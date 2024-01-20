@@ -343,7 +343,6 @@ namespace GW2FOX
 
                         DateTime currentTimeUtc = DateTime.UtcNow;
                         DateTime currentTimeMez = TimeZoneInfo.ConvertTimeFromUtc(currentTimeUtc, mezTimeZone);
-                        TimeSpan currentTime = currentTimeMez.TimeOfDay;
 
 
                         var upcomingBosses = BossEventGroups
@@ -367,9 +366,6 @@ namespace GW2FOX
                         //         bossEvent.Timing > currentTime.Subtract(new TimeSpan(0, 14, 59)) && bossEvent.Timing < currentTime)
                         //     .ToList();
 
-                        // Combine all bosses
-                        var allBosses = upcomingBosses.Concat(pastBosses).ToList();
-
                         var listViewItems = new List<ListViewItem>();
 
                         // Use a HashSet to keep track of added boss names
@@ -392,7 +388,7 @@ namespace GW2FOX
                             int categoryComparison = bossEvent1.Category.CompareTo(bossEvent2.Category);
                             if (categoryComparison != 0) return categoryComparison;
 
-                            return 0; // Tie, maintain the order unchanged
+                            return 0;
                         });
 
                         foreach (var bossEvent in allBosses)
@@ -414,30 +410,46 @@ namespace GW2FOX
                                 {
                                     TimeSpan elapsedTime = bossEvent.NextRunTime - currentTimeMez;
 
-                                    // Änderung der Formatierung für den Countdown basierend auf der vergangenen Zeitspanne
-                                    TimeSpan countdownTime = elapsedTime;
+                                string remainingTimeFormat = $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
 
-                                    string elapsedTimeFormat = $"{(int)elapsedTime.TotalHours:D2}:{elapsedTime.Minutes:D2}:{elapsedTime.Seconds:D2}";
+                                Color fontColor = GetFontColor(bossEvent);
 
-                                    Color fontColor = GetFontColor(bossEvent, pastBosses);
+                                var listViewItem = new ListViewItem(new[] { bossEvent.BossName, remainingTimeFormat });
+                                listViewItem.ForeColor = fontColor;
 
-                                    var listViewItem = new ListViewItem(new[] { bossEvent.BossName, elapsedTimeFormat });
-                                    listViewItem.ForeColor = fontColor;
-
-                                    // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
-                                    if (HasSameTimeAndCategory(allBosses, bossEvent))
-                                    {
-                                        listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
-                                    }
-                                    else
-                                    {
-                                        listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                                    }
-
-                                    listViewItems.Add(listViewItem);
-
-
+                                // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
+                                if (HasSameTimeAndCategory(allBosses, bossEvent))
+                                {
+                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
                                 }
+                                else
+                                {
+                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                                }
+
+                                listViewItems.Add(listViewItem);
+                            }
+                            else if (addedBossNames.Add(bossNameKey))
+                            {
+                                // If the countdown has ended, add the boss name for an additional 14 minutes and 59 seconds
+                                Color fontColor = GetFontColor(bossEvent);
+
+                                var listViewItem = new ListViewItem(new[] { bossEvent.BossName });
+
+                                // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
+                                if (HasSameTimeAndCategory(allBosses, bossEvent))
+                                {
+                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
+                                }
+                                else
+                                {
+                                    // If the countdown has ended, but still display the boss name for an additional 14 minutes and 59 seconds without time
+                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                                    listViewItem.SubItems.Add(""); // Add an empty subitem for time
+                                }
+
+                                listViewItem.ForeColor = fontColor;
+                                listViewItems.Add(listViewItem);
                             }
                         }
 
