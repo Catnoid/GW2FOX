@@ -332,131 +332,123 @@ namespace GW2FOX
 
             public void UpdateBossList()
             {
-                // Überprüfen, ob die Handle für die bossList erstellt wurde
                 if (!bossList.IsHandleCreated) return;
 
-                // Auf dem UI-Thread ausführen, um auf die UI-Elemente zuzugreifen
                 bossList.BeginInvoke((MethodInvoker)delegate
                 {
                     try
                     {
-                        // Bossnamen aus der Konfigurationsdatei lesen
+                        // Read the boss names from the configuration file
                         List<string> bossNamesFromConfig = BossList23;
 
-                        // Aktuelle Zeit in UTC und MEZ umwandeln
                         DateTime currentTimeUtc = DateTime.UtcNow;
                         DateTime currentTimeMez = TimeZoneInfo.ConvertTimeFromUtc(currentTimeUtc, mezTimeZone);
+                        TimeSpan currentTime = currentTimeMez.TimeOfDay;
 
-                        // Boss-Events für die konfigurierten Bossnamen abrufen
+
                         var upcomingBosses = BossEventGroups
                             .Where(bossEventGroup => bossNamesFromConfig.Contains(bossEventGroup.BossName))
                             .SelectMany(bossEventGroup => bossEventGroup.GetNextRuns())
                             .ToList();
+                            
+                            // Events
+                            // .Where(bossEvent =>
+                            //     bossNamesFromConfig.Contains(bossEvent.BossName) &&
+                            //     bossEvent.Timing > currentTime && bossEvent.Timing < currentTime.Add(new TimeSpan(24, 0, 0)))
+                            // .ToList();
 
-                        // Alle Boss-Events in einer Liste speichern
-                        var allBosses = upcomingBosses.ToList();
+                        var pastBosses =  BossEventGroups
+                                .Where(bossEventGroup => bossNamesFromConfig.Contains(bossEventGroup.BossName))
+                                .SelectMany(bossEventGroup => bossEventGroup.GetPreviousRuns())
+                                .ToList();
+                        // BossTimings.Events
+                        //     .Where(bossEvent =>
+                        //         bossNamesFromConfig.Contains(bossEvent.BossName) &&
+                        //         bossEvent.Timing > currentTime.Subtract(new TimeSpan(0, 14, 59)) && bossEvent.Timing < currentTime)
+                        //     .ToList();
 
-                        // Liste für ListView-Items erstellen
+                        // Combine all bosses
+                        var allBosses = upcomingBosses.Concat(pastBosses).ToList();
+
                         var listViewItems = new List<ListViewItem>();
 
-                        // HashSet verwenden, um hinzugefügte Bossnamen zu verfolgen
+                        // Use a HashSet to keep track of added boss names
                         HashSet<string> addedBossNames = new HashSet<string>();
 
-                        // Boss-Events nach verschiedenen Kriterien sortieren
                         allBosses.Sort((bossEvent1, bossEvent2) =>
                         {
-                            // Vergleiche die angepassten Zeiten für den nächsten Tag
+                            // DateTime adjustedTiming1 = currentTimeMez.Date + bossEvent1.Timing;
+                            // DateTime adjustedTiming2 = currentTimeMez.Date + bossEvent2.Timing;
+
+                            // Compare the adjusted timings for the next day
                             int adjustedTimingComparison = bossEvent1.NextRunTime.CompareTo(bossEvent2.NextRunTime);
                             if (adjustedTimingComparison != 0) return adjustedTimingComparison;
 
-                            // Wenn die Zeiten gleich sind, nach aufsteigenden Dauern sortieren
+                            // If timings are equal, sort by ascending durations
                             int durationComparison = bossEvent1.Duration.CompareTo(bossEvent2.Duration);
                             if (durationComparison != 0) return durationComparison;
 
-                            // Wenn Dauern und Zeiten gleich sind, nach Kategorien sortieren (falls erforderlich)
+                            // If durations and timings are equal, sort by categories (if necessary)
                             int categoryComparison = bossEvent1.Category.CompareTo(bossEvent2.Category);
                             if (categoryComparison != 0) return categoryComparison;
 
-                            return 0;
+                            return 0; // Tie, maintain the order unchanged
                         });
 
                         foreach (var bossEvent in allBosses)
                         {
-                            // Schlüssel für Bossnamen und Zeit erstellen
-                            string bossNameKey = $"{bossEvent.BossName}_{bossEvent.NextRunTime}";
+                            // DateTime adjustedTiming = GetAdjustedTiming(currentTimeMez, bossEvent.Timing);
 
-                            // Endzeit des Boss-Events basierend auf der aktuellen Zeit berechnen
-                            DateTime endTime = bossEvent.NextRunTime.AddMinutes(14).AddSeconds(59);
-
-                            // Überprüfen, ob das Boss-Event innerhalb der nächsten 14 Minuten und 59 Sekunden liegt
-                            if (currentTimeMez <= endTime)
+                            // Check if the boss with the adjusted timing is already added to avoid duplicates
+                            if (addedBossNames.Add($"{bossEvent.BossName}_{bossEvent.NextRunTime}"))
                             {
-                                // Verbleibende Zeit bis zum Ende des Boss-Events berechnen
-                                TimeSpan remainingTime = endTime - currentTimeMez;
-
-                                // Format für verbleibende Zeit erstellen
-                                string remainingTimeFormat = $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
-
-                                // Schriftfarbe basierend auf dem Boss-Event erhalten
-                                Color fontColor = GetFontColor(bossEvent);
-
-                                // ListViewItem erstellen und hinzufügen
-                                var listViewItem = new ListViewItem(new[] { bossEvent.BossName, remainingTimeFormat });
-                                listViewItem.ForeColor = fontColor;
-
-                                // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
-                                if (HasSameTimeAndCategory(allBosses, bossEvent))
+                                if (pastBosses.Contains(bossEvent) && currentTimeMez - bossEvent.NextRunTime < new TimeSpan(0, 14, 59))
                                 {
-                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
+                                    // Display only the boss name for past events within the time span of 00:14:59
+                                    var listViewItem = new ListViewItem(new[] { bossEvent.BossName });
+                                    listViewItem.ForeColor = GetFontColor(bossEvent, pastBosses);
+                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                                    listViewItems.Add(listViewItem);
                                 }
                                 else
                                 {
-                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                                    TimeSpan elapsedTime = bossEvent.NextRunTime - currentTimeMez;
+
+                                    // Änderung der Formatierung für den Countdown basierend auf der vergangenen Zeitspanne
+                                    TimeSpan countdownTime = elapsedTime;
+
+                                    string elapsedTimeFormat = $"{(int)elapsedTime.TotalHours:D2}:{elapsedTime.Minutes:D2}:{elapsedTime.Seconds:D2}";
+
+                                    Color fontColor = GetFontColor(bossEvent, pastBosses);
+
+                                    var listViewItem = new ListViewItem(new[] { bossEvent.BossName, elapsedTimeFormat });
+                                    listViewItem.ForeColor = fontColor;
+
+                                    // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
+                                    if (HasSameTimeAndCategory(allBosses, bossEvent))
+                                    {
+                                        listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
+                                    }
+                                    else
+                                    {
+                                        listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                                    }
+
+                                    listViewItems.Add(listViewItem);
+
+
                                 }
-
-                                listViewItems.Add(listViewItem);
-                            }
-                            else if (addedBossNames.Add(bossNameKey))
-                            {
-                                // Falls der Countdown abgelaufen ist, den Bossnamen für zusätzliche 14 Minuten und 59 Sekunden hinzufügen
-                                Color fontColor = GetFontColor(bossEvent);
-
-                                // ListViewItem erstellen und hinzufügen
-                                var listViewItem = new ListViewItem(new[] { bossEvent.BossName });
-
-                                // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
-                                if (HasSameTimeAndCategory(allBosses, bossEvent))
-                                {
-                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
-                                }
-                                else
-                                {
-                                    // Falls der Countdown abgelaufen ist, den Bossnamen für zusätzliche 14 Minuten und 59 Sekunden ohne Zeit anzeigen
-                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                                    listViewItem.SubItems.Add(""); // Leeres Subitem für die Zeit hinzufügen
-                                }
-
-                                listViewItem.ForeColor = fontColor;
-                                listViewItems.Add(listViewItem);
                             }
                         }
 
-                        // ListView-Items aktualisieren
                         UpdateListViewItems(listViewItems);
                     }
                     catch (Exception ex)
                     {
-                        // Ausnahme behandeln und protokollieren
                         HandleException(ex, "UpdateBossList");
                     }
                 });
             }
-
-
-
-
-
-
 
             private bool HasSameTimeAndCategory(List<BossEventRun> allBosses, BossEventRun currentBossEvent)
             {
@@ -509,7 +501,7 @@ namespace GW2FOX
                 return adjustedTiming - currentTimeMez;
             }
 
-            private static Color GetFontColor(BossEventRun bossEvent)
+            private static Color GetFontColor(BossEventRun bossEvent, List<BossEventRun> pastBosses)
             {
                 Color fontColor;
 
@@ -544,7 +536,10 @@ namespace GW2FOX
                         break;
                 }
 
-                
+                if (pastBosses.Any(pastBoss => pastBoss.BossName == bossEvent.BossName && pastBoss.NextRunTime == bossEvent.NextRunTime))
+                {
+                    fontColor = PastBossFontColor;
+                }
 
                 return fontColor;
             }
