@@ -410,9 +410,9 @@ namespace GW2FOX
                             var formattedRemainingTime = $"{(int)remainingBossTime.TotalHours:D2}:{remainingBossTime.Minutes:D2}:{remainingBossTime.Seconds:D2}";
 
                             var listViewItemDelayed = new ListViewItem(new[] {
-                    delayedBossEvent.BossName,
-                    formattedRemainingTime
-                });
+                                delayedBossEvent.BossName,
+                                formattedRemainingTime
+                            });
 
                             listViewItemDelayed.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                             listViewItemDelayed.ForeColor = fontColor;
@@ -425,9 +425,9 @@ namespace GW2FOX
                             var formattedRemainingTime = $"{(int)remainingBossTime.TotalHours:D2}:{remainingBossTime.Minutes:D2}:{remainingBossTime.Seconds:D2}";
 
                             var listViewItem = new ListViewItem(new[] {
-                    bossEvent.BossName,
-                    formattedRemainingTime
-                });
+                                bossEvent.BossName,
+                                formattedRemainingTime
+                            });
 
                             if (HasSameTimeAndCategory(upcomingBosses, bossEvent))
                             {
