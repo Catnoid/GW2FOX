@@ -1,4 +1,5 @@
-﻿using static GW2FOX.BossTimings;
+﻿using System.Drawing;
+using static GW2FOX.BossTimings;
 
 namespace GW2FOX
 {
@@ -7,10 +8,9 @@ namespace GW2FOX
         public static ListView CustomBossList { get; private set; }
 
         private Point mouse_offset;
-        private static readonly Color DefaultFontColor = Color.White; 
+        private static readonly Color DefaultFontColor = Color.White;
         private static readonly Color PastBossFontColor = Color.OrangeRed;
- 
-
+        private static readonly Color MyAlmostBlackColor = Color.FromArgb(255, 1, 1, 1);
 
         public Overlay()
         {
@@ -23,7 +23,7 @@ namespace GW2FOX
             if (Owner is BaseForm baseForm)
             {
                 baseForm.UpdateCustomBossList(listViewItems);
-            };
+            }
             CustomBossList = listViewItems;
 
             ListView overlayListView = CustomBossList;
@@ -31,8 +31,8 @@ namespace GW2FOX
             overlayListView.DrawItem += OverlayListView_DrawItem;
 
             // Konfiguriere das Overlay-Formular
-            BackColor = Color.DimGray;
-            TransparencyKey = Color.DimGray;
+            BackColor = MyAlmostBlackColor;
+            TransparencyKey = MyAlmostBlackColor;
             TopMost = true;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.Manual;
@@ -42,7 +42,6 @@ namespace GW2FOX
             Width = 235;
             Height = 310;
             AutoScroll = true;
-
 
             Panel listViewPanel = new Panel();
             listViewPanel.BackColor = Color.Transparent;
@@ -56,7 +55,6 @@ namespace GW2FOX
             listViewPanel.Location = new Point(0, 0);
 
             // Erstelle die ListView
-
             overlayListView.ForeColor = Color.White;
             overlayListView.Font = new Font("Segoe UI", 10);
             overlayListView.BackColor = BackColor;
@@ -81,7 +79,6 @@ namespace GW2FOX
             // Füge die ListView zum ListView Panel hinzu
             listViewPanel.Controls.Add(overlayListView);
             Controls.Add(listViewPanel);
-
         }
 
         private void OverlayListView_DrawItem(object sender, DrawListViewItemEventArgs e)
@@ -139,7 +136,6 @@ namespace GW2FOX
 
             Font font = e.Item.Font;
 
-            
             Point mainTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 0);
 
             // Zeichne den Haupttext mit grauer Umrandung
@@ -162,15 +158,7 @@ namespace GW2FOX
 
             // Zeichne den Zeittext ohne Umrandung (darüber, um die Umrandung zu überlagern)
             TextRenderer.DrawText(e.Graphics, timeText, font, timeTextLocation, e.Item.ForeColor, Color.Transparent, TextFormatFlags.Default);
-
-
         }
-
-
-
-
-
-
 
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
@@ -191,6 +179,5 @@ namespace GW2FOX
         {
             Dispose();
         }
-
     }
 }

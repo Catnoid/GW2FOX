@@ -56,7 +56,7 @@ namespace GW2FOX
             customBossList.Columns.Add("Time", 78);
             customBossList.Location = new Point(0, 0);
             customBossList.ForeColor = Color.White;
-            new Font("Segoe UI", 10);
+            new Font("Segoe UI", 10, FontStyle.Bold);
         }
 
         public void UpdateCustomBossList(ListView updatedList)
@@ -402,7 +402,7 @@ namespace GW2FOX
                             if (remainingTime.TotalMinutes <= 14.99)
                             {
                                 var listViewItemExpired = new ListViewItem(new[] { bossEvent.BossName, "" });
-                                listViewItemExpired.Font = new Font("Segoe UI", 10);
+                                listViewItemExpired.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                                 listViewItemExpired.ForeColor = PastBossFontColor;
                                 tempUpcomingBosses.Add(listViewItemExpired);
                             }
@@ -441,7 +441,7 @@ namespace GW2FOX
                                 formattedRemainingTime
                             });
 
-                                listViewItemDelayed.Font = new Font("Segoe UI", 10);
+                                listViewItemDelayed.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                                 listViewItemDelayed.ForeColor = fontColor;
                                 tempUpcomingBosses.Add(listViewItemDelayed);
 
@@ -463,11 +463,12 @@ namespace GW2FOX
 
                             if (HasSameTimeAndCategory(upcomingBosses, bossEvent))
                             {
-                                listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic);
+                                listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
+
                             }
                             else
                             {
-                                listViewItem.Font = new Font("Segoe UI", 10);
+                                listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                             }
 
                             listViewItem.ForeColor = fontColor;
@@ -550,7 +551,7 @@ namespace GW2FOX
 
                             // ListViewItem erstellen und zur Liste hinzufügen
                             var listViewItem = new ListViewItem(new[] { bossEvent.BossName });
-                            listViewItem.Font = new Font("Segoe UI", 10);
+                            listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                             listViewItem.SubItems.Add(""); // Leeres SubItem hinzufügen (falls benötigt)
                             listViewItem.ForeColor = fontColor;
 
