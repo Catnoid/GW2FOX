@@ -787,41 +787,59 @@
                     .Where(bossEvent => bossEvent.BossName.Equals(BossName))
                     .OrderBy(span => span.Timing)
                     .ToList();
-                // BossEvent? firstEvent = events.FirstOrDefault();
-                // if (firstEvent != null)
-                // {
-                //     Category = firstEvent.Category;
-                // }
+               
             }
 
             public List<BossEventRun> GetNextRuns()
             {
                 List<BossEvent> nextTimings = Timings
                     .Where(bossEvent => bossEvent.Timing > GlobalVariables.CURRENT_TIME)
+                    .OrderBy(bossEvent => bossEvent.Timing)  // Sortiere die Läufe nach dem Zeitpunkt
                     .ToList();
+
                 if (nextTimings.Count == 0)
                 {
                     return Timings
-                        .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category, GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(24, 0, 0)) + bossEvent.Timing))
+                        .Select(bossEvent => new BossEventRun(bossEvent, GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(24, 0, 0)) + bossEvent.Timing))
                         .Take(NEXT_RUNS_TO_SHOW)
                         .ToList();
                 }
 
-                return nextTimings
-                    .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category, GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing))
-                    .Take(NEXT_RUNS_TO_SHOW)
-                    .ToList();
+                var result = new List<BossEventRun>();
+
+                foreach (var bossEvent in nextTimings)
+                {
+                    var nextRunTime = GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing;
+
+                    // Wenn es einen weiteren Lauf gibt, füge ihn mit 24 Stunden Verzögerung hinzu
+                    var nextBossEvent = nextTimings.FirstOrDefault(ne => ne.Timing == bossEvent.Timing && ne != bossEvent);
+
+                    if (nextBossEvent != null)
+                    {
+                        var nextNextRunTime = nextRunTime.AddDays(1);  // Füge 24 Stunden hinzu
+                        result.Add(new BossEventRun(bossEvent, nextRunTime));
+                        result.Add(new BossEventRun(nextBossEvent, nextNextRunTime));
+                    }
+                    else
+                    {
+                        // Kein weiterer Lauf, füge nur den aktuellen Lauf hinzu
+                        result.Add(new BossEventRun(bossEvent, nextRunTime));
+                    }
+                }
+
+                return result.Take(NEXT_RUNS_TO_SHOW).ToList();
             }
 
             public List<BossEventRun> GetPreviousRuns()
             {
                 return Timings
-                    .Where(bossEvent => bossEvent.Timing > GlobalVariables.CURRENT_TIME.Subtract(new TimeSpan(0, 14, 59)) && bossEvent.Timing < GlobalVariables.CURRENT_TIME)
-                    .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category, GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing))
+                    .Where(bossEvent => bossEvent.Timing >= GlobalVariables.CURRENT_TIME.Subtract(new TimeSpan(0, 14, 59)) && bossEvent.Timing <= GlobalVariables.CURRENT_TIME)
+                    .Select(bossEvent => new BossEventRun(bossEvent, GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing))
                     .Take(PREVIOUS_RUNS_TO_SHOW)
                     .ToList();
             }
-            
+
+
         }
 
         public class BossEvent
@@ -842,14 +860,37 @@
                 Timing = timing;
                 Category = category;
             }
+            public BossEvent(BossEvent original)
+            {
+                // Kopiere die Eigenschaften des Originals
+                BossName = original.BossName;
+                Timing = original.Timing;
+                Category = original.Category;
+            }
         }
 
 
-        public class BossEventRun(string bossName, TimeSpan timing, string category, DateTime nextRunTime)
-            : BossEvent(bossName, timing, category)
+        public class BossEventRun : BossEvent
         {
-            public DateTime NextRunTime { get; set; } = nextRunTime;
-            
+            public DateTime NextRunTime { get; set; }
+
+            public BossEventRun(BossEvent original, DateTime nextRunTime)
+                : base(original.BossName, original.Timing, original.Category)
+            {
+                NextRunTime = nextRunTime;
+            }
+
+            public bool IsPreviewBoss => NextRunTime < DateTime.Now;
+
+            public BossEventRun Clone()
+            {
+                return new BossEventRun(this, NextRunTime);
+            }
         }
+
+
+       
+
+
     }
 }
