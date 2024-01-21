@@ -399,24 +399,46 @@ namespace GW2FOX
                             continue;  // Skip adding this boss to the regular upcoming bosses list
                         }
 
+                        // Adjust currentTimeMez to the next day if needed
+                        if (bossEvent.NextRunTime <= currentTimeMez)
+                        {
+                            currentTimeMez = currentTimeMez.AddDays(1);
+                        }
+
                         // Überprüfe, ob das BossEvent bereits verwendet wurde
                         if (usedBossEvents.Contains(bossEventKey))
                         {
                             // Wenn bereits verwendet, füge das BossEvent mit 24 Stunden Verzögerung hinzu
                             var delayedBossEvent = bossEvent.Clone(); // Annahme: BossEvent ist klonbar
-                            delayedBossEvent.NextRunTime = delayedBossEvent.NextRunTime.AddHours(24);
 
-                            var remainingBossTime = delayedBossEvent.NextRunTime - currentTimeMez;
-                            var formattedRemainingTime = $"{(int)remainingBossTime.TotalHours:D2}:{remainingBossTime.Minutes:D2}:{remainingBossTime.Seconds:D2}";
+                            // If the boss event is scheduled after midnight, adjust the timing to the next day
+                            if (delayedBossEvent.NextRunTime.TimeOfDay < currentTimeMez.TimeOfDay)
+                            {
+                                delayedBossEvent.NextRunTime = delayedBossEvent.NextRunTime.AddDays(1);
+                            }
 
-                            var listViewItemDelayed = new ListViewItem(new[] {
+                            // Generate a unique key for the delayed BossEvent
+                            string delayedBossEventKey = $"{delayedBossEvent.BossName}_{delayedBossEvent.Category}_{delayedBossEvent.Timing}";
+
+                            // Check if the delayed BossEvent has already been used
+                            if (!usedBossEvents.Contains(delayedBossEventKey))
+                            {
+                                var remainingBossTime = delayedBossEvent.NextRunTime - currentTimeMez;
+                                var formattedRemainingTime = $"{(int)remainingBossTime.TotalHours:D2}:{remainingBossTime.Minutes:D2}:{remainingBossTime.Seconds:D2}";
+
+                                var listViewItemDelayed = new ListViewItem(new[] {
                                 delayedBossEvent.BossName,
                                 formattedRemainingTime
                             });
 
-                            listViewItemDelayed.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                            listViewItemDelayed.ForeColor = fontColor;
-                            tempUpcomingBosses.Add(listViewItemDelayed);
+                                listViewItemDelayed.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                                listViewItemDelayed.ForeColor = fontColor;
+                                tempUpcomingBosses.Add(listViewItemDelayed);
+
+                                // Markiere das BossEvent und das verschobene BossEvent als verwendet
+                                usedBossEvents.Add(bossEventKey);
+                                usedBossEvents.Add(delayedBossEventKey);
+                            }
                         }
                         else
                         {
@@ -443,8 +465,36 @@ namespace GW2FOX
 
                             // Markiere das BossEvent als verwendet
                             usedBossEvents.Add(bossEventKey);
+
+                            // Add the "24h later" timing below the current timing
+                            var delayedBossEvent = bossEvent.Clone(); // Annahme: BossEvent ist klonbar
+                            delayedBossEvent.NextRunTime = delayedBossEvent.NextRunTime.AddHours(24);
+
+                            // Generate a unique key for the delayed BossEvent
+                            string delayedBossEventKey = $"{delayedBossEvent.BossName}_{delayedBossEvent.Category}_{delayedBossEvent.Timing}";
+
+                            // Check if the delayed BossEvent has already been used
+                            if (!usedBossEvents.Contains(delayedBossEventKey))
+                            {
+                                var remainingBossTimeDelayed = delayedBossEvent.NextRunTime - currentTimeMez;
+                                var formattedRemainingTimeDelayed = $"{(int)remainingBossTimeDelayed.TotalHours:D2}:{remainingBossTimeDelayed.Minutes:D2}:{remainingBossTimeDelayed.Seconds:D2}";
+
+                                var listViewItemDelayed = new ListViewItem(new[] {
+                                    delayedBossEvent.BossName,
+                                    formattedRemainingTimeDelayed
+                                });
+
+                                listViewItemDelayed.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                                listViewItemDelayed.ForeColor = fontColor;
+                                tempUpcomingBosses.Add(listViewItemDelayed);
+
+                                // Markiere das verschobene BossEvent als verwendet
+                                usedBossEvents.Add(delayedBossEventKey);
+                            }
                         }
                     }
+
+
                 }
                 catch (Exception ex)
                 {

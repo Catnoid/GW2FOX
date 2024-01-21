@@ -790,6 +790,10 @@
                
             }
 
+
+
+
+
             public List<BossEventRun> GetNextRuns()
             {
                 List<BossEvent> nextTimings = Timings
@@ -880,7 +884,7 @@
                 NextRunTime = nextRunTime;
             }
 
-            public bool IsPreviewBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
+            public bool IsPreviewBoss => NextRunTime < DateTime.Now;
 
             public BossEventRun Clone()
             {
