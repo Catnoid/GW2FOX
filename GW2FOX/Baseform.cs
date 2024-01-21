@@ -66,12 +66,21 @@ namespace GW2FOX
 
         public void Timer_Click(object sender, EventArgs e)
         {
+            // Überprüfen, ob bereits ein Timer läuft
+            if (bossTimer != null && bossTimer.IsRunning)
+            {
+                // Optional: Hier können Sie eine Meldung anzeigen, dass der Timer bereits läuft.
+                // MessageBox.Show("Timer is already running.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             InitializeCustomBossList();
             InitializeBossTimerAndOverlay();
 
             bossTimer.Start();
             overlay.Show();
         }
+
 
         protected void ShowAndHideForm(Form newForm)
         {
@@ -297,22 +306,26 @@ namespace GW2FOX
             private readonly ListView bossList;
             private readonly TimeZoneInfo mezTimeZone;
             private readonly System.Threading.Timer timer;
+            public bool IsRunning { get; private set; }
 
             public BossTimer(ListView bossList)
             {
                 this.bossList = bossList;
                 mezTimeZone = TimeZoneInfo.FindSystemTimeZoneById(TimeZoneId);
                 timer = new System.Threading.Timer(TimerCallback, null, 0, 1000);
+                IsRunning = false;
             }
 
             public void Start()
             {
                 timer.Change(0, 1000);
+                IsRunning = true;
             }
 
             public void Stop()
             {
                 timer.Change(Timeout.Infinite, Timeout.Infinite);
+                IsRunning = false;
             }
 
             private void TimerCallback(object? state)
