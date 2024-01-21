@@ -10,7 +10,7 @@ namespace GW2FOX
         protected Overlay overlay;
         protected ListView customBossList;
         protected BossTimer bossTimer;
-        private GlobalKeyboardHook? _globalKeyboardHook; // Füge dies hinzu
+        private GlobalKeyboardHook? _globalKeyboardHook;
 
         public static ListView CustomBossList { get; private set; } = new ListView();
 
@@ -77,10 +77,8 @@ namespace GW2FOX
         {
             newForm.Owner = this;
             newForm.Show();
-            if (this is not Worldbosses)
-            {
-                Dispose();
-            }
+            this.Hide();
+            
         }
 
         protected static void SaveTextToFile(string textToSave, string sectionHeader, bool hideMessages = false)
