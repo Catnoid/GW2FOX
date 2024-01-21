@@ -880,7 +880,7 @@
                 NextRunTime = nextRunTime;
             }
 
-            public bool IsPreviewBoss => NextRunTime < DateTime.Now;
+            public bool IsPreviewBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
 
             public BossEventRun Clone()
             {
