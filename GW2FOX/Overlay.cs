@@ -18,7 +18,7 @@ namespace GW2FOX
             if (Owner is BaseForm baseForm)
             {
                 BossTimerService.UpdateCustomBossList(listViewItems);
-            };
+            }
             CustomBossList = listViewItems;
 
             ListView overlayListView = CustomBossList;
@@ -34,13 +34,12 @@ namespace GW2FOX
             Opacity = 1;
             MouseDown += OnMouseDown;
             MouseMove += OnMouseMove;
-            Width = 235;
+            Width = 230;
             Height = 310;
             AutoScroll = true;
 
             Panel listViewPanel = new Panel();
             listViewPanel.BackColor = Color.Transparent;
-            FormBorderStyle = FormBorderStyle.Fixed3D;
 
             // Berechne die Größe des listViewPanel
             int panelWidth = (int)(Width);
@@ -53,16 +52,21 @@ namespace GW2FOX
             overlayListView.ForeColor = Color.White;
             overlayListView.Font = new Font("Segoe UI", 10);
             overlayListView.BackColor = BackColor;
-            overlayListView.View = View.Details;
-            overlayListView.OwnerDraw = true;
 
+            // Setze die View auf Details, um die horizontale Scrollleiste zu deaktivieren
+            overlayListView.View = View.Details;
+
+            // Entferne die Spaltenüberschriften, um die horizontale Scrollleiste zu verbergen
+            overlayListView.HeaderStyle = ColumnHeaderStyle.None;
+
+            overlayListView.OwnerDraw = true;
             overlayListView.Location = new Point(0, 0);
             overlayListView.Width = listViewPanel.Width;
 
             // Enable vertical scrollbar
             overlayListView.Scrollable = true;
 
-            // Set the height considering the horizontal scrollbar
+            // Setze die Höhe unter Berücksichtigung der horizontalen Scrollleiste
             overlayListView.Height = listViewPanel.Height - SystemInformation.HorizontalScrollBarHeight;
 
             overlayListView.Enabled = true;
@@ -75,6 +79,8 @@ namespace GW2FOX
             listViewPanel.Controls.Add(overlayListView);
             Controls.Add(listViewPanel);
         }
+
+
 
         private void OverlayListView_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
@@ -131,7 +137,7 @@ namespace GW2FOX
 
             Font font = e.Item.Font;
 
-            Point mainTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 0);
+            Point mainTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 5);
 
             // Zeichne den Haupttext mit grauer Umrandung
             TextRenderer.DrawText(e.Graphics, mainText, font, new Point(mainTextLocation.X - 1, mainTextLocation.Y - 1), Color.Black);
@@ -143,7 +149,7 @@ namespace GW2FOX
             TextRenderer.DrawText(e.Graphics, mainText, font, mainTextLocation, e.Item.ForeColor, Color.Transparent, TextFormatFlags.Default);
 
             // Definiere die Position des Zeittexts mit grauer Umrandung
-            Point timeTextLocation = new Point(e.Bounds.Left + 145, e.Bounds.Top + 0); // Annahme: 20 Pixel Abstand von Haupttext
+            Point timeTextLocation = new Point(e.Bounds.Left + 145, e.Bounds.Top + 5); 
 
             // Zeichne den Zeittext mit grauer Umrandung
             TextRenderer.DrawText(e.Graphics, timeText, font, new Point(timeTextLocation.X - 1, timeTextLocation.Y - 1), Color.Black);

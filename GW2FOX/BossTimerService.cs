@@ -44,7 +44,7 @@ public static class BossTimerService
         CustomBossList = new ListView();
         CustomBossList.View = View.Details;
         CustomBossList.Columns.Add("Boss Name", 145);
-        CustomBossList.Columns.Add("Time", 78);
+        CustomBossList.Columns.Add("Time", 73);
         CustomBossList.Location = new Point(0, 0);
         CustomBossList.ForeColor = Color.Black;
         CustomBossList.MouseClick += ListView_MouseClick;
@@ -71,7 +71,7 @@ public static class BossTimerService
         {
             DoneBosses.Add(bossEvent.NextRunTime.Date, [bossEvent.BossName]);
         }
-        // MessageBox.Show("Boss Name: " + bossEvent.BossName);
+        
     }
 
     private static void ListView_MouseClick(object? sender, MouseEventArgs e)
