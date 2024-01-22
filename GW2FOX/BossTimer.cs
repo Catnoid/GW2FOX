@@ -81,73 +81,83 @@ namespace GW2FOX
 
         private List<ListViewItem> UpdateBossListUpcomingBosses()
         {
+            // Liste für die anzuzeigenden Boss-Elemente
             var tempUpcomingBosses = new List<ListViewItem>();
 
             try
             {
+                // Bossnamen aus der Konfiguration laden
                 List<string> bossNamesFromConfig = BossList23;
 
+                // Aktuelle UTC-Zeit und Lokalzeit ermitteln
                 DateTime currentTimeUtc = DateTime.UtcNow;
                 DateTime currentTimeLocal = TimeZoneInfo.ConvertTimeFromUtc(currentTimeUtc, mezTimeZone);
 
+                // Nächste anstehende Boss-Events auswählen, nach Startzeit sortieren
                 var upcomingBosses = BossEventGroups
                     .Where(bossEventGroup => bossNamesFromConfig.Contains(bossEventGroup.BossName))
                     .SelectMany(bossEventGroup => bossEventGroup.GetNextRuns())
                     .OrderBy(bossEvent => bossEvent.NextRunTime)
                     .ToList();
 
+                // Verwendete Boss-Events, um Duplikate zu verfolgen
                 // Verwendete BossEvents, um Duplikate zu verfolgen
                 HashSet<string> usedBossEvents = new HashSet<string>();
 
+                // Für jedes anstehende Boss-Event die Anzeige aktualisieren
                 foreach (var bossEvent in upcomingBosses)
                 {
-                    // Erzeuge einen eindeutigen Schlüssel für das BossEvent
+                    // Eindeutigen Schlüssel für das Boss-Event erstellen
                     string bossEventKey = $"{bossEvent.BossName}_{bossEvent.Category}_{bossEvent.Timing}";
 
+                    // Textfarbe basierend auf dem Boss-Event abrufen
                     Color fontColor = GetFontColor(bossEvent);
 
-                    // Check if the countdown has ended
+                    // Überprüfen, ob der Countdown abgelaufen ist
                     if (bossEvent.NextRunTime <= currentTimeLocal)
                     {
-                        // Treat as if it were a previous boss for the specified duration
+                        // Als vergangener Boss behandeln für die angegebene Dauer
                         var remainingTime = currentTimeLocal - bossEvent.NextRunTime;
                         if (remainingTime.TotalMinutes <= 14.99)
                         {
+                            // Element für abgelaufene Boss-Events erstellen
                             var listViewItemExpired = new ListViewItem(new[] { bossEvent.BossName, "" });
                             listViewItemExpired.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                             listViewItemExpired.ForeColor = PastBossFontColor;
                             tempUpcomingBosses.Add(listViewItemExpired);
                         }
-                        continue;  // Skip adding this boss to the regular upcoming bosses list
+                        continue;  // Diesen Boss nicht zur Liste der anstehenden Boss-Events hinzufügen
                     }
 
-                    // Adjust currentTimeLocal to the next day if needed
+                    // Aktuelle Zeit für den nächsten Tag anpassen, wenn erforderlich
                     if (bossEvent.NextRunTime <= currentTimeLocal)
                     {
                         currentTimeLocal = currentTimeLocal.AddDays(1);
                     }
 
-                    // Überprüfe, ob das BossEvent bereits verwendet wurde
+                    // Überprüfen, ob das Boss-Event bereits verwendet wurde
                     if (usedBossEvents.Contains(bossEventKey))
                     {
-                        // Wenn bereits verwendet, füge das BossEvent mit 24 Stunden Verzögerung hinzu
-                        var delayedBossEvent = bossEvent.Clone(); // Annahme: BossEvent ist klonbar
+                        // Wenn bereits verwendet, das Boss-Event mit 24 Stunden Verzögerung hinzufügen
+                        var delayedBossEvent = bossEvent.Clone(); // Annahme: Boss-Event ist klonbar
 
-                        // If the boss event is scheduled after midnight, adjust the timing to the next day
+                        // Wenn das Boss-Event nach Mitternacht geplant ist, die Zeit auf den nächsten Tag anpassen
                         if (delayedBossEvent.NextRunTime.TimeOfDay < currentTimeLocal.TimeOfDay)
                         {
                             delayedBossEvent.NextRunTime = delayedBossEvent.NextRunTime.AddDays(1);
                         }
 
-                        // Generate a unique key for the delayed BossEvent
+                        // Eindeutigen Schlüssel für das verschobene Boss-Event erstellen
                         string delayedBossEventKey = $"{delayedBossEvent.BossName}_{delayedBossEvent.Category}_{delayedBossEvent.Timing}";
 
-                        // Check if the delayed BossEvent has already been used
+                        // Überprüfen, ob das verschobene Boss-Event bereits verwendet wurde
                         if (!usedBossEvents.Contains(delayedBossEventKey))
                         {
+                            // Verbleibende Zeit bis zum verschobenen Boss-Event berechnen
                             var remainingBossTime = delayedBossEvent.NextRunTime - currentTimeLocal;
                             var formattedRemainingTime = $"{(int)remainingBossTime.TotalHours:D2}:{remainingBossTime.Minutes:D2}:{remainingBossTime.Seconds:D2}";
 
+                            // Element für das verschobene Boss-Event erstellen und zur Liste hinzufügen
                             var listViewItemDelayed = new ListViewItem(new[] {
                         delayedBossEvent.BossName,
                         formattedRemainingTime
@@ -157,22 +167,24 @@ namespace GW2FOX
                             listViewItemDelayed.ForeColor = fontColor;
                             tempUpcomingBosses.Add(listViewItemDelayed);
 
-                            // Markiere das BossEvent und das verschobene BossEvent als verwendet
+                            // Markiere das Boss-Event und das verschobene Boss-Event als verwendet
                             usedBossEvents.Add(bossEventKey);
                             usedBossEvents.Add(delayedBossEventKey);
                         }
                     }
                     else
                     {
-                        // Wenn nicht verwendet, füge das BossEvent sofort hinzu
+                        // Wenn nicht verwendet, das Boss-Event sofort hinzufügen
                         var remainingBossTime = bossEvent.NextRunTime - currentTimeLocal;
                         var formattedRemainingTime = $"{(int)remainingBossTime.TotalHours:D2}:{remainingBossTime.Minutes:D2}:{remainingBossTime.Seconds:D2}";
 
+                        // Element für das Boss-Event erstellen und zur Liste hinzufügen
                         var listViewItem = new ListViewItem(new[] {
                     bossEvent.BossName,
                     formattedRemainingTime
                 });
 
+                        // Schriftstil basierend auf dem Namen und der Kategorie des Boss-Events festlegen
                         if (HasSameNameAndCategory(upcomingBosses, bossEvent))
                         {
                             listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
@@ -185,22 +197,24 @@ namespace GW2FOX
                         listViewItem.ForeColor = fontColor;
                         tempUpcomingBosses.Add(listViewItem);
 
-                        // Markiere das BossEvent als verwendet
+                        // Markiere das Boss-Event als verwendet
                         usedBossEvents.Add(bossEventKey);
 
-                        // Add the "24h later" timing below the current timing
-                        var delayedBossEvent = bossEvent.Clone(); // Annahme: BossEvent ist klonbar
+                        // "24 Stunden später"-Zeitpunkt unterhalb des aktuellen Zeitpunkts hinzufügen
+                        var delayedBossEvent = bossEvent.Clone(); // Annahme: Boss-Event ist klonbar
                         delayedBossEvent.NextRunTime = delayedBossEvent.NextRunTime.AddHours(24);
 
-                        // Generate a unique key for the delayed BossEvent
+                        // Eindeutigen Schlüssel für das verschobene Boss-Event erstellen
                         string delayedBossEventKey = $"{delayedBossEvent.BossName}_{delayedBossEvent.Category}_{delayedBossEvent.Timing}";
 
-                        // Check if the delayed BossEvent has already been used
+                        // Überprüfen, ob das verschobene Boss-Event bereits verwendet wurde
                         if (!usedBossEvents.Contains(delayedBossEventKey))
                         {
+                            // Verbleibende Zeit bis zum verschobenen Boss-Event berechnen
                             var remainingBossTimeDelayed = delayedBossEvent.NextRunTime - currentTimeLocal;
                             var formattedRemainingTimeDelayed = $"{(int)remainingBossTimeDelayed.TotalHours:D2}:{remainingBossTimeDelayed.Minutes:D2}:{remainingBossTimeDelayed.Seconds:D2}";
 
+                            // Element für das verschobene Boss-Event erstellen und zur Liste hinzufügen
                             var listViewItemDelayed = new ListViewItem(new[] {
                         delayedBossEvent.BossName,
                         formattedRemainingTimeDelayed
@@ -210,7 +224,7 @@ namespace GW2FOX
                             listViewItemDelayed.ForeColor = fontColor;
                             tempUpcomingBosses.Add(listViewItemDelayed);
 
-                            // Markiere das verschobene BossEvent als verwendet
+                            // Markiere das verschobene Boss-Event als verwendet
                             usedBossEvents.Add(delayedBossEventKey);
                         }
                     }
@@ -218,11 +232,14 @@ namespace GW2FOX
             }
             catch (Exception ex)
             {
+                // Fehler behandeln und protokollieren
                 HandleException(ex, "UpdateBossListUpcomingBosses");
             }
 
+            // Liste der anstehenden Boss-Elemente zurückgeben
             return tempUpcomingBosses;
         }
+
 
 
 
@@ -285,8 +302,7 @@ namespace GW2FOX
                 bossEvent != currentBossEvent &&
                 bossEvent.Category == currentBossEvent.Category &&
                 bossEvent.BossName == currentBossEvent.BossName &&
-                bossEvent.Timing == currentBossEvent.Timing &&
-                bossEvent.NextRunTime != currentBossEvent.NextRunTime);
+                bossEvent.Timing == currentBossEvent.Timing);
         }
 
 
