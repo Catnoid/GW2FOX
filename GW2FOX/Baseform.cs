@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using static GW2FOX.BossTimings;
+using static GW2FOX.BossTimerService;
 using static GW2FOX.GlobalVariables;
 
 namespace GW2FOX
@@ -7,85 +7,16 @@ namespace GW2FOX
     public class BaseForm : Form
     {
 
-        protected Overlay overlay;
-        protected ListView customBossList;
-        protected BossTimer bossTimer;
-        private GlobalKeyboardHook? _globalKeyboardHook;
-
-        public static ListView CustomBossList { get; private set; } = new ListView();
 
 
 
-        public BaseForm()
-        {
-            InitializeCustomBossList();
-            overlay = new Overlay(customBossList);
-            bossTimer = new BossTimer(customBossList);
-            InitializeGlobalKeyboardHook();
-        }
-
-        protected void InitializeBossTimerAndOverlay()
-        {
-            bossTimer = new BossTimer(customBossList);
-            overlay = new Overlay(customBossList);
-            overlay.WindowState = FormWindowState.Normal;
-        }
-
-        private void InitializeGlobalKeyboardHook()
-        {
-            _globalKeyboardHook = new GlobalKeyboardHook();
-            _globalKeyboardHook.KeyPressed += GlobalKeyboardHook_KeyPressed;
-        }
-
-        private void GlobalKeyboardHook_KeyPressed(object sender, KeyPressedEventArgs e)
-        {
-            if (ModifierKeys == Keys.Alt && e.Key == Keys.T)
-            {
-                if (this is Main)
-                {
-                    Timer_Click(sender, e);
-                }
-            }
-        }
-
-        protected void InitializeCustomBossList()
-        {
-            customBossList = new ListView();
-            customBossList.View = View.Details;
-            customBossList.Columns.Add("Boss Name");
-            customBossList.Columns.Add("Time");
-            customBossList.Location = new Point(0, 0);
-            customBossList.HeaderStyle = ColumnHeaderStyle.None;
-        }
-
-        public void UpdateCustomBossList(ListView updatedList)
-        {
-            CustomBossList = updatedList;
-        }
-
-        public void Timer_Click(object sender, EventArgs e)
-        {
-            
-            if (bossTimer != null && bossTimer.IsRunning)
-            {
-               
-                return;
-            }
-
-            InitializeCustomBossList();
-            InitializeBossTimerAndOverlay();
-
-            bossTimer.Start();
-            overlay.Show();
-        }
 
 
         protected void ShowAndHideForm(Form newForm)
         {
             newForm.Owner = this;
             newForm.Show();
-            this.Hide();
-            
+            Hide();
         }
 
         protected static void SaveTextToFile(string textToSave, string sectionHeader, bool hideMessages = false)
@@ -283,16 +214,18 @@ namespace GW2FOX
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            bossTimer.Dispose(); // Dispose of the BossTimer first
+            _bossTimer?.Dispose(); // Dispose of the BossTimer first
             base.OnFormClosing(e);
             Application.Exit();
         }
-
+        
         protected void Back_Click(object sender, EventArgs e)
         {
-            Owner.Show();
+            Owner?.Show();
             Dispose();
         }
+
+
+        
     }
 }
-

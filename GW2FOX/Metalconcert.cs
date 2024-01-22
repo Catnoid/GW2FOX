@@ -47,11 +47,6 @@ namespace GW2FOX
             BringGw2ToFront();
         }
 
-        private void Backtomain_Click(object sender, EventArgs e)
-        {
-            Owner.Show();
-            Dispose();
-        }
 
         private void Runinfo_Click(object sender, EventArgs e)
         {

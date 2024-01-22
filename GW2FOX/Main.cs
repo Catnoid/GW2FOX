@@ -1,18 +1,38 @@
 // Main.cs
 
 using System.Diagnostics;
+using IWshRuntimeLibrary;
+using File = System.IO.File;
 
 namespace GW2FOX
 {
     public partial class Main : BaseForm
     {
+        
+
+        private GlobalKeyboardHook? _globalKeyboardHook; // Füge dies hinzu
+        
         public Main()
         {
             InitializeComponent();
             Load += Main_Load;
-            InitializeCustomBossList();
-            InitializeBossTimerAndOverlay();
             Worldbosses.ReadConfigFile();
+            InitializeGlobalKeyboardHook();
+        }
+        
+        
+        private void InitializeGlobalKeyboardHook()
+        {
+            _globalKeyboardHook = new GlobalKeyboardHook();
+            _globalKeyboardHook.KeyPressed += GlobalKeyboardHook_KeyPressed;
+        }
+        
+        private void GlobalKeyboardHook_KeyPressed(object sender, KeyPressedEventArgs e)
+        {
+            if (ModifierKeys == Keys.Alt && e.Key == Keys.T)
+            {
+                Timer_Click(sender, e);
+            }
         }
 
         private void Main_Load(object? sender, EventArgs e) 
@@ -27,15 +47,10 @@ namespace GW2FOX
             }
         }
 
-        private new void InitializeBossTimerAndOverlay()
-        {
-            base.InitializeBossTimerAndOverlay();
-            // Additional initialization specific to Main class, if any
-        }
 
-        private new void Timer_Click(object sender, EventArgs e)
+        private void Timer_Click(object sender, EventArgs e)
         {
-            base.Timer_Click(sender, e);
+            BossTimerService.Timer_Click(sender, e);
             // Additional logic specific to Timer_Click in Main class, if any
         }
 
@@ -44,17 +59,6 @@ namespace GW2FOX
         private void HandleException(Exception ex)
         {
             MessageBox.Show($"An error occurred: {ex.Message}\n\nStack Trace: {ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private new void InitializeCustomBossList() // new hinzugefόgt
-        {
-            customBossList = new ListView();
-            customBossList.View = View.Details;
-            customBossList.Columns.Add("Boss Name", 145);
-            customBossList.Columns.Add("Time", 78);
-            customBossList.Location = new Point(0, 0);
-            customBossList.ForeColor = Color.White;
-            new Font("Segoe UI", 10, FontStyle.Bold);
         }
 
         private void OpenForm(Form newForm)
@@ -120,8 +124,8 @@ namespace GW2FOX
                     return;
                 }
 
-                IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
-                IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(shortcutPath);
+                WshShell shell = new WshShell();
+                IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
                 shortcut.TargetPath = targetPath;
                 shortcut.WorkingDirectory = Path.GetDirectoryName(targetPath); // Setzen Sie das Arbeitsverzeichnis auf den Ordner der ausf?hrbaren Datei
                 shortcut.Arguments = commandLineParameters;
@@ -181,18 +185,12 @@ namespace GW2FOX
             try
             {
                 // Stop the Timer and dispose of the BossTimer
-                if (bossTimer != null)
-                {
-                    bossTimer.Stop();
-                    bossTimer.Dispose(); // Dispose of the BossTimer
-                }
+                BossTimerService._bossTimer?.Stop();
+                BossTimerService._bossTimer?.Dispose(); // Dispose of the BossTimer
 
                 // Close the Overlay and dispose of it
-                if (overlay != null)
-                {
-                    overlay.Close();
-                    overlay.Dispose(); // Dispose of the Overlay
-                }
+                BossTimerService._overlay?.Close();
+                BossTimerService._overlay?.Dispose(); // Dispose of the Overlay
 
                 // Close the program
                 Application.Exit();

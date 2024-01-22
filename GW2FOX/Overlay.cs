@@ -1,29 +1,24 @@
-﻿using System.Drawing;
-using static GW2FOX.BossTimings;
+﻿using static GW2FOX.BossTimings;
 
 namespace GW2FOX
 {
     public partial class Overlay : Form
     {
         public static ListView CustomBossList { get; private set; }
-
-        private Point mouse_offset;
         private static readonly Color DefaultFontColor = Color.White;
         private static readonly Color PastBossFontColor = Color.OrangeRed;
         private static readonly Color MyAlmostBlackColor = Color.FromArgb(255, 1, 1, 1);
 
-        public Overlay()
-        {
-            InitializeComponent();
-        }
+        private Point mouse_offset;
 
-        public Overlay(ListView listViewItems) : this()
+
+        public Overlay(ListView listViewItems)
         {
             InitializeComponent();
             if (Owner is BaseForm baseForm)
             {
-                baseForm.UpdateCustomBossList(listViewItems);
-            }
+                BossTimerService.UpdateCustomBossList(listViewItems);
+            };
             CustomBossList = listViewItems;
 
             ListView overlayListView = CustomBossList;
