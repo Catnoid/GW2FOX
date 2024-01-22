@@ -686,122 +686,89 @@
                     .ToList();
             }
         }
-
-
-
-        public static void SetBossListFromConfig_Bosses()
-        {
-            try
+    
+    public static void SetBossListFromConfig_Bosses()
             {
-                // Vorhandenen Inhalt aus der Datei lesen
-                string[] lines = File.ReadAllLines(GlobalVariables.FILE_PATH);
-
-                // Index der Zeile mit dem Bossnamen finden
-                int bossIndex = -1;
-                for (int i = 0; i < lines.Length; i++)
+                try
                 {
-                    if (lines[i].StartsWith("Bosses:"))
+                    string[] lines = File.ReadAllLines(GlobalVariables.FILE_PATH);
+
+                    int bossIndex = Array.FindIndex(lines, line => line.StartsWith("Bosses:"));
+                    if (bossIndex != -1 && bossIndex < lines.Length)
                     {
-                        bossIndex = i; // Die aktuelle Zeile enthält den Namen
-                        break;
-                    }
-                }
+                        string bossLine = lines[bossIndex].Replace("Bosses:", "").Trim();
+                        string[] bossNames = bossLine
+                            .Trim('"')
+                            .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(name => name.Trim())
+                            .ToArray();
 
-                // Wenn der Bossname gefunden wird, setze die BossList23
-                if (bossIndex != -1 && bossIndex < lines.Length)
-                {
-                    // Extrahiere die Bosse aus der Zeile zwischen den Anführungszeichen
-                    string bossLine = lines[bossIndex].Replace("Bosses:", "").Trim();
+                        List<string> newBossList = new List<string>();
+                        newBossList.AddRange(bossNames);
 
-                    // Entferne die äußeren Anführungszeichen und teile die Bosse
-                    string[] bossNames = bossLine
-                        .Trim('"')  // Entferne äußere Anführungszeichen
-                        .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(name => name.Trim())  // Entferne führende und abschließende Leerzeichen
-                        .ToArray();
-
-                    // Erstelle eine neue List, um BossList23 zu ersetzen
-                    List<string> newBossList = new List<string>();
-
-                    // Füge jeden Bossnamen zur neuen Liste hinzu
-                    newBossList.AddRange(bossNames);
-
-                    // Iteriere durch die Zeilen, um Timings zu extrahieren
-                    for (int i = bossIndex + 1; i < lines.Length; i++)
-                    {
-                        if (lines[i].StartsWith("Timings:"))
+                        for (int i = bossIndex + 1; i < lines.Length; i++)
                         {
-                            string timingLine = lines[i].Replace("Timings:", "").Trim();
-                            string[] timings = timingLine.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                                .Select(timing => timing.Trim())
-                                .ToArray();
-
-                            // Überprüfe, ob die Anzahl der Timings mit der Anzahl der Bosse übereinstimmt
-                            if (timings.Length == bossNames.Length)
+                            if (lines[i].StartsWith("Timings:"))
                             {
-                                for (int j = 0; j < bossNames.Length; j++)
+                                string timingLine = lines[i].Replace("Timings:", "").Trim();
+                                string[] timings = timingLine.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                                    .Select(timing => timing.Trim())
+                                    .ToArray();
+
+                                if (timings.Length == bossNames.Length)
                                 {
-                                    // Füge das BossEvent zur neuen Liste hinzu
-                                    AddBossEvent(bossNames[j], timings[j], "WBs");
+                                    for (int j = 0; j < bossNames.Length; j++)
+                                    {
+                                        AddBossEvent(bossNames[j], timings[j], "WBs");
+                                    }
                                 }
+                                else
+                                {
+                                    // Handle den Fall, wenn die Anzahl der Timings nicht mit der Anzahl der Bosse übereinstimmt
+                                }
+                                break;
                             }
-                            else
-                            {
-                                // Handle den Fall, wenn die Anzahl der Timings nicht mit der Anzahl der Bosse übereinstimmt
-                            }
-                            break; // Da wir die Timings gefunden haben, können wir die Schleife beenden
                         }
-                    }
 
-                    // Jetzt kannst du die alte BossList23 durch die neue Liste ersetzen
-                    BossList23 = newBossList;
+                        BossList23 = newBossList;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hier kann eine Fehlermeldung protokolliert oder geloggt werden, wenn gewünscht
                 }
             }
-            catch (Exception ex)
+
+            public static void AddBossEvent(string bossName, string timing, string category)
             {
-                // Hier kann eine Fehlermeldung protokolliert oder geloggt werden, wenn gewünscht
-            }
-        }
-
-
-        public static void AddBossEvent(string bossName, string timing, string category)
-        {
-            Events.Add(new BossEvent(bossName, timing, category));
-        }
-
-        public class BossEventGroup
-        {
-
-            public string BossName { get; }
-            public string Category { get; }
-            public TimeSpan Duration { get; set; } 
-            public List<BossEvent> Timings = new List<BossEvent>();
-            
-            
-
-            public BossEventGroup(string bossName, string bossCategory, List<BossEvent> events)
-            {
-                BossName = bossName;
-                Category = bossCategory;
-                Timings = events
-                    .Where(bossEvent => bossEvent.BossName.Equals(BossName))
-                    .OrderBy(span => span.Timing)
-                    .ToList();
-               
+                Events.Add(new BossEvent(bossName, timing, category));
             }
 
+            public class BossEventGroup
+            {
+                public string BossName { get; }
+                public string Category { get; }
+                public TimeSpan Duration { get; set; }
+                public List<BossEvent> Timings = new List<BossEvent>();
 
-
-
+                public BossEventGroup(string bossName, string bossCategory, List<BossEvent> events)
+                {
+                    BossName = bossName;
+                    Category = bossCategory;
+                    Timings = events
+                        .Where(bossEvent => bossEvent.BossName.Equals(BossName))
+                        .OrderBy(span => span.Timing)
+                        .ToList();
+                }
 
             public List<BossEventRun> GetNextRuns()
             {
-                List<BossEvent> nextTimings = Timings
-                    .Where(bossEvent => bossEvent.Timing > GlobalVariables.CURRENT_TIME)
-                    .OrderBy(bossEvent => bossEvent.Timing)  // Sortiere die Läufe nach dem Zeitpunkt
+                List<BossEvent> nextAndFutureTimings = Timings
+                    .Where(bossEvent => bossEvent.Timing >= GlobalVariables.CURRENT_TIME)
+                    .OrderBy(bossEvent => bossEvent.Timing)
                     .ToList();
 
-                if (nextTimings.Count == 0)
+                if (nextAndFutureTimings.Count == 0)
                 {
                     return Timings
                         .Select(bossEvent => new BossEventRun(bossEvent, GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(24, 0, 0)) + bossEvent.Timing))
@@ -811,16 +778,29 @@
 
                 var result = new List<BossEventRun>();
 
-                foreach (var bossEvent in nextTimings)
+                foreach (var bossEvent in nextAndFutureTimings)
                 {
                     var nextRunTime = GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing;
 
+                    // Hier prüfen wir, ob die nächste Ausführung bereits abgeschlossen ist und in die Zukunft verschoben werden muss.
+                    if (nextRunTime <= GlobalVariables.CURRENT_DATE_TIME)
+                    {
+                        nextRunTime = nextRunTime.AddDays(1);
+                    }
+
                     // Wenn es einen weiteren Lauf gibt, füge ihn mit 24 Stunden Verzögerung hinzu
-                    var nextBossEvent = nextTimings.FirstOrDefault(ne => ne.Timing == bossEvent.Timing && ne != bossEvent);
+                    var nextBossEvent = nextAndFutureTimings.FirstOrDefault(ne => ne.Timing == bossEvent.Timing && ne != bossEvent);
 
                     if (nextBossEvent != null)
                     {
-                        var nextNextRunTime = nextRunTime.AddDays(1);  // Füge 24 Stunden hinzu
+                        var nextNextRunTime = GlobalVariables.CURRENT_DATE_TIME.Date + nextBossEvent.Timing;
+
+                        // Hier prüfen wir, ob der nächste Lauf bereits abgeschlossen ist und in die Zukunft verschoben werden muss.
+                        if (nextNextRunTime <= GlobalVariables.CURRENT_DATE_TIME)
+                        {
+                            nextNextRunTime = nextNextRunTime.AddDays(1);
+                        }
+
                         result.Add(new BossEventRun(bossEvent, nextRunTime));
                         result.Add(new BossEventRun(nextBossEvent, nextNextRunTime));
                     }
@@ -834,67 +814,62 @@
                 return result.Take(NEXT_RUNS_TO_SHOW).ToList();
             }
 
+
+
             public List<BossEventRun> GetPreviousRuns()
-            {
-                return Timings
-                    .Where(bossEvent => bossEvent.Timing >= GlobalVariables.CURRENT_TIME.Subtract(new TimeSpan(0, 14, 59)) && bossEvent.Timing <= GlobalVariables.CURRENT_TIME)
-                    .Select(bossEvent => new BossEventRun(bossEvent, GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing))
-                    .Take(PREVIOUS_RUNS_TO_SHOW)
-                    .ToList();
+                {
+                    return Timings
+                        .Where(bossEvent => bossEvent.Timing >= GlobalVariables.CURRENT_TIME.Subtract(new TimeSpan(0, 14, 59)) && bossEvent.Timing <= GlobalVariables.CURRENT_TIME)
+                        .Select(bossEvent => new BossEventRun(bossEvent, GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing))
+                        .Take(PREVIOUS_RUNS_TO_SHOW)
+                        .ToList();
+                }
             }
 
+            public class BossEvent
+            {
+                public string BossName { get; }
+                public TimeSpan Timing { get; }
+                public string Category { get; }
+                public TimeSpan Duration { get; set; }
+
+                public BossEvent(string bossName, string timing, string category) : this(bossName, TimeSpan.Parse(timing), category)
+                {
+                }
+
+                public BossEvent(string bossName, TimeSpan timing, string category)
+                {
+                    BossName = bossName;
+                    Timing = timing;
+                    Category = category;
+                }
+
+                public BossEvent(BossEvent original)
+                {
+                    BossName = original.BossName;
+                    Timing = original.Timing;
+                    Category = original.Category;
+                }
+            }
+
+            public class BossEventRun : BossEvent
+            {
+                public DateTime NextRunTime { get; set; }
+
+                public BossEventRun(BossEvent original, DateTime nextRunTime)
+                    : base(original.BossName, original.Timing, original.Category)
+                {
+                    NextRunTime = nextRunTime;
+                }
+
+                public bool IsPreviewBoss => NextRunTime < DateTime.Now;
+
+                public BossEventRun Clone()
+                {
+                    return new BossEventRun(this, NextRunTime);
+                }
+            }
 
         }
-
-        public class BossEvent
-        {
-            public string BossName { get; }
-            public TimeSpan Timing { get; }
-            public string Category { get; }
-            public TimeSpan Duration { get; set; }
-
-            public BossEvent(string bossName, string timing, string category) : this(bossName, TimeSpan.Parse(timing),
-                category)
-            {
-            }
-
-            public BossEvent(string bossName, TimeSpan timing, string category)
-            {
-                BossName = bossName;
-                Timing = timing;
-                Category = category;
-            }
-            public BossEvent(BossEvent original)
-            {
-                // Kopiere die Eigenschaften des Originals
-                BossName = original.BossName;
-                Timing = original.Timing;
-                Category = original.Category;
-            }
-        }
-
-
-        public class BossEventRun : BossEvent
-        {
-            public DateTime NextRunTime { get; set; }
-
-            public BossEventRun(BossEvent original, DateTime nextRunTime)
-                : base(original.BossName, original.Timing, original.Category)
-            {
-                NextRunTime = nextRunTime;
-            }
-
-            public bool IsPreviewBoss => NextRunTime < DateTime.Now;
-
-            public BossEventRun Clone()
-            {
-                return new BossEventRun(this, NextRunTime);
-            }
-        }
-
-
-       
-
-
     }
-}
+
