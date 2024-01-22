@@ -65,11 +65,9 @@ namespace GW2FOX
 
         public void Timer_Click(object sender, EventArgs e)
         {
-            
-            if (bossTimer != null && bossTimer.IsRunning)
+            if (overlay != null && overlay.Visible) // Überprüfung auf Visible statt IsRunning
             {
-               
-                return;
+                return; // Das Overlay ist bereits geöffnet, daher wird die Methode vorzeitig verlassen.
             }
 
             InitializeCustomBossList();
@@ -78,6 +76,8 @@ namespace GW2FOX
             bossTimer.Start();
             overlay.Show();
         }
+
+
 
 
         protected void ShowAndHideForm(Form newForm)
