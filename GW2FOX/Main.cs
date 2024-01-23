@@ -55,7 +55,6 @@ namespace GW2FOX
         }
 
 
-        // Fόge diese Methode hinzu, um Ausnahmen zu behandeln und Details anzuzeigen
         private void HandleException(Exception ex)
         {
             MessageBox.Show($"An error occurred: {ex.Message}\n\nStack Trace: {ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

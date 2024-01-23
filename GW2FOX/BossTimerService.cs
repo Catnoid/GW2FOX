@@ -1,58 +1,94 @@
-﻿
+﻿using System.Reflection;
 using static GW2FOX.BossTimings;
 
-namespace GW2FOX;
-
-public static class BossTimerService
+namespace GW2FOX
 {
-    private static readonly string TimeZoneId = "W. Europe Standard Time";
-    private static readonly Color DefaultFontColor = Color.Blue;
-    private static readonly Color PastBossFontColor = Color.OrangeRed;
-
-    public static Overlay? _overlay { get; set; }
-    public static BossTimer? _bossTimer { get; set; }
-    private static ListView CustomBossList { get; set; } = new();
-    
-
-    private static ToolTip toolTip = new ToolTip();
-    
-
-
-    static BossTimerService()
+    public static class Extensions
     {
-        Initialize();
+        public static void DoubleBuffered(this ListView listView, bool enable)
+        {
+            if (SystemInformation.TerminalServerSession)
+                return;
+
+            listView.GetType().InvokeMember("DoubleBuffered",
+                BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+                null, listView, new object[] { enable });
+        }
+
+        public static void SetDoubleBuffered(this Control control)
+        {
+            if (SystemInformation.TerminalServerSession)
+                return;
+
+            control.GetType().InvokeMember("DoubleBuffered",
+                BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+                null, control, new object[] { true });
+        }
     }
 
-    public static void UpdateCustomBossList(ListView updatedList)
+
+    public static class BossTimerService
     {
-        CustomBossList = updatedList;
-    }
+        private static readonly string TimeZoneId = "W. Europe Standard Time";
+        private static readonly Color DefaultFontColor = Color.Blue;
+        private static readonly Color PastBossFontColor = Color.OrangeRed;
+
+        public static Overlay? _overlay { get; set; }
+        public static BossTimer? _bossTimer { get; set; }
+        private static ListView CustomBossList { get; set; } = new();
+
+        private static ToolTip toolTip = new ToolTip();
 
 
-    private static void InitializeBossTimerAndOverlay()
-    {
 
-        _bossTimer = new BossTimer(CustomBossList);
+        static BossTimerService()
+        {
+            Initialize();
+        }
 
-        if (_overlay is { IsDisposed: false }) return;
-        _overlay = new Overlay(CustomBossList);
-        _overlay.WindowState = FormWindowState.Normal;
-    }
+        public static void UpdateCustomBossList(ListView updatedList)
+        {
+            CustomBossList = updatedList;
+        }
 
-    private static void InitializeCustomBossList()
-    {
-        CustomBossList = new ListView();
-        CustomBossList.View = View.Details;
-        CustomBossList.Columns.Add("Boss Name", 145);
-        CustomBossList.Columns.Add("Time", 73);
-        CustomBossList.Location = new Point(0, 0);
-        CustomBossList.ForeColor = Color.Black;
-        CustomBossList.MouseClick += ListView_MouseClick;
-        CustomBossList.MouseHover += ListView_MouseHover;
-        CustomBossList.HeaderStyle = ColumnHeaderStyle.None;
-    }
+        private static void InitializeBossTimerAndOverlay()
+        {
+            _bossTimer = new BossTimer(CustomBossList);
 
-    private static void MyMenuItem_Click(object sender, EventArgs e)
+            if (_overlay is { IsDisposed: false }) return;
+            _overlay = new Overlay(CustomBossList);
+            _overlay.WindowState = FormWindowState.Normal;
+        }
+
+        private static void InitializeCustomBossList()
+        {
+            CustomBossList = new ListView();
+
+            // Aktivieren Sie das Double-Buffering für die ListView
+            SetDoubleBuffered(CustomBossList);
+
+            CustomBossList.View = View.Details;
+            CustomBossList.Columns.Add("Boss Name", 145);
+            CustomBossList.Columns.Add("Time", 78);
+            CustomBossList.Location = new Point(0, 0);
+            CustomBossList.ForeColor = Color.Black;
+            CustomBossList.MouseClick += ListView_MouseClick;
+            CustomBossList.MouseHover += ListView_MouseHover;
+            CustomBossList.HeaderStyle = ColumnHeaderStyle.None;
+        }
+
+
+        public static void SetDoubleBuffered(Control control)
+        {
+            if (SystemInformation.TerminalServerSession)
+                return;
+
+            typeof(Control).InvokeMember("DoubleBuffered",
+                BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+                null, control, new object[] { true });
+        }
+
+        private static void MyMenuItem_Click(object sender, EventArgs e)
     {
         var menuItem = (ToolStripMenuItem)sender;
         var contextMenu = (ContextMenuStrip) menuItem.Owner!;
@@ -71,7 +107,7 @@ public static class BossTimerService
         {
             DoneBosses.Add(bossEvent.NextRunTime.Date, [bossEvent.BossName]);
         }
-        
+ 
     }
 
     private static void ListView_MouseClick(object? sender, MouseEventArgs e)
@@ -113,13 +149,19 @@ public static class BossTimerService
             toolTip.Show("Click to copy the Waypoint to clipboard", listView, mousePosition,
                 1000); // tooltip disappears after 1 second (1000 milliseconds)
         }
-        // MessageBox.Show("Waypoint of " + bossEvent.BossName + " has been copied to clipbaord", "Waypoint Copied!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
     }
-    
+
+
+
+
+
     public static void Timer_Click(object sender, EventArgs e)
     {
+        
         Update();
     }
+
 
     private static void Initialize()
     {
@@ -155,6 +197,7 @@ public static class BossTimerService
                 _mezTimeZone = TimeZoneInfo.FindSystemTimeZoneById(TimeZoneId);
                 _timer = new System.Threading.Timer(TimerCallback, null, 0, 1000);
             }
+       
 
             public void Start()
             {
@@ -165,6 +208,15 @@ public static class BossTimerService
             {
                 _timer.Change(Timeout.Infinite, Timeout.Infinite);
             }
+
+        public static void UpdateCustomBossList(ListView updatedList)
+        {
+            CustomBossList = updatedList;
+           
+            BossTimer.UpdateCustomBossList(updatedList);
+        }
+
+
 
             private void TimerCallback(object? state)
             {
@@ -178,12 +230,11 @@ public static class BossTimerService
                 }
             }
 
-
             public void UpdateBossList()
             {
                 if (!_bossList.IsHandleCreated) return;
 
-                _bossList.BeginInvoke((MethodInvoker)delegate
+                _bossList.BeginInvoke((System.Windows.Forms.MethodInvoker)delegate
                 {
                     try
                     {
@@ -284,11 +335,10 @@ public static class BossTimerService
 
 
 
-
-
             private void UpdateListViewItems(List<ListViewItem> listViewItems)
             {
-                _bossList.BeginInvoke((MethodInvoker)delegate
+                _bossList.BeginInvoke((System.Windows.Forms.MethodInvoker)delegate
+
                 {
                     try
                     {
@@ -370,5 +420,6 @@ public static class BossTimerService
                 Dispose(false);
             }
         }
+    }
 
 }
