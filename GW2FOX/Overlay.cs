@@ -8,6 +8,7 @@ namespace GW2FOX
         private static readonly Color DefaultFontColor = Color.White;
         private static readonly Color PastBossFontColor = Color.OrangeRed;
         private static readonly Color MyAlmostBlackColor = Color.FromArgb(255, 1, 1, 1);
+        private ListView overlayListView;
 
         private Point mouse_offset;
 
@@ -84,8 +85,6 @@ namespace GW2FOX
 
         private void OverlayListView_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            // Zeichne den Hintergrund
-            e.DrawBackground();
 
             // Holen Sie sich das BossEventRun-Objekt aus dem ListViewItem.Tag
             if (e.Item.Tag is BossEventRun bossEvent)
@@ -131,13 +130,20 @@ namespace GW2FOX
                 }
             }
 
+
+
+
+
+
+
+
             // Definiere die Position und Größe des Bilds
-            int imageWidth = 18;
-            int imageHeight = 18;
-            Point imageLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + (e.Bounds.Height - imageHeight) / 2);
+            int imageWidth = 17;
+            int imageHeight = 17;
+            Point imageLocation = new Point(e.Bounds.Left + 1, e.Bounds.Top + 5);
 
             // Laden Sie Ihr Bild hier, z.B., ersetzen Sie "IhrBild.png" durch den tatsächlichen Dateipfad oder die Ressourcenreferenz
-            Image bossImage = Properties.Resources.Adam;
+            Image bossImage = Properties.Resources.Waypoint;
 
             // Zeichne das Bild
             e.Graphics.DrawImage(bossImage, new Rectangle(imageLocation, new Size(imageWidth, imageHeight)));
@@ -171,7 +177,10 @@ namespace GW2FOX
 
             // Zeichne den Zeittext ohne Umrandung (darüber, um die Umrandung zu überlagern)
             TextRenderer.DrawText(e.Graphics, timeText, font, timeTextLocation, e.Item.ForeColor, Color.Transparent, TextFormatFlags.Default);
+
         }
+
+        
 
 
         private void OnMouseDown(object sender, MouseEventArgs e)

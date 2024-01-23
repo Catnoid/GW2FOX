@@ -89,9 +89,7 @@ namespace GW2FOX.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-     
-
+        
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
@@ -768,6 +766,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Unlocking_the_Wizard_s_Tower {
             get {
                 object obj = ResourceManager.GetObject("Unlocking the Wizard\'s Tower", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Waypoint {
+            get {
+                object obj = ResourceManager.GetObject("Waypoint", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
