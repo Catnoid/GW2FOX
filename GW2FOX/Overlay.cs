@@ -34,15 +34,15 @@ namespace GW2FOX
             Opacity = 1;
             MouseDown += OnMouseDown;
             MouseMove += OnMouseMove;
-            Width = 230;
-            Height = 310;
+            Width = 240;
+            Height = 316;
             AutoScroll = true;
 
             Panel listViewPanel = new Panel();
             listViewPanel.BackColor = Color.Transparent;
 
             // Berechne die Größe des listViewPanel
-            int panelWidth = (int)(Width);
+            int panelWidth = 238;
             int panelHeight = (int)(Height * 10);
             listViewPanel.Size = new Size(panelWidth, panelHeight);
 
@@ -131,13 +131,25 @@ namespace GW2FOX
                 }
             }
 
+            // Definiere die Position und Größe des Bilds
+            int imageWidth = 18;
+            int imageHeight = 18;
+            Point imageLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + (e.Bounds.Height - imageHeight) / 2);
+
+            // Laden Sie Ihr Bild hier, z.B., ersetzen Sie "IhrBild.png" durch den tatsächlichen Dateipfad oder die Ressourcenreferenz
+            Image bossImage = Properties.Resources.Adam;
+
+            // Zeichne das Bild
+            e.Graphics.DrawImage(bossImage, new Rectangle(imageLocation, new Size(imageWidth, imageHeight)));
+
             // Definiere den Text und die Schriftart
             string mainText = e.Item.Text;
             string timeText = e.Item.SubItems[1].Text;
 
             Font font = e.Item.Font;
 
-            Point mainTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 5);
+            // Definiere die Position des Haupttexts mit Berücksichtigung des Bilds
+            Point mainTextLocation = new Point(imageLocation.X + imageWidth + 2, e.Bounds.Top + 5);
 
             // Zeichne den Haupttext mit grauer Umrandung
             TextRenderer.DrawText(e.Graphics, mainText, font, new Point(mainTextLocation.X - 1, mainTextLocation.Y - 1), Color.Black);
@@ -149,7 +161,7 @@ namespace GW2FOX
             TextRenderer.DrawText(e.Graphics, mainText, font, mainTextLocation, e.Item.ForeColor, Color.Transparent, TextFormatFlags.Default);
 
             // Definiere die Position des Zeittexts mit grauer Umrandung
-            Point timeTextLocation = new Point(e.Bounds.Left + 145, e.Bounds.Top + 5); 
+            Point timeTextLocation = new Point(e.Bounds.Left + 160, e.Bounds.Top + 5);
 
             // Zeichne den Zeittext mit grauer Umrandung
             TextRenderer.DrawText(e.Graphics, timeText, font, new Point(timeTextLocation.X - 1, timeTextLocation.Y - 1), Color.Black);
@@ -160,6 +172,7 @@ namespace GW2FOX
             // Zeichne den Zeittext ohne Umrandung (darüber, um die Umrandung zu überlagern)
             TextRenderer.DrawText(e.Graphics, timeText, font, timeTextLocation, e.Item.ForeColor, Color.Transparent, TextFormatFlags.Default);
         }
+
 
         private void OnMouseDown(object sender, MouseEventArgs e)
         {

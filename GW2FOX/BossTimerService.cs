@@ -68,8 +68,8 @@ namespace GW2FOX
             SetDoubleBuffered(CustomBossList);
 
             CustomBossList.View = View.Details;
-            CustomBossList.Columns.Add("Boss Name", 145);
-            CustomBossList.Columns.Add("Time", 78);
+            CustomBossList.Columns.Add("Boss Name");
+            CustomBossList.Columns.Add("Time");
             CustomBossList.Location = new Point(0, 0);
             CustomBossList.ForeColor = Color.Black;
             CustomBossList.MouseClick += ListView_MouseClick;
