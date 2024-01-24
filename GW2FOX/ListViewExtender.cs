@@ -16,14 +16,14 @@ namespace GW2FOX
         private ListView CustomBossList;
 
 
-        public ListViewExtender(ListView customBossList)
+        public ListViewExtender(ListView CustomBossList)
         {
-            if (customBossList == null)
-                throw new ArgumentNullException("customBossList");
-            if (customBossList.View != View.Details)
-                throw new ArgumentException(null, "customBossList");
+            if (CustomBossList == null)
+                throw new ArgumentNullException("CustomBossList");
+            if (CustomBossList.View != View.Details)
+                throw new ArgumentException(null, "CustomBossList");
 
-            ListView = customBossList;
+            ListView = CustomBossList;
             ListView.OwnerDraw = true;
             ListView.DrawItem += OnDrawItem;
             ListView.DrawSubItem += OnDrawSubItem;

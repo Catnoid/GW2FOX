@@ -71,10 +71,12 @@ namespace GW2FOX
             CustomBossList.MouseClick += ListView_MouseClick;
             CustomBossList.MouseHover += ListView_MouseHover;
             CustomBossList.FullRowSelect = true;
+            CustomBossList.BackColor = Color.White;
+            CustomBossList.Font = new Font("Arial", 10, FontStyle.Regular);
             CustomBossList.Columns.Add("Boss Name");
             CustomBossList.Columns.Add("Time");
             ListViewExtender extender = new ListViewExtender(CustomBossList);
-            extender.AddColumn(new ListViewButtonColumn(0)); // Adjust column index as needed
+            extender.AddColumn(new ListViewButtonColumn(0));
             extender.AddColumn(new ListViewButtonColumn(1));
 
         }
