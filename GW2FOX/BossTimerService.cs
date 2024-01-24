@@ -71,8 +71,6 @@ namespace GW2FOX
             CustomBossList.MouseClick += ListView_MouseClick;
             CustomBossList.MouseHover += ListView_MouseHover;
             CustomBossList.FullRowSelect = true;
-            CustomBossList.Font = new Font("Arial", 12);
-            CustomBossList.Location = new Point(0, 0);
             CustomBossList.Columns.Add("Boss Name");
             CustomBossList.Columns.Add("Time");
             ListViewExtender extender = new ListViewExtender(CustomBossList);

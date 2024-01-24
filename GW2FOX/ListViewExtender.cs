@@ -23,13 +23,13 @@ namespace GW2FOX
             if (customBossList.View != View.Details)
                 throw new ArgumentException(null, "customBossList");
 
-            CustomBossList = customBossList;
-            CustomBossList.OwnerDraw = true;
-            CustomBossList.DrawItem += OnDrawItem;
-            CustomBossList.DrawSubItem += OnDrawSubItem;
-            CustomBossList.DrawColumnHeader += OnDrawColumnHeader;
-            CustomBossList.MouseMove += OnMouseMove;
-            CustomBossList.MouseClick += OnMouseClick;
+            ListView = customBossList;
+            ListView.OwnerDraw = true;
+            ListView.DrawItem += OnDrawItem;
+            ListView.DrawSubItem += OnDrawSubItem;
+            ListView.DrawColumnHeader += OnDrawColumnHeader;
+            ListView.MouseMove += OnMouseMove;
+            ListView.MouseClick += OnMouseClick;
             Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 2);
         }
         public virtual Font Font { get; private set; }

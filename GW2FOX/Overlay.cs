@@ -27,8 +27,6 @@ namespace GW2FOX
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.Manual;
             Opacity = 1;
-            Width = 240;
-            Height = 316;
             AutoScroll = true;
 
 
