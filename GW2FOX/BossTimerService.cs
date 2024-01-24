@@ -298,7 +298,8 @@ namespace GW2FOX
                                 $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
 
 
-                            var listViewItem = new ListViewItem(new[] { bossEvent.BossName, remainingTimeFormat });
+                            var listViewItem = new ListViewItem(bossEvent.BossName);
+                            listViewItem.SubItems.Add(remainingTimeFormat); // Hier wird ein Unterelement hinzugefügt
                             listViewItem.Tag = bossEvent;
 
                             // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
