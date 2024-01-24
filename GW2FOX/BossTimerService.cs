@@ -64,18 +64,30 @@ namespace GW2FOX
         {
             CustomBossList = new ListView();
 
-            // Aktivieren Sie das Double-Buffering für die ListView
+            // Activate double buffering for the ListView
             SetDoubleBuffered(CustomBossList);
 
             CustomBossList.View = View.Details;
-            CustomBossList.Columns.Add("Boss Name");
-            CustomBossList.Columns.Add("Time");
+
+            // Instead of using standard ColumnHeader, use your custom ListViewColumn
+            var bossNameColumn = new ListViewButtonColumn(0) { Text = "Boss Name" };
+            var timeColumn = new ListViewButtonColumn(1) { Text = "Time" };
+
+
             CustomBossList.Location = new Point(0, 0);
             CustomBossList.ForeColor = Color.Black;
             CustomBossList.MouseClick += ListView_MouseClick;
             CustomBossList.MouseHover += ListView_MouseHover;
-            CustomBossList.HeaderStyle = ColumnHeaderStyle.None;
+            CustomBossList.FullRowSelect = true;
+
+            CustomBossList.Font = new Font("Arial", 12);
+            CustomBossList.Location = new Point(0, 0);
+            // Add your custom columns to the ListViewExtender
+            ListViewExtender extender = new ListViewExtender(CustomBossList);
+            extender.AddColumn(bossNameColumn);
+            extender.AddColumn(timeColumn);
         }
+
 
 
         public static void SetDoubleBuffered(Control control)
@@ -151,8 +163,6 @@ namespace GW2FOX
         }
         
     }
-
-
 
 
 
@@ -295,12 +305,13 @@ namespace GW2FOX
 
                                 Color fontColor = GetFontColor(bossEvent);
 
-                                var listViewItem = new ListViewItem(new[] { bossEvent.BossName, remainingTimeFormat });
-                                listViewItem.ForeColor = fontColor;
-                                listViewItem.Tag = bossEvent;
+                            var listViewItem = new ListViewItem(bossEvent.BossName);
+                            listViewItem.SubItems.Add(remainingTimeFormat); // Hier wird ein Unterelement hinzugefügt
+                            listViewItem.ForeColor = fontColor;
+                            listViewItem.Tag = bossEvent;
 
-                                // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
-                                if (HasSameTimeAndCategory(allBosses, bossEvent))
+                            // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
+                            if (HasSameTimeAndCategory(allBosses, bossEvent))
                                 {
                                     listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
                                 }
