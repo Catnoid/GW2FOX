@@ -295,19 +295,24 @@ namespace GW2FOX
             // Die Größe auf 17x17 Pixel setzen
             Rectangle imageBounds = new Rectangle(bounds.Location, new Size(17, 17));
 
+            // Falls "hot" aktiviert ist, das Bild um 3 Pixel vergrößern
+            if (hot)
+            {
+                imageBounds.Inflate(3, 3);
+            }
+
             // Hintergrund zeichnen
             g.DrawImage(backgroundImage, imageBounds);
 
-            // Falls "hot" aktiviert ist, könntest du hier zusätzliche Effekte hinzufügen
+            // Falls "hot" aktiviert ist, Text anzeigen
             if (hot)
             {
-                // Beispiel: Ein Rechteck um den Button zeichnen, wenn die Maus darüber ist
-                using (Pen pen = new Pen(Color.Red, 2))
-                {
-                    g.DrawRectangle(pen, bounds);
-                }
+               
+             
             }
         }
+
+
 
 
 
