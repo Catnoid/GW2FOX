@@ -30,8 +30,6 @@ namespace GW2FOX
     public static class BossTimerService
     {
         private static readonly string TimeZoneId = "W. Europe Standard Time";
-        private static readonly Color DefaultFontColor = Color.Blue;
-        private static readonly Color PastBossFontColor = Color.OrangeRed;
 
         public static Overlay? _overlay { get; set; }
         public static BossTimer? _bossTimer { get; set; }
@@ -132,9 +130,10 @@ namespace GW2FOX
         if (e.Button == MouseButtons.Left)
         {
             // Assuming each ListViewItem.Tag holds the corresponding BossEventRun
+            if (bossEvent.Waypoint.Equals("")) return;
             var textToCopy = bossEvent.Waypoint; // Use 'waypoint' property of BossEventRun instead.
             Clipboard.SetText(textToCopy);
-            MessageBox.Show("Waypoint of " + bossEvent.BossName + " has been copied to clipbaord", "Waypoint Copied!",
+            MessageBox.Show("Waypoint of \"" + bossEvent.BossName + "\" has been copied to clipbaord", "Waypoint Copied!",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         } else if (e.Button == MouseButtons.Right)
         {
@@ -158,11 +157,13 @@ namespace GW2FOX
         if (!"".Equals(bossEvent.Waypoint))
         {
             // Show the tooltip
-            toolTip.Show("Click to copy the Waypoint to clipboard", listView, mousePosition,
+            toolTip.Show("Left Click to copy the Waypoint to clipboard\nRight Click to remove from the list", listView, mousePosition,
                 1000); // tooltip disappears after 1 second (1000 milliseconds)
         }
         
     }
+
+
 
 
 
@@ -288,8 +289,6 @@ namespace GW2FOX
 
                         foreach (var bossEvent in allBosses)
                         {
-                            string bossNameKey = $"{bossEvent.BossName}_{bossEvent.NextRunTime}";
-
                             // Calculate the end time of the boss event based on the current time
                             DateTime timeToShow = bossEvent.NextRunTime;
                             if (bossEvent.IsPreviewBoss)
@@ -297,31 +296,28 @@ namespace GW2FOX
                                 timeToShow = bossEvent.NextRunTimeEnding;
                             }
 
-                            
-                                // Calculate remaining time until the end of the boss event
-                                TimeSpan remainingTime = timeToShow - GlobalVariables.CURRENT_DATE_TIME;
 
-                                string remainingTimeFormat = $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
+                            // Calculate remaining time until the end of the boss event
+                            TimeSpan remainingTime = timeToShow - GlobalVariables.CURRENT_DATE_TIME;
 
-                                Color fontColor = GetFontColor(bossEvent);
+                            string remainingTimeFormat =
+                                $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
 
-                            var listViewItem = new ListViewItem(bossEvent.BossName);
-                            listViewItem.SubItems.Add(remainingTimeFormat); // Hier wird ein Unterelement hinzugefügt
-                            listViewItem.ForeColor = fontColor;
+
+                            var listViewItem = new ListViewItem(new[] { bossEvent.BossName, remainingTimeFormat });
                             listViewItem.Tag = bossEvent;
 
                             // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
                             if (HasSameTimeAndCategory(allBosses, bossEvent))
-                                {
-                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
-                                }
-                                else
-                                {
-                                    listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                                }
+                            {
+                                listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Italic | FontStyle.Bold);
+                            }
+                            else
+                            {
+                                listViewItem.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                            }
 
-                                listViewItems.Add(listViewItem);
-                            
+                            listViewItems.Add(listViewItem);
                         }
 
                         UpdateListViewItems(listViewItems);
@@ -372,44 +368,6 @@ namespace GW2FOX
             {
                 Console.WriteLine($"Exception in {methodName}: {ex}");
                 // Consider logging the exception with more details
-            }
-
-            private TimeSpan GetRemainingTime(DateTime currentTimeMez, DateTime adjustedTiming, BossEventRun bossEvent)
-            {
-                return adjustedTiming - currentTimeMez;
-            }
-
-            private static Color GetFontColor(BossEventRun bossEvent)
-            {
-                
-
-
-                if (bossEvent.IsPreviewBoss)
-                {
-                    return PastBossFontColor;
-                }
-
-                switch (bossEvent.Category)
-                {
-                    case "Maguuma":
-                        return Color.LimeGreen;
-                    case "Desert":
-                        return Color.DeepPink;
-                    case "WBs":
-                        return Color.Black;
-                    case "Ice":
-                        return Color.DeepSkyBlue;
-                    case "Cantha":
-                        return Color.Blue;
-                    case "SotO":
-                        return Color.Orange;
-                    case "LWS2":
-                        return Color.LightYellow;
-                    case "LWS3":
-                        return Color.ForestGreen;
-                    default:
-                        return DefaultFontColor;
-                }
             }
 
 
