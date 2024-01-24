@@ -277,13 +277,40 @@ namespace GW2FOX
             if ((this.ListView.GetItemAt(mouse.X, mouse.Y) == e.Item) &&
                 (e.Item.GetSubItemAt(mouse.X, mouse.Y) == e.SubItem))
             {
-                ButtonRenderer.DrawButton(e.Graphics, e.Bounds, e.SubItem.Text, Font, true, PushButtonState.Hot);
+                // Verwende die eigene Methode für den Button mit Hintergrundbild (ohne Text)
+                DrawImageButton(e.Graphics, e.Bounds, true);
                 this.hot = e.Bounds;
             }
             else
             {
-                ButtonRenderer.DrawButton(e.Graphics, e.Bounds, e.SubItem.Text, Font, false, PushButtonState.Default);
+                // Verwende die eigene Methode für den Button mit Hintergrundbild (ohne Text)
+                DrawImageButton(e.Graphics, e.Bounds, false);
             }
         }
+        private void DrawImageButton(Graphics g, Rectangle bounds, bool hot)
+        {
+            // Das Bild aus den Ressourcen laden
+            Image backgroundImage = Properties.Resources.Waypoint;
+
+            // Die Größe auf 17x17 Pixel setzen
+            Rectangle imageBounds = new Rectangle(bounds.Location, new Size(17, 17));
+
+            // Hintergrund zeichnen
+            g.DrawImage(backgroundImage, imageBounds);
+
+            // Falls "hot" aktiviert ist, könntest du hier zusätzliche Effekte hinzufügen
+            if (hot)
+            {
+                // Beispiel: Ein Rechteck um den Button zeichnen, wenn die Maus darüber ist
+                using (Pen pen = new Pen(Color.Red, 2))
+                {
+                    g.DrawRectangle(pen, bounds);
+                }
+            }
+        }
+
+
+
+
     }
 }

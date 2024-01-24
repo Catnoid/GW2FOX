@@ -30,8 +30,7 @@ namespace GW2FOX
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.Manual;
             Opacity = 1;
-            MouseDown += OnMouseDown;
-            MouseMove += OnMouseMove;
+            
             Width = 270;
             Height = 310;
             AutoScroll = true;
@@ -132,17 +131,7 @@ namespace GW2FOX
                 }
             }
 
-            // Definiere die Position und Größe des Bilds
-            int imageWidth = 18;
-            int imageHeight = 18;
-            Point imageLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 5 + (e.Bounds.Height - imageHeight) / 2);
-
-            // Laden Sie Ihr Bild hier, z.B., ersetzen Sie "IhrBild.png" durch den tatsächlichen Dateipfad oder die Ressourcenreferenz
-            Image bossImage = Properties.Resources.Waypoint;
-
-            // Zeichne das Bild
-            e.Graphics.DrawImage(bossImage, new Rectangle(imageLocation, new Size(imageWidth, imageHeight)));
-
+       
             // Definiere den Text und die Schriftart
             string mainText = e.Item.Text;
             string timeText = e.Item.SubItems[1].Text;
@@ -150,7 +139,7 @@ namespace GW2FOX
             Font font = e.Item.Font;
 
             // Definiere die Position des Haupttexts mit Berücksichtigung des Bilds
-            Point mainTextLocation = new Point(imageLocation.X + imageWidth + 2, e.Bounds.Top + 5);
+            Point mainTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 5);
 
             // Zeichne den Haupttext mit grauer Umrandung
             TextRenderer.DrawText(e.Graphics, mainText, font, new Point(mainTextLocation.X - 1, mainTextLocation.Y - 1), Color.Black);
@@ -177,21 +166,6 @@ namespace GW2FOX
 
         
 
-
-        private void OnMouseDown(object sender, MouseEventArgs e)
-        {
-            mouse_offset = new Point(-e.X, -e.Y);
-        }
-
-        private void OnMouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                Point mousePos = MousePosition;
-                mousePos.Offset(mouse_offset.X, mouse_offset.Y);
-                Location = mousePos;
-            }
-        }
 
         public void CloseOverlay()
         {
