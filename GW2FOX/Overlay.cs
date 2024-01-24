@@ -12,7 +12,7 @@ namespace GW2FOX
 {
     public partial class Overlay : Form
     {
-        public static ListView CustomBossList { get; private set; }
+      
         private static readonly Color MyAlmostBlackColor = Color.FromArgb(255, 1, 1, 1);
         
         private ListViewExtender extender;
