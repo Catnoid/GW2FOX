@@ -68,26 +68,20 @@ namespace GW2FOX
             SetDoubleBuffered(CustomBossList);
 
             CustomBossList.View = View.Details;
-
-            // Instead of using standard ColumnHeader, use your custom ListViewColumn
-            var bossNameColumn = new ListViewButtonColumn(0) { Text = "Boss Name" };
-            var timeColumn = new ListViewButtonColumn(1) { Text = "Time" };
-
-
             CustomBossList.Location = new Point(0, 0);
             CustomBossList.ForeColor = Color.Black;
             CustomBossList.MouseClick += ListView_MouseClick;
             CustomBossList.MouseHover += ListView_MouseHover;
             CustomBossList.FullRowSelect = true;
-
             CustomBossList.Font = new Font("Arial", 12);
             CustomBossList.Location = new Point(0, 0);
-            // Add your custom columns to the ListViewExtender
+            CustomBossList.Columns.Add("Boss Name");
+            CustomBossList.Columns.Add("Time");
             ListViewExtender extender = new ListViewExtender(CustomBossList);
-            extender.AddColumn(bossNameColumn);
-            extender.AddColumn(timeColumn);
-        }
+            extender.AddColumn(new ListViewButtonColumn(0)); // Adjust column index as needed
+            extender.AddColumn(new ListViewButtonColumn(1));
 
+        }
 
 
         public static void SetDoubleBuffered(Control control)
