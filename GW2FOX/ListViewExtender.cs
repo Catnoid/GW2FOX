@@ -12,216 +12,273 @@ namespace GW2FOX
 {
     public class ListViewExtender : IDisposable
     {
-        private readonly Dictionary<int, ListViewColumn> _columns = new Dictionary<int, ListViewColumn>();
-        private ListView CustomBossList;
+        private readonly Dictionary<int, ListViewColumn> columns = new Dictionary<int, ListViewColumn>();
 
+        private bool disposed;
 
-        public ListViewExtender(ListView CustomBossList)
+        public ListViewExtender(ListView listView)
         {
-            if (CustomBossList == null)
-                throw new ArgumentNullException("CustomBossList");
-            if (CustomBossList.View != View.Details)
-                throw new ArgumentException(null, "CustomBossList");
+            if (listView == null)
+                throw new ArgumentNullException("listView");
 
-            ListView = CustomBossList;
-            ListView.OwnerDraw = true;
-            ListView.DrawItem += OnDrawItem;
-            ListView.DrawSubItem += OnDrawSubItem;
-            ListView.DrawColumnHeader += OnDrawColumnHeader;
-            ListView.MouseMove += OnMouseMove;
-            ListView.MouseClick += OnMouseClick;
-            Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 2);
+            if (listView.View != View.Details)
+                throw new ArgumentException(null, "listView");
+
+            this.ListView = listView;
+
+            this.ListView.OwnerDraw = true;
+            this.ListView.DrawItem += OnDrawItem;
+            this.ListView.DrawSubItem += OnDrawSubItem;
+            this.ListView.DrawColumnHeader += OnDrawColumnHeader;
+            this.ListView.MouseMove += OnMouseMove;
+            this.ListView.MouseClick += OnMouseClick;
+
+            this.Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 2);
         }
+
         public virtual Font Font { get; private set; }
+
         public ListView ListView { get; private set; }
+
         protected virtual void OnMouseClick(object sender, MouseEventArgs e)
         {
             ListViewItem item;
             ListViewItem.ListViewSubItem sub;
-            ListViewColumn column = GetColumnAt(e.X, e.Y, out item, out sub);
+            ListViewColumn column = this.GetColumnAt(e.X, e.Y, out item, out sub);
+
             if (column != null)
             {
                 column.MouseClick(e, item, sub);
             }
         }
+
         public ListViewColumn GetColumnAt(int x, int y, out ListViewItem item, out ListViewItem.ListViewSubItem subItem)
         {
             subItem = null;
             item = ListView.GetItemAt(x, y);
+
             if (item == null)
                 return null;
+
             subItem = item.GetSubItemAt(x, y);
+
             if (subItem == null)
                 return null;
+
             for (int i = 0; i < item.SubItems.Count; i++)
             {
                 if (item.SubItems[i] == subItem)
-                    return GetColumn(i);
+                {
+                    return this.GetColumn(i);
+                }
             }
+
             return null;
         }
+
         protected virtual void OnMouseMove(object sender, MouseEventArgs e)
         {
             ListViewItem item;
             ListViewItem.ListViewSubItem sub;
-            ListViewColumn column = GetColumnAt(e.X, e.Y, out item, out sub);
+            ListViewColumn column = this.GetColumnAt(e.X, e.Y, out item, out sub);
+
             if (column != null)
             {
                 column.Invalidate(item, sub);
                 return;
             }
+
             if (item != null)
             {
-                ListView.Invalidate(item.Bounds);
+                this.ListView.Invalidate(item.Bounds);
             }
         }
+
         protected virtual void OnDrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
         {
             e.DrawDefault = true;
         }
+
         protected virtual void OnDrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
-            ListViewColumn column = GetColumn(e.ColumnIndex);
+            ListViewColumn column = this.GetColumn(e.ColumnIndex);
+
             if (column == null)
             {
                 e.DrawDefault = true;
                 return;
             }
+
             column.Draw(e);
         }
+
         protected virtual void OnDrawItem(object sender, DrawListViewItemEventArgs e)
         {
             // do nothing
         }
+
         public void AddColumn(ListViewColumn column)
         {
             if (column == null)
                 throw new ArgumentNullException("column");
+
             column.Extender = this;
-            _columns[column.ColumnIndex] = column;
+            this.columns[column.ColumnIndex] = column;
         }
+
         public ListViewColumn GetColumn(int index)
         {
             ListViewColumn column;
-            return _columns.TryGetValue(index, out column) ? column : null;
+
+            return this.columns.TryGetValue(index, out column)
+                ? column
+                : null;
         }
-        public IEnumerable Columns
+
+        public IEnumerable<ListViewColumn> Columns
         {
-            get
-            {
-                return _columns.Values;
-            }
+            get { return this.columns.Values; }
         }
-        public virtual void Dispose()
+
+        public void Dispose()
         {
-            if (Font != null)
+            this.Dispose(true);
+
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing && !this.disposed)
             {
-                Font.Dispose();
-                Font = null;
+                if (this.Font != null)
+                {
+                    this.Font.Dispose();
+                    this.Font = null;
+                }
+
+                this.disposed = true;
             }
         }
     }
+
     public abstract class ListViewColumn
     {
-        public event EventHandler Click;
+        public event EventHandler<ListViewColumnMouseEventArgs> Click;
+
         protected ListViewColumn(int columnIndex)
         {
             if (columnIndex < 0)
                 throw new ArgumentException(null, "columnIndex");
-            ColumnIndex = columnIndex;
+
+            this.ColumnIndex = columnIndex;
         }
+
         public virtual ListViewExtender Extender { get; protected internal set; }
+
         public int ColumnIndex { get; private set; }
+
         public virtual Font Font
         {
-            get
-            {
-                return Extender == null ? null : Extender.Font;
-            }
+            get { return this.Extender == null ? null : this.Extender.Font; }
         }
+
         public ListView ListView
         {
-            get
-            {
-                return Extender == null ? null : Extender.ListView;
-            }
+            get { return this.Extender == null ? null : this.Extender.ListView; }
         }
+
         public abstract void Draw(DrawListViewSubItemEventArgs e);
+
         public virtual void MouseClick(MouseEventArgs e, ListViewItem item, ListViewItem.ListViewSubItem subItem)
         {
-            if (Click != null)
+            if (this.Click != null)
             {
-                Click(this, new ListViewColumnMouseEventArgs(e, item, subItem));
+                this.Click(this, new ListViewColumnMouseEventArgs(e, item, subItem));
             }
         }
+
         public virtual void Invalidate(ListViewItem item, ListViewItem.ListViewSubItem subItem)
         {
-            if (Extender != null)
+            if (this.Extender != null)
             {
-                Extender.ListView.Invalidate(subItem.Bounds);
+                this.Extender.ListView.Invalidate(subItem.Bounds);
             }
         }
     }
+
     public class ListViewColumnMouseEventArgs : MouseEventArgs
     {
         public ListViewColumnMouseEventArgs(MouseEventArgs e, ListViewItem item, ListViewItem.ListViewSubItem subItem)
             : base(e.Button, e.Clicks, e.X, e.Y, e.Delta)
         {
-            Item = item;
-            SubItem = subItem;
+            this.Item = item;
+            this.SubItem = subItem;
         }
+
         public ListViewItem Item { get; private set; }
+
         public ListViewItem.ListViewSubItem SubItem { get; private set; }
     }
+
     public class ListViewButtonColumn : ListViewColumn
     {
-        private Rectangle _hot = Rectangle.Empty;
+        private Rectangle hot = Rectangle.Empty;
+
         public ListViewButtonColumn(int columnIndex)
             : base(columnIndex)
         {
         }
+
         public bool FixedWidth { get; set; }
+
         public bool DrawIfEmpty { get; set; }
+
         public override ListViewExtender Extender
         {
-            get
-            {
-                return base.Extender;
-            }
+            get { return base.Extender; }
+
             protected internal set
             {
                 base.Extender = value;
-                if (FixedWidth)
+
+                if (this.FixedWidth)
                 {
-                    base.Extender.ListView.ColumnWidthChanging += OnColumnWidthChanging;
+                    base.Extender.ListView.ColumnWidthChanging += this.OnColumnWidthChanging;
                 }
             }
         }
+
         protected virtual void OnColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
             if (e.ColumnIndex == ColumnIndex)
             {
                 e.Cancel = true;
-                e.NewWidth = ListView.Columns[e.ColumnIndex].Width;
+                e.NewWidth = this.ListView.Columns[e.ColumnIndex].Width;
             }
         }
+
         public override void Draw(DrawListViewSubItemEventArgs e)
         {
-            if (_hot != Rectangle.Empty)
+            if (this.hot != Rectangle.Empty)
             {
-                if (_hot != e.Bounds)
+                if (this.hot != e.Bounds)
                 {
-                    ListView.Invalidate(_hot);
-                    _hot = Rectangle.Empty;
+                    this.ListView.Invalidate(this.hot);
+                    this.hot = Rectangle.Empty;
                 }
             }
-            if ((!DrawIfEmpty) && (string.IsNullOrEmpty(e.SubItem.Text)))
+
+            if ((!this.DrawIfEmpty) && (string.IsNullOrEmpty(e.SubItem.Text)))
                 return;
+
             Point mouse = e.Item.ListView.PointToClient(Control.MousePosition);
-            if ((ListView.GetItemAt(mouse.X, mouse.Y) == e.Item) && (e.Item.GetSubItemAt(mouse.X, mouse.Y) == e.SubItem))
+
+            if ((this.ListView.GetItemAt(mouse.X, mouse.Y) == e.Item) &&
+                (e.Item.GetSubItemAt(mouse.X, mouse.Y) == e.SubItem))
             {
                 ButtonRenderer.DrawButton(e.Graphics, e.Bounds, e.SubItem.Text, Font, true, PushButtonState.Hot);
-                _hot = e.Bounds;
+                this.hot = e.Bounds;
             }
             else
             {
@@ -230,4 +287,3 @@ namespace GW2FOX
         }
     }
 }
-

@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overlay));
-            listView1 = new ListView();
             SuspendLayout();
-            // 
-            // listView1
-            // 
-            listView1.FullRowSelect = true;
-            resources.ApplyResources(listView1, "listView1");
-            listView1.Name = "listView1";
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
             // 
             // Overlay
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            Controls.Add(listView1);
             Cursor = Cursors.SizeAll;
             ForeColor = SystemColors.ControlText;
             MaximizeBox = false;
@@ -59,7 +49,5 @@
         }
 
         #endregion
-
-        private ListView listView1;
     }
 }

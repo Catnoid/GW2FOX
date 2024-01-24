@@ -325,10 +325,47 @@
             string waypoint = "")
             : BossEvent(bossName, timing, category, waypoint)
         {
+            
+            private static readonly Color DefaultFontColor = Color.White;
+            private static readonly Color PastBossFontColor = Color.OrangeRed;
+            
             public DateTime NextRunTime { get; set; } = nextRunTime;
 
             public bool IsPreviewBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
             public DateTime NextRunTimeEnding => NextRunTime.AddMinutes(14).AddSeconds(59);
+
+            public Color getForeColor()
+            {
+                if (IsPreviewBoss)
+                {
+                    return PastBossFontColor; // Setzen Sie die Farbe auf OrangeRed für PreviewBosses
+                }
+                else
+                {
+                    // Setzen Sie die Farbe basierend auf der Kategorie des BossEvents
+                    switch (Category)
+                    {
+                        case "Maguuma":
+                            return Color.LimeGreen;
+                        case "Desert":
+                            return Color.DeepPink;
+                        case "WBs":
+                            return Color.WhiteSmoke;
+                        case "Ice":
+                            return Color.DeepSkyBlue;
+                        case "Cantha":
+                            return Color.Blue;
+                        case "SotO":
+                            return Color.Yellow;
+                        case "LWS2":
+                            return Color.LightYellow;
+                        case "LWS3":
+                            return Color.ForestGreen;
+                        default:
+                            return DefaultFontColor;
+                    }
+                }
+            }
         }
     }
     

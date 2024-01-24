@@ -34,6 +34,7 @@ namespace GW2FOX
         public static Overlay? _overlay { get; set; }
         public static BossTimer? _bossTimer { get; set; }
         private static ListView CustomBossList { get; set; } = new();
+        public static ListViewExtender extender { get; private set; }
 
         private static ToolTip toolTip = new ToolTip();
 
@@ -68,17 +69,23 @@ namespace GW2FOX
             CustomBossList.View = View.Details;
             CustomBossList.Location = new Point(0, 0);
             CustomBossList.ForeColor = Color.Black;
-            CustomBossList.MouseClick += ListView_MouseClick;
-            CustomBossList.MouseHover += ListView_MouseHover;
+            // CustomBossList.MouseClick += ListView_MouseClick;
+            // CustomBossList.MouseHover += ListView_MouseHover;
             CustomBossList.FullRowSelect = true;
             CustomBossList.BackColor = Color.White;
             CustomBossList.Font = new Font("Arial", 10, FontStyle.Regular);
-            CustomBossList.Columns.Add("Boss Name");
-            CustomBossList.Columns.Add("Time");
-            ListViewExtender extender = new ListViewExtender(CustomBossList);
-            extender.AddColumn(new ListViewButtonColumn(0));
-            extender.AddColumn(new ListViewButtonColumn(1));
+            CustomBossList.Columns.Add("Button", 20, HorizontalAlignment.Left);
+            CustomBossList.Columns.Add("Boss Name", 150, HorizontalAlignment.Left);
+            var timeHeader = CustomBossList.Columns.Add("Time");
+            timeHeader.TextAlign = HorizontalAlignment.Right;
+            CustomBossList.FullRowSelect = true;
+            extender = new ListViewExtender(CustomBossList);
+            var listViewButtonColumn = new ListViewButtonColumn(0);
+            listViewButtonColumn.Click += ListView_MouseClick;
+            listViewButtonColumn.FixedWidth = true;
+            extender.AddColumn(listViewButtonColumn);
 
+            
         }
 
 
@@ -114,10 +121,11 @@ namespace GW2FOX
  
     }
 
-    private static void ListView_MouseClick(object? sender, MouseEventArgs e)
+    private static void ListView_MouseClick(object? sender, ListViewColumnMouseEventArgs e)
     {
         
-        var listView = sender as ListView;
+        var listViewButtonColumn = sender as ListViewButtonColumn;
+        var listView = listViewButtonColumn.ListView;
         var selectedItem = listView?.GetItemAt(e.X, e.Y);
         if (listView == null) return;
         if (selectedItem is not { Tag: BossEventRun bossEvent }) return;
@@ -298,9 +306,12 @@ namespace GW2FOX
                                 $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
 
 
-                            var listViewItem = new ListViewItem(bossEvent.BossName);
+                            var listViewItem = new ListViewItem("btn", 0);
+                            listViewItem.SubItems.Add(bossEvent.BossName); // Hier wird ein Unterelement hinzugefügt
                             listViewItem.SubItems.Add(remainingTimeFormat); // Hier wird ein Unterelement hinzugefügt
+                            listViewItem.ForeColor = bossEvent.getForeColor();
                             listViewItem.Tag = bossEvent;
+                            
 
                             // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
                             if (HasSameTimeAndCategory(allBosses, bossEvent))
