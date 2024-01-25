@@ -83,6 +83,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap AllMetas {
+            get {
+                object obj = ResourceManager.GetObject("AllMetas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Ascension {
             get {
                 object obj = ResourceManager.GetObject("Ascension", resourceCulture);
@@ -186,6 +196,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Claw {
             get {
                 object obj = ResourceManager.GetObject("Claw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Clear {
+            get {
+                object obj = ResourceManager.GetObject("Clear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,6 +543,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Metainfusion {
+            get {
+                object obj = ResourceManager.GetObject("Metainfusion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap New_Loamhurst {
             get {
                 object obj = ResourceManager.GetObject("New Loamhurst", resourceCulture);
@@ -743,6 +773,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap TimerOverlay {
+            get {
+                object obj = ResourceManager.GetObject("TimerOverlay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Ulgoth {
             get {
                 object obj = ResourceManager.GetObject("Ulgoth", resourceCulture);
@@ -806,6 +846,26 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap WBsheaderonetime {
             get {
                 object obj = ResourceManager.GetObject("WBsheaderonetime", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Worldbosses {
+            get {
+                object obj = ResourceManager.GetObject("Worldbosses", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WorldMeta {
+            get {
+                object obj = ResourceManager.GetObject("WorldMeta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -272,7 +272,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(1377, 12);
+            button6.Location = new Point(1377, 164);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 12;
@@ -1472,63 +1472,73 @@
             // 
             // button27
             // 
+            button27.BackColor = SystemColors.ActiveCaptionText;
+            button27.BackgroundImage = Properties.Resources.Metainfusion;
+            button27.FlatStyle = FlatStyle.Flat;
             button27.Location = new Point(12, 12);
             button27.Name = "button27";
-            button27.Size = new Size(131, 23);
+            button27.Size = new Size(130, 33);
             button27.TabIndex = 184;
-            button27.Text = "MetaInfusin";
-            button27.UseVisualStyleBackColor = true;
+            button27.UseVisualStyleBackColor = false;
             button27.Click += Meta_Click;
             // 
             // button42
             // 
-            button42.Location = new Point(12, 41);
+            button42.BackColor = SystemColors.ActiveCaptionText;
+            button42.BackgroundImage = Properties.Resources.Worldbosses;
+            button42.FlatStyle = FlatStyle.Flat;
+            button42.Location = new Point(12, 51);
             button42.Name = "button42";
-            button42.Size = new Size(130, 23);
+            button42.Size = new Size(130, 33);
             button42.TabIndex = 185;
-            button42.Text = "Worldbosses";
-            button42.UseVisualStyleBackColor = true;
+            button42.UseVisualStyleBackColor = false;
             button42.Click += World_Click;
             // 
             // button63
             // 
-            button63.ForeColor = Color.Red;
-            button63.Location = new Point(10, 128);
+            button63.BackColor = SystemColors.ActiveCaptionText;
+            button63.BackgroundImage = Properties.Resources.Clear;
+            button63.FlatStyle = FlatStyle.Flat;
+            button63.ForeColor = Color.Black;
+            button63.Location = new Point(148, 51);
             button63.Name = "button63";
-            button63.Size = new Size(131, 23);
+            button63.Size = new Size(131, 33);
             button63.TabIndex = 186;
-            button63.Text = "Clear All";
-            button63.UseVisualStyleBackColor = true;
+            button63.UseVisualStyleBackColor = false;
             button63.Click += ClearAll_Click;
             // 
             // button65
             // 
-            button65.Location = new Point(11, 70);
+            button65.BackgroundImage = Properties.Resources.WorldMeta;
+            button65.FlatStyle = FlatStyle.Flat;
+            button65.Location = new Point(12, 90);
             button65.Name = "button65";
-            button65.Size = new Size(130, 23);
+            button65.Size = new Size(130, 33);
             button65.TabIndex = 187;
-            button65.Text = "World + Meta";
             button65.UseVisualStyleBackColor = true;
             button65.Click += Mixed_Click;
             // 
             // button66
             // 
-            button66.Location = new Point(10, 165);
+            button66.BackColor = SystemColors.ActiveCaptionText;
+            button66.BackgroundImage = Properties.Resources.TimerOverlay;
+            button66.FlatStyle = FlatStyle.Flat;
+            button66.Location = new Point(284, 12);
             button66.Name = "button66";
-            button66.Size = new Size(130, 23);
+            button66.Size = new Size(130, 33);
             button66.TabIndex = 189;
-            button66.Text = "Timer Overlay";
-            button66.UseVisualStyleBackColor = true;
+            button66.UseVisualStyleBackColor = false;
             button66.Click += Timer_Click;
             // 
             // buttonSelectAll
             // 
-            buttonSelectAll.ForeColor = Color.Green;
-            buttonSelectAll.Location = new Point(10, 99);
+            buttonSelectAll.BackgroundImage = Properties.Resources.AllMetas;
+            buttonSelectAll.FlatStyle = FlatStyle.Flat;
+            buttonSelectAll.ForeColor = SystemColors.ControlText;
+            buttonSelectAll.Location = new Point(148, 12);
             buttonSelectAll.Name = "buttonSelectAll";
-            buttonSelectAll.Size = new Size(130, 23);
+            buttonSelectAll.Size = new Size(130, 33);
             buttonSelectAll.TabIndex = 188;
-            buttonSelectAll.Text = "All";
             buttonSelectAll.UseVisualStyleBackColor = true;
             buttonSelectAll.Click += All_click;
             // 
