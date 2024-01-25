@@ -412,7 +412,7 @@ namespace GW2FOX
 
         private void MarkTwo_CheckedChanged(object sender, EventArgs e)
         {
-            string bossName = "Inquest Golem Mark II";
+            string bossName = "Inquest Golem M2";
 
 
 
