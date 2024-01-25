@@ -334,6 +334,25 @@
             public bool IsPreviewBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
             public DateTime NextRunTimeEnding => NextRunTime.AddMinutes(14).AddSeconds(59);
 
+            public DateTime getTimeToShow()
+            {
+                if (IsPreviewBoss)
+                {
+                    return NextRunTimeEnding;
+                }
+
+                return NextRunTime;
+            }
+            public TimeSpan getTimeRemaining()
+            {
+                return getTimeToShow() - GlobalVariables.CURRENT_DATE_TIME;
+            }
+            public string getTimeRemainingFormatted()
+            {
+                var remainingTime = getTimeRemaining();
+                return $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
+            }
+
             public Color getForeColor()
             {
                 if (IsPreviewBoss)
