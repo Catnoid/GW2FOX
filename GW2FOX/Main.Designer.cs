@@ -66,7 +66,7 @@
             button3.BackColor = SystemColors.ActiveCaptionText;
             button3.BackgroundImage = Properties.Resources.Repair;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(230, 193);
+            button3.Location = new Point(301, 193);
             button3.Name = "button3";
             button3.Size = new Size(182, 45);
             button3.TabIndex = 8;
@@ -78,7 +78,7 @@
             button7.BackColor = SystemColors.ActiveCaptionText;
             button7.BackgroundImage = Properties.Resources.Addonmanager;
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(418, 193);
+            button7.Location = new Point(560, 193);
             button7.Name = "button7";
             button7.Size = new Size(182, 45);
             button7.TabIndex = 9;
@@ -90,7 +90,7 @@
             button5.BackColor = SystemColors.ActiveCaptionText;
             button5.BackgroundImage = Properties.Resources.OTimer;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(230, 244);
+            button5.Location = new Point(301, 244);
             button5.Name = "button5";
             button5.Size = new Size(182, 45);
             button5.TabIndex = 10;
@@ -123,7 +123,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(418, 256);
+            textBox1.Location = new Point(489, 256);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(47, 23);
             textBox1.TabIndex = 13;
