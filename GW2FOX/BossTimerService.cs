@@ -68,21 +68,17 @@ namespace GW2FOX
 
             CustomBossList.View = View.Details;
             CustomBossList.Location = new Point(0, 0);
-            CustomBossList.ForeColor = Color.Black;
-            // CustomBossList.MouseClick += ListView_MouseClick;
-            // CustomBossList.MouseHover += ListView_MouseHover;
+            CustomBossList.ForeColor = Color.White;
             CustomBossList.FullRowSelect = true;
-            CustomBossList.BackColor = Color.White;
-            CustomBossList.Font = new Font("Arial", 10, FontStyle.Regular);
+            CustomBossList.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             CustomBossList.Columns.Add("Button", 20, HorizontalAlignment.Left);
-            CustomBossList.Columns.Add("Boss Name", 150, HorizontalAlignment.Left);
+            CustomBossList.Columns.Add("Boss Name", 130, HorizontalAlignment.Left);
             var timeHeader = CustomBossList.Columns.Add("Time");
             timeHeader.TextAlign = HorizontalAlignment.Right;
             CustomBossList.FullRowSelect = true;
             extender = new ListViewExtender(CustomBossList);
             var listViewButtonColumn = new ListViewButtonColumn(0);
             listViewButtonColumn.Click += ListView_MouseClick;
-            listViewButtonColumn.FixedWidth = true;
             extender.AddColumn(listViewButtonColumn);
 
             

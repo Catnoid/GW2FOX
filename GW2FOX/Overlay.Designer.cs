@@ -37,7 +37,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             Cursor = Cursors.SizeAll;
-            ForeColor = SystemColors.ControlText;
+            ForeColor = SystemColors.Window;
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;

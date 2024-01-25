@@ -4,6 +4,7 @@ namespace GW2FOX
 {
     public partial class Overlay : Form
     {
+ 
         private static readonly Color DefaultFontColor = Color.White;
         private static readonly Color PastBossFontColor = Color.OrangeRed;
         private static readonly Color MyAlmostBlackColor = Color.FromArgb(255, 1, 1, 1);
@@ -17,8 +18,7 @@ namespace GW2FOX
             InitializeComponent();
 
             overlayListView = listViewItems;
-            overlayListView.ForeColor = Color.Black;
-            // overlayListView.DrawItem += OverlayListView_DrawItem;
+            overlayListView.DrawItem += OverlayListView_SetColor;
 
             listViewPanel = new Panel();
             listViewPanel.Size = new Size(listViewPanel.Width, 21 * overlayListView.Items.Count);
@@ -35,9 +35,6 @@ namespace GW2FOX
             Height = 310;
             AutoScroll = true;
 
-         
-
-
             listViewPanel.BackColor = Color.Transparent;
 
             // Berechne die Größe des listViewPanel
@@ -48,20 +45,19 @@ namespace GW2FOX
             listViewPanel.Location = new Point(0, 0);
 
             // Erstelle die ListView
-            overlayListView.ForeColor = Color.White;
-            overlayListView.Font = new Font("Segoe UI", 10);
+           
             overlayListView.BackColor = BackColor;
 
             // Setze die View auf Details, um die horizontale Scrollleiste zu deaktivieren
             overlayListView.View = View.Details;
-
+            
             // Entferne die Spaltenüberschriften, um die horizontale Scrollleiste zu verbergen
             overlayListView.HeaderStyle = ColumnHeaderStyle.None;
 
             overlayListView.OwnerDraw = true;
             overlayListView.Location = new Point(0, 0);
             overlayListView.Width = listViewPanel.Width;
-
+            overlayListView.Visible = true;
             // Enable vertical scrollbar
             overlayListView.Scrollable = true;
 
@@ -81,12 +77,54 @@ namespace GW2FOX
         }
 
 
-      
+        private void OverlayListView_SetColor(object sender, DrawListViewItemEventArgs e)
+        {
+            listViewPanel.Size = new Size(listViewPanel.Width, 21 * overlayListView.Items.Count);
+            // Holen Sie sich das BossEventRun-Objekt aus dem ListViewItem.Tag
+            if (e.Item.Tag is BossEventRun bossEvent)
+            {
+                // Überprüfen, ob das BossEvent zu den PreviewBosses gehört
+                if (bossEvent.IsPreviewBoss)
+                {
+                    e.Item.ForeColor = PastBossFontColor; // Setzen Sie die Farbe auf OrangeRed für PreviewBosses
+                }
+                else
+                {
+                    // Setzen Sie die Farbe basierend auf der Kategorie des BossEvents
+                    switch (bossEvent.Category)
+                    {
+                        case "Maguuma":
+                            e.Item.ForeColor = Color.LimeGreen;
+                            break;
+                        case "Desert":
+                            e.Item.ForeColor = Color.DeepPink;
+                            break;
+                        case "WBs":
+                            e.Item.ForeColor = Color.WhiteSmoke;
+                            break;
+                        case "Ice":
+                            e.Item.ForeColor = Color.DeepSkyBlue;
+                            break;
+                        case "Cantha":
+                            e.Item.ForeColor = Color.Blue;
+                            break;
+                        case "SotO":
+                            e.Item.ForeColor = Color.Yellow;
+                            break;
+                        case "LWS2":
+                            e.Item.ForeColor = Color.LightYellow;
+                            break;
+                        case "LWS3":
+                            e.Item.ForeColor = Color.ForestGreen;
+                            break;
+                        default:
+                            e.Item.ForeColor = DefaultFontColor;
+                            break;
+                    }
+                }
+            }
 
-
-
-
-
+        }
 
         public void CloseOverlay()
         {

@@ -20,35 +20,52 @@ namespace GW2FOX
     public class ListViewTextColumn : ListViewColumn
     {
         public ListViewTextColumn(int columnIndex)
-            : base(columnIndex)
-        {
-        }
-
-        public override void Draw(DrawListViewSubItemEventArgs e)
-        {
-            using (var font = new Font("Segoe UI", 10))
+                : base(columnIndex)
             {
-                // Setze die Schriftart und Farbe basierend auf bestimmten Bedingungen
-                if (e.Item.Selected)
+            }
+
+         public override void Draw(DrawListViewSubItemEventArgs e)
+            {
+                using (var font = new Font("Segoe UI", 10))
                 {
-                    e.Graphics.DrawString(e.SubItem.Text, font, Brushes.White, e.Bounds);
-                }
-                else
-                {
-                    e.Graphics.DrawString(e.SubItem.Text, font, Brushes.White, e.Bounds);
+                    // Setze die Schriftart und Farbe basierend auf bestimmten Bedingungen
+                    if (e.Item.Selected)
+                    {
+                        e.Graphics.DrawString(e.SubItem.Text, font, Brushes.White, e.Bounds);
+                    }
+                    else
+                    {
+                        // Definiere die Position des Zeittexts
+                        Point timeTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 0);
+
+
+                        // Zeichne den Zeittext mit grauer Umrandung
+                        using (Pen borderPen = new Pen(Color.Gray))
+                        {
+                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X - 1, timeTextLocation.Y - 1), Color.Black);
+                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X + 1, timeTextLocation.Y - 1), Color.Black);
+                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X - 1, timeTextLocation.Y + 1), Color.Black);
+                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X + 1, timeTextLocation.Y + 1), Color.Black);
+                    }
+
+                        // Zeichne den Zeittext ohne Umrandung (darüber, um die Umrandung zu überlagern)
+                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, timeTextLocation, e.Item.ForeColor, Color.Transparent, TextFormatFlags.Default);
+                    }
                 }
             }
         }
-    }
 
-    public class ListViewExtender : IDisposable
+
+
+
+public class ListViewExtender : IDisposable
     {
         private readonly Dictionary<int, ListViewColumn> columns = new Dictionary<int, ListViewColumn>();
         
 
         // Füge diese Dictionary hinzu, um die Breiten der Spalten festzulegen
         private readonly Dictionary<ColumnType, int> columnWidths = new Dictionary<ColumnType, int>();
-
+    
 
         private bool disposed;
 
@@ -82,7 +99,7 @@ namespace GW2FOX
             this.ListView.MouseMove += OnMouseMove;
             this.ListView.MouseClick += OnMouseClick;
 
-            this.Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 2);
+            this.Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 0);
         }
    
 
