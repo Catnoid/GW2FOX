@@ -26,7 +26,7 @@ namespace GW2FOX
 
          public override void Draw(DrawListViewSubItemEventArgs e)
             {
-                using (var font = new Font("Segoe UI", 10))
+                using (var font = new Font("Segoe UI", 10, FontStyle.Bold))
                 {
                     // Setze die Schriftart und Farbe basierend auf bestimmten Bedingungen
                     if (e.Item.Selected)
@@ -39,8 +39,7 @@ namespace GW2FOX
                         Point timeTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 0);
 
 
-                        // Zeichne den Zeittext mit grauer Umrandung
-                        using (Pen borderPen = new Pen(Color.Gray))
+                        
                         {
                         TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X - 1, timeTextLocation.Y - 1), Color.Black);
                         TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X + 1, timeTextLocation.Y - 1), Color.Black);

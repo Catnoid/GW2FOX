@@ -72,7 +72,7 @@ namespace GW2FOX
             CustomBossList.FullRowSelect = true;
             CustomBossList.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             CustomBossList.Columns.Add("Button", 20, HorizontalAlignment.Left);
-            CustomBossList.Columns.Add("Boss Name", 130, HorizontalAlignment.Left);
+            CustomBossList.Columns.Add("Boss Name", 138, HorizontalAlignment.Left);
             var timeHeader = CustomBossList.Columns.Add("Time");
             timeHeader.TextAlign = HorizontalAlignment.Right;
             CustomBossList.FullRowSelect = true;

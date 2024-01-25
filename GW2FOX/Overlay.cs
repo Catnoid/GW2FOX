@@ -31,7 +31,7 @@ namespace GW2FOX
             StartPosition = FormStartPosition.Manual;
             Opacity = 1;
 
-            Width = 270;
+            Width = 240;
             Height = 310;
             AutoScroll = true;
 
