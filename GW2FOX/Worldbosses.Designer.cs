@@ -179,7 +179,7 @@
             Runinfo.ScrollBars = ScrollBars.Vertical;
             Runinfo.Size = new Size(350, 100);
             Runinfo.TabIndex = 1;
-            Runinfo.Text = GlobalVariables.DEFAULT_RUN_INFO; //"≪Meta -Train» with the old [FOX]";
+            Runinfo.Text = "«Meta-Train» with the old [FOX]";
             // 
             // Squadinfo
             // 
@@ -191,7 +191,7 @@
             Squadinfo.ScrollBars = ScrollBars.Vertical;
             Squadinfo.Size = new Size(350, 100);
             Squadinfo.TabIndex = 2;
-            Squadinfo.Text = GlobalVariables.DEFAULT_RUN_INFO; //resources.GetString("Squadinfo.Text");
+            Squadinfo.Text = resources.GetString("Squadinfo.Text");
             // 
             // Guild
             // 
@@ -203,7 +203,7 @@
             Guild.ScrollBars = ScrollBars.Vertical;
             Guild.Size = new Size(350, 100);
             Guild.TabIndex = 3;
-            Guild.Text = GlobalVariables.DEFAULT_GUILD;
+            Guild.Text = "☠ Young or old [FOX], we take every stray. Humor, respect and fun at the game are what distinguish us. No Obligations! Infos: wsp me or https://gw2-hub.000webhostapp.com ☻";
             // 
             // Welcome
             // 
@@ -215,9 +215,7 @@
             Welcome.ScrollBars = ScrollBars.Vertical;
             Welcome.Size = new Size(350, 100);
             Welcome.TabIndex = 4;
-            
-            Welcome.Text = GlobalVariables.DEFAULT_WELCOME;
-            // Welcome.Text = "Welcome to the FOXhole. Read the Message of the Day for Infos - Questions, ask us! Guides & Tools on our Homepage: https://gw2-hub.000webhostapp.com";
+            Welcome.Text = "Welcome to the FOXhole. Read the Message of the Day for Infos - Questions, ask us! Guides & Tools on our Homepage: https://gw2-hub.000webhostapp.com";
             // 
             // Symbols
             // 
@@ -228,8 +226,7 @@
             Symbols.ScrollBars = ScrollBars.Vertical;
             Symbols.Size = new Size(434, 175);
             Symbols.TabIndex = 5;
-
-            Symbols.Text = GlobalVariables.DEFAULT_SYMBOLS; //"☠ ★ ☣ ☮ ☢ ♪ ☜ ☞ ┌ ∩ ┐ ( ●̮̃ • ) ۶ ( • ◡ • ) ♋ ☿ ♀ ♂ ☀ ☁ ☂ ☃ ☄ ☾ ☽ ☇ ☉ ☐ ☒ ☑ ☝ ☚ • ☟ ☆ ♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟ † ☨ ☥ ☦ ☓ ☩ ☯ ☧ ☬ ☸ ♁ ♆ ☭ ✯ ☪ ☫ ✡ © ™ ® ☕ ☎ ☻ ♥ ⏰ 凸";
+            Symbols.Text = "☠ ★ ☣ ☮ ☢ ♪ ☜ ☞ ┌ ∩ ┐ ( ●̮̃ • ) ۶ ( • ◡ • ) ♋ ☿ ♀ ♂ ☀ ☁ ☂ ☃ ☄ ☾ ☽ ☇ ☉ ☐ ☒ ☑ ☝ ☚ • ☟ ☆ ♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟ † ☨ ☥ ☦ ☓ ☩ ☯ ☧ ☬ ☸ ♁ ♆ ☭ ✯ ☪ ☫ ✡ © ™ ® ☕ ☎ ☻ ♥ ⏰ 凸 ◇";
             // 
             // button1
             // 
@@ -1495,13 +1492,13 @@
             // 
             // button63
             // 
+            button63.ForeColor = Color.Red;
             button63.Location = new Point(10, 128);
             button63.Name = "button63";
             button63.Size = new Size(131, 23);
             button63.TabIndex = 186;
             button63.Text = "Clear All";
             button63.UseVisualStyleBackColor = true;
-            button63.ForeColor = Color.Red;
             button63.Click += ClearAll_Click;
             // 
             // button65
@@ -1514,17 +1511,6 @@
             button65.UseVisualStyleBackColor = true;
             button65.Click += Mixed_Click;
             // 
-            // buttonSelectAll
-            // 
-            buttonSelectAll.Location = new Point(10, 99);
-            buttonSelectAll.Name = "buttonSelectAll";
-            buttonSelectAll.Size = new Size(130, 23);
-            buttonSelectAll.TabIndex = 188;
-            buttonSelectAll.Text = "All";
-            buttonSelectAll.UseVisualStyleBackColor = true;
-            buttonSelectAll.Click += All_click;
-            buttonSelectAll.ForeColor = Color.Green;
-            // 
             // button66
             // 
             button66.Location = new Point(10, 165);
@@ -1534,6 +1520,17 @@
             button66.Text = "Timer Overlay";
             button66.UseVisualStyleBackColor = true;
             button66.Click += Timer_Click;
+            // 
+            // buttonSelectAll
+            // 
+            buttonSelectAll.ForeColor = Color.Green;
+            buttonSelectAll.Location = new Point(10, 99);
+            buttonSelectAll.Name = "buttonSelectAll";
+            buttonSelectAll.Size = new Size(130, 23);
+            buttonSelectAll.TabIndex = 188;
+            buttonSelectAll.Text = "All";
+            buttonSelectAll.UseVisualStyleBackColor = true;
+            buttonSelectAll.Click += All_click;
             // 
             // Worldbosses
             // 
