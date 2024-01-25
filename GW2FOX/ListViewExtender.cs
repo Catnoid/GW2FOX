@@ -382,9 +382,10 @@ public class ListViewExtender : IDisposable
             // Falls "hot" aktiviert ist, Text anzeigen
             if (hot)
             {
-               
-             
+
+
             }
         }
+
     }
 }

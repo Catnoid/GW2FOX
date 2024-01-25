@@ -36,7 +36,7 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            Cursor = Cursors.SizeAll;
+            Cursor = Cursors.Default;
             ForeColor = SystemColors.Window;
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
