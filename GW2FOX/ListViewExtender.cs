@@ -10,9 +10,45 @@ using static GW2FOX.ListViewColumn;
 
 namespace GW2FOX
 {
+    public enum ColumnType
+    {
+        Button,
+        SecondColumn,
+        ThirdColumn
+    }
+
+    public class ListViewTextColumn : ListViewColumn
+    {
+        public ListViewTextColumn(int columnIndex)
+            : base(columnIndex)
+        {
+        }
+
+        public override void Draw(DrawListViewSubItemEventArgs e)
+        {
+            using (var font = new Font("Segoe UI", 10))
+            {
+                // Setze die Schriftart und Farbe basierend auf bestimmten Bedingungen
+                if (e.Item.Selected)
+                {
+                    e.Graphics.DrawString(e.SubItem.Text, font, Brushes.White, e.Bounds);
+                }
+                else
+                {
+                    e.Graphics.DrawString(e.SubItem.Text, font, Brushes.White, e.Bounds);
+                }
+            }
+        }
+    }
+
     public class ListViewExtender : IDisposable
     {
         private readonly Dictionary<int, ListViewColumn> columns = new Dictionary<int, ListViewColumn>();
+        
+
+        // Füge diese Dictionary hinzu, um die Breiten der Spalten festzulegen
+        private readonly Dictionary<ColumnType, int> columnWidths = new Dictionary<ColumnType, int>();
+
 
         private bool disposed;
 
@@ -25,6 +61,19 @@ namespace GW2FOX
                 throw new ArgumentException(null, "listView");
 
             this.ListView = listView;
+            columnWidths[ColumnType.Button] = 50;
+            columnWidths[ColumnType.SecondColumn] = 100;
+            columnWidths[ColumnType.ThirdColumn] = 150;
+            var buttonColumn = new ListViewButtonColumn(0);
+            AddColumn(buttonColumn);
+
+            // Erstelle die zweite Spalte
+            var secondColumn = new ListViewTextColumn(1);
+            AddColumn(secondColumn);
+
+            // Erstelle die dritte Spalte
+            var thirdColumn = new ListViewTextColumn(2);
+            AddColumn(thirdColumn);
 
             this.ListView.OwnerDraw = true;
             this.ListView.DrawItem += OnDrawItem;
@@ -35,6 +84,7 @@ namespace GW2FOX
 
             this.Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 2);
         }
+   
 
         public virtual Font Font { get; private set; }
 
@@ -97,6 +147,7 @@ namespace GW2FOX
         protected virtual void OnDrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
         {
             e.DrawDefault = true;
+
         }
 
         protected virtual void OnDrawSubItem(object sender, DrawListViewSubItemEventArgs e)
@@ -110,12 +161,17 @@ namespace GW2FOX
             }
 
             column.Draw(e);
+        
         }
+
+
 
         protected virtual void OnDrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            // do nothing
+            
         }
+
+      
 
         public void AddColumn(ListViewColumn column)
         {
@@ -286,7 +342,10 @@ namespace GW2FOX
                 // Verwende die eigene Methode für den Button mit Hintergrundbild (ohne Text)
                 DrawImageButton(e.Graphics, e.Bounds, false);
             }
+
+            
         }
+
         private void DrawImageButton(Graphics g, Rectangle bounds, bool hot)
         {
             // Das Bild aus den Ressourcen laden
@@ -311,11 +370,5 @@ namespace GW2FOX
              
             }
         }
-
-
-
-
-
-
     }
 }

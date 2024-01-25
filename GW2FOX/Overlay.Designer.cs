@@ -45,6 +45,7 @@
             ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Show;
             TopMost = true;
+            Load += Overlay_Load;
             ResumeLayout(false);
         }
 
