@@ -272,7 +272,7 @@ namespace GW2FOX
         private void Maw_CheckedChanged(object sender, EventArgs e)
         {
             // Der Name des Bosses
-            string[] bossNames = { "LLLA - Timberline Falls", "LLLA - Iron Marches", "LLLA - Gendarran Fields", "The frozen Maw" };
+            string[] bossNames = { "LLLA Timberline", "LLLA Iron Marches", "LLLA Gendarran ", "The frozen Maw" };
 
 
             // Setze den Trigger, um anzuzeigen, dass die Aktion vom Benutzer ausgelöst wurde
