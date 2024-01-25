@@ -51,67 +51,79 @@
             // 
             // button4
             // 
-            button4.Location = new Point(284, 222);
+            button4.BackColor = SystemColors.ActiveCaptionText;
+            button4.BackgroundImage = Properties.Resources.FOXHomepage;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Location = new Point(42, 193);
             button4.Name = "button4";
-            button4.Size = new Size(217, 23);
+            button4.Size = new Size(182, 45);
             button4.TabIndex = 5;
-            button4.Text = "Homepage";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += Fox_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(284, 251);
+            button3.BackColor = SystemColors.ActiveCaptionText;
+            button3.BackgroundImage = Properties.Resources.Repair;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(230, 193);
             button3.Name = "button3";
-            button3.Size = new Size(217, 23);
+            button3.Size = new Size(182, 45);
             button3.TabIndex = 8;
-            button3.Text = "Repair Client";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += Repair_Click;
             // 
             // button7
             // 
-            button7.Location = new Point(284, 193);
+            button7.BackColor = SystemColors.ActiveCaptionText;
+            button7.BackgroundImage = Properties.Resources.Addonmanager;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Location = new Point(418, 193);
             button7.Name = "button7";
-            button7.Size = new Size(217, 23);
+            button7.Size = new Size(182, 45);
             button7.TabIndex = 9;
-            button7.Text = "Unofficial Add-On Manager";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += Uam_Click;
             // 
             // button5
             // 
-            button5.Location = new Point(284, 309);
+            button5.BackColor = SystemColors.ActiveCaptionText;
+            button5.BackgroundImage = Properties.Resources.OTimer;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Location = new Point(230, 244);
             button5.Name = "button5";
-            button5.Size = new Size(217, 23);
+            button5.Size = new Size(182, 45);
             button5.TabIndex = 10;
-            button5.Text = "Overlay Timer";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += Timer_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(284, 280);
+            button1.BackColor = SystemColors.ActiveCaptionText;
+            button1.BackgroundImage = Properties.Resources.LeadingHelper;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(42, 244);
             button1.Name = "button1";
-            button1.Size = new Size(217, 23);
+            button1.Size = new Size(182, 45);
             button1.TabIndex = 11;
-            button1.Text = "Leading Tool";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += Leading_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(284, 356);
+            button2.BackColor = SystemColors.ActiveCaptionText;
+            button2.BackgroundImage = Properties.Resources.Close;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(42, 295);
             button2.Name = "button2";
-            button2.Size = new Size(217, 23);
+            button2.Size = new Size(182, 45);
             button2.TabIndex = 12;
-            button2.Text = "Close";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += CloseAll_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(507, 310);
+            textBox1.Location = new Point(418, 256);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(47, 23);
             textBox1.TabIndex = 13;
