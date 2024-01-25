@@ -311,6 +311,10 @@ namespace GW2FOX
                             listViewItem.SubItems.Add(remainingTimeFormat); // Hier wird ein Unterelement hinzugefügt
                             listViewItem.ForeColor = bossEvent.getForeColor();
                             listViewItem.Tag = bossEvent;
+                            foreach (ListViewItem.ListViewSubItem subItem in listViewItem.SubItems)
+                            {
+                                subItem.ForeColor = listViewItem.ForeColor;
+                            }
                             
 
                             // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
