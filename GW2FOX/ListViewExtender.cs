@@ -373,7 +373,7 @@ public class ListViewExtender : IDisposable
             // Falls "hot" aktiviert ist, das Bild um 3 Pixel vergrößern
             if (hot)
             {
-                imageBounds.Inflate(3, 3);
+                imageBounds.Inflate(2, 2);
             }
 
             // Hintergrund zeichnen
@@ -382,7 +382,7 @@ public class ListViewExtender : IDisposable
             // Falls "hot" aktiviert ist, Text anzeigen
             if (hot)
             {
-
+                
 
             }
         }
