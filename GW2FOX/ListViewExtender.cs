@@ -36,7 +36,7 @@ namespace GW2FOX
                     else
                     {
                         // Definiere die Position des Zeittexts
-                        Point timeTextLocation = new Point(e.Bounds.Left + 2, e.Bounds.Top + 0);
+                        Point timeTextLocation = new Point(e.Bounds.Left + 0, e.Bounds.Top + 0);
 
 
                         
