@@ -66,6 +66,7 @@ namespace GW2FOX
             // Activate double buffering for the ListView
             SetDoubleBuffered(CustomBossList);
 
+            // CustomBossList.ShowItemToolTips = true;
             CustomBossList.View = View.Details;
             CustomBossList.Location = new Point(0, 0);
             CustomBossList.ForeColor = Color.White;
@@ -79,6 +80,8 @@ namespace GW2FOX
             extender = new ListViewExtender(CustomBossList);
             var listViewButtonColumn = new ListViewButtonColumn(0);
             listViewButtonColumn.Click += ListView_MouseClick;
+            // listViewButtonColumn.Tr
+            listViewButtonColumn.Hover += ListView_MouseHover;
             extender.AddColumn(listViewButtonColumn);
 
             
@@ -142,9 +145,15 @@ namespace GW2FOX
         }
     }
     
+    
     private static void ListView_MouseHover(object? sender, EventArgs e)
     {
-        ListView listView = sender as ListView;
+        // return;
+        if (sender is not ListViewButtonColumn listViewButtonColumn) return;
+        ListView listView = listViewButtonColumn.ListView;
+        
+        // set listView to be the active control without this it works only when the window is clicked.
+        listView.Focus();
         Point mousePosition = listView.PointToClient(Cursor.Position);
         ListViewItem hoveredItem = listView.GetItemAt(mousePosition.X, mousePosition.Y);
         if (hoveredItem is not { Tag: BossEvent bossEvent })
@@ -152,13 +161,15 @@ namespace GW2FOX
             toolTip.Hide(listView);
             return;
         }
+
         if (!"".Equals(bossEvent.Waypoint))
         {
             // Show the tooltip
-            toolTip.Show("Left Click to copy the Waypoint to clipboard\nRight Click to remove from the list", listView, mousePosition,
+            toolTip.Show("Left Click to copy the Waypoint to clipboard\nRight Click to remove from the list",
+                listView, mousePosition,
                 1000); // tooltip disappears after 1 second (1000 milliseconds)
         }
-        
+
     }
 
 
@@ -306,6 +317,8 @@ namespace GW2FOX
                             listViewItem.SubItems.Add(bossEvent.BossName); // Hier wird ein Unterelement hinzugefügt
                             listViewItem.SubItems.Add(remainingTimeFormat); // Hier wird ein Unterelement hinzugefügt
                             listViewItem.ForeColor = bossEvent.getForeColor();
+                            // listViewItem.ToolTipText =
+                            //     "Left Click to copy the Waypoint to clipboard\nRight Click to remove from the list";
                             listViewItem.Tag = bossEvent;
                             foreach (ListViewItem.ListViewSubItem subItem in listViewItem.SubItems)
                             {

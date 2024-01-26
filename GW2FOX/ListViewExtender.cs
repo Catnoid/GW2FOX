@@ -97,6 +97,8 @@ public class ListViewExtender : IDisposable
             this.ListView.DrawColumnHeader += OnDrawColumnHeader;
             this.ListView.MouseMove += OnMouseMove;
             this.ListView.MouseClick += OnMouseClick;
+            this.ListView.MouseMove += OnMouseHover;
+            // this.ListView.ItemMouseHover += OnMouseHover;
 
             this.Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 0);
         }
@@ -105,6 +107,18 @@ public class ListViewExtender : IDisposable
         public virtual Font Font { get; private set; }
 
         public ListView ListView { get; private set; }
+
+        protected virtual void OnMouseHover(object sender, MouseEventArgs e)
+        {
+            ListViewItem item;
+            ListViewItem.ListViewSubItem sub;
+            ListViewColumn column = this.GetColumnAt(e.X, e.Y, out item, out sub);
+
+            if (column != null)
+            {
+                column.MouseHover(e, item, sub);
+            }
+        }
 
         protected virtual void OnMouseClick(object sender, MouseEventArgs e)
         {
@@ -237,6 +251,7 @@ public class ListViewExtender : IDisposable
     public abstract class ListViewColumn
     {
         public event EventHandler<ListViewColumnMouseEventArgs> Click;
+        public event EventHandler<ListViewColumnMouseHoverEventArgs> Hover;
 
         protected ListViewColumn(int columnIndex)
         {
@@ -270,6 +285,14 @@ public class ListViewExtender : IDisposable
             }
         }
 
+        public virtual void MouseHover(MouseEventArgs e, ListViewItem item, ListViewItem.ListViewSubItem subItem)
+        {
+            if (this.Hover != null)
+            {
+                this.Hover(this, new ListViewColumnMouseHoverEventArgs(e, item, subItem));
+            }
+        }
+
         public virtual void Invalidate(ListViewItem item, ListViewItem.ListViewSubItem subItem)
         {
             if (this.Extender != null)
@@ -283,6 +306,20 @@ public class ListViewExtender : IDisposable
     {
         public ListViewColumnMouseEventArgs(MouseEventArgs e, ListViewItem item, ListViewItem.ListViewSubItem subItem)
             : base(e.Button, e.Clicks, e.X, e.Y, e.Delta)
+        {
+            this.Item = item;
+            this.SubItem = subItem;
+        }
+
+        public ListViewItem Item { get; private set; }
+
+        public ListViewItem.ListViewSubItem SubItem { get; private set; }
+    }
+
+    public class ListViewColumnMouseHoverEventArgs : ListViewItemMouseHoverEventArgs
+    {
+        public ListViewColumnMouseHoverEventArgs(MouseEventArgs e, ListViewItem item, ListViewItem.ListViewSubItem subItem)
+            : base(item)
         {
             this.Item = item;
             this.SubItem = subItem;
