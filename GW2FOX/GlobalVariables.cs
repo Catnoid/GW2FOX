@@ -42,7 +42,7 @@ public class GlobalVariables
     public static string DEFAULT_RUN_INFO =
         "«Meta-Train» with the old [FOX]";
     public static string DEFAULT_SQUAD_INFO =
-        "• InstanceCheck:\n    - right click on me & join map\n• Don’t cancel invites!\n• No 3ple Trouble\n• https://gw2-hub.000webhostapp.com\n\n• GW2FOX:\n  - Overlay Timer, Guild Helper, Com Central, Repair GW2\n  on GitHub & HP\"\n    - right click on me & join MapName\n• Don’t cancel invites!\n• No Triple Trouble\n• https://gw2-hub.000webhostapp.com\n• GW2FOX:\n  - Overlay Timer, Guild Advertising Helper, Leading Tool, Repair Client\n\"\n\n• InstanceCheck: \n    - right click on me & join MapName \n• Don’t cancel invites! \n• No Triple Trouble\n• https://gw2-hub.000webhostapp.com\n \n• GW2FOX: \n  - Overlay Timer\n  - Guild Advertising Helper\n  - Leading Tool\n  - Repair Client\n";
+        "\n• InstanceCheck:\n    - right click on me & join map\n• Don’t cancel invites!\n• No 3ple Trouble\n• https://gw2-hub.000webhostapp.com\n\n• GW2FOX:\n  - Overlay Timer, Guild Helper, Com Central, Repair GW2\n  on GitHub & HP\"\n    - right click on me & join MapName\n• Don’t cancel invites!\n• No Triple Trouble\n• https://gw2-hub.000webhostapp.com\n• GW2FOX:\n  - Overlay Timer, Guild Advertising Helper, Leading Tool, Repair Client\n\"\n\n• InstanceCheck: \n    - right click on me & join MapName \n• Don’t cancel invites! \n• No Triple Trouble\n• https://gw2-hub.000webhostapp.com\n \n• GW2FOX: \n  - Overlay Timer\n  - Guild Advertising Helper\n  - Leading Tool\n  - Repair Client\n";
 
     
 }
