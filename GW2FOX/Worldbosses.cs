@@ -1149,7 +1149,7 @@ namespace GW2FOX
         { "Ulgoth the Modniir", Ulgoth },
         { "Taidha Covington", Thaida },
         { "Megadestroyer", Megadestroyer },
-        { "Inquest Golem Mark II", MarkTwo },
+        { "Inquest Golem M2", MarkTwo },
         { "Tequatl the Sunless", Tequatl },
         { "The Shatterer", Shatterer },
         { "Karka Queen", Karka },
