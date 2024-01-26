@@ -569,7 +569,7 @@ namespace GW2FOX
 
         private void DBS_CheckedChanged(object sender, EventArgs e)
         {
-            string bossName = "Death-Branded Shatterer";
+            string bossName = "DB Shatterer";
 
 
 
@@ -1067,7 +1067,7 @@ namespace GW2FOX
 
         private void WizzardsTower_CheckedChanged(object sender, EventArgs e)
         {
-            string bossName = "Unlock'Wizard's Tower";
+            string bossName = "Wizard's Tower";
 
 
 
@@ -1158,7 +1158,7 @@ namespace GW2FOX
         { "Battle in Tarir", Tarir },
         { "Spellmaster Macsen", Mascen },
         { "Dragon's Stand", DS },
-        { "Death-Branded Shatterer", DBS },
+        { "DB Shatterer", DBS },
         { "Junundu Rising", Junundu },
         { "Path to Ascension", PTA },
         { "Doppelganger", Doppelganger },
@@ -1186,7 +1186,7 @@ namespace GW2FOX
         { "Gang War", GangWar },
         { "Aspenwood", Aspenwood },
         { "Battle for Jade Sea", JadeSea },
-        { "Unlock'Wizard's Tower", WizzardsTower },
+        { "Wizard's Tower", WizzardsTower },
         { "Fly by Night", Flybynigtht },
         { "Defense of Amnytas", Amnytas },
         { "Convergences", Convergence }
