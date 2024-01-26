@@ -518,17 +518,17 @@ namespace GW2FOX
 
         private void Tarir_CheckedChanged(object sender, EventArgs e)
         {
-            string bossName = "Battle in Tarir";
+            string[] bossNames = ["Battle in Tarir", "Octovine"];
 
 
 
             if (Tarir.Checked)
             {
-                SaveBossNameToConfig(bossName);
+                SaveBossNameToConfig(bossNames);
             }
             else
             {
-                RemoveBossNameFromConfig(bossName);
+                RemoveBossNameFromConfig(bossNames);
             }
 
         }
@@ -1237,6 +1237,14 @@ namespace GW2FOX
 
         }
 
+        private static void SaveBossNameToConfig(string[] bossNames)
+        {
+            foreach (var bossName in bossNames)
+            {
+                SaveBossNameToConfig(bossName);
+            }
+        }
+
         private static void SaveBossNameToConfig(string bossName)
         {
             try
@@ -1427,6 +1435,14 @@ namespace GW2FOX
                 // Log or handle the exception, but don't call ReadConfigFile recursively
                 Console.WriteLine($"Error reading from config file: {ex.Message}");
                 throw; // Re-throw the exception to prevent infinite recursion
+            }
+        }
+
+        private static void RemoveBossNameFromConfig(string[] bossNames)
+        {
+            foreach (var bossName in bossNames)
+            {
+                RemoveBossNameFromConfig(bossName);
             }
         }
 
