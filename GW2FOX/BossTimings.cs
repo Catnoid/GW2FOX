@@ -248,7 +248,7 @@
                 {
                     return _timings
                         .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
-                            GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(24, 0, 0)) + bossEvent.Timing,
+                            GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(24, 0, 1)) + bossEvent.Timing,
                             bossEvent.Waypoint))
                         .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                         .Take(NextRunsToShow)
@@ -257,7 +257,7 @@
 
                 return nextTimings
                     .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
-                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing, bossEvent.Waypoint))
+                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing + TimeSpan.Parse("00:00:01.500"), bossEvent.Waypoint))
                     .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                     .Take(NextRunsToShow)
                     .ToList();
@@ -270,7 +270,7 @@
                         bossEvent.Timing > GlobalVariables.CURRENT_TIME.Subtract(new TimeSpan(0, 14, 59)) &&
                         bossEvent.Timing < GlobalVariables.CURRENT_TIME)
                     .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
-                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing, bossEvent.Waypoint))
+                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing + TimeSpan.Parse("00:00:02.500"), bossEvent.Waypoint))
                     .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                     // .Take(PREVIOUS_RUNS_TO_SHOW)
                     .ToList();
