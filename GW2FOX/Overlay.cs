@@ -80,49 +80,7 @@ namespace GW2FOX
         private void OverlayListView_SetColor(object sender, DrawListViewItemEventArgs e)
         {
             listViewPanel.Size = new Size(listViewPanel.Width, 21 * overlayListView.Items.Count);
-            // Holen Sie sich das BossEventRun-Objekt aus dem ListViewItem.Tag
-            if (e.Item.Tag is BossEventRun bossEvent)
-            {
-                // Überprüfen, ob das BossEvent zu den PreviewBosses gehört
-                if (bossEvent.IsPreviewBoss)
-                {
-                    e.Item.ForeColor = PastBossFontColor; // Setzen Sie die Farbe auf OrangeRed für PreviewBosses
-                }
-                else
-                {
-                    // Setzen Sie die Farbe basierend auf der Kategorie des BossEvents
-                    switch (bossEvent.Category)
-                    {
-                        case "Maguuma":
-                            e.Item.ForeColor = Color.LimeGreen;
-                            break;
-                        case "Desert":
-                            e.Item.ForeColor = Color.DeepPink;
-                            break;
-                        case "WBs":
-                            e.Item.ForeColor = Color.WhiteSmoke;
-                            break;
-                        case "Ice":
-                            e.Item.ForeColor = Color.DeepSkyBlue;
-                            break;
-                        case "Cantha":
-                            e.Item.ForeColor = Color.Blue;
-                            break;
-                        case "SotO":
-                            e.Item.ForeColor = Color.Yellow;
-                            break;
-                        case "LWS2":
-                            e.Item.ForeColor = Color.LightYellow;
-                            break;
-                        case "LWS3":
-                            e.Item.ForeColor = Color.ForestGreen;
-                            break;
-                        default:
-                            e.Item.ForeColor = DefaultFontColor;
-                            break;
-                    }
-                }
-            }
+            //this was not needed we have already assigned color in BossTimerService.cs line 312 and 318
 
         }
 

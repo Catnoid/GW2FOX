@@ -248,7 +248,10 @@
                 {
                     return _timings
                         .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
-                            GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(0, 24, 0, 1, 500)) + bossEvent.Timing,
+                            GlobalVariables.CURRENT_DATE_TIME.Date
+                                // .Add(new TimeSpan(0, 24, 0, 1, 500))
+                                .Add(new TimeSpan(0, 24, 0, 0, 0))
+                            + bossEvent.Timing,
                             bossEvent.Waypoint))
                         .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                         .Take(NextRunsToShow)
@@ -257,7 +260,9 @@
 
                 return nextTimings
                     .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
-                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing + TimeSpan.Parse("00:00:01.500"), bossEvent.Waypoint))
+                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing
+                                                               // + TimeSpan.Parse("00:00:01.500")
+                        , bossEvent.Waypoint))
                     .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                     .Take(NextRunsToShow)
                     .ToList();
@@ -270,7 +275,9 @@
                         bossEvent.Timing > GlobalVariables.CURRENT_TIME.Subtract(new TimeSpan(0, 14, 59)) &&
                         bossEvent.Timing < GlobalVariables.CURRENT_TIME)
                     .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
-                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing + TimeSpan.Parse("00:00:02.500"), bossEvent.Waypoint))
+                        GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing
+                                                               // + TimeSpan.Parse("00:00:02.500")
+                        , bossEvent.Waypoint))
                     .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                     // .Take(PREVIOUS_RUNS_TO_SHOW)
                     .ToList();
@@ -331,12 +338,12 @@
             
             public DateTime NextRunTime { get; set; } = nextRunTime;
 
-            public bool IsPreviewBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
+            public bool isPreviousBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
             public DateTime NextRunTimeEnding => NextRunTime.AddMinutes(14).AddSeconds(59);
 
             public DateTime getTimeToShow()
             {
-                if (IsPreviewBoss)
+                if (isPreviousBoss)
                 {
                     return NextRunTimeEnding;
                 }
@@ -345,7 +352,17 @@
             }
             public TimeSpan getTimeRemaining()
             {
-                return getTimeToShow() - GlobalVariables.CURRENT_DATE_TIME;
+                if (!isPreviousBoss)
+                {
+                    return getTimeToShow() - GlobalVariables.CURRENT_DATE_TIME;
+                }
+                else
+                {
+                    return GlobalVariables.CURRENT_DATE_TIME
+                        .Add(new TimeSpan(0, 0,15, 0, 0))
+                        // .Subtract(new TimeSpan(0, 0,0, 2, 0))
+                        .Subtract(getTimeToShow());
+                }
             }
             public string getTimeRemainingFormatted()
             {
@@ -355,7 +372,7 @@
 
             public Color getForeColor()
             {
-                if (IsPreviewBoss)
+                if (isPreviousBoss)
                 {
                     return PastBossFontColor; // Setzen Sie die Farbe auf OrangeRed für PreviewBosses
                 }

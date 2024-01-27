@@ -299,23 +299,10 @@ namespace GW2FOX
                         foreach (var bossEvent in allBosses)
                         {
                             // Calculate the end time of the boss event based on the current time
-                            DateTime timeToShow = bossEvent.NextRunTime;
-                            if (bossEvent.IsPreviewBoss)
-                            {
-                                timeToShow = bossEvent.NextRunTimeEnding;
-                            }
-
-
-                            // Calculate remaining time until the end of the boss event
-                            TimeSpan remainingTime = timeToShow - GlobalVariables.CURRENT_DATE_TIME;
-
-                            string remainingTimeFormat =
-                                $"{(int)remainingTime.TotalHours:D2}:{remainingTime.Minutes:D2}:{remainingTime.Seconds:D2}";
-
 
                             var listViewItem = new ListViewItem("btn", 0);
                             listViewItem.SubItems.Add(bossEvent.BossName); // Hier wird ein Unterelement hinzugefügt
-                            listViewItem.SubItems.Add(remainingTimeFormat); // Hier wird ein Unterelement hinzugefügt
+                            listViewItem.SubItems.Add(bossEvent.getTimeRemainingFormatted()); // Hier wird ein Unterelement hinzugefügt
                             listViewItem.ForeColor = bossEvent.getForeColor();
                             // listViewItem.ToolTipText =
                             //     "Left Click to copy the Waypoint to clipboard\nRight Click to remove from the list";
