@@ -15,7 +15,7 @@ jobs:
       - name: Send Discord notification
         run: |
           curl -X POST -H "Content-Type: application/json" \
-            -d '{"content": "New release: ${{ github.event.release.tag_name }}"}' \
+            -d '{"content": "New release: ${{ github.event.release.tag_name }}\nDescrtiption: ${{ github.event.release.body }}\nClick here for more info: ${{ github.event.release.html_url }}"}' \
             https://discord.com/api/webhooks/1200776192299638954/PkVpj2ckfqaV93f1A2WOwEKK_LbkAI8o_7gES5ijFFJ6I_qgI6DI1w_c2luFuAuKSYy1
         env:
           YOUR_DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/1200776192299638954/PkVpj2ckfqaV93f1A2WOwEKK_LbkAI8o_7gES5ijFFJ6I_qgI6DI1w_c2luFuAuKSYy1
