@@ -58,6 +58,7 @@ public class Updater
 
             using (WebClient client = new WebClient())
             {
+                client.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
                 string json = client.DownloadString(RepositoryUrl);
                 dynamic releaseInfo = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
 
@@ -93,7 +94,7 @@ public class Updater
             // Je nach Update-Mechanismus kann dies variieren.
 
             // Beispiel (vereinfacht):
-            ZipFile.ExtractToDirectory(updateFilePath, "path_to_installation_directory");
+            ZipFile.ExtractToDirectory(updateFilePath, UpdateFolder);
 
             Console.WriteLine("Update successfully installed.");
         }

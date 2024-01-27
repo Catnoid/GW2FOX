@@ -1968,8 +1968,38 @@ namespace GW2FOX
             BossTimerService.Timer_Click(sender, e);
             // Additional logic specific to Timer_Click in Main class, if any
         }
-    }
+        
+        
+        public static string getConfigLineForItem(string configItem)
+        {
+            string[] lines = ReadConfigFile();
+            
+            // Index of the line with the Meta bosses
+            int versionIndex = -1;
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].StartsWith(configItem + ":"))
+                {
+                    versionIndex = i;
+                    break;
+                }
+            }
+            if (versionIndex != -1 && versionIndex < lines.Length)
+            {
+                // Extract the bosses from the Meta line
+                return lines[versionIndex].Replace( configItem + ":", "").Trim();
 
+
+            }
+            else
+            {
+                SaveTextToFile("1", configItem);
+                return getConfigLineForItem(configItem);
+            }
+        }
+    }
+    
+    
 
 }
 

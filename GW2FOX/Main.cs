@@ -16,8 +16,10 @@ namespace GW2FOX
         {
             InitializeComponent();
             Load += Main_Load;
-            Worldbosses.ReadConfigFile();
+            
             InitializeGlobalKeyboardHook();
+            
+            // Updater.CheckForUpdates(Worldbosses.getConfigLineForItem("Version"));
         }
         
         
