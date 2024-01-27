@@ -6,7 +6,7 @@ using System.IO.Compression;
 
 public class Updater
 {
-    private const string RepositoryUrl = "https://api.github.com/repos/DEIN_BENUTZERNAME/DEIN_REPO/releases/latest";
+    private const string RepositoryUrl = "https://api.github.com/repos/catnoid/gw2fox/releases/latest";
     private const string UpdateFolder = "Update";
 
     public static void CheckForUpdates(string currentVersion)
