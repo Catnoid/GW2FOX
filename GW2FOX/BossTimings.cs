@@ -248,7 +248,7 @@
                 {
                     return _timings
                         .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
-                            GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(24, 0, 1)) + bossEvent.Timing,
+                            GlobalVariables.CURRENT_DATE_TIME.Date.Add(new TimeSpan(0, 24, 0, 1, 500)) + bossEvent.Timing,
                             bossEvent.Waypoint))
                         .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                         .Take(NextRunsToShow)
