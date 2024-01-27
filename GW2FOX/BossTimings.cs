@@ -338,12 +338,12 @@
             
             public DateTime NextRunTime { get; set; } = nextRunTime;
 
-            public bool isPreviousBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
+            public bool IsPreviewBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
             public DateTime NextRunTimeEnding => NextRunTime.AddMinutes(14).AddSeconds(59);
 
             public DateTime getTimeToShow()
             {
-                if (isPreviousBoss)
+                if (IsPreviewBoss)
                 {
                     return NextRunTimeEnding;
                 }
@@ -352,17 +352,7 @@
             }
             public TimeSpan getTimeRemaining()
             {
-                if (!isPreviousBoss)
-                {
-                    return getTimeToShow() - GlobalVariables.CURRENT_DATE_TIME;
-                }
-                else
-                {
-                    return GlobalVariables.CURRENT_DATE_TIME
-                        .Add(new TimeSpan(0, 0,15, 0, 0))
-                        // .Subtract(new TimeSpan(0, 0,0, 2, 0))
-                        .Subtract(getTimeToShow());
-                }
+                return getTimeToShow() - GlobalVariables.CURRENT_DATE_TIME;
             }
             public string getTimeRemainingFormatted()
             {
@@ -372,7 +362,7 @@
 
             public Color getForeColor()
             {
-                if (isPreviousBoss)
+                if (IsPreviewBoss)
                 {
                     return PastBossFontColor; // Setzen Sie die Farbe auf OrangeRed für PreviewBosses
                 }
