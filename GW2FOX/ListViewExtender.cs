@@ -25,8 +25,10 @@ namespace GW2FOX
             }
 
          public override void Draw(DrawListViewSubItemEventArgs e)
-            {
-                using (var font = new Font("Segoe UI", 10, FontStyle.Bold))
+         {
+             if (e.Item == null) return;
+             var itemFont = e.Item.Font;
+             using (var font = itemFont)
                 {
                     // Setze die Schriftart und Farbe basierend auf bestimmten Bedingungen
                     if (e.Item.Selected)
