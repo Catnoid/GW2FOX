@@ -163,7 +163,7 @@
             Beheinfo.ScrollBars = ScrollBars.Vertical;
             Beheinfo.Size = new Size(600, 60);
             Beheinfo.TabIndex = 56;
-            Beheinfo.Text = "☠ ≪Battle in Tarir≫ South: ☣[&BAIIAAA=]☣, North: ☣[&BN0HAAA=]☣, East: ☣[&BGwIAAA=]☣, West: ☣ [&BAIIAAA=]☣";
+            Beheinfo.Text = "☠ ≪Battle in Tarir≫ South: ☣[&BAIIAAA=]☣, North: ☣[&BN0HAAA=]☣, East: ☣[&BGwIAAA=]☣, West: ☣ [&BAYIAAA=]☣";
             // 
             // button1
             // 
