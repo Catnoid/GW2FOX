@@ -149,7 +149,7 @@
             Beheinfo.ScrollBars = ScrollBars.Vertical;
             Beheinfo.Size = new Size(600, 60);
             Beheinfo.TabIndex = 56;
-            Beheinfo.Text = "☠ ≪Junundu Rising≫ with Bounty-Hunting ☣[&BIMLAAA=]☣";
+            Beheinfo.Text = "☠ ≪Junundu Rising≫ with Bounty-Hunting ☣[&BMEKAAA=]☣";
             // 
             // button1
             // 
