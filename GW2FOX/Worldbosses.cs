@@ -21,7 +21,7 @@ namespace GW2FOX
         private void Worldbosses_Load_1(object? sender, EventArgs e)
         {
 
-            WindowState = FormWindowState.Maximized;
+            
             SetBossListFromConfig_Bosses();
         }
 
