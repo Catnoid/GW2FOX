@@ -1,10 +1,10 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using static GW2FOX.BossTimerService;
 using static GW2FOX.GlobalVariables;
 
 namespace GW2FOX
 {
-    public class BaseForm : Form
+    public partial class BaseForm : Form
     {
 
 
@@ -14,9 +14,20 @@ namespace GW2FOX
 
         protected void ShowAndHideForm(Form newForm)
         {
+            // Speichern Sie die Größe und Position des aktuellen Formulars
+            Size currentSize = this.Size;
+            Point currentPosition = this.Location;
+
+            // Setzen Sie die Größe und Position des neuen Formulars
+            newForm.Size = currentSize;
+            newForm.Location = currentPosition;
+
+            // Setzen Sie das aktuelle Formular als Besitzer des neuen Formulars
             newForm.Owner = this;
+
+            // Zeigen Sie das neue Formular an und verbergen Sie das aktuelle Formular
             newForm.Show();
-            Hide();
+            this.Hide();
         }
 
         protected static void SaveTextToFile(string textToSave, string sectionHeader, bool hideMessages = false)
@@ -218,7 +229,7 @@ namespace GW2FOX
             base.OnFormClosing(e);
             Application.Exit();
         }
-        
+
         protected void Back_Click(object sender, EventArgs e)
         {
             Owner?.Show();
@@ -226,6 +237,6 @@ namespace GW2FOX
         }
 
 
-        
+
     }
 }
