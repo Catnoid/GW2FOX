@@ -1545,11 +1545,9 @@
             // Worldbosses
             // 
             AutoScaleMode = AutoScaleMode.None;
-            AutoScroll = true;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = Properties.Resources.Background;
-            ClientSize = new Size(1904, 961);
+            ClientSize = new Size(1904, 1041);
             Controls.Add(button66);
             Controls.Add(buttonSelectAll);
             Controls.Add(button65);
@@ -1676,14 +1674,9 @@
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
             Controls.Add(pictureBox1);
-            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Worldbosses";
             RightToLeft = RightToLeft.No;
-            SizeGripStyle = SizeGripStyle.Show;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "GW2FOX";
-            WindowState = FormWindowState.Maximized;
             Load += Worldbosses_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

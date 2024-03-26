@@ -9,7 +9,26 @@ namespace GW2FOX
 
 
 
+        public BaseForm()
+        {
+            InitializeComponent();
 
+            // Setzen Sie hier Ihre gemeinsamen Eigenschaften
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = Properties.Resources.Background;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Text = "GW2FOX";
+            this.SizeGripStyle = SizeGripStyle.Show;
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.WindowState = FormWindowState.Normal;
+            this.DoubleBuffered = true;
+            // Weitere gemeinsame Eigenschaften setzen...
+        }
 
 
         protected void ShowAndHideForm(Form newForm)
