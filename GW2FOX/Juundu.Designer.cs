@@ -149,7 +149,7 @@
             Beheinfo.ScrollBars = ScrollBars.Vertical;
             Beheinfo.Size = new Size(600, 60);
             Beheinfo.TabIndex = 56;
-            Beheinfo.Text = "☠ ≪Junundu Rising≫ with Bounty-Hunting ☣[&BIMLAAA=]☣";
+            Beheinfo.Text = "☠ ≪Junundu Rising≫ with Bounty-Hunting ☣[&BMEKAAA=]☣";
             // 
             // button1
             // 
@@ -279,7 +279,7 @@
             Mapinfo.ScrollBars = ScrollBars.Vertical;
             Mapinfo.Size = new Size(600, 60);
             Mapinfo.TabIndex = 82;
-            Mapinfo.Text = "≪ATTENTION≫ Meta-Infusion-Train │ “Junundu Rising” │ with Bounty-Hunting ☣[&BIMLAAA=]☣  - Join us!\r\n";
+            Mapinfo.Text = "≪ATTENTION≫ Meta-Infusion-Train │ “Junundu Rising” │ with Bounty-Hunting ☣[&BMEKAAA=]☣  - Join us!\r\n";
             // 
             // pictureBox5
             // 
