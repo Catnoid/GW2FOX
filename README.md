@@ -1,10 +1,10 @@
-# GW2FOX
+Guild Wars 2 FOX
 
 - Overlay Timer
 - Leading Tool
 - Repair Guild Wars 2
 - Guild Advertising Helper
+- Unoffical Add-On Manager
 
-
-All written with Open AI and Visual Studio 2022.
-Crashes, issus and errors solved so far!
+Feel free to use it and donate on Homapage if you want!
+https://gw2-hub.000webhostapp.com/makrotool.php
