@@ -7,6 +7,7 @@ Guild Wars 2 FOX
 - Blish HUD
 - ReShade GW2 for DirectX11
 - TACO ReActive
+- ArcDPS
 
 Feel free to use it and donate on Homapage if you want!
 https://gw2-hub.000webhostapp.com/makrotool.php
