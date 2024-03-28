@@ -8,27 +8,27 @@ namespace GW2FOX
 {
     public partial class Main : BaseForm
     {
-        
+
 
         private GlobalKeyboardHook? _globalKeyboardHook; // Füge dies hinzu
-        
+
         public Main()
         {
             InitializeComponent();
             Load += Main_Load;
-            
+
             InitializeGlobalKeyboardHook();
-            
+
             // Updater.CheckForUpdates(Worldbosses.getConfigLineForItem("Version"));
         }
-        
-        
+
+
         private void InitializeGlobalKeyboardHook()
         {
             _globalKeyboardHook = new GlobalKeyboardHook();
             _globalKeyboardHook.KeyPressed += GlobalKeyboardHook_KeyPressed;
         }
-        
+
         private void GlobalKeyboardHook_KeyPressed(object sender, KeyPressedEventArgs e)
         {
             if (ModifierKeys == Keys.Alt && e.Key == Keys.T)
@@ -37,7 +37,7 @@ namespace GW2FOX
             }
         }
 
-        private void Main_Load(object? sender, EventArgs e) 
+        private void Main_Load(object? sender, EventArgs e)
         {
             try
             {
@@ -157,23 +157,7 @@ namespace GW2FOX
             }
         }
 
-        private void Uam_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string homepageUrl = "https://github.com/gw2-addon-loader/GW2-Addon-Manager/releases";
-                ProcessStartInfo psi = new ProcessStartInfo
-                {
-                    FileName = homepageUrl,
-                    UseShellExecute = true
-                };
-                Process.Start(psi);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Fehler beim ?ffnen der Homepage: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+
 
         private void Leading_Click(object sender, EventArgs e)
         {
@@ -202,5 +186,31 @@ namespace GW2FOX
             }
         }
 
+        private void BlishHUD_Click(object sender, EventArgs e)
+        {
+            // Verzeichnis der ausführbaren Datei erhalten
+            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+
+            // Pfad zur Datei "Blish HUD.exe" im Verzeichnis "data"
+            string filePath = Path.Combine(exeDirectory, "data", "Blish HUD.exe");
+
+            // Überprüfen, ob die Datei existiert, bevor sie geöffnet wird
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    // Öffne die Datei
+                    Process.Start(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fehler beim Öffnen der Datei: " + ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

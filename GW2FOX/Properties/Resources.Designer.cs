@@ -73,16 +73,6 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Addonmanager {
-            get {
-                object obj = ResourceManager.GetObject("Addonmanager", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap Aetherblade_Assault {
             get {
                 object obj = ResourceManager.GetObject("Aetherblade Assault", resourceCulture);
@@ -516,6 +506,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Line {
             get {
                 object obj = ResourceManager.GetObject("Line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
