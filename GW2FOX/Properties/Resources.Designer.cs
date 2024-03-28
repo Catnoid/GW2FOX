@@ -733,6 +733,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Screenshot_2024_03_28_162930 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_2024_03_28_162930", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap SerpentsIre {
             get {
                 object obj = ResourceManager.GetObject("SerpentsIre", resourceCulture);
@@ -746,6 +756,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Shatti {
             get {
                 object obj = ResourceManager.GetObject("Shatti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Shortcut {
+            get {
+                object obj = ResourceManager.GetObject("Shortcut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
