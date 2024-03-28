@@ -21,18 +21,18 @@ namespace GW2FOX
         private void Worldbosses_Load_1(object? sender, EventArgs e)
         {
 
-            
+
             SetBossListFromConfig_Bosses();
         }
 
 
 
-        
+
 
         // Constants for window handling
         const int SW_RESTORE = 9;
 
-        
+
 
         private void Saverun_Click(object sender, EventArgs e)
         {
@@ -57,6 +57,11 @@ namespace GW2FOX
         private void Symbols_Click(object sender, EventArgs e)
         {
             SaveTextToFile(Symbols.Text, "Symbols");
+        }
+
+        private void TheOilFloes_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new TheOilFloes());
         }
 
         private void Behe_Click(object sender, EventArgs e)
@@ -197,6 +202,12 @@ namespace GW2FOX
             BringGw2ToFront();
         }
 
+        private void MawsOfTorment_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new MawsOfTorement());
+        }
+
+
 
         private void Chak_Click(object sender, EventArgs e)
         {
@@ -246,6 +257,12 @@ namespace GW2FOX
         private void Savesquadmessage_Click(object sender, EventArgs e)
         {
             SaveTextToFile(Squadinfo.Text, "Squadinfo");
+        }
+
+
+        private void OozePits_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new TheOozePits());
         }
 
         private void SerpentsIre_Click(object sender, EventArgs e)
@@ -1296,7 +1313,7 @@ namespace GW2FOX
 
                         // Setze das Häkchen im CheckBox-Control auf true
                         CheckBox bossCheckBox = FindCheckBoxByBossName(bossName);
-                        if (bossCheckBox != null) 
+                        if (bossCheckBox != null)
                         {
                             bossCheckBox.Checked = true;
                         }
@@ -1416,7 +1433,7 @@ namespace GW2FOX
                         SaveTextToFile(GlobalVariables.DEFAULT_SQUAD_INFO, "Squadinfo", true);
                         SaveTextToFile(GlobalVariables.DEFAULT_WELCOME, "Welcome", true);
                         SaveTextToFile(GlobalVariables.DEFAULT_SYMBOLS, "Symbols", true);
-                        
+
                         return ReadConfigFile();
                     }
                     catch (Exception ex)
@@ -1667,7 +1684,7 @@ namespace GW2FOX
                 {
                     // Remove the "Bosses:" section from the array
                     // lines = lines.Take(bossIndex).Concat(lines.SkipWhile(line => line.StartsWith("Bosses:")).Skip(1)).ToArray();
-                    lines[bossIndex] =  $"Bosses: \"{string.Join(", ", BossEventGroups.Select(group => group.BossName).ToList())}\"";
+                    lines[bossIndex] = $"Bosses: \"{string.Join(", ", BossEventGroups.Select(group => group.BossName).ToList())}\"";
                     // Save the modified configuration back to the file
                     WriteConfigFile(lines);
                 }
@@ -1758,7 +1775,7 @@ namespace GW2FOX
                 {
                     //This will create a new section
                     SaveTextToFile(GlobalVariables.DEFAULT_BOSSES, "Bosses");
-                    World_Click(sender, e);   
+                    World_Click(sender, e);
                     // MessageBox.Show($"World section not found in config.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -1811,7 +1828,7 @@ namespace GW2FOX
                 {
                     //This will create a new section
                     SaveTextToFile(GlobalVariables.DEFAULT_WORLD, "World");
-                    World_Click(sender, e);   
+                    World_Click(sender, e);
                     // MessageBox.Show($"World section not found in config.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -1968,12 +1985,12 @@ namespace GW2FOX
             BossTimerService.Timer_Click(sender, e);
             // Additional logic specific to Timer_Click in Main class, if any
         }
-        
-        
+
+
         public static string getConfigLineForItem(string configItem)
         {
             string[] lines = ReadConfigFile();
-            
+
             // Index of the line with the Meta bosses
             int versionIndex = -1;
             for (int i = 0; i < lines.Length; i++)
@@ -1987,7 +2004,7 @@ namespace GW2FOX
             if (versionIndex != -1 && versionIndex < lines.Length)
             {
                 // Extract the bosses from the Meta line
-                return lines[versionIndex].Replace( configItem + ":", "").Trim();
+                return lines[versionIndex].Replace(configItem + ":", "").Trim();
 
 
             }
@@ -1997,9 +2014,96 @@ namespace GW2FOX
                 return getConfigLineForItem(configItem);
             }
         }
+
+        private void Effigy_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new Effigy());
+        }
+
+        private void DoomloreShrine_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new DoomloreShrine());
+        }
+
+        private void StormsOfWinter_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new StormsOfWinter());
+        }
+
+        private void DefendJorasKeep_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new DefendJorasKeep());
+        }
+
+        private void Sandstorm_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new Sandstorm());
+        }
+
+        private void SaidrasHaven_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new SaidrasHaven());
+        }
+
+        private void NewLoamhurst_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new NewLoamhurst());
+        }
+
+        private void NoransHomestead_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new NoransHomestead());
+        }
+
+        private void AetherbladeAssault_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new AetherbladeAssault());
+        }
+
+        private void KainengBlackout_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new KainengBlackout());
+        }
+
+        private void GangWar_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new GangWar());
+        }
+
+        private void Aspenwood_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new Aspenwood());
+        }
+
+        private void JadeSea_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new JadeSea());
+        }
+
+        private void WizardsTower_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new WizardsTower());
+        }
+
+        private void FlyByNight_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new FlyByNight());
+        }
+
+        private void DefenseOfAmnytas_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new DefenseOfAmnytas());
+        }
+
+        private void Convergences_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new Convergences());
+        }
     }
-    
-    
+
+
+
+
 
 }
 

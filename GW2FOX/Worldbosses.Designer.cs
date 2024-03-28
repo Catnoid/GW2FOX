@@ -732,6 +732,7 @@
             button45.Size = new Size(182, 46);
             button45.TabIndex = 106;
             button45.UseVisualStyleBackColor = false;
+            button45.Click += Sandstorm_Click;
             // 
             // button46
             // 
@@ -743,6 +744,7 @@
             button46.Size = new Size(182, 46);
             button46.TabIndex = 107;
             button46.UseVisualStyleBackColor = false;
+            button46.Click += SaidrasHaven_Click;
             // 
             // button47
             // 
@@ -754,6 +756,7 @@
             button47.Size = new Size(182, 46);
             button47.TabIndex = 108;
             button47.UseVisualStyleBackColor = false;
+            button47.Click += NewLoamhurst_Click;
             // 
             // button48
             // 
@@ -765,6 +768,7 @@
             button48.Size = new Size(182, 46);
             button48.TabIndex = 109;
             button48.UseVisualStyleBackColor = false;
+            button48.Click += NoransHomestead_Click;
             // 
             // button49
             // 
@@ -776,6 +780,7 @@
             button49.Size = new Size(182, 46);
             button49.TabIndex = 110;
             button49.UseVisualStyleBackColor = false;
+            button49.Click += MawsOfTorment_Click;
             // 
             // button50
             // 
@@ -787,6 +792,7 @@
             button50.Size = new Size(182, 46);
             button50.TabIndex = 111;
             button50.UseVisualStyleBackColor = false;
+            button50.Click += TheOilFloes_Click;
             // 
             // button51
             // 
@@ -798,6 +804,7 @@
             button51.Size = new Size(182, 46);
             button51.TabIndex = 112;
             button51.UseVisualStyleBackColor = false;
+            button51.Click += OozePits_Click;
             // 
             // button52
             // 
@@ -809,6 +816,7 @@
             button52.Size = new Size(182, 46);
             button52.TabIndex = 113;
             button52.UseVisualStyleBackColor = false;
+            button52.Click += Effigy_Click;
             // 
             // button53
             // 
@@ -820,6 +828,7 @@
             button53.Size = new Size(182, 46);
             button53.TabIndex = 114;
             button53.UseVisualStyleBackColor = false;
+            button53.Click += DoomloreShrine_Click;
             // 
             // button54
             // 
@@ -831,6 +840,7 @@
             button54.Size = new Size(182, 46);
             button54.TabIndex = 115;
             button54.UseVisualStyleBackColor = false;
+            button54.Click += StormsOfWinter_Click;
             // 
             // button55
             // 
@@ -842,6 +852,7 @@
             button55.Size = new Size(182, 46);
             button55.TabIndex = 116;
             button55.UseVisualStyleBackColor = false;
+            button55.Click += DefendJorasKeep_Click;
             // 
             // button56
             // 
@@ -853,6 +864,7 @@
             button56.Size = new Size(185, 46);
             button56.TabIndex = 117;
             button56.UseVisualStyleBackColor = false;
+            button56.Click += AetherbladeAssault_Click;
             // 
             // button57
             // 
@@ -864,6 +876,7 @@
             button57.Size = new Size(185, 46);
             button57.TabIndex = 118;
             button57.UseVisualStyleBackColor = false;
+            button57.Click += KainengBlackout_Click;
             // 
             // button58
             // 
@@ -875,6 +888,7 @@
             button58.Size = new Size(185, 46);
             button58.TabIndex = 119;
             button58.UseVisualStyleBackColor = false;
+            button58.Click += GangWar_Click;
             // 
             // button59
             // 
@@ -886,6 +900,7 @@
             button59.Size = new Size(185, 46);
             button59.TabIndex = 120;
             button59.UseVisualStyleBackColor = false;
+            button59.Click += Aspenwood_Click;
             // 
             // button60
             // 
@@ -897,6 +912,7 @@
             button60.Size = new Size(185, 46);
             button60.TabIndex = 121;
             button60.UseVisualStyleBackColor = false;
+            button60.Click += WizardsTower_Click;
             // 
             // button61
             // 
@@ -908,6 +924,7 @@
             button61.Size = new Size(185, 46);
             button61.TabIndex = 122;
             button61.UseVisualStyleBackColor = false;
+            button61.Click += FlyByNight_Click;
             // 
             // button62
             // 
@@ -919,6 +936,7 @@
             button62.Size = new Size(185, 46);
             button62.TabIndex = 123;
             button62.UseVisualStyleBackColor = false;
+            button62.Click += DefenseOfAmnytas_Click;
             // 
             // Convergens
             // 
@@ -930,6 +948,7 @@
             Convergens.Size = new Size(185, 46);
             Convergens.TabIndex = 124;
             Convergens.UseVisualStyleBackColor = false;
+            Convergens.Click += Convergences_Click;
             // 
             // button64
             // 
@@ -941,6 +960,7 @@
             button64.Size = new Size(185, 46);
             button64.TabIndex = 125;
             button64.UseVisualStyleBackColor = false;
+            button64.Click += JadeSea_Click;
             // 
             // Maw
             // 
