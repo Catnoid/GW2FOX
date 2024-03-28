@@ -5,7 +5,7 @@ Guild Wars 2 FOX
 - Repair Guild Wars 2
 - Guild Advertising Helper
 - Blish HUD
-- ReShade
+- ReShade GW2 for DirectX11
 
 Feel free to use it and donate on Homapage if you want!
 https://gw2-hub.000webhostapp.com/makrotool.php
