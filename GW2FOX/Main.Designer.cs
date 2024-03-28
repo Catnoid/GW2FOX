@@ -46,7 +46,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Header;
-            pictureBox1.Location = new Point(41, 12);
+            pictureBox1.Location = new Point(42, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(700, 175);
             pictureBox1.TabIndex = 0;
@@ -157,8 +157,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Background;
-            ClientSize = new Size(781, 407);
+            BackgroundImage = Properties.Resources.Backgroundmini;
+            ClientSize = new Size(784, 411);
             Controls.Add(pictureBox2);
             Controls.Add(button8);
             Controls.Add(button7);
