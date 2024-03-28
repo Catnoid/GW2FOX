@@ -266,5 +266,91 @@ namespace GW2FOX
                 MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ArcDPSInstall_Click(object sender, EventArgs e)
+        {
+            string gw2Verzeichnis = GetGw2Verzeichnis();
+
+            if (string.IsNullOrEmpty(gw2Verzeichnis))
+            {
+                MessageBox.Show("Das Guild Wars 2-Verzeichnis wurde nicht ausgewählt.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            InstallArcDPS(gw2Verzeichnis);
+        }
+
+        private string GetGw2Verzeichnis()
+        {
+            using (var dialog = new FolderBrowserDialog())
+            {
+                dialog.Description = "Please select the directory of Guild Wars 2 where the .exe file is located.";
+                dialog.ShowNewFolderButton = false;
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    return dialog.SelectedPath;
+                }
+            }
+
+            return null;
+        }
+
+        private void InstallArcDPS(string gw2Verzeichnis)
+        {
+            // Pfade zu den zu kopierenden Dateien
+            string d3d11DllQuelle = Path.Combine("data", "d3d11.dll");
+            string d3d11Md5SumQuelle = Path.Combine("data", "d3d11.dll.md5sum");
+
+            // Ziel Pfade im Guild Wars 2-Verzeichnis
+            string d3d11DllZiel = Path.Combine(gw2Verzeichnis, "d3d11.dll");
+            string d3d11Md5SumZiel = Path.Combine(gw2Verzeichnis, "d3d11.dll.md5sum");
+
+            try
+            {
+                // Dateien kopieren
+                File.Copy(d3d11DllQuelle, d3d11DllZiel, true);
+                File.Copy(d3d11Md5SumQuelle, d3d11Md5SumZiel, true);
+
+                MessageBox.Show("Done.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ArcDPSDeinstall_Click(object sender, EventArgs e)
+        {
+            string gw2Verzeichnis = GetGw2Verzeichnis();
+
+            if (string.IsNullOrEmpty(gw2Verzeichnis))
+            {
+                MessageBox.Show("The Guild Wars 2 directory was not selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                // Pfade zu den zu löschenden Dateien
+                string d3d11DllZiel = Path.Combine(gw2Verzeichnis, "d3d11.dll");
+                string d3d11Md5SumZiel = Path.Combine(gw2Verzeichnis, "d3d11.dll.md5sum");
+
+                // Dateien löschen, wenn sie existieren
+                if (File.Exists(d3d11DllZiel))
+                    File.Delete(d3d11DllZiel);
+
+                if (File.Exists(d3d11Md5SumZiel))
+                    File.Delete(d3d11Md5SumZiel);
+
+                MessageBox.Show("Done.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
     }
 }
