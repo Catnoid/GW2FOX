@@ -10,4 +10,5 @@ Feel free to use it and donate on Homapage if you want!
 https://gw2-hub.000webhostapp.com/makrotool.php
 
 
-![Screenshot 2024-03-27 135141](https://github.com/Catnoid/GW2FOX/assets/67755545/a37c64b6-b88b-42ff-98fc-1feaff0e67df)
+
+![Screenshot 2024-03-28 095158](https://github.com/Catnoid/GW2FOX/assets/67755545/f364e2d8-8a99-44a7-b2b2-21d6a14cefb5)
