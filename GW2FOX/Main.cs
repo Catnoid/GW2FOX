@@ -212,5 +212,32 @@ namespace GW2FOX
                 MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ReShade_Click(object sender, EventArgs e)
+        {
+            // Verzeichnis der ausführbaren Datei erhalten
+            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+
+            // Pfad zur Datei "Blish HUD.exe" im Verzeichnis "data"
+            string filePath = Path.Combine(exeDirectory, "data", "ReShade_Setup_6.0.1.exe");
+
+            // Überprüfen, ob die Datei existiert, bevor sie geöffnet wird
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    // Öffne die Datei
+                    Process.Start(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fehler beim Öffnen der Datei: " + ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -673,6 +673,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ReShade {
+            get {
+                object obj = ResourceManager.GetObject("ReShade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Rhendaksiegel {
             get {
                 object obj = ResourceManager.GetObject("Rhendaksiegel", resourceCulture);
