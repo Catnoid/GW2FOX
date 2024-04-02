@@ -192,7 +192,7 @@ namespace GW2FOX
             string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
 
             // Pfad zur Datei "Blish HUD.exe" im Verzeichnis "data"
-            string filePath = Path.Combine(exeDirectory, "data", "Blish HUD.exe");
+            string filePath = Path.Combine(exeDirectory, "data2", "Blish HUD.exe");
 
             // Überprüfen, ob die Datei existiert, bevor sie geöffnet wird
             if (File.Exists(filePath))
