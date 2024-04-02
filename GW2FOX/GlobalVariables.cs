@@ -14,7 +14,7 @@ public class GlobalVariables
     public static TimeSpan CURRENT_TIME => CURRENT_DATE_TIME.TimeOfDay;
     public static DateTime CURRENT_DATE => CURRENT_DATE_TIME.Date;
     public static string FILE_PATH = "config.txt";
-    
+
     // Constants for window handling
     public const int SW_RESTORE = 9;
     [DllImport("user32.dll")]

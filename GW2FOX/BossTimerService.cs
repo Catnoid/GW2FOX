@@ -84,7 +84,7 @@ namespace GW2FOX
             listViewButtonColumn.Hover += ListView_MouseHover;
             extender.AddColumn(listViewButtonColumn);
 
-            
+
         }
 
 
@@ -99,114 +99,115 @@ namespace GW2FOX
         }
 
         private static void MyMenuItem_Click(object sender, EventArgs e)
-    {
-        var menuItem = (ToolStripMenuItem)sender;
-        var contextMenu = (ContextMenuStrip) menuItem.Owner!;
-        var owner = contextMenu.SourceControl;
-        var listView = (ListView)owner!;
+        {
+            var menuItem = (ToolStripMenuItem)sender;
+            var contextMenu = (ContextMenuStrip)menuItem.Owner!;
+            var owner = contextMenu.SourceControl;
+            var listView = (ListView)owner!;
 
-        if (listView.SelectedItems.Count <= 0) return;
-        var listViewItem = listView.SelectedItems[0];
-        var bossEvent = (BossEventRun)listViewItem.Tag!;
+            if (listView.SelectedItems.Count <= 0) return;
+            var listViewItem = listView.SelectedItems[0];
+            var bossEvent = (BossEventRun)listViewItem.Tag!;
 
-        if (DoneBosses.ContainsKey(bossEvent.NextRunTime.Date))
-        {
-            DoneBosses[bossEvent.NextRunTime.Date].Add(bossEvent.BossName);
-        }
-        else
-        {
-            DoneBosses.Add(bossEvent.NextRunTime.Date, [bossEvent.BossName]);
-        }
- 
-    }
+            if (DoneBosses.ContainsKey(bossEvent.NextRunTime.Date))
+            {
+                DoneBosses[bossEvent.NextRunTime.Date].Add(bossEvent.BossName);
+            }
+            else
+            {
+                DoneBosses.Add(bossEvent.NextRunTime.Date, [bossEvent.BossName]);
+            }
 
-    private static void ListView_MouseClick(object? sender, ListViewColumnMouseEventArgs e)
-    {
-        
-        var listViewButtonColumn = sender as ListViewButtonColumn;
-        var listView = listViewButtonColumn.ListView;
-        var selectedItem = listView?.GetItemAt(e.X, e.Y);
-        if (listView == null) return;
-        if (selectedItem is not { Tag: BossEventRun bossEvent }) return;
-        if (e.Button == MouseButtons.Left)
-        {
-            // Assuming each ListViewItem.Tag holds the corresponding BossEventRun
-            if (bossEvent.Waypoint.Equals("")) return;
-            var textToCopy = bossEvent.Waypoint; // Use 'waypoint' property of BossEventRun instead.
-            Clipboard.SetText(textToCopy);
-            MessageBox.Show("Waypoint of \"" + bossEvent.BossName + "\" has been copied to clipbaord", "Waypoint Copied!",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-        } else if (e.Button == MouseButtons.Right)
-        {
-            var dialogResult = MessageBox.Show("Are You Sure you want to Uncheck \"" + bossEvent.BossName + "\"?", "Confirm Uncheck Boss \"" + bossEvent.BossName + "\"", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult != DialogResult.Yes) return;
-            Worldbosses.RemoveBossNameFromConfig(bossEvent.BossName);
-            MessageBox.Show($"Boss \"" + bossEvent.BossName + "\" has been Unchecked!", "\"" + bossEvent.BossName + "\" Unchecked", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-    }
-    
-    
-    private static void ListView_MouseHover(object? sender, EventArgs e)
-    {
-        // return;
-        if (sender is not ListViewButtonColumn listViewButtonColumn) return;
-        ListView listView = listViewButtonColumn.ListView;
-        
-        // set listView to be the active control without this it works only when the window is clicked.
-        listView.Focus();
-        Point mousePosition = listView.PointToClient(Cursor.Position);
-        ListViewItem hoveredItem = listView.GetItemAt(mousePosition.X, mousePosition.Y);
-        if (hoveredItem is not { Tag: BossEvent bossEvent })
-        {
-            toolTip.Hide(listView);
-            return;
         }
 
-        if (!"".Equals(bossEvent.Waypoint))
+        private static void ListView_MouseClick(object? sender, ListViewColumnMouseEventArgs e)
         {
-            // Show the tooltip
-            toolTip.Show("Left Click to copy the Waypoint to clipboard\nRight Click to remove from the list",
-                listView, mousePosition,
-                1000); // tooltip disappears after 1 second (1000 milliseconds)
+
+            var listViewButtonColumn = sender as ListViewButtonColumn;
+            var listView = listViewButtonColumn.ListView;
+            var selectedItem = listView?.GetItemAt(e.X, e.Y);
+            if (listView == null) return;
+            if (selectedItem is not { Tag: BossEventRun bossEvent }) return;
+            if (e.Button == MouseButtons.Left)
+            {
+                // Assuming each ListViewItem.Tag holds the corresponding BossEventRun
+                if (bossEvent.Waypoint.Equals("")) return;
+                var textToCopy = bossEvent.Waypoint; // Use 'waypoint' property of BossEventRun instead.
+                Clipboard.SetText(textToCopy);
+                MessageBox.Show("Waypoint of \"" + bossEvent.BossName + "\" has been copied to clipbaord", "Waypoint Copied!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+                var dialogResult = MessageBox.Show("Are You Sure you want to Uncheck \"" + bossEvent.BossName + "\"?", "Confirm Uncheck Boss \"" + bossEvent.BossName + "\"", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult != DialogResult.Yes) return;
+                Worldbosses.RemoveBossNameFromConfig(bossEvent.BossName);
+                MessageBox.Show($"Boss \"" + bossEvent.BossName + "\" has been Unchecked!", "\"" + bossEvent.BossName + "\" Unchecked", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-    }
 
-
-
-
-
-    public static void Timer_Click(object sender, EventArgs e)
-    {
-        
-        Update();
-    }
-
-
-    private static void Initialize()
-    {
-        InitializeCustomBossList();
-        if (_overlay == null || _overlay.IsDisposed)
+        private static void ListView_MouseHover(object? sender, EventArgs e)
         {
-            InitializeBossTimerAndOverlay();
+            // return;
+            if (sender is not ListViewButtonColumn listViewButtonColumn) return;
+            ListView listView = listViewButtonColumn.ListView;
+
+            // set listView to be the active control without this it works only when the window is clicked.
+            listView.Focus();
+            Point mousePosition = listView.PointToClient(Cursor.Position);
+            ListViewItem hoveredItem = listView.GetItemAt(mousePosition.X, mousePosition.Y);
+            if (hoveredItem is not { Tag: BossEvent bossEvent })
+            {
+                toolTip.Hide(listView);
+                return;
+            }
+
+            if (!"".Equals(bossEvent.Waypoint))
+            {
+                // Show the tooltip
+                toolTip.Show("Left Click to copy the Waypoint to clipboard\nRight Click to remove from the list",
+                    listView, mousePosition,
+                    1000); // tooltip disappears after 1 second (1000 milliseconds)
+            }
+
         }
-    }
 
-    private static void Update()
-    {
-        Initialize();
-        
-        _bossTimer?.Start();
-        if (_overlay is { Visible: false })
+
+
+
+
+        public static void Timer_Click(object sender, EventArgs e)
         {
-            _overlay.Show();
+
+            Update();
         }
-    }
 
 
-    public class BossTimer : IDisposable
+        private static void Initialize()
         {
-           
+            InitializeCustomBossList();
+            if (_overlay == null || _overlay.IsDisposed)
+            {
+                InitializeBossTimerAndOverlay();
+            }
+        }
+
+        private static void Update()
+        {
+            Initialize();
+
+            _bossTimer?.Start();
+            if (_overlay is { Visible: false })
+            {
+                _overlay.Show();
+            }
+        }
+
+
+        public class BossTimer : IDisposable
+        {
+
             private readonly ListView _bossList;
             private readonly TimeZoneInfo _mezTimeZone;
             private readonly System.Threading.Timer _timer;
@@ -217,7 +218,7 @@ namespace GW2FOX
                 _mezTimeZone = TimeZoneInfo.FindSystemTimeZoneById(TimeZoneId);
                 _timer = new System.Threading.Timer(TimerCallback, null, 0, 1000);
             }
-       
+
 
             public void Start()
             {
@@ -229,12 +230,12 @@ namespace GW2FOX
                 _timer.Change(Timeout.Infinite, Timeout.Infinite);
             }
 
-        public static void UpdateCustomBossList(ListView updatedList)
-        {
-            CustomBossList = updatedList;
-           
-            BossTimer.UpdateCustomBossList(updatedList);
-        }
+            public static void UpdateCustomBossList(ListView updatedList)
+            {
+                CustomBossList = updatedList;
+
+                BossTimer.UpdateCustomBossList(updatedList);
+            }
 
 
 
@@ -268,9 +269,9 @@ namespace GW2FOX
                         var upcomingBosses = bossEventGroups
                             .SelectMany(bossEventGroup => bossEventGroup.GetNextRuns())
                             .ToList();
-                        
-                        
-                        var pastBosses =  bossEventGroups
+
+
+                        var pastBosses = bossEventGroups
                             .SelectMany(bossEventGroup => bossEventGroup.GetPreviousRuns())
                             .ToList();
 
@@ -311,7 +312,7 @@ namespace GW2FOX
                             {
                                 subItem.ForeColor = listViewItem.ForeColor;
                             }
-                            
+
 
                             // Neue Bedingung hinzufügen, um zu prüfen, ob ein Bossevent zur selben Zeit stattfindet wie ein anderes Bossevent derselben Kategorie
                             if (HasSameTimeAndCategory(allBosses, bossEvent))

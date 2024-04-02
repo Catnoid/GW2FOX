@@ -253,7 +253,7 @@
                                 .Add(new TimeSpan(0, 24, 0, 0, 0))
                             + bossEvent.Timing,
                             bossEvent.Waypoint))
-                        .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
+                        .Where(bossEventRun => !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                         .Take(NextRunsToShow)
                         .ToList();
                 }
@@ -261,9 +261,9 @@
                 return nextTimings
                     .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
                         GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing
-                                                               // + TimeSpan.Parse("00:00:01.500")
+                        // + TimeSpan.Parse("00:00:01.500")
                         , bossEvent.Waypoint))
-                    .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
+                    .Where(bossEventRun => !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                     .Take(NextRunsToShow)
                     .ToList();
             }
@@ -276,9 +276,9 @@
                         bossEvent.Timing < GlobalVariables.CURRENT_TIME)
                     .Select(bossEvent => new BossEventRun(bossEvent.BossName, bossEvent.Timing, bossEvent.Category,
                         GlobalVariables.CURRENT_DATE_TIME.Date + bossEvent.Timing
-                                                               // + TimeSpan.Parse("00:00:02.500")
+                        // + TimeSpan.Parse("00:00:02.500")
                         , bossEvent.Waypoint))
-                    .Where(bossEventRun =>  !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
+                    .Where(bossEventRun => !DoneBosses.ContainsKey(bossEventRun.NextRunTime.Date) || !DoneBosses[bossEventRun.NextRunTime.Date].Contains(bossEventRun.BossName))
                     // .Take(PREVIOUS_RUNS_TO_SHOW)
                     .ToList();
             }
@@ -332,10 +332,10 @@
             string waypoint = "")
             : BossEvent(bossName, timing, category, waypoint)
         {
-            
+
             private static readonly Color DefaultFontColor = Color.White;
             private static readonly Color PastBossFontColor = Color.OrangeRed;
-            
+
             public DateTime NextRunTime { get; set; } = nextRunTime;
 
             public bool isPreviousBoss => NextRunTime < GlobalVariables.CURRENT_DATE_TIME;
@@ -359,7 +359,7 @@
                 else
                 {
                     return GlobalVariables.CURRENT_DATE_TIME
-                        .Add(new TimeSpan(0, 0,15, 0, 0))
+                        .Add(new TimeSpan(0, 0, 15, 0, 0))
                         // .Subtract(new TimeSpan(0, 0,0, 2, 0))
                         .Subtract(getTimeToShow());
                 }
@@ -404,6 +404,6 @@
             }
         }
     }
-    
-    
+
+
 }
