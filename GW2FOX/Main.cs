@@ -73,7 +73,7 @@ namespace GW2FOX
         {
             try
             {
-                string homepageUrl = "https://gw2-hub.000webhostapp.com/";
+                string homepageUrl = "www.gw2fox.com";
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
                     FileName = homepageUrl,

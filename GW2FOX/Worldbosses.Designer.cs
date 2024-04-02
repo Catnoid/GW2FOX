@@ -203,7 +203,7 @@
             Guild.ScrollBars = ScrollBars.Vertical;
             Guild.Size = new Size(350, 100);
             Guild.TabIndex = 3;
-            Guild.Text = "☠ Young or old [FOX], we take every stray. Humor, respect and fun at the game are what distinguish us. No Obligations! Infos: wsp me or https://gw2-hub.000webhostapp.com ☻";
+            Guild.Text = "☠ Young or old [FOX], we take every stray. Humor, respect and fun at the game are what distinguish us. No Obligations! Infos: wsp me or www.gw2fox.com ☻";
             // 
             // Welcome
             // 
@@ -215,7 +215,7 @@
             Welcome.ScrollBars = ScrollBars.Vertical;
             Welcome.Size = new Size(350, 100);
             Welcome.TabIndex = 4;
-            Welcome.Text = "Welcome to the FOXhole. Read the Message of the Day for Infos - Questions, ask us! Guides & Tools on our Homepage: https://gw2-hub.000webhostapp.com";
+            Welcome.Text = "Welcome to the FOXhole. Read the Message of the Day for Infos - Questions, ask us! Guides & Tools on our Homepage: www.gw2fox.com";
             // 
             // Symbols
             // 
