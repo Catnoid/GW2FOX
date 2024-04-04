@@ -1532,7 +1532,7 @@
             button65.BackColor = Color.Black;
             button65.BackgroundImage = Properties.Resources.WorldMeta;
             button65.FlatStyle = FlatStyle.Flat;
-            button65.Location = new Point(388, 62);
+            button65.Location = new Point(12, 114);
             button65.Name = "button65";
             button65.Size = new Size(182, 46);
             button65.TabIndex = 187;
