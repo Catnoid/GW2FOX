@@ -643,7 +643,7 @@
             // 
             button40.BackgroundImage = Properties.Resources.Chak;
             button40.FlatStyle = FlatStyle.Flat;
-            button40.Location = new Point(468, 371);
+            button40.Location = new Point(470, 371);
             button40.Name = "button40";
             button40.Size = new Size(182, 46);
             button40.TabIndex = 88;
