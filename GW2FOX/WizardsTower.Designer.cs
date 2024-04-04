@@ -49,6 +49,7 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -266,11 +267,23 @@
             pictureBox4.TabIndex = 101;
             pictureBox4.TabStop = false;
             // 
+            // button10
+            // 
+            button10.BackgroundImage = Properties.Resources.wikigw2;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Location = new Point(12, 12);
+            button10.Name = "button10";
+            button10.Size = new Size(100, 45);
+            button10.TabIndex = 126;
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
             // WizardsTower
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button10);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox3);
@@ -323,5 +336,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
+        private Button button10;
     }
 }

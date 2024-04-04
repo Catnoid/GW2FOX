@@ -11,14 +11,14 @@ namespace GW2FOX
             LoadConfigText(Runinfo, Squadinfo, Guild, Welcome, Symbols);
         }
 
-        
-
-        
-
-        
 
 
-        
+
+
+
+
+
+
 
 
         private void Runinfo_Click(object sender, EventArgs e)
@@ -99,6 +99,22 @@ namespace GW2FOX
             }
         }
 
-        
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string homepageUrl = "https://wiki.guildwars2.com/wiki/Defeat_the_great_jungle_wurm";
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = homepageUrl,
+                    UseShellExecute = true
+                };
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Fehler beim ?ffnen der Homepage: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

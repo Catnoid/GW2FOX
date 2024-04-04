@@ -49,6 +49,7 @@
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
             OozeInstance = new TextBox();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -267,11 +268,23 @@
             OozeInstance.TabIndex = 102;
             OozeInstance.Text = "Go out of fight, then right click group 2 & join ☣Grothmar Valley☣";
             // 
+            // button10
+            // 
+            button10.BackgroundImage = Properties.Resources.wikigw2;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Location = new Point(12, 12);
+            button10.Name = "button10";
+            button10.Size = new Size(100, 45);
+            button10.TabIndex = 126;
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
             // TheOozePits
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button10);
             Controls.Add(OozeInstance);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
@@ -328,5 +341,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
         private TextBox OozeInstance;
+        private Button button10;
     }
 }

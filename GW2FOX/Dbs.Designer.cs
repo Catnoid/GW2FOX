@@ -49,6 +49,7 @@
             Mapinfo = new TextBox();
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -266,12 +267,24 @@
             pictureBox2.TabIndex = 101;
             pictureBox2.TabStop = false;
             // 
+            // button10
+            // 
+            button10.BackgroundImage = Properties.Resources.wikigw2;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Location = new Point(12, 11);
+            button10.Name = "button10";
+            button10.Size = new Size(100, 45);
+            button10.TabIndex = 127;
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
             // Dbs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button10);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox4);
             Controls.Add(button6);
@@ -324,5 +337,6 @@
         private TextBox Mapinfo;
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
+        private Button button10;
     }
 }
