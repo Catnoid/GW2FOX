@@ -268,8 +268,8 @@
                 }
 
                return toReturn
+                    .Where(bossEvent => bossEvent.getTimeToShow() >= GlobalVariables.CURRENT_DATE_TIME)
                     .OrderBy(bossEvent => bossEvent.getTimeToShow())
-                    .Where(bossEvent => bossEvent.Timing >= GlobalVariables.CURRENT_TIME)
                     .Take(NextRunsToShow)
                     .ToList()
                     ;
