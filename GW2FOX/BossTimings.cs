@@ -1,4 +1,6 @@
-﻿namespace GW2FOX
+﻿using TimeSpan = System.TimeSpan;
+
+namespace GW2FOX
 {
     public static class BossTimings
     {
@@ -10,7 +12,7 @@
         private static readonly List<BossEvent> Events = [];
         internal static readonly List<BossEventGroup> BossEventGroups = [];
 
-        private const int NextRunsToShow = 4;
+        private const int NextRunsToShow = 2;
         private const int DaysExtraToCalculate = 1;
 
         // internal static int PREVIOUS_RUNS_TO_SHOW = 1;
@@ -252,7 +254,7 @@
                 //changed the logic to always calculate more than one day
                 List<BossEventRun> toReturn = new List<BossEventRun>();
                 
-                for (var i = 0; i <= DaysExtraToCalculate; i++)
+                for (var i = -1; i <= DaysExtraToCalculate; i++)
                 {
                     toReturn.AddRange(
                         _timings

@@ -8,7 +8,9 @@ public class GlobalVariables
     public static DateTime CURRENT_DATE_TIME =>
         TimeZoneInfo
             .ConvertTimeFromUtc(
-                DateTime.UtcNow, // debug  DateTime.UtcNow + TimeSpan.FromHours(3) - TimeSpan.FromMinutes(5),
+                DateTime.UtcNow, 
+                // DateTime.UtcNow + TimeSpan.FromHours(11) - TimeSpan.FromMinutes(17),
+                // DateTime.Parse("22:00:01"),
                 TIMEZONE_TO_USE
             );
     
