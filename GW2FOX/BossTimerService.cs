@@ -266,17 +266,10 @@ namespace GW2FOX
                             .Where(bossEventGroup => bossNamesFromConfig.Contains(bossEventGroup.BossName))
                             .ToList();
 
-                        var upcomingBosses = bossEventGroups
+                        var allBosses = bossEventGroups
                             .SelectMany(bossEventGroup => bossEventGroup.GetNextRuns())
                             .ToList();
 
-
-                        var pastBosses = bossEventGroups
-                            .SelectMany(bossEventGroup => bossEventGroup.GetPreviousRuns())
-                            .ToList();
-
-                        // var allBosses = upcomingBosses.ToList();
-                        var allBosses = upcomingBosses.Concat(pastBosses).ToList();
 
                         var listViewItems = new List<ListViewItem>();
 
