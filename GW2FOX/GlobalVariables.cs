@@ -4,12 +4,18 @@ namespace GW2FOX;
 
 public class GlobalVariables
 {
+    public static TimeZoneInfo TIMEZONE_TO_USE = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
     public static DateTime CURRENT_DATE_TIME =>
         TimeZoneInfo
             .ConvertTimeFromUtc(
                 DateTime.UtcNow, // debug  DateTime.UtcNow + TimeSpan.FromHours(3) - TimeSpan.FromMinutes(5),
-                TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time")
+                TIMEZONE_TO_USE
             );
+    
+    public static bool IsDaylightSavingTimeActive()
+    {
+        return TIMEZONE_TO_USE.IsDaylightSavingTime(CURRENT_DATE_TIME);
+    }
 
     public static TimeSpan CURRENT_TIME => CURRENT_DATE_TIME.TimeOfDay;
     public static DateTime CURRENT_DATE => CURRENT_DATE_TIME.Date;
