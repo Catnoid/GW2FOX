@@ -181,7 +181,8 @@ namespace GW2FOX
 
         private void button15_Click(object sender, EventArgs e)
         {
-
+            Clipboard.SetText(JadeCost.Text);
+            BringGw2ToFront();
         }
     }
 }
