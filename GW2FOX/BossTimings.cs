@@ -31,9 +31,9 @@ namespace GW2FOX
 
             AddBossEvent("The frozen Maw", "01:15:00", 2, "WBs", "[&BMIDAAA=]");
             AddBossEvent("Fireshaman", "01:15:00", 2, "WBs", "[&BO4BAAA=]");
-            AddBossEvent("LLLA Timberline", "01:20:00", 6, "WBs");
+            AddBossEvent("LLLA Timberline", "01:20:00", 6, "WBs", "[&BEwCAAA=]");
             AddBossEvent("LLLA Iron Marches", "03:20:00", 6, "WBs", "[&BOcBAAA=]");
-            AddBossEvent("LLLA Gendarran", "05:20:00", 6, "WBs");
+            AddBossEvent("LLLA Gendarran", "05:20:00", 6, "WBs", "[&BOQAAAA=]");
             AddBossEvent("Fire Elemental", "01:45:00", 2, "WBs", "[&BEcAAAA=]");
             AddBossEvent("Great Jungle Wurm", "00:15:00", 2, "WBs", "[&BEEFAAA=]");
             AddBossEvent("Ulgoth the Modniir", "02:30:00", 3, "WBs", "[&BLAAAAA=]");
