@@ -155,6 +155,7 @@
             button65 = new Button();
             button66 = new Button();
             buttonSelectAll = new Button();
+            button67 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -1576,12 +1577,24 @@
             buttonSelectAll.UseVisualStyleBackColor = false;
             buttonSelectAll.Click += All_click;
             // 
+            // button67
+            // 
+            button67.BackgroundImage = Properties.Resources.button_LLA;
+            button67.FlatStyle = FlatStyle.Flat;
+            button67.Location = new Point(259, 683);
+            button67.Name = "button67";
+            button67.Size = new Size(182, 46);
+            button67.TabIndex = 190;
+            button67.UseVisualStyleBackColor = true;
+            button67.Click += button67_Click;
+            // 
             // Worldbosses
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button67);
             Controls.Add(button66);
             Controls.Add(buttonSelectAll);
             Controls.Add(button65);
@@ -1848,5 +1861,6 @@
         private Button button65;
         private Button button66;
         private Button buttonSelectAll;
+        private Button button67;
     }
 }

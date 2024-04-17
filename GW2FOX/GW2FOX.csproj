@@ -41,6 +41,9 @@
     <Compile Update="FlyByNight.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="LLA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="WizardsTower.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -2100,6 +2100,11 @@ namespace GW2FOX
         {
             ShowAndHideForm(new Convergences());
         }
+
+        private void button67_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new LLA());
+        }
     }
 
 
