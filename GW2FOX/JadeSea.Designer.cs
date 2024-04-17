@@ -50,6 +50,10 @@
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
             button10 = new Button();
+            button15 = new Button();
+            JadeCost = new TextBox();
+            JadeItemName = new TextBox();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -278,11 +282,52 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button15
+            // 
+            button15.Location = new Point(296, 121);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 135;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
+            // JadeCost
+            // 
+            JadeCost.Location = new Point(296, 81);
+            JadeCost.Multiline = true;
+            JadeCost.Name = "JadeCost";
+            JadeCost.Size = new Size(301, 34);
+            JadeCost.TabIndex = 134;
+            // 
+            // JadeItemName
+            // 
+            JadeItemName.Location = new Point(366, 41);
+            JadeItemName.Multiline = true;
+            JadeItemName.Name = "JadeItemName";
+            JadeItemName.Size = new Size(231, 34);
+            JadeItemName.TabIndex = 133;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Black;
+            button6.BackgroundImage = Properties.Resources.Glob_of_Dragonvoid_Aether;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Location = new Point(296, 12);
+            button6.Name = "button6";
+            button6.Size = new Size(64, 64);
+            button6.TabIndex = 132;
+            button6.UseVisualStyleBackColor = false;
+            // 
             // JadeSea
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
+            Controls.Add(JadeCost);
+            Controls.Add(JadeItemName);
+            Controls.Add(button6);
             Controls.Add(button10);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
@@ -337,5 +382,9 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
         private Button button10;
+        private Button button15;
+        private TextBox JadeCost;
+        private TextBox JadeItemName;
+        private Button button6;
     }
 }

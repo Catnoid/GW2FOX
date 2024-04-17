@@ -66,6 +66,10 @@
             Mapinfo = new TextBox();
             pictureBox5 = new PictureBox();
             button16 = new Button();
+            button18 = new Button();
+            TarirCost = new TextBox();
+            TarirItemName = new TextBox();
+            button19 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -473,12 +477,53 @@
             button16.UseVisualStyleBackColor = true;
             button16.Click += button16_Click;
             // 
+            // button18
+            // 
+            button18.Location = new Point(294, 121);
+            button18.Name = "button18";
+            button18.Size = new Size(75, 23);
+            button18.TabIndex = 135;
+            button18.Text = "Copy";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
+            // 
+            // TarirCost
+            // 
+            TarirCost.Location = new Point(294, 81);
+            TarirCost.Multiline = true;
+            TarirCost.Name = "TarirCost";
+            TarirCost.Size = new Size(301, 34);
+            TarirCost.TabIndex = 134;
+            // 
+            // TarirItemName
+            // 
+            TarirItemName.Location = new Point(364, 41);
+            TarirItemName.Multiline = true;
+            TarirItemName.Name = "TarirItemName";
+            TarirItemName.Size = new Size(231, 34);
+            TarirItemName.TabIndex = 133;
+            // 
+            // button19
+            // 
+            button19.BackColor = Color.Black;
+            button19.BackgroundImage = Properties.Resources.Vial_of_Liquid_Aurillium;
+            button19.FlatStyle = FlatStyle.Flat;
+            button19.Location = new Point(294, 12);
+            button19.Name = "button19";
+            button19.Size = new Size(64, 64);
+            button19.TabIndex = 132;
+            button19.UseVisualStyleBackColor = false;
+            // 
             // Tarir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button18);
+            Controls.Add(TarirCost);
+            Controls.Add(TarirItemName);
+            Controls.Add(button19);
             Controls.Add(button16);
             Controls.Add(pictureBox5);
             Controls.Add(button17);
@@ -565,5 +610,9 @@
         private TextBox Mapinfo;
         private PictureBox pictureBox5;
         private Button button16;
+        private Button button18;
+        private TextBox TarirCost;
+        private TextBox TarirItemName;
+        private Button button19;
     }
 }

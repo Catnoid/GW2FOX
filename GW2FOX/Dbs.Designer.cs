@@ -50,6 +50,10 @@
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
             button10 = new Button();
+            button18 = new Button();
+            DBSCost = new TextBox();
+            DBSItemName = new TextBox();
+            button19 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -278,12 +282,53 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button18
+            // 
+            button18.Location = new Point(293, 120);
+            button18.Name = "button18";
+            button18.Size = new Size(75, 23);
+            button18.TabIndex = 139;
+            button18.Text = "Copy";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
+            // 
+            // DBSCost
+            // 
+            DBSCost.Location = new Point(293, 80);
+            DBSCost.Multiline = true;
+            DBSCost.Name = "DBSCost";
+            DBSCost.Size = new Size(301, 34);
+            DBSCost.TabIndex = 138;
+            // 
+            // DBSItemName
+            // 
+            DBSItemName.Location = new Point(363, 40);
+            DBSItemName.Multiline = true;
+            DBSItemName.Name = "DBSItemName";
+            DBSItemName.Size = new Size(231, 34);
+            DBSItemName.TabIndex = 137;
+            // 
+            // button19
+            // 
+            button19.BackColor = Color.Black;
+            button19.BackgroundImage = Properties.Resources.Kristall_Infusion_Icon;
+            button19.FlatStyle = FlatStyle.Flat;
+            button19.Location = new Point(293, 11);
+            button19.Name = "button19";
+            button19.Size = new Size(64, 64);
+            button19.TabIndex = 136;
+            button19.UseVisualStyleBackColor = false;
+            // 
             // Dbs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button18);
+            Controls.Add(DBSCost);
+            Controls.Add(DBSItemName);
+            Controls.Add(button19);
             Controls.Add(button10);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox4);
@@ -338,5 +383,9 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
         private Button button10;
+        private Button button18;
+        private TextBox DBSCost;
+        private TextBox DBSItemName;
+        private Button button19;
     }
 }

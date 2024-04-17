@@ -58,6 +58,10 @@
             Mapinfo = new TextBox();
             pictureBox4 = new PictureBox();
             button13 = new Button();
+            button14 = new Button();
+            ChakItemName = new TextBox();
+            ChackCost = new TextBox();
+            button15 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -374,12 +378,55 @@
             button13.UseVisualStyleBackColor = true;
             button13.Click += button13_Click;
             // 
+            // button14
+            // 
+            button14.BackColor = Color.Black;
+            button14.BackgroundImage = Properties.Resources.ChackInfusion;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Location = new Point(295, 12);
+            button14.Name = "button14";
+            button14.Size = new Size(64, 64);
+            button14.TabIndex = 105;
+            button14.UseVisualStyleBackColor = false;
+            // 
+            // ChakItemName
+            // 
+            ChakItemName.Location = new Point(365, 42);
+            ChakItemName.Multiline = true;
+            ChakItemName.Name = "ChakItemName";
+            ChakItemName.Size = new Size(231, 34);
+            ChakItemName.TabIndex = 106;
+            ChakItemName.TextChanged += ChakItemName_TextChanged;
+            // 
+            // ChackCost
+            // 
+            ChackCost.Location = new Point(295, 82);
+            ChackCost.Multiline = true;
+            ChackCost.Name = "ChackCost";
+            ChackCost.Size = new Size(301, 34);
+            ChackCost.TabIndex = 107;
+
+            // 
+            // button15
+            // 
+            button15.Location = new Point(295, 122);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 108;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
             // Chak
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
+            Controls.Add(ChackCost);
+            Controls.Add(ChakItemName);
+            Controls.Add(button14);
             Controls.Add(button13);
             Controls.Add(pictureBox4);
             Controls.Add(button12);
@@ -450,5 +497,9 @@
         private TextBox Mapinfo;
         private PictureBox pictureBox4;
         private Button button13;
+        private Button button14;
+        private TextBox ChakItemName;
+        private TextBox ChackCost;
+        private Button button15;
     }
 }

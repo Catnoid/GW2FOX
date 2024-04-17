@@ -203,6 +203,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ChackInfusion {
+            get {
+                object obj = ResourceManager.GetObject("ChackInfusion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Chak {
             get {
                 object obj = ResourceManager.GetObject("Chak", resourceCulture);
@@ -266,6 +276,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Concert1 {
             get {
                 object obj = ResourceManager.GetObject("Concert1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Confetti {
+            get {
+                object obj = ResourceManager.GetObject("Confetti", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,6 +483,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Glob_of_Dragonvoid_Aether {
+            get {
+                object obj = ResourceManager.GetObject("Glob_of_Dragonvoid_Aether", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Header {
             get {
                 object obj = ResourceManager.GetObject("Header", resourceCulture);
@@ -516,6 +546,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Karka {
             get {
                 object obj = ResourceManager.GetObject("Karka", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Kristall_Infusion_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Kristall_Infusion_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -936,6 +976,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Unlocking_the_Wizard_s_Tower {
             get {
                 object obj = ResourceManager.GetObject("Unlocking the Wizard\'s Tower", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Vial_of_Liquid_Aurillium {
+            get {
+                object obj = ResourceManager.GetObject("Vial_of_Liquid_Aurillium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

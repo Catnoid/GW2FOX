@@ -50,6 +50,10 @@
             Mapinfo = new TextBox();
             pictureBox5 = new PictureBox();
             button10 = new Button();
+            button9 = new Button();
+            button15 = new Button();
+            PinataCost = new TextBox();
+            PinataItemName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -278,12 +282,53 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button9
+            // 
+            button9.BackColor = Color.Black;
+            button9.BackgroundImage = Properties.Resources.Confetti;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Location = new Point(295, 12);
+            button9.Name = "button9";
+            button9.Size = new Size(64, 64);
+            button9.TabIndex = 128;
+            button9.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            button15.Location = new Point(295, 121);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 131;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
+            // PinataCost
+            // 
+            PinataCost.Location = new Point(295, 81);
+            PinataCost.Multiline = true;
+            PinataCost.Name = "PinataCost";
+            PinataCost.Size = new Size(301, 34);
+            PinataCost.TabIndex = 130;
+            // 
+            // PinataItemName
+            // 
+            PinataItemName.Location = new Point(365, 41);
+            PinataItemName.Multiline = true;
+            PinataItemName.Name = "PinataItemName";
+            PinataItemName.Size = new Size(231, 34);
+            PinataItemName.TabIndex = 129;
+            // 
             // Pinatas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
+            Controls.Add(PinataCost);
+            Controls.Add(PinataItemName);
+            Controls.Add(button9);
             Controls.Add(button10);
             Controls.Add(pictureBox5);
             Controls.Add(button6);
@@ -338,5 +383,9 @@
         private TextBox Mapinfo;
         private PictureBox pictureBox5;
         private Button button10;
+        private Button button9;
+        private Button button15;
+        private TextBox PinataCost;
+        private TextBox PinataItemName;
     }
 }

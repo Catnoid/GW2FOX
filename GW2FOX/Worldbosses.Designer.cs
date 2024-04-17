@@ -282,46 +282,50 @@
             // 
             // button7
             // 
+            button7.BackColor = Color.Black;
             button7.BackgroundImage = Properties.Resources.Maw;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Location = new Point(50, 371);
             button7.Name = "button7";
             button7.Size = new Size(182, 46);
             button7.TabIndex = 14;
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += Maw_Click;
             // 
             // button8
             // 
+            button8.BackColor = Color.Black;
             button8.BackgroundImage = Properties.Resources.buttonBEHE;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(48, 423);
             button8.Name = "button8";
             button8.Size = new Size(182, 46);
             button8.TabIndex = 15;
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             button8.Click += Behe_Click;
             // 
             // button9
             // 
+            button9.BackColor = Color.Black;
             button9.BackgroundImage = Properties.Resources.Fire;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(50, 475);
             button9.Name = "button9";
             button9.Size = new Size(182, 46);
             button9.TabIndex = 16;
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
             button9.Click += Fireelemental_Click;
             // 
             // button10
             // 
+            button10.BackColor = Color.Black;
             button10.BackgroundImage = Properties.Resources.Wurm;
             button10.FlatStyle = FlatStyle.Flat;
             button10.Location = new Point(50, 527);
             button10.Name = "button10";
             button10.Size = new Size(182, 46);
             button10.TabIndex = 17;
-            button10.UseVisualStyleBackColor = true;
+            button10.UseVisualStyleBackColor = false;
             button10.Click += Junglewurm_Click;
             // 
             // button11
@@ -337,35 +341,38 @@
             // 
             // button12
             // 
+            button12.BackColor = Color.Black;
             button12.BackgroundImage = Properties.Resources.Ulgoth;
             button12.FlatStyle = FlatStyle.Flat;
             button12.Location = new Point(50, 579);
             button12.Name = "button12";
             button12.Size = new Size(182, 46);
             button12.TabIndex = 19;
-            button12.UseVisualStyleBackColor = true;
+            button12.UseVisualStyleBackColor = false;
             button12.Click += Ulgoth_Click;
             // 
             // button13
             // 
+            button13.BackColor = Color.Black;
             button13.BackgroundImage = Properties.Resources.Thaida;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Location = new Point(50, 631);
             button13.Name = "button13";
             button13.Size = new Size(182, 46);
             button13.TabIndex = 20;
-            button13.UseVisualStyleBackColor = true;
+            button13.UseVisualStyleBackColor = false;
             button13.Click += Thaida_Click;
             // 
             // button14
             // 
+            button14.BackColor = Color.Black;
             button14.BackgroundImage = Properties.Resources.Shatti;
             button14.FlatStyle = FlatStyle.Flat;
             button14.Location = new Point(50, 839);
             button14.Name = "button14";
             button14.Size = new Size(182, 46);
             button14.TabIndex = 21;
-            button14.UseVisualStyleBackColor = true;
+            button14.UseVisualStyleBackColor = false;
             button14.Click += TheShatterer_Click;
             // 
             // button15
@@ -381,57 +388,62 @@
             // 
             // button16
             // 
+            button16.BackColor = Color.Black;
             button16.BackgroundImage = Properties.Resources.Tequatl;
             button16.FlatStyle = FlatStyle.Flat;
             button16.Location = new Point(48, 787);
             button16.Name = "button16";
             button16.Size = new Size(182, 46);
             button16.TabIndex = 23;
-            button16.UseVisualStyleBackColor = true;
+            button16.UseVisualStyleBackColor = false;
             button16.Click += Tequatl_Click;
             // 
             // button17
             // 
+            button17.BackColor = Color.Black;
             button17.BackgroundImage = Properties.Resources.Mega;
             button17.FlatStyle = FlatStyle.Flat;
             button17.Location = new Point(50, 683);
             button17.Name = "button17";
             button17.Size = new Size(182, 46);
             button17.TabIndex = 24;
-            button17.UseVisualStyleBackColor = true;
+            button17.UseVisualStyleBackColor = false;
             button17.Click += Megadestroyer_Click;
             // 
             // button18
             // 
+            button18.BackColor = Color.Black;
             button18.BackgroundImage = Properties.Resources.Inquestgolem;
             button18.FlatStyle = FlatStyle.Flat;
             button18.Location = new Point(50, 735);
             button18.Name = "button18";
             button18.Size = new Size(182, 46);
             button18.TabIndex = 25;
-            button18.UseVisualStyleBackColor = true;
+            button18.UseVisualStyleBackColor = false;
             button18.Click += Inquestgolem_Click;
             // 
             // button19
             // 
+            button19.BackColor = Color.Black;
             button19.BackgroundImage = Properties.Resources.Karka;
             button19.FlatStyle = FlatStyle.Flat;
             button19.Location = new Point(50, 891);
             button19.Name = "button19";
             button19.Size = new Size(182, 46);
             button19.TabIndex = 26;
-            button19.UseVisualStyleBackColor = true;
+            button19.UseVisualStyleBackColor = false;
             button19.Click += Karkaqueen_Click;
             // 
             // button20
             // 
+            button20.BackColor = Color.Black;
             button20.BackgroundImage = Properties.Resources.Claw;
             button20.FlatStyle = FlatStyle.Flat;
             button20.Location = new Point(50, 943);
             button20.Name = "button20";
             button20.Size = new Size(182, 46);
             button20.TabIndex = 27;
-            button20.UseVisualStyleBackColor = true;
+            button20.UseVisualStyleBackColor = false;
             button20.Click += Clawjormag_Click;
             // 
             // button21
