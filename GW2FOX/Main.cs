@@ -3,6 +3,7 @@
 using System.Diagnostics;
 using IWshRuntimeLibrary;
 using File = System.IO.File;
+using System.Net;
 
 namespace GW2FOX
 {
@@ -273,7 +274,7 @@ namespace GW2FOX
 
             if (string.IsNullOrEmpty(gw2Verzeichnis))
             {
-                MessageBox.Show("Das Guild Wars 2-Verzeichnis wurde nicht ausgewählt.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error - nothing is chooooooosen!.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -298,25 +299,29 @@ namespace GW2FOX
 
         private void InstallArcDPS(string gw2Verzeichnis)
         {
-            // Pfade zu den zu kopierenden Dateien
-            string d3d11DllQuelle = Path.Combine("data", "d3d11.dll");
-            string d3d11Md5SumQuelle = Path.Combine("data", "d3d11.dll.md5sum");
+            // URL zum ArcDPS-Verzeichnis
+            string arcDPSBaseUrl = "https://www.deltaconnected.com/arcdps/x64/";
+
+            // Dateinamen
+            string d3d11DllName = "d3d11.dll";
+            string d3d11Md5SumName = "d3d11.dll.md5sum";
 
             // Ziel Pfade im Guild Wars 2-Verzeichnis
-            string d3d11DllZiel = Path.Combine(gw2Verzeichnis, "d3d11.dll");
-            string d3d11Md5SumZiel = Path.Combine(gw2Verzeichnis, "d3d11.dll.md5sum");
+            string d3d11DllZiel = Path.Combine(gw2Verzeichnis, d3d11DllName);
+            string d3d11Md5SumZiel = Path.Combine(gw2Verzeichnis, d3d11Md5SumName);
 
             try
             {
-                // Dateien kopieren
-                File.Copy(d3d11DllQuelle, d3d11DllZiel, true);
-                File.Copy(d3d11Md5SumQuelle, d3d11Md5SumZiel, true);
+                // Dateien herunterladen
+                WebClient client = new WebClient();
+                client.DownloadFile(arcDPSBaseUrl + d3d11DllName, d3d11DllZiel);
+                client.DownloadFile(arcDPSBaseUrl + d3d11Md5SumName, d3d11Md5SumZiel);
 
-                MessageBox.Show("Done.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("ArcDPS wurde erfolgreich installiert.", "Installation abgeschlossen", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Fehler beim Installieren von ArcDPS: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
