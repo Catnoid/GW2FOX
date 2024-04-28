@@ -220,7 +220,7 @@ namespace GW2FOX
             string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
 
             // Pfad zur Datei "Blish HUD.exe" im Verzeichnis "data"
-            string filePath = Path.Combine(exeDirectory, "data", "ReShade_Setup_6.0.1.exe");
+            string filePath = Path.Combine(exeDirectory, "data", "ReShade_Setup_6.1.1.exe");
 
             // Überprüfen, ob die Datei existiert, bevor sie geöffnet wird
             if (File.Exists(filePath))
@@ -356,6 +356,22 @@ namespace GW2FOX
             }
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            // Daten von PSNA Formular erhalten
+            PSNA psnaForm = new PSNA();
+            string npcData = psnaForm.GetNPCData();
 
+            // Daten in die Zwischenablage kopieren
+            Clipboard.SetText(npcData);
+
+            // Gw2-64 in den Vordergrund bringen
+            BringGw2ToFront();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new PSNAgents());
+        }
     }
 }

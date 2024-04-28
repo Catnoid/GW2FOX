@@ -43,6 +43,9 @@
     <Compile Update="Forgedwithfire.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PSNAgents.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Inquestgolem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +86,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Pinatas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PSNA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Pta.cs">
