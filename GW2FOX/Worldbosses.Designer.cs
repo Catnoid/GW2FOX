@@ -237,7 +237,6 @@
             button1.Name = "button1";
             button1.Size = new Size(100, 102);
             button1.TabIndex = 7;
-            button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += Back_Click;
             // 
@@ -288,7 +287,7 @@
             button7.FlatStyle = FlatStyle.Flat;
             button7.Location = new Point(50, 371);
             button7.Name = "button7";
-            button7.Size = new Size(182, 46);
+            button7.Size = new Size(180, 50);
             button7.TabIndex = 14;
             button7.UseVisualStyleBackColor = false;
             button7.Click += Maw_Click;
@@ -300,7 +299,7 @@
             button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(48, 423);
             button8.Name = "button8";
-            button8.Size = new Size(182, 46);
+            button8.Size = new Size(180, 50);
             button8.TabIndex = 15;
             button8.UseVisualStyleBackColor = false;
             button8.Click += Behe_Click;
@@ -312,7 +311,7 @@
             button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(50, 475);
             button9.Name = "button9";
-            button9.Size = new Size(182, 46);
+            button9.Size = new Size(180, 50);
             button9.TabIndex = 16;
             button9.UseVisualStyleBackColor = false;
             button9.Click += Fireelemental_Click;
@@ -324,7 +323,7 @@
             button10.FlatStyle = FlatStyle.Flat;
             button10.Location = new Point(50, 527);
             button10.Name = "button10";
-            button10.Size = new Size(182, 46);
+            button10.Size = new Size(180, 50);
             button10.TabIndex = 17;
             button10.UseVisualStyleBackColor = false;
             button10.Click += Junglewurm_Click;
@@ -335,7 +334,7 @@
             button11.FlatStyle = FlatStyle.Flat;
             button11.Location = new Point(259, 631);
             button11.Name = "button11";
-            button11.Size = new Size(182, 46);
+            button11.Size = new Size(180, 50);
             button11.TabIndex = 18;
             button11.UseVisualStyleBackColor = true;
             button11.Click += Rhendak_Click;
@@ -347,7 +346,7 @@
             button12.FlatStyle = FlatStyle.Flat;
             button12.Location = new Point(50, 579);
             button12.Name = "button12";
-            button12.Size = new Size(182, 46);
+            button12.Size = new Size(180, 50);
             button12.TabIndex = 19;
             button12.UseVisualStyleBackColor = false;
             button12.Click += Ulgoth_Click;
@@ -359,7 +358,7 @@
             button13.FlatStyle = FlatStyle.Flat;
             button13.Location = new Point(50, 631);
             button13.Name = "button13";
-            button13.Size = new Size(182, 46);
+            button13.Size = new Size(180, 50);
             button13.TabIndex = 20;
             button13.UseVisualStyleBackColor = false;
             button13.Click += Thaida_Click;
@@ -371,7 +370,7 @@
             button14.FlatStyle = FlatStyle.Flat;
             button14.Location = new Point(50, 839);
             button14.Name = "button14";
-            button14.Size = new Size(182, 46);
+            button14.Size = new Size(180, 50);
             button14.TabIndex = 21;
             button14.UseVisualStyleBackColor = false;
             button14.Click += TheShatterer_Click;
@@ -382,7 +381,7 @@
             button15.FlatStyle = FlatStyle.Flat;
             button15.Location = new Point(259, 579);
             button15.Name = "button15";
-            button15.Size = new Size(182, 46);
+            button15.Size = new Size(180, 50);
             button15.TabIndex = 22;
             button15.UseVisualStyleBackColor = true;
             button15.Click += Fireshaman_Click;
@@ -394,7 +393,7 @@
             button16.FlatStyle = FlatStyle.Flat;
             button16.Location = new Point(48, 787);
             button16.Name = "button16";
-            button16.Size = new Size(182, 46);
+            button16.Size = new Size(180, 50);
             button16.TabIndex = 23;
             button16.UseVisualStyleBackColor = false;
             button16.Click += Tequatl_Click;
@@ -406,7 +405,7 @@
             button17.FlatStyle = FlatStyle.Flat;
             button17.Location = new Point(50, 683);
             button17.Name = "button17";
-            button17.Size = new Size(182, 46);
+            button17.Size = new Size(180, 50);
             button17.TabIndex = 24;
             button17.UseVisualStyleBackColor = false;
             button17.Click += Megadestroyer_Click;
@@ -418,7 +417,7 @@
             button18.FlatStyle = FlatStyle.Flat;
             button18.Location = new Point(50, 735);
             button18.Name = "button18";
-            button18.Size = new Size(182, 46);
+            button18.Size = new Size(180, 50);
             button18.TabIndex = 25;
             button18.UseVisualStyleBackColor = false;
             button18.Click += Inquestgolem_Click;
@@ -430,7 +429,7 @@
             button19.FlatStyle = FlatStyle.Flat;
             button19.Location = new Point(50, 891);
             button19.Name = "button19";
-            button19.Size = new Size(182, 46);
+            button19.Size = new Size(180, 50);
             button19.TabIndex = 26;
             button19.UseVisualStyleBackColor = false;
             button19.Click += Karkaqueen_Click;
@@ -442,7 +441,7 @@
             button20.FlatStyle = FlatStyle.Flat;
             button20.Location = new Point(50, 943);
             button20.Name = "button20";
-            button20.Size = new Size(182, 46);
+            button20.Size = new Size(180, 50);
             button20.TabIndex = 27;
             button20.UseVisualStyleBackColor = false;
             button20.Click += Clawjormag_Click;
@@ -453,7 +452,7 @@
             button21.FlatStyle = FlatStyle.Flat;
             button21.Location = new Point(885, 475);
             button21.Name = "button21";
-            button21.Size = new Size(182, 46);
+            button21.Size = new Size(180, 50);
             button21.TabIndex = 28;
             button21.UseVisualStyleBackColor = true;
             button21.Click += Dragonstorm_Click;
@@ -464,7 +463,7 @@
             button22.FlatStyle = FlatStyle.Flat;
             button22.Location = new Point(885, 371);
             button22.Name = "button22";
-            button22.Size = new Size(182, 46);
+            button22.Size = new Size(180, 50);
             button22.TabIndex = 29;
             button22.UseVisualStyleBackColor = true;
             button22.Click += Drakkar_Click;
@@ -475,7 +474,7 @@
             button23.FlatStyle = FlatStyle.Flat;
             button23.Location = new Point(259, 371);
             button23.Name = "button23";
-            button23.Size = new Size(182, 46);
+            button23.Size = new Size(180, 50);
             button23.TabIndex = 30;
             button23.UseVisualStyleBackColor = true;
             button23.Click += Eye_Click;
@@ -486,7 +485,7 @@
             button24.FlatStyle = FlatStyle.Flat;
             button24.Location = new Point(259, 423);
             button24.Name = "button24";
-            button24.Size = new Size(182, 46);
+            button24.Size = new Size(180, 50);
             button24.TabIndex = 31;
             button24.UseVisualStyleBackColor = true;
             button24.Click += Dwayna_Click;
@@ -497,7 +496,7 @@
             button25.FlatStyle = FlatStyle.Flat;
             button25.Location = new Point(259, 475);
             button25.Name = "button25";
-            button25.Size = new Size(182, 46);
+            button25.Size = new Size(180, 50);
             button25.TabIndex = 32;
             button25.UseVisualStyleBackColor = true;
             button25.Click += Lyssa_Click;
@@ -508,7 +507,7 @@
             button26.FlatStyle = FlatStyle.Flat;
             button26.Location = new Point(259, 527);
             button26.Name = "button26";
-            button26.Size = new Size(182, 46);
+            button26.Size = new Size(180, 50);
             button26.TabIndex = 33;
             button26.UseVisualStyleBackColor = true;
             button26.Click += Ogrewars_Click;
@@ -519,7 +518,7 @@
             Concert.FlatStyle = FlatStyle.Flat;
             Concert.Location = new Point(885, 423);
             Concert.Name = "Concert";
-            Concert.Size = new Size(182, 46);
+            Concert.Size = new Size(180, 50);
             Concert.TabIndex = 81;
             Concert.UseVisualStyleBackColor = true;
             Concert.Click += Concert_Click;
@@ -570,7 +569,7 @@
             button32.FlatStyle = FlatStyle.Flat;
             button32.Location = new Point(677, 631);
             button32.Name = "button32";
-            button32.Size = new Size(182, 46);
+            button32.Size = new Size(180, 50);
             button32.TabIndex = 96;
             button32.UseVisualStyleBackColor = true;
             button32.Click += Pinata_Click;
@@ -581,7 +580,7 @@
             button33.FlatStyle = FlatStyle.Flat;
             button33.Location = new Point(677, 579);
             button33.Name = "button33";
-            button33.Size = new Size(182, 46);
+            button33.Size = new Size(180, 50);
             button33.TabIndex = 95;
             button33.UseVisualStyleBackColor = true;
             button33.Click += Forged_Click;
@@ -592,7 +591,7 @@
             button34.FlatStyle = FlatStyle.Flat;
             button34.Location = new Point(677, 527);
             button34.Name = "button34";
-            button34.Size = new Size(182, 46);
+            button34.Size = new Size(180, 50);
             button34.TabIndex = 94;
             button34.UseVisualStyleBackColor = true;
             button34.Click += Doppel_Click;
@@ -603,7 +602,7 @@
             button35.FlatStyle = FlatStyle.Flat;
             button35.Location = new Point(677, 475);
             button35.Name = "button35";
-            button35.Size = new Size(182, 46);
+            button35.Size = new Size(180, 50);
             button35.TabIndex = 93;
             button35.UseVisualStyleBackColor = true;
             button35.Click += PTA_Click;
@@ -614,7 +613,7 @@
             button36.FlatStyle = FlatStyle.Flat;
             button36.Location = new Point(677, 423);
             button36.Name = "button36";
-            button36.Size = new Size(182, 46);
+            button36.Size = new Size(180, 50);
             button36.TabIndex = 92;
             button36.UseVisualStyleBackColor = true;
             button36.Click += Junundo_Click;
@@ -625,7 +624,7 @@
             button37.FlatStyle = FlatStyle.Flat;
             button37.Location = new Point(677, 371);
             button37.Name = "button37";
-            button37.Size = new Size(182, 46);
+            button37.Size = new Size(180, 50);
             button37.TabIndex = 91;
             button37.UseVisualStyleBackColor = true;
             button37.Click += DBS_Click;
@@ -636,7 +635,7 @@
             button38.FlatStyle = FlatStyle.Flat;
             button38.Location = new Point(470, 475);
             button38.Name = "button38";
-            button38.Size = new Size(182, 46);
+            button38.Size = new Size(180, 50);
             button38.TabIndex = 90;
             button38.UseVisualStyleBackColor = true;
             button38.Click += Massen_Click;
@@ -647,7 +646,7 @@
             button39.FlatStyle = FlatStyle.Flat;
             button39.Location = new Point(470, 423);
             button39.Name = "button39";
-            button39.Size = new Size(182, 46);
+            button39.Size = new Size(180, 50);
             button39.TabIndex = 89;
             button39.UseVisualStyleBackColor = true;
             button39.Click += Tarir_Click;
@@ -658,7 +657,7 @@
             button40.FlatStyle = FlatStyle.Flat;
             button40.Location = new Point(470, 371);
             button40.Name = "button40";
-            button40.Size = new Size(182, 46);
+            button40.Size = new Size(180, 50);
             button40.TabIndex = 88;
             button40.UseVisualStyleBackColor = true;
             button40.Click += Chak_Click;
@@ -693,44 +692,44 @@
             // 
             // button41
             // 
-            button41.BackgroundImage = (Image)resources.GetObject("button41.BackgroundImage");
+            button41.BackgroundImage = Properties.Resources.SerpentsIre;
             button41.FlatStyle = FlatStyle.Flat;
             button41.Location = new Point(677, 683);
             button41.Name = "button41";
-            button41.Size = new Size(182, 46);
+            button41.Size = new Size(180, 50);
             button41.TabIndex = 102;
             button41.UseVisualStyleBackColor = true;
             button41.Click += SerpentsIre_Click;
             // 
             // DragonsStand
             // 
-            DragonsStand.BackgroundImage = (Image)resources.GetObject("DragonsStand.BackgroundImage");
+            DragonsStand.BackgroundImage = Properties.Resources.DragonsStand;
             DragonsStand.FlatStyle = FlatStyle.Flat;
             DragonsStand.Location = new Point(470, 527);
             DragonsStand.Name = "DragonsStand";
-            DragonsStand.Size = new Size(182, 46);
+            DragonsStand.Size = new Size(180, 50);
             DragonsStand.TabIndex = 103;
             DragonsStand.UseVisualStyleBackColor = true;
             DragonsStand.Click += DragonsStand_Click;
             // 
             // button43
             // 
-            button43.BackgroundImage = (Image)resources.GetObject("button43.BackgroundImage");
+            button43.BackgroundImage = Properties.Resources.Palawadan;
             button43.FlatStyle = FlatStyle.Flat;
             button43.Location = new Point(677, 735);
             button43.Name = "button43";
-            button43.Size = new Size(182, 46);
+            button43.Size = new Size(180, 50);
             button43.TabIndex = 104;
             button43.UseVisualStyleBackColor = true;
             button43.Click += Palawadan_Click;
             // 
             // button44
             // 
-            button44.BackgroundImage = (Image)resources.GetObject("button44.BackgroundImage");
+            button44.BackgroundImage = Properties.Resources.ThunderheadKeep;
             button44.FlatStyle = FlatStyle.Flat;
             button44.Location = new Point(677, 787);
             button44.Name = "button44";
-            button44.Size = new Size(182, 46);
+            button44.Size = new Size(180, 50);
             button44.TabIndex = 105;
             button44.UseVisualStyleBackColor = true;
             button44.Click += ThunderheadKeep_Click;
@@ -738,11 +737,11 @@
             // button45
             // 
             button45.BackColor = SystemColors.ActiveCaptionText;
-            button45.BackgroundImage = (Image)resources.GetObject("button45.BackgroundImage");
+            button45.BackgroundImage = Properties.Resources.Sandstorm1;
             button45.FlatStyle = FlatStyle.Flat;
             button45.Location = new Point(1094, 371);
             button45.Name = "button45";
-            button45.Size = new Size(182, 46);
+            button45.Size = new Size(180, 50);
             button45.TabIndex = 106;
             button45.UseVisualStyleBackColor = false;
             button45.Click += Sandstorm_Click;
@@ -750,11 +749,11 @@
             // button46
             // 
             button46.BackColor = SystemColors.ActiveCaptionText;
-            button46.BackgroundImage = (Image)resources.GetObject("button46.BackgroundImage");
+            button46.BackgroundImage = Properties.Resources.Saidra_s_Haven1;
             button46.FlatStyle = FlatStyle.Flat;
             button46.Location = new Point(1094, 423);
             button46.Name = "button46";
-            button46.Size = new Size(182, 46);
+            button46.Size = new Size(180, 50);
             button46.TabIndex = 107;
             button46.UseVisualStyleBackColor = false;
             button46.Click += SaidrasHaven_Click;
@@ -762,11 +761,11 @@
             // button47
             // 
             button47.BackColor = SystemColors.ActiveCaptionText;
-            button47.BackgroundImage = (Image)resources.GetObject("button47.BackgroundImage");
+            button47.BackgroundImage = Properties.Resources.New_Loamhurst1;
             button47.FlatStyle = FlatStyle.Flat;
             button47.Location = new Point(1094, 475);
             button47.Name = "button47";
-            button47.Size = new Size(182, 46);
+            button47.Size = new Size(180, 50);
             button47.TabIndex = 108;
             button47.UseVisualStyleBackColor = false;
             button47.Click += NewLoamhurst_Click;
@@ -774,11 +773,11 @@
             // button48
             // 
             button48.BackColor = SystemColors.ActiveCaptionText;
-            button48.BackgroundImage = (Image)resources.GetObject("button48.BackgroundImage");
+            button48.BackgroundImage = Properties.Resources.Noran_s_Homestead1;
             button48.FlatStyle = FlatStyle.Flat;
             button48.Location = new Point(1094, 527);
             button48.Name = "button48";
-            button48.Size = new Size(182, 46);
+            button48.Size = new Size(180, 50);
             button48.TabIndex = 109;
             button48.UseVisualStyleBackColor = false;
             button48.Click += NoransHomestead_Click;
@@ -786,11 +785,11 @@
             // button49
             // 
             button49.BackColor = SystemColors.ActiveCaptionText;
-            button49.BackgroundImage = (Image)resources.GetObject("button49.BackgroundImage");
+            button49.BackgroundImage = Properties.Resources.Maws_of_Torment1;
             button49.FlatStyle = FlatStyle.Flat;
             button49.Location = new Point(677, 839);
             button49.Name = "button49";
-            button49.Size = new Size(182, 46);
+            button49.Size = new Size(180, 50);
             button49.TabIndex = 110;
             button49.UseVisualStyleBackColor = false;
             button49.Click += MawsOfTorment_Click;
@@ -798,11 +797,11 @@
             // button50
             // 
             button50.BackColor = SystemColors.ActiveCaptionText;
-            button50.BackgroundImage = (Image)resources.GetObject("button50.BackgroundImage");
+            button50.BackgroundImage = Properties.Resources.The_Oil_Floes1;
             button50.FlatStyle = FlatStyle.Flat;
             button50.Location = new Point(677, 891);
             button50.Name = "button50";
-            button50.Size = new Size(182, 46);
+            button50.Size = new Size(180, 50);
             button50.TabIndex = 111;
             button50.UseVisualStyleBackColor = false;
             button50.Click += TheOilFloes_Click;
@@ -810,11 +809,11 @@
             // button51
             // 
             button51.BackColor = SystemColors.ActiveCaptionText;
-            button51.BackgroundImage = (Image)resources.GetObject("button51.BackgroundImage");
+            button51.BackgroundImage = Properties.Resources.OozePits1;
             button51.FlatStyle = FlatStyle.Flat;
             button51.Location = new Point(885, 527);
             button51.Name = "button51";
-            button51.Size = new Size(182, 46);
+            button51.Size = new Size(180, 50);
             button51.TabIndex = 112;
             button51.UseVisualStyleBackColor = false;
             button51.Click += OozePits_Click;
@@ -822,11 +821,11 @@
             // button52
             // 
             button52.BackColor = SystemColors.ActiveCaptionText;
-            button52.BackgroundImage = (Image)resources.GetObject("button52.BackgroundImage");
+            button52.BackgroundImage = Properties.Resources.Effigy1;
             button52.FlatStyle = FlatStyle.Flat;
             button52.Location = new Point(885, 579);
             button52.Name = "button52";
-            button52.Size = new Size(182, 46);
+            button52.Size = new Size(180, 50);
             button52.TabIndex = 113;
             button52.UseVisualStyleBackColor = false;
             button52.Click += Effigy_Click;
@@ -834,11 +833,11 @@
             // button53
             // 
             button53.BackColor = SystemColors.ActiveCaptionText;
-            button53.BackgroundImage = (Image)resources.GetObject("button53.BackgroundImage");
+            button53.BackgroundImage = Properties.Resources.DoomloreShrine1;
             button53.FlatStyle = FlatStyle.Flat;
             button53.Location = new Point(885, 631);
             button53.Name = "button53";
-            button53.Size = new Size(182, 46);
+            button53.Size = new Size(180, 50);
             button53.TabIndex = 114;
             button53.UseVisualStyleBackColor = false;
             button53.Click += DoomloreShrine_Click;
@@ -846,11 +845,11 @@
             // button54
             // 
             button54.BackColor = SystemColors.ActiveCaptionText;
-            button54.BackgroundImage = (Image)resources.GetObject("button54.BackgroundImage");
+            button54.BackgroundImage = Properties.Resources.StormsofWinter1;
             button54.FlatStyle = FlatStyle.Flat;
             button54.Location = new Point(885, 683);
             button54.Name = "button54";
-            button54.Size = new Size(182, 46);
+            button54.Size = new Size(180, 50);
             button54.TabIndex = 115;
             button54.UseVisualStyleBackColor = false;
             button54.Click += StormsOfWinter_Click;
@@ -858,11 +857,11 @@
             // button55
             // 
             button55.BackColor = SystemColors.ActiveCaptionText;
-            button55.BackgroundImage = (Image)resources.GetObject("button55.BackgroundImage");
+            button55.BackgroundImage = Properties.Resources.DefendJorasKeep1;
             button55.FlatStyle = FlatStyle.Flat;
             button55.Location = new Point(885, 735);
             button55.Name = "button55";
-            button55.Size = new Size(182, 46);
+            button55.Size = new Size(180, 50);
             button55.TabIndex = 116;
             button55.UseVisualStyleBackColor = false;
             button55.Click += DefendJorasKeep_Click;
@@ -870,11 +869,11 @@
             // button56
             // 
             button56.BackColor = SystemColors.ActiveCaptionText;
-            button56.BackgroundImage = (Image)resources.GetObject("button56.BackgroundImage");
+            button56.BackgroundImage = Properties.Resources.Aetherblade_Assault1;
             button56.FlatStyle = FlatStyle.Flat;
             button56.Location = new Point(1303, 371);
             button56.Name = "button56";
-            button56.Size = new Size(185, 46);
+            button56.Size = new Size(180, 50);
             button56.TabIndex = 117;
             button56.UseVisualStyleBackColor = false;
             button56.Click += AetherbladeAssault_Click;
@@ -882,11 +881,11 @@
             // button57
             // 
             button57.BackColor = SystemColors.ActiveCaptionText;
-            button57.BackgroundImage = (Image)resources.GetObject("button57.BackgroundImage");
+            button57.BackgroundImage = Properties.Resources.Kaineng_Blackout1;
             button57.FlatStyle = FlatStyle.Flat;
             button57.Location = new Point(1303, 423);
             button57.Name = "button57";
-            button57.Size = new Size(185, 46);
+            button57.Size = new Size(180, 50);
             button57.TabIndex = 118;
             button57.UseVisualStyleBackColor = false;
             button57.Click += KainengBlackout_Click;
@@ -894,11 +893,11 @@
             // button58
             // 
             button58.BackColor = SystemColors.ActiveCaptionText;
-            button58.BackgroundImage = (Image)resources.GetObject("button58.BackgroundImage");
+            button58.BackgroundImage = Properties.Resources.GangWar1;
             button58.FlatStyle = FlatStyle.Flat;
             button58.Location = new Point(1303, 475);
             button58.Name = "button58";
-            button58.Size = new Size(185, 46);
+            button58.Size = new Size(180, 50);
             button58.TabIndex = 119;
             button58.UseVisualStyleBackColor = false;
             button58.Click += GangWar_Click;
@@ -906,11 +905,11 @@
             // button59
             // 
             button59.BackColor = SystemColors.ActiveCaptionText;
-            button59.BackgroundImage = (Image)resources.GetObject("button59.BackgroundImage");
+            button59.BackgroundImage = Properties.Resources.Aspenwood1;
             button59.FlatStyle = FlatStyle.Flat;
             button59.Location = new Point(1303, 527);
             button59.Name = "button59";
-            button59.Size = new Size(185, 46);
+            button59.Size = new Size(180, 50);
             button59.TabIndex = 120;
             button59.UseVisualStyleBackColor = false;
             button59.Click += Aspenwood_Click;
@@ -918,7 +917,7 @@
             // button60
             // 
             button60.BackColor = SystemColors.ActiveCaptionText;
-            button60.BackgroundImage = (Image)resources.GetObject("button60.BackgroundImage");
+            button60.BackgroundImage = Properties.Resources.Unlocking_the_Wizard_s_Tower1;
             button60.FlatStyle = FlatStyle.Flat;
             button60.Location = new Point(1515, 371);
             button60.Name = "button60";
@@ -930,7 +929,7 @@
             // button61
             // 
             button61.BackColor = SystemColors.ActiveCaptionText;
-            button61.BackgroundImage = (Image)resources.GetObject("button61.BackgroundImage");
+            button61.BackgroundImage = Properties.Resources.Fly_by_Night1;
             button61.FlatStyle = FlatStyle.Flat;
             button61.Location = new Point(1515, 423);
             button61.Name = "button61";
@@ -942,7 +941,7 @@
             // button62
             // 
             button62.BackColor = SystemColors.ActiveCaptionText;
-            button62.BackgroundImage = (Image)resources.GetObject("button62.BackgroundImage");
+            button62.BackgroundImage = Properties.Resources.TheDefenseofAmnytas1;
             button62.FlatStyle = FlatStyle.Flat;
             button62.Location = new Point(1515, 475);
             button62.Name = "button62";
@@ -954,7 +953,7 @@
             // Convergens
             // 
             Convergens.BackColor = SystemColors.ActiveCaptionText;
-            Convergens.BackgroundImage = (Image)resources.GetObject("Convergens.BackgroundImage");
+            Convergens.BackgroundImage = Properties.Resources.Convergences1;
             Convergens.FlatStyle = FlatStyle.Flat;
             Convergens.Location = new Point(1515, 527);
             Convergens.Name = "Convergens";
@@ -966,11 +965,11 @@
             // button64
             // 
             button64.BackColor = SystemColors.ActiveCaptionText;
-            button64.BackgroundImage = (Image)resources.GetObject("button64.BackgroundImage");
+            button64.BackgroundImage = Properties.Resources.Battle_for_the_Jade_Sea2;
             button64.FlatStyle = FlatStyle.Flat;
             button64.Location = new Point(1303, 579);
             button64.Name = "button64";
-            button64.Size = new Size(185, 46);
+            button64.Size = new Size(180, 50);
             button64.TabIndex = 125;
             button64.UseVisualStyleBackColor = false;
             button64.Click += JadeSea_Click;
@@ -1510,7 +1509,7 @@
             button27.FlatStyle = FlatStyle.Flat;
             button27.Location = new Point(12, 62);
             button27.Name = "button27";
-            button27.Size = new Size(182, 45);
+            button27.Size = new Size(180, 50);
             button27.TabIndex = 184;
             button27.UseVisualStyleBackColor = false;
             button27.Click += Meta_Click;
@@ -1522,7 +1521,7 @@
             button42.FlatStyle = FlatStyle.Flat;
             button42.Location = new Point(12, 12);
             button42.Name = "button42";
-            button42.Size = new Size(182, 45);
+            button42.Size = new Size(180, 50);
             button42.TabIndex = 185;
             button42.UseVisualStyleBackColor = false;
             button42.Click += World_Click;
@@ -1535,7 +1534,7 @@
             button63.ForeColor = Color.Black;
             button63.Location = new Point(200, 62);
             button63.Name = "button63";
-            button63.Size = new Size(182, 45);
+            button63.Size = new Size(180, 50);
             button63.TabIndex = 186;
             button63.UseVisualStyleBackColor = false;
             button63.Click += ClearAll_Click;
@@ -1547,7 +1546,7 @@
             button65.FlatStyle = FlatStyle.Flat;
             button65.Location = new Point(12, 114);
             button65.Name = "button65";
-            button65.Size = new Size(182, 45);
+            button65.Size = new Size(180, 50);
             button65.TabIndex = 187;
             button65.UseVisualStyleBackColor = false;
             button65.Click += Mixed_Click;
@@ -1559,7 +1558,7 @@
             button66.FlatStyle = FlatStyle.Flat;
             button66.Location = new Point(388, 10);
             button66.Name = "button66";
-            button66.Size = new Size(182, 45);
+            button66.Size = new Size(180, 50);
             button66.TabIndex = 189;
             button66.UseVisualStyleBackColor = false;
             button66.Click += Timer_Click;
@@ -1572,7 +1571,7 @@
             buttonSelectAll.ForeColor = SystemColors.ControlText;
             buttonSelectAll.Location = new Point(200, 10);
             buttonSelectAll.Name = "buttonSelectAll";
-            buttonSelectAll.Size = new Size(182, 45);
+            buttonSelectAll.Size = new Size(180, 50);
             buttonSelectAll.TabIndex = 188;
             buttonSelectAll.UseVisualStyleBackColor = false;
             buttonSelectAll.Click += All_click;
@@ -1583,7 +1582,7 @@
             button67.FlatStyle = FlatStyle.Flat;
             button67.Location = new Point(259, 683);
             button67.Name = "button67";
-            button67.Size = new Size(182, 46);
+            button67.Size = new Size(180, 50);
             button67.TabIndex = 190;
             button67.UseVisualStyleBackColor = true;
             button67.Click += button67_Click;

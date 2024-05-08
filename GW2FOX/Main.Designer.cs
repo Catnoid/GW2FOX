@@ -151,7 +151,7 @@
             pictureBox2.BackgroundImage = Properties.Resources.Shortcut;
             pictureBox2.Location = new Point(200, 365);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(160, 25);
+            pictureBox2.Size = new Size(63, 25);
             pictureBox2.TabIndex = 17;
             pictureBox2.TabStop = false;
             // 

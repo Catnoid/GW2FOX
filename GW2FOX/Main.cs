@@ -356,22 +356,6 @@ namespace GW2FOX
             }
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            // Daten von PSNA Formular erhalten
-            PSNA psnaForm = new PSNA();
-            string npcData = psnaForm.GetNPCData();
-
-            // Daten in die Zwischenablage kopieren
-            Clipboard.SetText(npcData);
-
-            // Gw2-64 in den Vordergrund bringen
-            BringGw2ToFront();
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            ShowAndHideForm(new PSNAgents());
-        }
+       
     }
 }

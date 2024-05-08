@@ -134,7 +134,6 @@
             button1.Name = "button1";
             button1.Size = new Size(100, 102);
             button1.TabIndex = 24;
-            button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += Back_Click;
             // 
