@@ -923,7 +923,7 @@
             button60.FlatStyle = FlatStyle.Flat;
             button60.Location = new Point(1515, 371);
             button60.Name = "button60";
-            button60.Size = new Size(185, 46);
+            button60.Size = new Size(180, 50);
             button60.TabIndex = 121;
             button60.UseVisualStyleBackColor = false;
             button60.Click += WizardsTower_Click;
@@ -935,7 +935,7 @@
             button61.FlatStyle = FlatStyle.Flat;
             button61.Location = new Point(1515, 423);
             button61.Name = "button61";
-            button61.Size = new Size(185, 46);
+            button61.Size = new Size(180, 50);
             button61.TabIndex = 122;
             button61.UseVisualStyleBackColor = false;
             button61.Click += FlyByNight_Click;
@@ -947,7 +947,7 @@
             button62.FlatStyle = FlatStyle.Flat;
             button62.Location = new Point(1515, 475);
             button62.Name = "button62";
-            button62.Size = new Size(185, 46);
+            button62.Size = new Size(180, 50);
             button62.TabIndex = 123;
             button62.UseVisualStyleBackColor = false;
             button62.Click += DefenseOfAmnytas_Click;
@@ -959,7 +959,7 @@
             Convergens.FlatStyle = FlatStyle.Flat;
             Convergens.Location = new Point(1515, 527);
             Convergens.Name = "Convergens";
-            Convergens.Size = new Size(185, 46);
+            Convergens.Size = new Size(180, 50);
             Convergens.TabIndex = 124;
             Convergens.UseVisualStyleBackColor = false;
             Convergens.Click += Convergences_Click;
@@ -1508,8 +1508,8 @@
             // 
             button27.BackColor = SystemColors.ActiveCaptionText;
             button27.BackgroundImage = Properties.Resources.Metainfusion;
-            button27.FlatStyle = FlatStyle.Flat;
-            button27.Location = new Point(12, 62);
+            button27.FlatStyle = FlatStyle.Popup;
+            button27.Location = new Point(12, 68);
             button27.Name = "button27";
             button27.Size = new Size(180, 50);
             button27.TabIndex = 184;
@@ -1520,7 +1520,7 @@
             // 
             button42.BackColor = SystemColors.ActiveCaptionText;
             button42.BackgroundImage = Properties.Resources.Worldbosses;
-            button42.FlatStyle = FlatStyle.Flat;
+            button42.FlatStyle = FlatStyle.Popup;
             button42.Location = new Point(12, 12);
             button42.Name = "button42";
             button42.Size = new Size(180, 50);
@@ -1532,9 +1532,9 @@
             // 
             button63.BackColor = SystemColors.ActiveCaptionText;
             button63.BackgroundImage = Properties.Resources.Clear;
-            button63.FlatStyle = FlatStyle.Flat;
+            button63.FlatStyle = FlatStyle.Popup;
             button63.ForeColor = Color.Black;
-            button63.Location = new Point(200, 62);
+            button63.Location = new Point(196, 68);
             button63.Name = "button63";
             button63.Size = new Size(180, 50);
             button63.TabIndex = 186;
@@ -1545,8 +1545,8 @@
             // 
             button65.BackColor = Color.Black;
             button65.BackgroundImage = Properties.Resources.WorldMeta;
-            button65.FlatStyle = FlatStyle.Flat;
-            button65.Location = new Point(12, 114);
+            button65.FlatStyle = FlatStyle.Popup;
+            button65.Location = new Point(12, 124);
             button65.Name = "button65";
             button65.Size = new Size(180, 50);
             button65.TabIndex = 187;
@@ -1557,8 +1557,8 @@
             // 
             button66.BackColor = SystemColors.ActiveCaptionText;
             button66.BackgroundImage = Properties.Resources.TimerOverlay;
-            button66.FlatStyle = FlatStyle.Flat;
-            button66.Location = new Point(388, 10);
+            button66.FlatStyle = FlatStyle.Popup;
+            button66.Location = new Point(382, 12);
             button66.Name = "button66";
             button66.Size = new Size(180, 50);
             button66.TabIndex = 189;
@@ -1569,9 +1569,9 @@
             // 
             buttonSelectAll.BackColor = Color.Black;
             buttonSelectAll.BackgroundImage = Properties.Resources.AllMetas;
-            buttonSelectAll.FlatStyle = FlatStyle.Flat;
+            buttonSelectAll.FlatStyle = FlatStyle.Popup;
             buttonSelectAll.ForeColor = SystemColors.ControlText;
-            buttonSelectAll.Location = new Point(200, 10);
+            buttonSelectAll.Location = new Point(196, 12);
             buttonSelectAll.Name = "buttonSelectAll";
             buttonSelectAll.Size = new Size(180, 50);
             buttonSelectAll.TabIndex = 188;

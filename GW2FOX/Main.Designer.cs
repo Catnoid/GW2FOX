@@ -61,7 +61,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(12, 193);
             button4.Name = "button4";
-            button4.Size = new Size(182, 47);
+            button4.Size = new Size(180, 50);
             button4.TabIndex = 5;
             button4.UseVisualStyleBackColor = false;
             button4.Click += Fox_Click;
@@ -71,7 +71,7 @@
             button3.BackColor = SystemColors.ActiveCaptionText;
             button3.BackgroundImage = Properties.Resources.Repair;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(12, 246);
+            button3.Location = new Point(12, 249);
             button3.Name = "button3";
             button3.Size = new Size(182, 47);
             button3.TabIndex = 8;
@@ -83,7 +83,7 @@
             button5.BackColor = SystemColors.ActiveCaptionText;
             button5.BackgroundImage = Properties.Resources.OTimer;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(12, 352);
+            button5.Location = new Point(12, 355);
             button5.Name = "button5";
             button5.Size = new Size(182, 47);
             button5.TabIndex = 10;
@@ -95,7 +95,7 @@
             button1.BackColor = SystemColors.ActiveCaptionText;
             button1.BackgroundImage = Properties.Resources.LeadingHelper;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(12, 299);
+            button1.Location = new Point(12, 302);
             button1.Name = "button1";
             button1.Size = new Size(182, 47);
             button1.TabIndex = 11;
@@ -149,7 +149,7 @@
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = Properties.Resources.Shortcut;
-            pictureBox2.Location = new Point(200, 365);
+            pictureBox2.Location = new Point(200, 377);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(63, 25);
             pictureBox2.TabIndex = 17;
