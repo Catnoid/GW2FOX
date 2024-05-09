@@ -15,4 +15,5 @@ Feel free to use it and donate on Homapage if you want!
 
 
 
-![GW2FOXMain](https://github.com/Catnoid/GW2FOX/assets/67755545/3613ab1a-fc54-4245-9e1c-30c68eafce7e)
+![Screenshot 2024-05-09 204315](https://github.com/Catnoid/GW2FOX/assets/67755545/35841fa6-65fe-4d80-b624-c984a22a052d)
+
