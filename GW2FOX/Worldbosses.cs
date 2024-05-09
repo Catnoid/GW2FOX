@@ -2104,12 +2104,17 @@ namespace GW2FOX
         private void button68_Click(object sender, EventArgs e)
         {
             ShowAndHideForm(new CaptainRotbeard());
-            
+
         }
 
         private void button69_Click(object sender, EventArgs e)
         {
             ShowAndHideForm(new DredgeCommissar());
+        }
+
+        private void button67_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new LLA());
         }
     }
 

@@ -1587,7 +1587,8 @@
             button67.Size = new Size(180, 50);
             button67.TabIndex = 190;
             button67.UseVisualStyleBackColor = true;
-                        // 
+            button67.Click += button67_Click;
+            // 
             // button68
             // 
             button68.BackColor = Color.Black;
