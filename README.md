@@ -10,7 +10,7 @@ Guild Wars 2 FOX
 - ArcDPS
 
 Feel free to use it and donate on Homapage if you want!
-https://gw2-hub.000webhostapp.com/makrotool.php
+(https://www.gw2fox.com/makrotool.php)
 
 
 
