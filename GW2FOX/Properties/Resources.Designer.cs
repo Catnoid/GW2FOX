@@ -253,6 +253,26 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ButtonCaptain_Rotbeard {
+            get {
+                object obj = ResourceManager.GetObject("ButtonCaptain Rotbeard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ButtonDefeat_the_dredge_commissar {
+            get {
+                object obj = ResourceManager.GetObject("ButtonDefeat the dredge commissar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ChackInfusion {
             get {
                 object obj = ResourceManager.GetObject("ChackInfusion", resourceCulture);

@@ -2101,9 +2101,15 @@ namespace GW2FOX
             ShowAndHideForm(new Convergences());
         }
 
-        private void button67_Click(object sender, EventArgs e)
+        private void button68_Click(object sender, EventArgs e)
         {
-            ShowAndHideForm(new LLA());
+            ShowAndHideForm(new CaptainRotbeard());
+            
+        }
+
+        private void button69_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new DredgeCommissar());
         }
     }
 

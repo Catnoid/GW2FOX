@@ -124,6 +124,9 @@
   <data name="Tequatl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tequatl.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Shortcut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shortcut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Adam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +192,9 @@
   </data>
   <data name="Maw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maw.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AllMetas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AllMetas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wurm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wurm.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,9 +273,6 @@
   </data>
   <data name="Forged" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Forged.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kristall_Infusion_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kristall-Infusion_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -397,14 +400,14 @@
   <data name="Kaineng Blackout1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kaineng Blackout.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GangWar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GangWar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Chak" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chak.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AllMetas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AllMetas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Convergences1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Convergences.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Waypoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Waypoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -417,6 +420,9 @@
   </data>
   <data name="The Oil Floes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Oil Floes.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonCaptain Rotbeard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonCaptain Rotbeard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eye.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -457,8 +463,8 @@
   <data name="Thaida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thaida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shortcut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shortcut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StormsofWinter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StormsofWinter.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rhendi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rhendi.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -472,8 +478,8 @@
   <data name="Aspenwood1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aspenwood.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StormsofWinter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StormsofWinter.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GangWar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GangWar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonBEHE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonBEHE.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -490,7 +496,7 @@
   <data name="Homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Homepage.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Convergences1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Convergences.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ButtonDefeat the dredge commissar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonDefeat the dredge commissar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -33,6 +33,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CaptainRotbeard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DredgeCommissar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Convergences.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="CaptainRotbeard.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DredgeCommissar.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Update="Convergences.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

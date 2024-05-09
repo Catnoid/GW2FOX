@@ -156,6 +156,8 @@
             button66 = new Button();
             buttonSelectAll = new Button();
             button67 = new Button();
+            button68 = new Button();
+            button69 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -1585,7 +1587,30 @@
             button67.Size = new Size(180, 50);
             button67.TabIndex = 190;
             button67.UseVisualStyleBackColor = true;
-            button67.Click += button67_Click;
+                        // 
+            // button68
+            // 
+            button68.BackColor = Color.Black;
+            button68.BackgroundImage = Properties.Resources.ButtonCaptain_Rotbeard;
+            button68.FlatStyle = FlatStyle.Flat;
+            button68.Location = new Point(259, 735);
+            button68.Name = "button68";
+            button68.Size = new Size(180, 50);
+            button68.TabIndex = 191;
+            button68.UseVisualStyleBackColor = false;
+            button68.Click += button68_Click;
+            // 
+            // button69
+            // 
+            button69.BackColor = Color.Black;
+            button69.BackgroundImage = Properties.Resources.ButtonDefeat_the_dredge_commissar;
+            button69.FlatStyle = FlatStyle.Flat;
+            button69.Location = new Point(259, 787);
+            button69.Name = "button69";
+            button69.Size = new Size(180, 50);
+            button69.TabIndex = 192;
+            button69.UseVisualStyleBackColor = false;
+            button69.Click += button69_Click;
             // 
             // Worldbosses
             // 
@@ -1593,6 +1618,8 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button69);
+            Controls.Add(button68);
             Controls.Add(button67);
             Controls.Add(button66);
             Controls.Add(buttonSelectAll);
@@ -1861,5 +1888,7 @@
         private Button button66;
         private Button buttonSelectAll;
         private Button button67;
+        private Button button68;
+        private Button button69;
     }
 }
