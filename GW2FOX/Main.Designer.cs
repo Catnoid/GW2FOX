@@ -58,6 +58,7 @@
             // 
             button4.BackColor = SystemColors.ActiveCaptionText;
             button4.BackgroundImage = Properties.Resources.FOXHomepage;
+            button4.Cursor = Cursors.Cross;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(12, 193);
             button4.Name = "button4";
@@ -70,10 +71,11 @@
             // 
             button3.BackColor = SystemColors.ActiveCaptionText;
             button3.BackgroundImage = Properties.Resources.Repair;
+            button3.Cursor = Cursors.Cross;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(12, 249);
             button3.Name = "button3";
-            button3.Size = new Size(182, 47);
+            button3.Size = new Size(180, 50);
             button3.TabIndex = 8;
             button3.UseVisualStyleBackColor = false;
             button3.Click += Repair_Click;
@@ -82,10 +84,11 @@
             // 
             button5.BackColor = SystemColors.ActiveCaptionText;
             button5.BackgroundImage = Properties.Resources.OTimer;
+            button5.Cursor = Cursors.Cross;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(12, 355);
+            button5.Location = new Point(12, 361);
             button5.Name = "button5";
-            button5.Size = new Size(182, 47);
+            button5.Size = new Size(180, 50);
             button5.TabIndex = 10;
             button5.UseVisualStyleBackColor = false;
             button5.Click += Timer_Click;
@@ -94,10 +97,11 @@
             // 
             button1.BackColor = SystemColors.ActiveCaptionText;
             button1.BackgroundImage = Properties.Resources.LeadingHelper;
+            button1.Cursor = Cursors.Cross;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(12, 302);
+            button1.Location = new Point(12, 305);
             button1.Name = "button1";
-            button1.Size = new Size(182, 47);
+            button1.Size = new Size(180, 50);
             button1.TabIndex = 11;
             button1.UseVisualStyleBackColor = false;
             button1.Click += Leading_Click;
