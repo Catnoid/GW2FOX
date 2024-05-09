@@ -57,11 +57,15 @@
             button10 = new Button();
             Eyeitemname = new TextBox();
             pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // button13
@@ -357,12 +361,36 @@
             pictureBox5.TabIndex = 125;
             pictureBox5.TabStop = false;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.BackgroundImage = Properties.Resources._20min;
+            pictureBox6.InitialImage = Properties.Resources._20min;
+            pictureBox6.Location = new Point(346, 148);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(250, 20);
+            pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox6.TabIndex = 126;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackgroundImage = Properties.Resources.TowerisUp1;
+            pictureBox7.InitialImage = Properties.Resources.TowerisUp;
+            pictureBox7.Location = new Point(346, 174);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(250, 20);
+            pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox7.TabIndex = 127;
+            pictureBox7.TabStop = false;
+            // 
             // Eye
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(pictureBox7);
+            Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
             Controls.Add(Eyeitemname);
             Controls.Add(button10);
@@ -399,6 +427,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -432,5 +462,7 @@
         private Button button10;
         private TextBox Eyeitemname;
         private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
     }
 }

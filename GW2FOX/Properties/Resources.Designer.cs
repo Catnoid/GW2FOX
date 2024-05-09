@@ -63,6 +63,56 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _10minlast {
+            get {
+                object obj = ResourceManager.GetObject("10minlast", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _20min {
+            get {
+                object obj = ResourceManager.GetObject("20min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _20minlast {
+            get {
+                object obj = ResourceManager.GetObject("20minlast", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _35min {
+            get {
+                object obj = ResourceManager.GetObject("35min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _50min {
+            get {
+                object obj = ResourceManager.GetObject("50min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Adam {
             get {
                 object obj = ResourceManager.GetObject("Adam", resourceCulture);
@@ -1196,6 +1246,26 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap TimerOverlay {
             get {
                 object obj = ResourceManager.GetObject("TimerOverlay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TowerisUp {
+            get {
+                object obj = ResourceManager.GetObject("TowerisUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TowerisUp1 {
+            get {
+                object obj = ResourceManager.GetObject("TowerisUp1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

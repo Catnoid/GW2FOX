@@ -57,6 +57,7 @@
             button10 = new Button();
             Lyssaitemname = new TextBox();
             pictureBox5 = new PictureBox();
+            button11 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -357,12 +358,24 @@
             pictureBox5.TabIndex = 126;
             pictureBox5.TabStop = false;
             // 
+            // button11
+            // 
+            button11.BackgroundImage = Properties.Resources.wikigw2;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Location = new Point(11, 12);
+            button11.Name = "button11";
+            button11.Size = new Size(100, 45);
+            button11.TabIndex = 129;
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
             // Lyssa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button11);
             Controls.Add(pictureBox5);
             Controls.Add(Lyssaitemname);
             Controls.Add(button10);
@@ -432,5 +445,6 @@
         private Button button10;
         private TextBox Lyssaitemname;
         private PictureBox pictureBox5;
+        private Button button11;
     }
 }

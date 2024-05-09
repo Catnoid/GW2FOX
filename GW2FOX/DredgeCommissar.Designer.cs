@@ -56,10 +56,12 @@
             DredgeCommissarItemName = new TextBox();
             DredgeCommissarCoste = new TextBox();
             button15 = new Button();
+            pictureBox5 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // button8
@@ -343,12 +345,24 @@
             button15.UseVisualStyleBackColor = true;
             button15.Click += button15_Click;
             // 
+            // pictureBox5
+            // 
+            pictureBox5.BackgroundImage = Properties.Resources._20min;
+            pictureBox5.InitialImage = Properties.Resources._20min;
+            pictureBox5.Location = new Point(346, 151);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(250, 20);
+            pictureBox5.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox5.TabIndex = 109;
+            pictureBox5.TabStop = false;
+            // 
             // DredgeCommissar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(pictureBox5);
             Controls.Add(button15);
             Controls.Add(DredgeCommissarCoste);
             Controls.Add(DredgeCommissarItemName);
@@ -383,6 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -415,5 +430,6 @@
         private TextBox DredgeCommissarItemName;
         private TextBox DredgeCommissarCost;
         private Button button15;
+        private PictureBox pictureBox5;
     }
 }

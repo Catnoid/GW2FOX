@@ -55,11 +55,14 @@
             pictureBox4 = new PictureBox();
             Dwaynaitemname = new TextBox();
             pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // button13
@@ -333,12 +336,36 @@
             pictureBox5.TabIndex = 123;
             pictureBox5.TabStop = false;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.BackgroundImage = Properties.Resources._50min;
+            pictureBox6.InitialImage = Properties.Resources._50min;
+            pictureBox6.Location = new Point(346, 151);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(250, 20);
+            pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox6.TabIndex = 127;
+            pictureBox6.TabStop = false;
+            // 
+            // button10
+            // 
+            button10.BackgroundImage = Properties.Resources.wikigw2;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Location = new Point(12, 12);
+            button10.Name = "button10";
+            button10.Size = new Size(100, 45);
+            button10.TabIndex = 128;
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
             // Dwayna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button10);
+            Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
             Controls.Add(Dwaynaitemname);
             Controls.Add(pictureBox4);
@@ -373,6 +400,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -404,5 +432,7 @@
         private PictureBox pictureBox4;
         private TextBox Dwaynaitemname;
         private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private Button button10;
     }
 }

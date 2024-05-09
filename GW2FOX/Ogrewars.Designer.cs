@@ -53,11 +53,14 @@
             Samname = new TextBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
+            button11 = new Button();
+            pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // button9
@@ -309,12 +312,36 @@
             pictureBox5.TabIndex = 126;
             pictureBox5.TabStop = false;
             // 
+            // button11
+            // 
+            button11.BackgroundImage = Properties.Resources.wikigw2;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Location = new Point(12, 12);
+            button11.Name = "button11";
+            button11.Size = new Size(100, 45);
+            button11.TabIndex = 130;
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackgroundImage = Properties.Resources._20minlast;
+            pictureBox6.InitialImage = Properties.Resources._20minlast;
+            pictureBox6.Location = new Point(346, 147);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(250, 20);
+            pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox6.TabIndex = 131;
+            pictureBox6.TabStop = false;
+            // 
             // Ogrewars
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(pictureBox6);
+            Controls.Add(button11);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(button6);
@@ -347,6 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -376,5 +404,7 @@
         private TextBox Samname;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
+        private Button button11;
+        private PictureBox pictureBox6;
     }
 }

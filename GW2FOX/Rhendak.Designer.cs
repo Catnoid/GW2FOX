@@ -58,11 +58,14 @@
             button10 = new Button();
             Rhendiitemname = new TextBox();
             pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            button11 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // button13
@@ -364,12 +367,36 @@
             pictureBox5.TabIndex = 126;
             pictureBox5.TabStop = false;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.BackgroundImage = Properties.Resources._10minlast;
+            pictureBox6.InitialImage = Properties.Resources._10minlast;
+            pictureBox6.Location = new Point(346, 149);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(250, 20);
+            pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox6.TabIndex = 128;
+            pictureBox6.TabStop = false;
+            // 
+            // button11
+            // 
+            button11.BackgroundImage = Properties.Resources.wikigw2;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Location = new Point(11, 12);
+            button11.Name = "button11";
+            button11.Size = new Size(100, 45);
+            button11.TabIndex = 129;
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
             // Rhendak
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button11);
+            Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
             Controls.Add(Rhendiitemname);
             Controls.Add(button10);
@@ -407,6 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -442,5 +470,7 @@
         private Button button10;
         private TextBox Rhendiitemname;
         private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private Button button11;
     }
 }
