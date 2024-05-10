@@ -233,13 +233,18 @@
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.back;
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = Properties.Resources.ButtonBack;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(1792, 869);
+            button1.Location = new Point(1793, 900);
             button1.Name = "button1";
             button1.Size = new Size(100, 102);
             button1.TabIndex = 7;
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += Back_Click;
             // 
             // button2
@@ -1687,6 +1692,7 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button1);
             Controls.Add(button69);
             Controls.Add(button68);
             Controls.Add(button67);
@@ -1809,7 +1815,6 @@
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(Symbols);
             Controls.Add(Welcome);
             Controls.Add(Guild);

@@ -153,13 +153,17 @@
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.back;
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = Properties.Resources.ButtonBack;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(1793, 900);
             button1.Name = "button1";
             button1.Size = new Size(100, 102);
             button1.TabIndex = 55;
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += Back_Click;
             // 
             // Symbols

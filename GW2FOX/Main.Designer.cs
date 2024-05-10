@@ -108,11 +108,18 @@
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.ActiveCaptionText;
+            button2.BackColor = Color.Transparent;
             button2.BackgroundImage = Properties.Resources.Close;
-            button2.Location = new Point(689, 416);
+            button2.FlatAppearance.BorderColor = Color.Black;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = SystemColors.WindowText;
+            button2.Image = Properties.Resources.Close;
+            button2.Location = new Point(678, 339);
             button2.Name = "button2";
-            button2.Size = new Size(100, 20);
+            button2.Size = new Size(100, 100);
             button2.TabIndex = 12;
             button2.UseVisualStyleBackColor = false;
             button2.Click += CloseAll_Click;
@@ -183,6 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
             BackgroundImage = Properties.Resources.Backgroundmini;
             ClientSize = new Size(801, 448);
             Controls.Add(button10);
