@@ -53,10 +53,8 @@
             pictureBox5 = new PictureBox();
             button10 = new Button();
             FireShamanCost = new TextBox();
-            FireShamanItemName = new TextBox();
             button14 = new Button();
             FireShaman2Cost = new TextBox();
-            FireShaman2ItemName = new TextBox();
             button6 = new Button();
             button15 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -320,14 +318,6 @@
             FireShamanCost.Size = new Size(301, 34);
             FireShamanCost.TabIndex = 136;
             // 
-            // FireShamanItemName
-            // 
-            FireShamanItemName.Location = new Point(359, 42);
-            FireShamanItemName.Multiline = true;
-            FireShamanItemName.Name = "FireShamanItemName";
-            FireShamanItemName.Size = new Size(231, 34);
-            FireShamanItemName.TabIndex = 135;
-            // 
             // button14
             // 
             button14.BackColor = Color.Black;
@@ -341,26 +331,18 @@
             // 
             // FireShaman2Cost
             // 
-            FireShaman2Cost.Location = new Point(289, 192);
+            FireShaman2Cost.Location = new Point(289, 122);
             FireShaman2Cost.Multiline = true;
             FireShaman2Cost.Name = "FireShaman2Cost";
             FireShaman2Cost.Size = new Size(301, 34);
             FireShaman2Cost.TabIndex = 140;
-            // 
-            // FireShaman2ItemName
-            // 
-            FireShaman2ItemName.Location = new Point(359, 152);
-            FireShaman2ItemName.Multiline = true;
-            FireShaman2ItemName.Name = "FireShaman2ItemName";
-            FireShaman2ItemName.Size = new Size(231, 34);
-            FireShaman2ItemName.TabIndex = 139;
             // 
             // button6
             // 
             button6.BackColor = Color.Black;
             button6.BackgroundImage = Properties.Resources.Flame_Guard1;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(289, 122);
+            button6.Location = new Point(359, 12);
             button6.Name = "button6";
             button6.Size = new Size(64, 64);
             button6.TabIndex = 138;
@@ -368,7 +350,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(208, 192);
+            button15.Location = new Point(289, 164);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 141;
@@ -384,10 +366,8 @@
             ClientSize = new Size(1904, 1041);
             Controls.Add(button15);
             Controls.Add(FireShaman2Cost);
-            Controls.Add(FireShaman2ItemName);
             Controls.Add(button6);
             Controls.Add(FireShamanCost);
-            Controls.Add(FireShamanItemName);
             Controls.Add(button14);
             Controls.Add(button10);
             Controls.Add(pictureBox5);
@@ -449,10 +429,8 @@
         private PictureBox pictureBox5;
         private Button button10;
         private TextBox FireShamanCost;
-        private TextBox FireShamanItemName;
         private Button button14;
         private TextBox FireShaman2Cost;
-        private TextBox FireShaman2ItemName;
         private Button button6;
         private Button button15;
     }

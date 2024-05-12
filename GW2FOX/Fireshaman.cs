@@ -50,8 +50,7 @@ namespace GW2FOX
                     int silver = (itemPriceCopper % 10000) / 100;
                     int copper = itemPriceCopper % 100;
 
-                    // Update the existing "FireShamanItemName" TextBox text
-                    FireShamanItemName.Text = itemName;
+                    
 
                     // Set FireShamanCost to display item name and price
                     FireShamanCost.Text = $"{itemName}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
@@ -77,8 +76,7 @@ namespace GW2FOX
                     int silver = (itemPriceCopper % 10000) / 100;
                     int copper = itemPriceCopper % 100;
 
-                    // Update the existing "FireShaman2ItemName" TextBox text
-                    FireShaman2ItemName.Text = itemName;
+                    
 
                     // Set FireShaman2Cost to display item name and price
                     FireShaman2Cost.Text = $"{itemName}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
