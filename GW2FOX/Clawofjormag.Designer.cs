@@ -353,6 +353,7 @@
             button15.TabIndex = 129;
             button15.Text = "Copy";
             button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
             // 
             // ClawCost
             // 

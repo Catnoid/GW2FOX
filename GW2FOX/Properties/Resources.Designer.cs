@@ -643,6 +643,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Flame_Guard1 {
+            get {
+                object obj = ResourceManager.GetObject("Flame_Guard1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Fly_by_Night {
             get {
                 object obj = ResourceManager.GetObject("Fly by Night", resourceCulture);

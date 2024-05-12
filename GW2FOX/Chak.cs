@@ -212,9 +212,5 @@ namespace GW2FOX
             BringGw2ToFront();
         }
 
-        private void ChakItemName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

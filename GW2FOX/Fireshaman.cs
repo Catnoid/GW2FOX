@@ -24,6 +24,10 @@ namespace GW2FOX
             FireShamanCost.ReadOnly = true;
             FireShamanCost.Location = new Point(/* Specify the X and Y coordinates */);
             Controls.Add(FireShamanCost);
+            FireShaman2Cost.AutoSize = true;
+            FireShaman2Cost.ReadOnly = true;
+            FireShaman2Cost.Location = new Point(/* Specify the X and Y coordinates */);
+            Controls.Add(FireShaman2Cost);
         }
 
 
@@ -57,6 +61,33 @@ namespace GW2FOX
             {
                 MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://api.guildwars2.com/v2/items/19365";
+                    string jsonResult = await client.GetStringAsync(apiUrl);
+
+                    JObject resultObject = JObject.Parse(jsonResult);
+
+                    string itemName = (string)resultObject["name"];
+                    string chatLink = (string)resultObject["chat_link"];
+                    int itemPriceCopper = await GetItemPriceCopper2();
+
+                    int gold = itemPriceCopper / 10000;
+                    int silver = (itemPriceCopper % 10000) / 100;
+                    int copper = itemPriceCopper % 100;
+
+                    // Update the existing "Itempriceexeofzhaitan" TextBox text
+                    FireShaman2ItemName.Text = $"{itemName}";
+
+                    FireShaman2Cost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async Task<int> GetItemPriceCopper()
@@ -75,7 +106,22 @@ namespace GW2FOX
                 throw new Exception($"Fehler beim Abrufen des Item-Preises: {ex.Message}");
             }
         }
-
+        private async Task<int> GetItemPriceCopper2()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string jsonResult = await client.GetStringAsync("https://api.guildwars2.com/v2/commerce/prices/19365");
+                    JObject resultObject = JObject.Parse(jsonResult);
+                    return (int)resultObject["sells"]["unit_price"];
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fehler beim Abrufen des Item-Preises: {ex.Message}");
+            }
+        }
 
 
 
@@ -169,5 +215,7 @@ namespace GW2FOX
                 MessageBox.Show($"Fehler beim ?ffnen der Homepage: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
     }
 }

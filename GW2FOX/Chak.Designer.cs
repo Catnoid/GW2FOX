@@ -399,7 +399,6 @@
             ChakItemName.Name = "ChakItemName";
             ChakItemName.Size = new Size(231, 34);
             ChakItemName.TabIndex = 106;
-            ChakItemName.TextChanged += ChakItemName_TextChanged;
             // 
             // ChackCost
             // 

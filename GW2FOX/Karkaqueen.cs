@@ -175,5 +175,11 @@ namespace GW2FOX
                 MessageBox.Show($"Fehler beim ?ffnen der Homepage: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(KarkaCost.Text);
+            BringGw2ToFront();
+        }
     }
 }

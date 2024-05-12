@@ -367,6 +367,7 @@
             button15.TabIndex = 133;
             button15.Text = "Copy";
             button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
             // 
             // KarkaCost
             // 
