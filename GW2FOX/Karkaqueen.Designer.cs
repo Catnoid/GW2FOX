@@ -56,6 +56,10 @@
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             button10 = new Button();
+            button15 = new Button();
+            KarkaCost = new TextBox();
+            KarkaItemName = new TextBox();
+            button14 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -355,12 +359,52 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button15
+            // 
+            button15.Location = new Point(293, 122);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 133;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            // 
+            // KarkaCost
+            // 
+            KarkaCost.Location = new Point(293, 82);
+            KarkaCost.Multiline = true;
+            KarkaCost.Name = "KarkaCost";
+            KarkaCost.Size = new Size(301, 34);
+            KarkaCost.TabIndex = 132;
+            // 
+            // KarkaItemName
+            // 
+            KarkaItemName.Location = new Point(363, 42);
+            KarkaItemName.Multiline = true;
+            KarkaItemName.Name = "KarkaItemName";
+            KarkaItemName.Size = new Size(231, 34);
+            KarkaItemName.TabIndex = 131;
+            // 
+            // button14
+            // 
+            button14.BackColor = Color.Black;
+            button14.BackgroundImage = Properties.Resources.Arthropoda;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Location = new Point(293, 12);
+            button14.Name = "button14";
+            button14.Size = new Size(64, 64);
+            button14.TabIndex = 130;
+            button14.UseVisualStyleBackColor = false;
+            // 
             // Karkaqueen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
+            Controls.Add(KarkaCost);
+            Controls.Add(KarkaItemName);
+            Controls.Add(button14);
             Controls.Add(button10);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox3);
@@ -428,5 +472,9 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox5;
         private Button button10;
+        private Button button15;
+        private TextBox KarkaCost;
+        private TextBox KarkaItemName;
+        private Button button14;
     }
 }

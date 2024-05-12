@@ -173,6 +173,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Arthropoda {
+            get {
+                object obj = ResourceManager.GetObject("Arthropoda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Ascension {
             get {
                 object obj = ResourceManager.GetObject("Ascension", resourceCulture);
@@ -623,6 +633,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Flame_Guard {
+            get {
+                object obj = ResourceManager.GetObject("Flame_Guard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Fly_by_Night {
             get {
                 object obj = ResourceManager.GetObject("Fly by Night", resourceCulture);
@@ -723,6 +743,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Jormag_Klauen_Fragment_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Jormag-Klauen-Fragment_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Junundu {
             get {
                 object obj = ResourceManager.GetObject("Junundu", resourceCulture);
@@ -776,6 +806,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap LeadingHelper {
             get {
                 object obj = ResourceManager.GetObject("LeadingHelper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Legionnaire_Staff {
+            get {
+                object obj = ResourceManager.GetObject("Legionnaire_Staff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

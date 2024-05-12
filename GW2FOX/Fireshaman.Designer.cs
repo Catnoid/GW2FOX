@@ -52,6 +52,10 @@
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             button10 = new Button();
+            button15 = new Button();
+            FireShamanCost = new TextBox();
+            FireShamanItemName = new TextBox();
+            button14 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -305,12 +309,52 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button15
+            // 
+            button15.Location = new Point(289, 122);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 137;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            // 
+            // FireShamanCost
+            // 
+            FireShamanCost.Location = new Point(289, 82);
+            FireShamanCost.Multiline = true;
+            FireShamanCost.Name = "FireShamanCost";
+            FireShamanCost.Size = new Size(301, 34);
+            FireShamanCost.TabIndex = 136;
+            // 
+            // FireShamanItemName
+            // 
+            FireShamanItemName.Location = new Point(359, 42);
+            FireShamanItemName.Multiline = true;
+            FireShamanItemName.Name = "FireShamanItemName";
+            FireShamanItemName.Size = new Size(231, 34);
+            FireShamanItemName.TabIndex = 135;
+            // 
+            // button14
+            // 
+            button14.BackColor = Color.Black;
+            button14.BackgroundImage = Properties.Resources.Legionnaire_Staff;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Location = new Point(289, 12);
+            button14.Name = "button14";
+            button14.Size = new Size(64, 64);
+            button14.TabIndex = 134;
+            button14.UseVisualStyleBackColor = false;
+            // 
             // Fireshaman
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
+            Controls.Add(FireShamanCost);
+            Controls.Add(FireShamanItemName);
+            Controls.Add(button14);
             Controls.Add(button10);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox3);
@@ -370,5 +414,9 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox5;
         private Button button10;
+        private Button button15;
+        private TextBox FireShamanCost;
+        private TextBox FireShamanItemName;
+        private Button button14;
     }
 }

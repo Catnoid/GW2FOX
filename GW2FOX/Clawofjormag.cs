@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace GW2FOX
@@ -9,6 +10,7 @@ namespace GW2FOX
         {
             InitializeComponent();
             LoadConfigText(Runinfo, Squadinfo, Guild, Welcome, Symbols);
+            _ = LoadItemPriceInformation();
         }
         // Variable zur Speicherung des Ursprungs der Seite
         private string originPage;
@@ -21,7 +23,66 @@ namespace GW2FOX
         }
 
 
+        private void InitializeItemPriceTextBox()
+        {
+            // Remove this line since Itempriceexeofzhaitan is already declared in the designer.
+            // Itempriceexeofzhaitan = new TextBox(); 
+            ClawCost.Text = "Item-Preis: Wird geladen...";
+            ClawCost.AutoSize = true;
+            ClawCost.ReadOnly = true;
+            ClawCost.Location = new Point(/* Specify the X and Y coordinates */);
+            Controls.Add(ClawCost);
+        }
 
+
+
+        private async Task LoadItemPriceInformation()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://api.guildwars2.com/v2/items/67276";
+                    string jsonResult = await client.GetStringAsync(apiUrl);
+
+                    JObject resultObject = JObject.Parse(jsonResult);
+
+                    string itemName = (string)resultObject["name"];
+                    string chatLink = (string)resultObject["chat_link"];
+                    int itemPriceCopper = await GetItemPriceCopper();
+
+                    int gold = itemPriceCopper / 10000;
+                    int silver = (itemPriceCopper % 10000) / 100;
+                    int copper = itemPriceCopper % 100;
+
+                    // Update the existing "Itempriceexeofzhaitan" TextBox text
+                    ClawItemName.Text = $"{itemName}";
+
+                    ClawCost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async Task<int> GetItemPriceCopper()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string jsonResult = await client.GetStringAsync("https://api.guildwars2.com/v2/commerce/prices/67276");
+                    JObject resultObject = JObject.Parse(jsonResult);
+                    return (int)resultObject["sells"]["unit_price"];
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fehler beim Abrufen des Item-Preises: {ex.Message}");
+            }
+        }
 
 
 

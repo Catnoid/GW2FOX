@@ -55,6 +55,10 @@
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
             button10 = new Button();
+            button15 = new Button();
+            ClawCost = new TextBox();
+            ClawItemName = new TextBox();
+            button14 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -341,12 +345,52 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button15
+            // 
+            button15.Location = new Point(293, 122);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 129;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            // 
+            // ClawCost
+            // 
+            ClawCost.Location = new Point(293, 82);
+            ClawCost.Multiline = true;
+            ClawCost.Name = "ClawCost";
+            ClawCost.Size = new Size(301, 34);
+            ClawCost.TabIndex = 128;
+            // 
+            // ClawItemName
+            // 
+            ClawItemName.Location = new Point(363, 42);
+            ClawItemName.Multiline = true;
+            ClawItemName.Name = "ClawItemName";
+            ClawItemName.Size = new Size(231, 34);
+            ClawItemName.TabIndex = 127;
+            // 
+            // button14
+            // 
+            button14.BackColor = Color.Black;
+            button14.BackgroundImage = Properties.Resources.Jormag_Klauen_Fragment_Icon;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Location = new Point(293, 12);
+            button14.Name = "button14";
+            button14.Size = new Size(64, 64);
+            button14.TabIndex = 126;
+            button14.UseVisualStyleBackColor = false;
+            // 
             // Clawofjormag
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
+            Controls.Add(ClawCost);
+            Controls.Add(ClawItemName);
+            Controls.Add(button14);
             Controls.Add(button10);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox4);
@@ -412,5 +456,9 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
         private Button button10;
+        private Button button15;
+        private TextBox ClawCost;
+        private TextBox ClawItemName;
+        private Button button14;
     }
 }
