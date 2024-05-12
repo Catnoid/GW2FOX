@@ -38,6 +38,11 @@ namespace GW2FOX
             Dwaynaitem.ReadOnly = true;
             Dwaynaitem.Location = new Point(/* Specify the X and Y coordinates */);
             Controls.Add(Dwaynaitem);
+            Dwaynaitem2.Text = "Item-Preis: Wird geladen...";
+            Dwaynaitem2.AutoSize = true;
+            Dwaynaitem2.ReadOnly = true;
+            Dwaynaitem2.Location = new Point(/* Specify the X and Y coordinates */);
+            Controls.Add(Dwaynaitem2);
         }
 
 
@@ -73,6 +78,36 @@ namespace GW2FOX
             {
                 MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://api.guildwars2.com/v2/items/39479";
+                    string jsonResult = await client.GetStringAsync(apiUrl);
+
+                    JObject resultObject = JObject.Parse(jsonResult);
+
+                    // Extract the item name, chat link, and price
+                    string itemName = (string)resultObject["name"];
+                    string chatLink = (string)resultObject["chat_link"];
+                    int itemPriceCopper = await GetItemPriceCopper2();
+
+                    int gold = itemPriceCopper / 10000;
+                    int silver = (itemPriceCopper % 10000) / 100;
+                    int copper = itemPriceCopper % 100;
+
+                    // Update the existing "Dwaynaitem" TextBox text
+                    Dwaynaitem2.Text = $"{chatLink}: Price: {gold} Gold, {silver} Silver, {copper} Copper";
+
+                    // Update the "Dwaynaitemname" TextBox text
+                    Dwaynaitemname2.Text = itemName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -94,7 +129,22 @@ namespace GW2FOX
         }
 
 
-
+        private async Task<int> GetItemPriceCopper2()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string jsonResult = await client.GetStringAsync("https://api.guildwars2.com/v2/commerce/prices/39479");
+                    JObject resultObject = JObject.Parse(jsonResult);
+                    return (int)resultObject["sells"]["unit_price"];
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fehler beim Abrufen des Item-Preises: {ex.Message}");
+            }
+        }
 
 
 
@@ -176,10 +226,8 @@ namespace GW2FOX
 
         private void Preis_Click(object sender, EventArgs e)
         {
-            // Copy the text from Leyline60 TextBox to the clipboard
-            Clipboard.SetText(Dwaynaitem.Text);
-
-            // Bring the Gw2-64.exe window to the foreground
+            string combinedText = $"{Dwaynaitem.Text}, {Dwaynaitem2.Text}";
+            Clipboard.SetText(combinedText);
             BringGw2ToFront();
         }
 

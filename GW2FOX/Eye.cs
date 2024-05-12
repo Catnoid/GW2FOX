@@ -37,6 +37,11 @@ namespace GW2FOX
             Itempriceexeofzhaitan.ReadOnly = true;
             Itempriceexeofzhaitan.Location = new Point(/* Specify the X and Y coordinates */);
             Controls.Add(Itempriceexeofzhaitan);
+            Itempriceexeofzhaitan2.Text = "Item-Preis: Wird geladen...";
+            Itempriceexeofzhaitan2.AutoSize = true;
+            Itempriceexeofzhaitan2.ReadOnly = true;
+            Itempriceexeofzhaitan2.Location = new Point(/* Specify the X and Y coordinates */);
+            Controls.Add(Itempriceexeofzhaitan2);
         }
 
 
@@ -71,6 +76,36 @@ namespace GW2FOX
             {
                 MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://api.guildwars2.com/v2/items/39478";
+                    string jsonResult = await client.GetStringAsync(apiUrl);
+
+                    JObject resultObject = JObject.Parse(jsonResult);
+
+                    string itemName = (string)resultObject["name"];
+                    string chatLink = "Circle of Arah";
+                    int itemPriceCopper = await GetItemPriceCopper2();
+
+                    int gold = itemPriceCopper / 10000;
+                    int silver = (itemPriceCopper % 10000) / 100;
+                    int copper = itemPriceCopper % 100;
+
+                    // Update the existing "Eyeitemname" TextBox text
+                    Eye2itemname.Text = $"{itemName}";
+
+                    // Update the existing "Itempriceexeofzhaitan" TextBox text
+                    Itempriceexeofzhaitan2.Text = $"{chatLink}, Price: {gold} Gold";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async Task<int> GetItemPriceCopper()
@@ -88,9 +123,30 @@ namespace GW2FOX
             {
                 throw new Exception($"Fehler beim Abrufen des Item-Preises: {ex.Message}");
             }
+
+
+            
         }
 
+        private async Task<int> GetItemPriceCopper2()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string jsonResult = await client.GetStringAsync("https://api.guildwars2.com/v2/commerce/prices/39478");
+                    JObject resultObject = JObject.Parse(jsonResult);
+                    return (int)resultObject["sells"]["unit_price"];
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fehler beim Abrufen des Item-Preises: {ex.Message}");
+            }
 
+
+
+        }
 
         private void Runinfo_Click(object sender, EventArgs e)
         {
@@ -148,7 +204,8 @@ namespace GW2FOX
 
         private void Preis_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(Itempriceexeofzhaitan.Text);
+            string combinedText = $"{Itempriceexeofzhaitan.Text}, {Itempriceexeofzhaitan2.Text}";
+            Clipboard.SetText(combinedText);
             BringGw2ToFront();
         }
 

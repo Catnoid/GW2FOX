@@ -383,6 +383,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Circle_of_Arah {
+            get {
+                object obj = ResourceManager.GetObject("Circle_of_Arah", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Claw {
             get {
                 object obj = ResourceManager.GetObject("Claw", resourceCulture);
@@ -566,6 +576,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Dwayna {
             get {
                 object obj = ResourceManager.GetObject("Dwayna", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Dwayna_s_Embrace {
+            get {
+                object obj = ResourceManager.GetObject("Dwayna\'s_Embrace", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

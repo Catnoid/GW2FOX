@@ -60,6 +60,9 @@
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
             button11 = new Button();
+            Eye2itemname = new TextBox();
+            pictureBox8 = new PictureBox();
+            Itempriceexeofzhaitan2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -67,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // button13
@@ -339,7 +343,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(296, 119);
+            button10.Location = new Point(215, 203);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 123;
@@ -370,7 +374,7 @@
             // 
             pictureBox6.BackgroundImage = Properties.Resources._20min;
             pictureBox6.InitialImage = Properties.Resources._20min;
-            pictureBox6.Location = new Point(346, 148);
+            pictureBox6.Location = new Point(11, 151);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(250, 20);
             pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -381,7 +385,7 @@
             // 
             pictureBox7.BackgroundImage = Properties.Resources.TowerisUp1;
             pictureBox7.InitialImage = Properties.Resources.TowerisUp;
-            pictureBox7.Location = new Point(346, 174);
+            pictureBox7.Location = new Point(11, 177);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(250, 20);
             pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -399,12 +403,44 @@
             button11.UseVisualStyleBackColor = true;
             button11.Click += button11_Click;
             // 
+            // Eye2itemname
+            // 
+            Eye2itemname.Font = new Font("Segoe UI", 15F);
+            Eye2itemname.Location = new Point(366, 153);
+            Eye2itemname.Multiline = true;
+            Eye2itemname.Name = "Eye2itemname";
+            Eye2itemname.ReadOnly = true;
+            Eye2itemname.Size = new Size(230, 34);
+            Eye2itemname.TabIndex = 133;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.Circle_of_Arah;
+            pictureBox8.Location = new Point(296, 123);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(64, 64);
+            pictureBox8.TabIndex = 132;
+            pictureBox8.TabStop = false;
+            // 
+            // Itempriceexeofzhaitan2
+            // 
+            Itempriceexeofzhaitan2.Font = new Font("Segoe UI", 15F);
+            Itempriceexeofzhaitan2.Location = new Point(296, 193);
+            Itempriceexeofzhaitan2.Multiline = true;
+            Itempriceexeofzhaitan2.Name = "Itempriceexeofzhaitan2";
+            Itempriceexeofzhaitan2.ReadOnly = true;
+            Itempriceexeofzhaitan2.Size = new Size(300, 34);
+            Itempriceexeofzhaitan2.TabIndex = 131;
+            // 
             // Eye
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(Eye2itemname);
+            Controls.Add(pictureBox8);
+            Controls.Add(Itempriceexeofzhaitan2);
             Controls.Add(button11);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
@@ -446,6 +482,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -482,5 +519,8 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private Button button11;
+        private TextBox Eye2itemname;
+        private PictureBox pictureBox8;
+        private TextBox Itempriceexeofzhaitan2;
     }
 }

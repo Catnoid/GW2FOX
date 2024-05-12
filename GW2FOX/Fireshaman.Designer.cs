@@ -57,6 +57,8 @@
             FireShaman2Cost = new TextBox();
             button6 = new Button();
             button15 = new Button();
+            FireShamanitemname = new TextBox();
+            FireShaman2itemname = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -358,12 +360,34 @@
             button15.UseVisualStyleBackColor = true;
             button15.Click += button15_Click;
             // 
+            // FireShamanitemname
+            // 
+            FireShamanitemname.Font = new Font("Segoe UI", 15F);
+            FireShamanitemname.Location = new Point(359, 42);
+            FireShamanitemname.Multiline = true;
+            FireShamanitemname.Name = "FireShamanitemname";
+            FireShamanitemname.ReadOnly = true;
+            FireShamanitemname.Size = new Size(230, 34);
+            FireShamanitemname.TabIndex = 142;
+            // 
+            // FireShaman2itemname
+            // 
+            FireShaman2itemname.Font = new Font("Segoe UI", 15F);
+            FireShaman2itemname.Location = new Point(359, 153);
+            FireShaman2itemname.Multiline = true;
+            FireShaman2itemname.Name = "FireShaman2itemname";
+            FireShaman2itemname.ReadOnly = true;
+            FireShaman2itemname.Size = new Size(230, 34);
+            FireShaman2itemname.TabIndex = 143;
+            // 
             // Fireshaman
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(FireShaman2itemname);
+            Controls.Add(FireShamanitemname);
             Controls.Add(button15);
             Controls.Add(FireShaman2Cost);
             Controls.Add(button6);
@@ -433,5 +457,7 @@
         private TextBox FireShaman2Cost;
         private Button button6;
         private Button button15;
+        private TextBox FireShamanitemname;
+        private TextBox FireShaman2itemname;
     }
 }

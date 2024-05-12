@@ -51,8 +51,9 @@ namespace GW2FOX
                     int silver = (itemPriceCopper % 10000) / 100;
                     int copper = itemPriceCopper % 100;
 
-                    
 
+
+                    FireShamanitemname.Text = $"{itemName}";
                     // Set FireShamanCost to display item name and price
                     FireShamanCost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
                 }
@@ -78,8 +79,8 @@ namespace GW2FOX
                     int silver = (itemPriceCopper % 10000) / 100;
                     int copper = itemPriceCopper % 100;
 
-                    
 
+                    FireShaman2itemname.Text = $"{itemName}";
                     // Set FireShaman2Cost to display item name and price
                     FireShaman2Cost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
                 }

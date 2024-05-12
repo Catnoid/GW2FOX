@@ -139,8 +139,8 @@
   <data name="Thaida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thaida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sandstorm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sandstorm.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dbs.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Battle for the Jade Sea1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Battle for the Jade Sea.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +169,8 @@
   <data name="ButtonBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StormsofWinter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StormsofWinter.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Forged" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Forged.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,9 +253,6 @@
   <data name="Doppelganger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Doppelganger.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StormsofWinter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StormsofWinter.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Backgroundmini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Backgroundmini.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -282,6 +279,12 @@
   </data>
   <data name="Inquestgolem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inquestgolem.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sandstorm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sandstorm.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circle_of_Arah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circle_of_Arah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ButtonDefeat the dredge commissar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonDefeat the dredge commissar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,6 +334,9 @@
   <data name="AllMetas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AllMetas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Final_Rest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Final_Rest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Shortcut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shortcut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -346,9 +352,6 @@
   <data name="Fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fire.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dbs.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FOXHomepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FOXHomepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -358,8 +361,8 @@
   <data name="back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Arthropoda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arthropoda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Adam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="50min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\50min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -370,8 +373,8 @@
   <data name="ArcDPSinstall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ArcDPSinstall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Aspenwood1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Aspenwood.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arthropoda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arthropoda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dwayna" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dwayna.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -399,6 +402,9 @@
   </data>
   <data name="Glob_of_Dragonvoid_Aether" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Glob_of_Dragonvoid_Aether.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Aspenwood1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aspenwood.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tequatl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tequatl.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -438,6 +444,9 @@
   </data>
   <data name="Eternal_Ice__exotic_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eternal_Ice_(exotic).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Flame_Guard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flame_Guard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -535,16 +544,13 @@
   <data name="GangWar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GangWar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Adam" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Adam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DefendJorasKeep1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefendJorasKeep.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="20min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Final_Rest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Final_Rest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dwayna's_Embrace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dwayna's_Embrace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

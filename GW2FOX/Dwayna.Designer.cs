@@ -57,12 +57,16 @@
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             button10 = new Button();
+            Dwaynaitemname2 = new TextBox();
+            pictureBox7 = new PictureBox();
+            Dwaynaitem2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // button13
@@ -304,7 +308,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(296, 122);
+            button6.Location = new Point(215, 203);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 120;
@@ -344,7 +348,7 @@
             // 
             pictureBox6.BackgroundImage = Properties.Resources._50min;
             pictureBox6.InitialImage = Properties.Resources._50min;
-            pictureBox6.Location = new Point(346, 151);
+            pictureBox6.Location = new Point(15, 177);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(250, 20);
             pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -362,12 +366,44 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // Dwaynaitemname2
+            // 
+            Dwaynaitemname2.Font = new Font("Segoe UI", 15F);
+            Dwaynaitemname2.Location = new Point(366, 153);
+            Dwaynaitemname2.Multiline = true;
+            Dwaynaitemname2.Name = "Dwaynaitemname2";
+            Dwaynaitemname2.ReadOnly = true;
+            Dwaynaitemname2.Size = new Size(230, 34);
+            Dwaynaitemname2.TabIndex = 131;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.Dwayna_s_Embrace;
+            pictureBox7.Location = new Point(296, 123);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(64, 64);
+            pictureBox7.TabIndex = 130;
+            pictureBox7.TabStop = false;
+            // 
+            // Dwaynaitem2
+            // 
+            Dwaynaitem2.Font = new Font("Segoe UI", 15F);
+            Dwaynaitem2.Location = new Point(296, 193);
+            Dwaynaitem2.Multiline = true;
+            Dwaynaitem2.Name = "Dwaynaitem2";
+            Dwaynaitem2.ReadOnly = true;
+            Dwaynaitem2.Size = new Size(300, 34);
+            Dwaynaitem2.TabIndex = 129;
+            // 
             // Dwayna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(Dwaynaitemname2);
+            Controls.Add(pictureBox7);
+            Controls.Add(Dwaynaitem2);
             Controls.Add(button10);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
@@ -405,6 +441,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -438,5 +475,8 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private Button button10;
+        private TextBox Dwaynaitemname2;
+        private PictureBox pictureBox7;
+        private TextBox Dwaynaitem2;
     }
 }
