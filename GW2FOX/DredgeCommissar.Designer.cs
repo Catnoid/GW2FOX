@@ -57,6 +57,9 @@
             DredgeCommissarCoste = new TextBox();
             button15 = new Button();
             pictureBox5 = new PictureBox();
+            DredgeCommissarCoste2 = new TextBox();
+            DredgeCommissarItemName2 = new TextBox();
+            button9 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -341,7 +344,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(295, 122);
+            button15.Location = new Point(214, 203);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 108;
@@ -353,12 +356,39 @@
             // 
             pictureBox5.BackgroundImage = Properties.Resources._20min;
             pictureBox5.InitialImage = Properties.Resources._20min;
-            pictureBox5.Location = new Point(346, 151);
+            pictureBox5.Location = new Point(15, 177);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(250, 20);
             pictureBox5.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox5.TabIndex = 109;
             pictureBox5.TabStop = false;
+            // 
+            // DredgeCommissarCoste2
+            // 
+            DredgeCommissarCoste2.Location = new Point(295, 193);
+            DredgeCommissarCoste2.Multiline = true;
+            DredgeCommissarCoste2.Name = "DredgeCommissarCoste2";
+            DredgeCommissarCoste2.Size = new Size(301, 34);
+            DredgeCommissarCoste2.TabIndex = 112;
+            // 
+            // DredgeCommissarItemName2
+            // 
+            DredgeCommissarItemName2.Location = new Point(365, 153);
+            DredgeCommissarItemName2.Multiline = true;
+            DredgeCommissarItemName2.Name = "DredgeCommissarItemName2";
+            DredgeCommissarItemName2.Size = new Size(231, 34);
+            DredgeCommissarItemName2.TabIndex = 111;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.Black;
+            button9.BackgroundImage = Properties.Resources.Call_of_the_Commissar;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Location = new Point(295, 123);
+            button9.Name = "button9";
+            button9.Size = new Size(64, 64);
+            button9.TabIndex = 110;
+            button9.UseVisualStyleBackColor = false;
             // 
             // DredgeCommissar
             // 
@@ -366,6 +396,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(DredgeCommissarCoste2);
+            Controls.Add(DredgeCommissarItemName2);
+            Controls.Add(button9);
             Controls.Add(pictureBox5);
             Controls.Add(button15);
             Controls.Add(DredgeCommissarCoste);
@@ -435,5 +468,8 @@
         private TextBox DredgeCommissarCost;
         private Button button15;
         private PictureBox pictureBox5;
+        private TextBox DredgeCommissarCoste2;
+        private TextBox DredgeCommissarItemName2;
+        private Button button9;
     }
 }

@@ -353,6 +353,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Call_of_the_Commissar {
+            get {
+                object obj = ResourceManager.GetObject("Call_of_the_Commissar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ChackInfusion {
             get {
                 object obj = ResourceManager.GetObject("ChackInfusion", resourceCulture);

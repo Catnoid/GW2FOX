@@ -44,7 +44,7 @@ namespace GW2FOX
                     JObject resultObject = JObject.Parse(jsonResult);
 
                     string itemName = (string)resultObject["name"];
-                    string chatLink = "[&CggUAAA=]";
+                    string chatLink = "[&CggUAAA=] - Cinderspire's Rage";
                     int itemPriceCopper = await GetItemPriceCopper();
 
                     int gold = itemPriceCopper / 10000;
@@ -72,7 +72,7 @@ namespace GW2FOX
                     JObject resultObject = JObject.Parse(jsonResult);
 
                     string itemName = (string)resultObject["name"];
-                    string chatLink = "[&CgYUAAA=]";
+                    string chatLink = "[&CgYUAAA=] - Cinderspire's Tactics";
                     int itemPriceCopper = await GetItemPriceCopper2();
 
                     int gold = itemPriceCopper / 10000;
