@@ -44,17 +44,17 @@ namespace GW2FOX
                     JObject resultObject = JObject.Parse(jsonResult);
 
                     string itemName = (string)resultObject["name"];
-                    string chatLink = (string)resultObject["chat_link"];
                     int itemPriceCopper = await GetItemPriceCopper();
 
                     int gold = itemPriceCopper / 10000;
                     int silver = (itemPriceCopper % 10000) / 100;
                     int copper = itemPriceCopper % 100;
 
-                    // Update the existing "Itempriceexeofzhaitan" TextBox text
-                    FireShamanItemName.Text = $"{itemName}";
+                    // Update the existing "FireShamanItemName" TextBox text
+                    FireShamanItemName.Text = itemName;
 
-                    FireShamanCost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
+                    // Set FireShamanCost to display item name and price
+                    FireShamanCost.Text = $"{itemName}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
                 }
             }
             catch (Exception ex)
@@ -71,17 +71,17 @@ namespace GW2FOX
                     JObject resultObject = JObject.Parse(jsonResult);
 
                     string itemName = (string)resultObject["name"];
-                    string chatLink = (string)resultObject["chat_link"];
                     int itemPriceCopper = await GetItemPriceCopper2();
 
                     int gold = itemPriceCopper / 10000;
                     int silver = (itemPriceCopper % 10000) / 100;
                     int copper = itemPriceCopper % 100;
 
-                    // Update the existing "Itempriceexeofzhaitan" TextBox text
-                    FireShaman2ItemName.Text = $"{itemName}";
+                    // Update the existing "FireShaman2ItemName" TextBox text
+                    FireShaman2ItemName.Text = itemName;
 
-                    FireShaman2Cost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
+                    // Set FireShaman2Cost to display item name and price
+                    FireShaman2Cost.Text = $"{itemName}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
                 }
             }
             catch (Exception ex)
@@ -89,6 +89,7 @@ namespace GW2FOX
                 MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private async Task<int> GetItemPriceCopper()
         {
@@ -216,6 +217,11 @@ namespace GW2FOX
             }
         }
 
-       
+        private void button15_Click(object sender, EventArgs e)
+        {
+            string combinedText = $"{FireShamanCost.Text}, {FireShaman2Cost.Text}";
+            Clipboard.SetText(combinedText);
+            BringGw2ToFront();
+        }
     }
 }

@@ -58,6 +58,7 @@
             FireShaman2Cost = new TextBox();
             FireShaman2ItemName = new TextBox();
             button6 = new Button();
+            button15 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -365,12 +366,23 @@
             button6.TabIndex = 138;
             button6.UseVisualStyleBackColor = false;
             // 
+            // button15
+            // 
+            button15.Location = new Point(208, 192);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 141;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
             // Fireshaman
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
             Controls.Add(FireShaman2Cost);
             Controls.Add(FireShaman2ItemName);
             Controls.Add(button6);
@@ -442,5 +454,6 @@
         private TextBox FireShaman2Cost;
         private TextBox FireShaman2ItemName;
         private Button button6;
+        private Button button15;
     }
 }
