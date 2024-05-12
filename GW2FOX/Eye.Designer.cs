@@ -59,6 +59,7 @@
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
+            button11 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -387,12 +388,24 @@
             pictureBox7.TabIndex = 127;
             pictureBox7.TabStop = false;
             // 
+            // button11
+            // 
+            button11.BackgroundImage = Properties.Resources.wikigw2;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Location = new Point(11, 12);
+            button11.Name = "button11";
+            button11.Size = new Size(100, 45);
+            button11.TabIndex = 130;
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
             // Eye
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button11);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
@@ -468,5 +481,6 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
+        private Button button11;
     }
 }
