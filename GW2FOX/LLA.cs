@@ -212,5 +212,10 @@ namespace GW2FOX
             Clipboard.SetText(LLACost.Text);
             BringGw2ToFront();
         }
+
+        private void LLA_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

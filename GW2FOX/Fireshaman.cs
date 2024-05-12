@@ -44,6 +44,7 @@ namespace GW2FOX
                     JObject resultObject = JObject.Parse(jsonResult);
 
                     string itemName = (string)resultObject["name"];
+                    string chatLink = "[&CggUAAA=]";
                     int itemPriceCopper = await GetItemPriceCopper();
 
                     int gold = itemPriceCopper / 10000;
@@ -53,7 +54,7 @@ namespace GW2FOX
                     
 
                     // Set FireShamanCost to display item name and price
-                    FireShamanCost.Text = $"{itemName}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
+                    FireShamanCost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
                 }
             }
             catch (Exception ex)
@@ -70,6 +71,7 @@ namespace GW2FOX
                     JObject resultObject = JObject.Parse(jsonResult);
 
                     string itemName = (string)resultObject["name"];
+                    string chatLink = "[&CgYUAAA=]";
                     int itemPriceCopper = await GetItemPriceCopper2();
 
                     int gold = itemPriceCopper / 10000;
@@ -79,7 +81,7 @@ namespace GW2FOX
                     
 
                     // Set FireShaman2Cost to display item name and price
-                    FireShaman2Cost.Text = $"{itemName}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
+                    FireShaman2Cost.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
                 }
             }
             catch (Exception ex)

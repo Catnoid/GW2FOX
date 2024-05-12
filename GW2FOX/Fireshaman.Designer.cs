@@ -323,7 +323,7 @@
             button14.BackColor = Color.Black;
             button14.BackgroundImage = Properties.Resources.Legionnaire_Staff;
             button14.FlatStyle = FlatStyle.Flat;
-            button14.Location = new Point(289, 12);
+            button14.Location = new Point(289, 123);
             button14.Name = "button14";
             button14.Size = new Size(64, 64);
             button14.TabIndex = 134;
@@ -331,7 +331,7 @@
             // 
             // FireShaman2Cost
             // 
-            FireShaman2Cost.Location = new Point(289, 122);
+            FireShaman2Cost.Location = new Point(289, 192);
             FireShaman2Cost.Multiline = true;
             FireShaman2Cost.Name = "FireShaman2Cost";
             FireShaman2Cost.Size = new Size(301, 34);
@@ -342,7 +342,7 @@
             button6.BackColor = Color.Black;
             button6.BackgroundImage = Properties.Resources.Flame_Guard1;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(359, 12);
+            button6.Location = new Point(289, 12);
             button6.Name = "button6";
             button6.Size = new Size(64, 64);
             button6.TabIndex = 138;
@@ -350,7 +350,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(289, 164);
+            button15.Location = new Point(208, 203);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 141;

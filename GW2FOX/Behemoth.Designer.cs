@@ -53,6 +53,10 @@
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
             button6 = new Button();
+            button10 = new Button();
+            BeheCost = new TextBox();
+            BeheItemName = new TextBox();
+            button11 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -318,11 +322,52 @@
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
+            // button10
+            // 
+            button10.Location = new Point(294, 122);
+            button10.Name = "button10";
+            button10.Size = new Size(75, 23);
+            button10.TabIndex = 137;
+            button10.Text = "Copy";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // BeheCost
+            // 
+            BeheCost.Location = new Point(294, 82);
+            BeheCost.Multiline = true;
+            BeheCost.Name = "BeheCost";
+            BeheCost.Size = new Size(301, 34);
+            BeheCost.TabIndex = 136;
+            // 
+            // BeheItemName
+            // 
+            BeheItemName.Location = new Point(364, 42);
+            BeheItemName.Multiline = true;
+            BeheItemName.Name = "BeheItemName";
+            BeheItemName.Size = new Size(231, 34);
+            BeheItemName.TabIndex = 135;
+            // 
+            // button11
+            // 
+            button11.BackColor = Color.Black;
+            button11.BackgroundImage = Properties.Resources.Final_Rest;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Location = new Point(294, 12);
+            button11.Name = "button11";
+            button11.Size = new Size(64, 64);
+            button11.TabIndex = 134;
+            button11.UseVisualStyleBackColor = false;
+            // 
             // Behemoth
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button10);
+            Controls.Add(BeheCost);
+            Controls.Add(BeheItemName);
+            Controls.Add(button11);
             Controls.Add(button6);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox2);
@@ -383,5 +428,9 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
         private Button button6;
+        private Button button10;
+        private TextBox BeheCost;
+        private TextBox BeheItemName;
+        private Button button11;
     }
 }
