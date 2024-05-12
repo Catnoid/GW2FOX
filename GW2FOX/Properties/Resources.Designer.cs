@@ -933,6 +933,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Mystische_Münze_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Mystische_Münze_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap New_Loamhurst {
             get {
                 object obj = ResourceManager.GetObject("New Loamhurst", resourceCulture);

@@ -56,6 +56,10 @@
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             button16 = new Button();
+            button6 = new Button();
+            LLACost = new TextBox();
+            LLAItemName = new TextBox();
+            button7 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -355,12 +359,53 @@
             button16.UseVisualStyleBackColor = true;
             button16.Click += button16_Click;
             // 
+            // button6
+            // 
+            button6.Location = new Point(292, 122);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 23);
+            button6.TabIndex = 133;
+            button6.Text = "Copy";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // LLACost
+            // 
+            LLACost.Location = new Point(292, 82);
+            LLACost.Multiline = true;
+            LLACost.Name = "LLACost";
+            LLACost.Size = new Size(301, 34);
+            LLACost.TabIndex = 132;
+            // 
+            // LLAItemName
+            // 
+            LLAItemName.Location = new Point(362, 42);
+            LLAItemName.Multiline = true;
+            LLAItemName.Name = "LLAItemName";
+            LLAItemName.Size = new Size(231, 34);
+            LLAItemName.TabIndex = 131;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.Black;
+            button7.BackgroundImage = Properties.Resources.Mystische_Münze_Icon;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Location = new Point(292, 12);
+            button7.Name = "button7";
+            button7.Size = new Size(64, 64);
+            button7.TabIndex = 130;
+            button7.UseVisualStyleBackColor = false;
+            // 
             // LLA
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button6);
+            Controls.Add(LLACost);
+            Controls.Add(LLAItemName);
+            Controls.Add(button7);
             Controls.Add(button16);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox3);
@@ -427,5 +472,9 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox5;
         private Button button16;
+        private Button button6;
+        private TextBox LLACost;
+        private TextBox LLAItemName;
+        private Button button7;
     }
 }
