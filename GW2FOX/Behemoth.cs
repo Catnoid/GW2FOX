@@ -195,5 +195,10 @@ namespace GW2FOX
             Clipboard.SetText(BeheCost.Text);
             BringGw2ToFront();
         }
+
+        private void Behemoth_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

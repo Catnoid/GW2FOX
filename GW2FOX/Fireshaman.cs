@@ -224,5 +224,10 @@ namespace GW2FOX
             Clipboard.SetText(combinedText);
             BringGw2ToFront();
         }
+
+        private void Fireshaman_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

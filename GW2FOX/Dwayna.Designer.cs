@@ -298,7 +298,7 @@
             // 
             // Dwaynaitem
             // 
-            Dwaynaitem.Font = new Font("Segoe UI", 15F);
+            Dwaynaitem.Font = new Font("Segoe UI", 10F);
             Dwaynaitem.Location = new Point(296, 82);
             Dwaynaitem.Multiline = true;
             Dwaynaitem.Name = "Dwaynaitem";
@@ -327,7 +327,7 @@
             // 
             // Dwaynaitemname
             // 
-            Dwaynaitemname.Font = new Font("Segoe UI", 15F);
+            Dwaynaitemname.Font = new Font("Segoe UI", 14F);
             Dwaynaitemname.Location = new Point(366, 42);
             Dwaynaitemname.Multiline = true;
             Dwaynaitemname.Name = "Dwaynaitemname";
@@ -368,7 +368,7 @@
             // 
             // Dwaynaitemname2
             // 
-            Dwaynaitemname2.Font = new Font("Segoe UI", 15F);
+            Dwaynaitemname2.Font = new Font("Segoe UI", 14F);
             Dwaynaitemname2.Location = new Point(366, 153);
             Dwaynaitemname2.Multiline = true;
             Dwaynaitemname2.Name = "Dwaynaitemname2";
@@ -387,7 +387,7 @@
             // 
             // Dwaynaitem2
             // 
-            Dwaynaitem2.Font = new Font("Segoe UI", 15F);
+            Dwaynaitem2.Font = new Font("Segoe UI", 10F);
             Dwaynaitem2.Location = new Point(296, 193);
             Dwaynaitem2.Multiline = true;
             Dwaynaitem2.Name = "Dwaynaitem2";

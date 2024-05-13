@@ -371,6 +371,7 @@
             // 
             // KarkaCost
             // 
+            KarkaCost.Font = new Font("Segoe UI", 10F);
             KarkaCost.Location = new Point(293, 82);
             KarkaCost.Multiline = true;
             KarkaCost.Name = "KarkaCost";
@@ -379,6 +380,7 @@
             // 
             // KarkaItemName
             // 
+            KarkaItemName.Font = new Font("Segoe UI", 14F);
             KarkaItemName.Location = new Point(363, 42);
             KarkaItemName.Multiline = true;
             KarkaItemName.Name = "KarkaItemName";

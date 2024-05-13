@@ -697,7 +697,7 @@
             // 
             // Shattiitem
             // 
-            Shattiitem.Font = new Font("Segoe UI", 15F);
+            Shattiitem.Font = new Font("Segoe UI", 10F);
             Shattiitem.Location = new Point(296, 82);
             Shattiitem.Multiline = true;
             Shattiitem.Name = "Shattiitem";
@@ -726,7 +726,7 @@
             // 
             // Shattiitemname
             // 
-            Shattiitemname.Font = new Font("Segoe UI", 15F);
+            Shattiitemname.Font = new Font("Segoe UI", 14F);
             Shattiitemname.Location = new Point(366, 42);
             Shattiitemname.Multiline = true;
             Shattiitemname.Name = "Shattiitemname";

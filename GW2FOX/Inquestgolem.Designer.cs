@@ -392,7 +392,7 @@
             // 
             // ItempriceInquest
             // 
-            ItempriceInquest.Font = new Font("Segoe UI", 15F);
+            ItempriceInquest.Font = new Font("Segoe UI", 10F);
             ItempriceInquest.Location = new Point(296, 82);
             ItempriceInquest.Multiline = true;
             ItempriceInquest.Name = "ItempriceInquest";
@@ -421,7 +421,7 @@
             // 
             // Golemitemname
             // 
-            Golemitemname.Font = new Font("Segoe UI", 15F);
+            Golemitemname.Font = new Font("Segoe UI", 14F);
             Golemitemname.Location = new Point(366, 42);
             Golemitemname.Multiline = true;
             Golemitemname.Name = "Golemitemname";

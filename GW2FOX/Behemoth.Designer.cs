@@ -334,6 +334,7 @@
             // 
             // BeheCost
             // 
+            BeheCost.Font = new Font("Segoe UI", 10F);
             BeheCost.Location = new Point(294, 82);
             BeheCost.Multiline = true;
             BeheCost.Name = "BeheCost";
@@ -342,6 +343,7 @@
             // 
             // BeheItemName
             // 
+            BeheItemName.Font = new Font("Segoe UI", 14.25F);
             BeheItemName.Location = new Point(364, 42);
             BeheItemName.Multiline = true;
             BeheItemName.Name = "BeheItemName";
@@ -395,6 +397,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Behemoth";
             StartPosition = FormStartPosition.Manual;
+            Load += Behemoth_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

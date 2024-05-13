@@ -308,6 +308,7 @@
             // 
             // PinataCost
             // 
+            PinataCost.Font = new Font("Segoe UI", 10F);
             PinataCost.Location = new Point(295, 81);
             PinataCost.Multiline = true;
             PinataCost.Name = "PinataCost";
@@ -316,6 +317,7 @@
             // 
             // PinataItemName
             // 
+            PinataItemName.Font = new Font("Segoe UI", 14F);
             PinataItemName.Location = new Point(365, 41);
             PinataItemName.Multiline = true;
             PinataItemName.Name = "PinataItemName";

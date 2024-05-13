@@ -357,6 +357,7 @@
             // 
             // ClawCost
             // 
+            ClawCost.Font = new Font("Segoe UI", 10F);
             ClawCost.Location = new Point(293, 82);
             ClawCost.Multiline = true;
             ClawCost.Name = "ClawCost";
@@ -365,6 +366,7 @@
             // 
             // ClawItemName
             // 
+            ClawItemName.Font = new Font("Segoe UI", 14F);
             ClawItemName.Location = new Point(363, 42);
             ClawItemName.Multiline = true;
             ClawItemName.Name = "ClawItemName";

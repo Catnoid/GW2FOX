@@ -314,6 +314,7 @@
             // 
             // FireShamanCost
             // 
+            FireShamanCost.Font = new Font("Segoe UI", 14F);
             FireShamanCost.Location = new Point(289, 82);
             FireShamanCost.Multiline = true;
             FireShamanCost.Name = "FireShamanCost";
@@ -333,6 +334,7 @@
             // 
             // FireShaman2Cost
             // 
+            FireShaman2Cost.Font = new Font("Segoe UI", 14F);
             FireShaman2Cost.Location = new Point(289, 192);
             FireShaman2Cost.Multiline = true;
             FireShaman2Cost.Name = "FireShaman2Cost";
@@ -362,7 +364,7 @@
             // 
             // FireShamanitemname
             // 
-            FireShamanitemname.Font = new Font("Segoe UI", 15F);
+            FireShamanitemname.Font = new Font("Segoe UI", 14F);
             FireShamanitemname.Location = new Point(359, 42);
             FireShamanitemname.Multiline = true;
             FireShamanitemname.Name = "FireShamanitemname";
@@ -372,7 +374,7 @@
             // 
             // FireShaman2itemname
             // 
-            FireShaman2itemname.Font = new Font("Segoe UI", 15F);
+            FireShaman2itemname.Font = new Font("Segoe UI", 14F);
             FireShaman2itemname.Location = new Point(359, 153);
             FireShaman2itemname.Multiline = true;
             FireShaman2itemname.Name = "FireShaman2itemname";
@@ -419,6 +421,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Fireshaman";
             StartPosition = FormStartPosition.Manual;
+            Load += Fireshaman_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

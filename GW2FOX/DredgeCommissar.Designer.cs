@@ -327,6 +327,7 @@
             // 
             // DredgeCommissarItemName
             // 
+            DredgeCommissarItemName.Font = new Font("Segoe UI", 14F);
             DredgeCommissarItemName.Location = new Point(365, 42);
             DredgeCommissarItemName.Multiline = true;
             DredgeCommissarItemName.Name = "DredgeCommissarItemName";
@@ -336,6 +337,7 @@
             // 
             // DredgeCommissarCoste
             // 
+            DredgeCommissarCoste.Font = new Font("Segoe UI", 10F);
             DredgeCommissarCoste.Location = new Point(295, 82);
             DredgeCommissarCoste.Multiline = true;
             DredgeCommissarCoste.Name = "DredgeCommissarCoste";
@@ -365,6 +367,7 @@
             // 
             // DredgeCommissarCoste2
             // 
+            DredgeCommissarCoste2.Font = new Font("Segoe UI", 10F);
             DredgeCommissarCoste2.Location = new Point(295, 193);
             DredgeCommissarCoste2.Multiline = true;
             DredgeCommissarCoste2.Name = "DredgeCommissarCoste2";
@@ -373,6 +376,7 @@
             // 
             // DredgeCommissarItemName2
             // 
+            DredgeCommissarItemName2.Font = new Font("Segoe UI", 14F);
             DredgeCommissarItemName2.Location = new Point(365, 153);
             DredgeCommissarItemName2.Multiline = true;
             DredgeCommissarItemName2.Name = "DredgeCommissarItemName2";

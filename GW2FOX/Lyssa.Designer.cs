@@ -316,7 +316,7 @@
             // 
             // Lyssacost
             // 
-            Lyssacost.Font = new Font("Segoe UI", 15F);
+            Lyssacost.Font = new Font("Segoe UI", 10F);
             Lyssacost.Location = new Point(296, 82);
             Lyssacost.Multiline = true;
             Lyssacost.Name = "Lyssacost";
@@ -345,7 +345,7 @@
             // 
             // Lyssaitemname
             // 
-            Lyssaitemname.Font = new Font("Segoe UI", 15F);
+            Lyssaitemname.Font = new Font("Segoe UI", 14F);
             Lyssaitemname.Location = new Point(366, 42);
             Lyssaitemname.Multiline = true;
             Lyssaitemname.Name = "Lyssaitemname";

@@ -318,7 +318,7 @@
             // 
             // Itemprice
             // 
-            Itemprice.Font = new Font("Segoe UI", 15F);
+            Itemprice.Font = new Font("Segoe UI", 10F);
             Itemprice.Location = new Point(296, 82);
             Itemprice.Multiline = true;
             Itemprice.Name = "Itemprice";
@@ -347,7 +347,7 @@
             // 
             // Pricename
             // 
-            Pricename.Font = new Font("Segoe UI", 15F);
+            Pricename.Font = new Font("Segoe UI", 14F);
             Pricename.Location = new Point(366, 42);
             Pricename.Multiline = true;
             Pricename.Name = "Pricename";

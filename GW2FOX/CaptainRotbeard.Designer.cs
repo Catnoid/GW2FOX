@@ -324,6 +324,7 @@
             // 
             // CaptainRotbeardItemName
             // 
+            CaptainRotbeardItemName.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CaptainRotbeardItemName.Location = new Point(365, 42);
             CaptainRotbeardItemName.Multiline = true;
             CaptainRotbeardItemName.Name = "CaptainRotbeardItemName";
@@ -333,6 +334,7 @@
             // 
             // CaptainRotbeardCoste
             // 
+            CaptainRotbeardCoste.Font = new Font("Segoe UI", 10F);
             CaptainRotbeardCoste.Location = new Point(295, 82);
             CaptainRotbeardCoste.Multiline = true;
             CaptainRotbeardCoste.Name = "CaptainRotbeardCoste";

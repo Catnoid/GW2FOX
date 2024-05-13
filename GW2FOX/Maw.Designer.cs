@@ -268,7 +268,7 @@
             // 
             // Mawitem
             // 
-            Mawitem.Font = new Font("Segoe UI", 15F);
+            Mawitem.Font = new Font("Segoe UI", 10F);
             Mawitem.Location = new Point(296, 82);
             Mawitem.Multiline = true;
             Mawitem.Name = "Mawitem";
@@ -297,7 +297,7 @@
             // 
             // Mawitemname
             // 
-            Mawitemname.Font = new Font("Segoe UI", 15F);
+            Mawitemname.Font = new Font("Segoe UI", 14F);
             Mawitemname.Location = new Point(366, 42);
             Mawitemname.Multiline = true;
             Mawitemname.Name = "Mawitemname";

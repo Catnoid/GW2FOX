@@ -297,6 +297,7 @@
             // 
             // DBSCost
             // 
+            DBSCost.Font = new Font("Segoe UI", 10F);
             DBSCost.Location = new Point(293, 80);
             DBSCost.Multiline = true;
             DBSCost.Name = "DBSCost";
@@ -305,6 +306,7 @@
             // 
             // DBSItemName
             // 
+            DBSItemName.Font = new Font("Segoe UI", 14F);
             DBSItemName.Location = new Point(363, 40);
             DBSItemName.Multiline = true;
             DBSItemName.Name = "DBSItemName";

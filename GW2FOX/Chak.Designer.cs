@@ -394,6 +394,7 @@
             // 
             // ChakItemName
             // 
+            ChakItemName.Font = new Font("Segoe UI", 14F);
             ChakItemName.Location = new Point(365, 42);
             ChakItemName.Multiline = true;
             ChakItemName.Name = "ChakItemName";
@@ -402,6 +403,7 @@
             // 
             // ChackCost
             // 
+            ChackCost.Font = new Font("Segoe UI", 10F);
             ChackCost.Location = new Point(295, 82);
             ChackCost.Multiline = true;
             ChackCost.Name = "ChackCost";

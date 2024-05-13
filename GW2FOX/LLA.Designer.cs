@@ -371,6 +371,7 @@
             // 
             // LLACost
             // 
+            LLACost.Font = new Font("Segoe UI", 10F);
             LLACost.Location = new Point(292, 82);
             LLACost.Multiline = true;
             LLACost.Name = "LLACost";
@@ -379,6 +380,7 @@
             // 
             // LLAItemName
             // 
+            LLAItemName.Font = new Font("Segoe UI", 14F);
             LLAItemName.Location = new Point(362, 42);
             LLAItemName.Multiline = true;
             LLAItemName.Name = "LLAItemName";

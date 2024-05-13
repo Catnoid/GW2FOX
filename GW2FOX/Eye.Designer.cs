@@ -324,7 +324,7 @@
             // 
             // Itempriceexeofzhaitan
             // 
-            Itempriceexeofzhaitan.Font = new Font("Segoe UI", 15F);
+            Itempriceexeofzhaitan.Font = new Font("Segoe UI", 10F);
             Itempriceexeofzhaitan.Location = new Point(296, 80);
             Itempriceexeofzhaitan.Multiline = true;
             Itempriceexeofzhaitan.Name = "Itempriceexeofzhaitan";
@@ -353,7 +353,7 @@
             // 
             // Eyeitemname
             // 
-            Eyeitemname.Font = new Font("Segoe UI", 15F);
+            Eyeitemname.Font = new Font("Segoe UI", 14F);
             Eyeitemname.Location = new Point(366, 40);
             Eyeitemname.Multiline = true;
             Eyeitemname.Name = "Eyeitemname";
@@ -405,7 +405,7 @@
             // 
             // Eye2itemname
             // 
-            Eye2itemname.Font = new Font("Segoe UI", 15F);
+            Eye2itemname.Font = new Font("Segoe UI", 14F);
             Eye2itemname.Location = new Point(366, 153);
             Eye2itemname.Multiline = true;
             Eye2itemname.Name = "Eye2itemname";
@@ -424,7 +424,7 @@
             // 
             // Itempriceexeofzhaitan2
             // 
-            Itempriceexeofzhaitan2.Font = new Font("Segoe UI", 15F);
+            Itempriceexeofzhaitan2.Font = new Font("Segoe UI", 10F);
             Itempriceexeofzhaitan2.Location = new Point(296, 193);
             Itempriceexeofzhaitan2.Multiline = true;
             Itempriceexeofzhaitan2.Name = "Itempriceexeofzhaitan2";

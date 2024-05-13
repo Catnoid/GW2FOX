@@ -270,7 +270,7 @@
             // 
             // Itemprice
             // 
-            Itemprice.Font = new Font("Segoe UI", 15F);
+            Itemprice.Font = new Font("Segoe UI", 10F);
             Itemprice.Location = new Point(296, 78);
             Itemprice.Multiline = true;
             Itemprice.Name = "Itemprice";
@@ -290,7 +290,7 @@
             // 
             // Samname
             // 
-            Samname.Font = new Font("Segoe UI", 15F);
+            Samname.Font = new Font("Segoe UI", 14F);
             Samname.Location = new Point(362, 38);
             Samname.Multiline = true;
             Samname.Name = "Samname";

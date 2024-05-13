@@ -326,11 +326,11 @@
             // 
             // Itemprice
             // 
-            Itemprice.Font = new Font("Segoe UI", 15F);
+            Itemprice.Font = new Font("Segoe UI", 10F);
             Itemprice.Location = new Point(296, 80);
             Itemprice.Name = "Itemprice";
             Itemprice.ReadOnly = true;
-            Itemprice.Size = new Size(300, 34);
+            Itemprice.Size = new Size(300, 25);
             Itemprice.TabIndex = 102;
             // 
             // pictureBox4
@@ -354,7 +354,7 @@
             // 
             // Rhendiitemname
             // 
-            Rhendiitemname.Font = new Font("Segoe UI", 15F);
+            Rhendiitemname.Font = new Font("Segoe UI", 14F);
             Rhendiitemname.Location = new Point(366, 40);
             Rhendiitemname.Multiline = true;
             Rhendiitemname.Name = "Rhendiitemname";
