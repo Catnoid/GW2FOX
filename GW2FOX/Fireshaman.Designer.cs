@@ -314,7 +314,7 @@
             // 
             // FireShamanCost
             // 
-            FireShamanCost.Font = new Font("Segoe UI", 14F);
+            FireShamanCost.Font = new Font("Segoe UI", 10F);
             FireShamanCost.Location = new Point(256, 43);
             FireShamanCost.Multiline = true;
             FireShamanCost.Name = "FireShamanCost";
@@ -334,7 +334,7 @@
             // 
             // FireShaman2Cost
             // 
-            FireShaman2Cost.Font = new Font("Segoe UI", 14F);
+            FireShaman2Cost.Font = new Font("Segoe UI", 10F);
             FireShaman2Cost.Location = new Point(256, 100);
             FireShaman2Cost.Multiline = true;
             FireShaman2Cost.Name = "FireShaman2Cost";
