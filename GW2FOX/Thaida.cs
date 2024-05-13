@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace GW2FOX
@@ -8,14 +9,80 @@ namespace GW2FOX
         public Thaida()
         {
             InitializeComponent();
-            LoadConfigText(Runinfo, Squadinfo, Guild, Welcome, Symbols);
+            _ = LoadItemPriceInformation();
         }
 
+        // Variable zur Speicherung des Ursprungs der Seite
+        private string originPage;
 
+        // Konstruktor, der den Ursprung der Seite als Parameter akzeptiert
+        public Thaida(string origin) : this()
+        {
 
+            // Setze den Ursprung der Seite
+            originPage = origin;
+        }
 
+        private void InitializeItemPriceTextBox()
+        {
+            ThaidaItemprice.Text = "Item-Preis: Wird geladen...";
+            ThaidaItemprice.AutoSize = true;
+            ThaidaItemprice.ReadOnly = true;
+        }
 
+        private async Task LoadItemPriceInformation()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string apiUrl = "https://api.guildwars2.com/v2/items/19357";
+                    string jsonResult = await client.GetStringAsync(apiUrl);
 
+                    JObject resultObject = JObject.Parse(jsonResult);
+
+                    string itemName = (string)resultObject["name"];
+                    string chatLink = "[&Cu8RAAA=] - Old Reliable";
+                    int itemPriceCopper = await GetItemPriceCopper();
+
+                    int gold = itemPriceCopper / 10000;
+                    int silver = (itemPriceCopper % 10000) / 100;
+                    int copper = itemPriceCopper % 100;
+
+                    // Update the existing "Itempriceexeofzhaitan" TextBox text
+                    Thaidaname.Text = $"{itemName}";
+
+                    ThaidaItemprice.Text = $"{chatLink}, Price: {gold} Gold, {silver} Silver, {copper} Copper";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Oh NO something went wrong: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async Task<int> GetItemPriceCopper()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    // Send a request to the API and get the response as JSON
+                    string jsonResult = await client.GetStringAsync($"https://api.guildwars2.com/v2/commerce/prices/19357");
+
+                    // Convert the JSON to a JObject
+                    JObject resultObject = JObject.Parse(jsonResult);
+
+                    // Extract the item price in copper
+                    return (int)resultObject["sells"]["unit_price"];
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle possible exceptions (e.g., if the API is not reachable)
+                throw new Exception($"Fehler beim Abrufen des Item-Preises: {ex.Message}");
+            }
+        }
 
 
 
@@ -101,6 +168,12 @@ namespace GW2FOX
             {
                 MessageBox.Show($"Fehler beim ?ffnen der Homepage: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            Clipboard.SetText(ThaidaItemprice.Text);
+            BringGw2ToFront();
         }
     }
 }

@@ -50,10 +50,15 @@
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             button10 = new Button();
+            pictureBox4 = new PictureBox();
+            button6 = new Button();
+            Thaidaname = new TextBox();
+            ThaidaItemprice = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // button9
@@ -281,12 +286,55 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.Pirate_Flintlock__1_;
+            pictureBox4.Location = new Point(190, 12);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(60, 60);
+            pictureBox4.TabIndex = 131;
+            pictureBox4.TabStop = false;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(256, 69);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 23);
+            button6.TabIndex = 129;
+            button6.Text = "Copy";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click_1;
+            // 
+            // Thaidaname
+            // 
+            Thaidaname.Font = new Font("Segoe UI", 14F);
+            Thaidaname.Location = new Point(256, 12);
+            Thaidaname.Multiline = true;
+            Thaidaname.Name = "Thaidaname";
+            Thaidaname.ReadOnly = true;
+            Thaidaname.Size = new Size(340, 25);
+            Thaidaname.TabIndex = 130;
+            // 
+            // ThaidaItemprice
+            // 
+            ThaidaItemprice.Font = new Font("Segoe UI", 10F);
+            ThaidaItemprice.Location = new Point(256, 43);
+            ThaidaItemprice.Multiline = true;
+            ThaidaItemprice.Name = "ThaidaItemprice";
+            ThaidaItemprice.ReadOnly = true;
+            ThaidaItemprice.Size = new Size(340, 20);
+            ThaidaItemprice.TabIndex = 128;
+            // 
             // Thaida
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(pictureBox4);
+            Controls.Add(button6);
+            Controls.Add(Thaidaname);
+            Controls.Add(ThaidaItemprice);
             Controls.Add(button10);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox3);
@@ -315,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -341,5 +390,9 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox5;
         private Button button10;
+        private PictureBox pictureBox4;
+        private Button button6;
+        private TextBox Thaidaname;
+        private TextBox ThaidaItemprice;
     }
 }

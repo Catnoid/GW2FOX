@@ -1093,6 +1093,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Pirate_Flintlock__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Pirate_Flintlock (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Repair {
             get {
                 object obj = ResourceManager.GetObject("Repair", resourceCulture);
