@@ -253,6 +253,9 @@
   <data name="Doppelganger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Doppelganger.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="20min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Backgroundmini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Backgroundmini.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -310,9 +313,6 @@
   <data name="Confetti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Confetti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Call_of_the_Commissar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Call_of_the_Commissar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Waypoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Waypoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -346,8 +346,8 @@
   <data name="OozePits" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OozePits.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sandstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sandstorm.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Call_of_the_Commissar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Call_of_the_Commissar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fire.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -363,6 +363,9 @@
   </data>
   <data name="Adam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sandstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sandstorm.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="50min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\50min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -391,9 +394,6 @@
   <data name="Ascension" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ascension.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wikigw2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wikigw2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Aspenwood" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aspenwood.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -402,6 +402,9 @@
   </data>
   <data name="Glob_of_Dragonvoid_Aether" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Glob_of_Dragonvoid_Aether.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pirate_Flintlock (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pirate_Flintlock (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Aspenwood1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aspenwood.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -553,10 +556,10 @@
   <data name="DefendJorasKeep1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefendJorasKeep.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wikigw2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wikigw2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pirate_Flintlock (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pirate_Flintlock (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Winter's_Heart_Infusion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Winter's_Heart_Infusion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

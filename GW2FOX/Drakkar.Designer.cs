@@ -52,6 +52,10 @@
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
             button10 = new Button();
+            button15 = new Button();
+            DrakkarCost = new TextBox();
+            DrakkarItemName = new TextBox();
+            button14 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -305,12 +309,55 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button15
+            // 
+            button15.Location = new Point(256, 69);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 130;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
+            // DrakkarCost
+            // 
+            DrakkarCost.Font = new Font("Segoe UI", 10F);
+            DrakkarCost.Location = new Point(256, 43);
+            DrakkarCost.Multiline = true;
+            DrakkarCost.Name = "DrakkarCost";
+            DrakkarCost.Size = new Size(340, 20);
+            DrakkarCost.TabIndex = 129;
+            // 
+            // DrakkarItemName
+            // 
+            DrakkarItemName.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DrakkarItemName.Location = new Point(256, 12);
+            DrakkarItemName.Multiline = true;
+            DrakkarItemName.Name = "DrakkarItemName";
+            DrakkarItemName.Size = new Size(340, 25);
+            DrakkarItemName.TabIndex = 128;
+            // 
+            // button14
+            // 
+            button14.BackColor = Color.Black;
+            button14.BackgroundImage = Properties.Resources.Winter_s_Heart_Infusion;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Location = new Point(186, 12);
+            button14.Name = "button14";
+            button14.Size = new Size(64, 64);
+            button14.TabIndex = 127;
+            button14.UseVisualStyleBackColor = false;
+            // 
             // Drakkar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button15);
+            Controls.Add(DrakkarCost);
+            Controls.Add(DrakkarItemName);
+            Controls.Add(button14);
             Controls.Add(button10);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox4);
@@ -370,5 +417,9 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
         private Button button10;
+        private Button button15;
+        private TextBox DrakkarCost;
+        private TextBox DrakkarItemName;
+        private Button button14;
     }
 }

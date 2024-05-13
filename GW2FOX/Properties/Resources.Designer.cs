@@ -1503,6 +1503,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Winter_s_Heart_Infusion {
+            get {
+                object obj = ResourceManager.GetObject("Winter\'s_Heart_Infusion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Worldbosses {
             get {
                 object obj = ResourceManager.GetObject("Worldbosses", resourceCulture);
