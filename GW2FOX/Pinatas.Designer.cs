@@ -278,7 +278,7 @@
             // 
             button10.BackgroundImage = Properties.Resources.wikigw2;
             button10.FlatStyle = FlatStyle.Flat;
-            button10.Location = new Point(15, 11);
+            button10.Location = new Point(12, 12);
             button10.Name = "button10";
             button10.Size = new Size(100, 45);
             button10.TabIndex = 127;
@@ -290,7 +290,7 @@
             button9.BackColor = Color.Black;
             button9.BackgroundImage = Properties.Resources.Confetti;
             button9.FlatStyle = FlatStyle.Flat;
-            button9.Location = new Point(295, 12);
+            button9.Location = new Point(186, 12);
             button9.Name = "button9";
             button9.Size = new Size(64, 64);
             button9.TabIndex = 128;
@@ -298,7 +298,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(295, 121);
+            button15.Location = new Point(256, 69);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 131;
@@ -309,19 +309,19 @@
             // PinataCost
             // 
             PinataCost.Font = new Font("Segoe UI", 10F);
-            PinataCost.Location = new Point(295, 81);
+            PinataCost.Location = new Point(256, 43);
             PinataCost.Multiline = true;
             PinataCost.Name = "PinataCost";
-            PinataCost.Size = new Size(301, 34);
+            PinataCost.Size = new Size(340, 20);
             PinataCost.TabIndex = 130;
             // 
             // PinataItemName
             // 
             PinataItemName.Font = new Font("Segoe UI", 14F);
-            PinataItemName.Location = new Point(365, 41);
+            PinataItemName.Location = new Point(256, 12);
             PinataItemName.Multiline = true;
             PinataItemName.Name = "PinataItemName";
-            PinataItemName.Size = new Size(231, 34);
+            PinataItemName.Size = new Size(340, 25);
             PinataItemName.TabIndex = 129;
             // 
             // Pinatas

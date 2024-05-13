@@ -269,17 +269,17 @@
             // Mawitem
             // 
             Mawitem.Font = new Font("Segoe UI", 10F);
-            Mawitem.Location = new Point(296, 82);
+            Mawitem.Location = new Point(256, 43);
             Mawitem.Multiline = true;
             Mawitem.Name = "Mawitem";
             Mawitem.ReadOnly = true;
-            Mawitem.Size = new Size(300, 34);
+            Mawitem.Size = new Size(340, 20);
             Mawitem.TabIndex = 81;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Eternal_Ice__exotic_;
-            pictureBox4.Location = new Point(296, 12);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 82;
@@ -287,7 +287,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(296, 122);
+            button6.Location = new Point(256, 69);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 83;
@@ -298,11 +298,11 @@
             // Mawitemname
             // 
             Mawitemname.Font = new Font("Segoe UI", 14F);
-            Mawitemname.Location = new Point(366, 42);
+            Mawitemname.Location = new Point(256, 12);
             Mawitemname.Multiline = true;
             Mawitemname.Name = "Mawitemname";
             Mawitemname.ReadOnly = true;
-            Mawitemname.Size = new Size(230, 34);
+            Mawitemname.Size = new Size(340, 25);
             Mawitemname.TabIndex = 84;
             // 
             // pictureBox5
@@ -318,7 +318,7 @@
             // 
             button16.BackgroundImage = Properties.Resources.wikigw2;
             button16.FlatStyle = FlatStyle.Flat;
-            button16.Location = new Point(10, 11);
+            button16.Location = new Point(12, 12);
             button16.Name = "button16";
             button16.Size = new Size(100, 45);
             button16.TabIndex = 127;

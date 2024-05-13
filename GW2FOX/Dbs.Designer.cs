@@ -287,7 +287,7 @@
             // 
             // button18
             // 
-            button18.Location = new Point(293, 120);
+            button18.Location = new Point(256, 69);
             button18.Name = "button18";
             button18.Size = new Size(75, 23);
             button18.TabIndex = 139;
@@ -298,19 +298,19 @@
             // DBSCost
             // 
             DBSCost.Font = new Font("Segoe UI", 10F);
-            DBSCost.Location = new Point(293, 80);
+            DBSCost.Location = new Point(256, 43);
             DBSCost.Multiline = true;
             DBSCost.Name = "DBSCost";
-            DBSCost.Size = new Size(301, 34);
+            DBSCost.Size = new Size(340, 20);
             DBSCost.TabIndex = 138;
             // 
             // DBSItemName
             // 
             DBSItemName.Font = new Font("Segoe UI", 14F);
-            DBSItemName.Location = new Point(363, 40);
+            DBSItemName.Location = new Point(256, 12);
             DBSItemName.Multiline = true;
             DBSItemName.Name = "DBSItemName";
-            DBSItemName.Size = new Size(231, 34);
+            DBSItemName.Size = new Size(340, 25);
             DBSItemName.TabIndex = 137;
             // 
             // button19
@@ -318,7 +318,7 @@
             button19.BackColor = Color.Black;
             button19.BackgroundImage = Properties.Resources.Kristall_Infusion_Icon;
             button19.FlatStyle = FlatStyle.Flat;
-            button19.Location = new Point(293, 11);
+            button19.Location = new Point(186, 12);
             button19.Name = "button19";
             button19.Size = new Size(64, 64);
             button19.TabIndex = 136;

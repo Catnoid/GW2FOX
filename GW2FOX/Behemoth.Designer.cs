@@ -324,7 +324,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(294, 122);
+            button10.Location = new Point(256, 69);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 137;
@@ -335,19 +335,19 @@
             // BeheCost
             // 
             BeheCost.Font = new Font("Segoe UI", 10F);
-            BeheCost.Location = new Point(294, 82);
+            BeheCost.Location = new Point(256, 43);
             BeheCost.Multiline = true;
             BeheCost.Name = "BeheCost";
-            BeheCost.Size = new Size(301, 34);
+            BeheCost.Size = new Size(340, 20);
             BeheCost.TabIndex = 136;
             // 
             // BeheItemName
             // 
             BeheItemName.Font = new Font("Segoe UI", 14.25F);
-            BeheItemName.Location = new Point(364, 42);
+            BeheItemName.Location = new Point(256, 12);
             BeheItemName.Multiline = true;
             BeheItemName.Name = "BeheItemName";
-            BeheItemName.Size = new Size(231, 34);
+            BeheItemName.Size = new Size(340, 25);
             BeheItemName.TabIndex = 135;
             // 
             // button11
@@ -355,7 +355,7 @@
             button11.BackColor = Color.Black;
             button11.BackgroundImage = Properties.Resources.Final_Rest;
             button11.FlatStyle = FlatStyle.Flat;
-            button11.Location = new Point(294, 12);
+            button11.Location = new Point(187, 8);
             button11.Name = "button11";
             button11.Size = new Size(64, 64);
             button11.TabIndex = 134;

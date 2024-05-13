@@ -319,17 +319,17 @@
             // Itemprice
             // 
             Itemprice.Font = new Font("Segoe UI", 10F);
-            Itemprice.Location = new Point(296, 82);
+            Itemprice.Location = new Point(256, 43);
             Itemprice.Multiline = true;
             Itemprice.Name = "Itemprice";
             Itemprice.ReadOnly = true;
-            Itemprice.Size = new Size(300, 34);
+            Itemprice.Size = new Size(340, 20);
             Itemprice.TabIndex = 121;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Ulgoth_s_Tail;
-            pictureBox4.Location = new Point(296, 12);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 122;
@@ -337,7 +337,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(296, 122);
+            button10.Location = new Point(256, 69);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 123;
@@ -348,11 +348,11 @@
             // Pricename
             // 
             Pricename.Font = new Font("Segoe UI", 14F);
-            Pricename.Location = new Point(366, 42);
+            Pricename.Location = new Point(256, 12);
             Pricename.Multiline = true;
             Pricename.Name = "Pricename";
             Pricename.ReadOnly = true;
-            Pricename.Size = new Size(230, 34);
+            Pricename.Size = new Size(340, 25);
             Pricename.TabIndex = 124;
             // 
             // button11

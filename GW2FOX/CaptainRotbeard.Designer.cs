@@ -316,7 +316,7 @@
             button14.BackColor = Color.Black;
             button14.BackgroundImage = (Image)resources.GetObject("button14.BackgroundImage");
             button14.FlatStyle = FlatStyle.Flat;
-            button14.Location = new Point(295, 12);
+            button14.Location = new Point(186, 12);
             button14.Name = "button14";
             button14.Size = new Size(64, 64);
             button14.TabIndex = 105;
@@ -325,25 +325,25 @@
             // CaptainRotbeardItemName
             // 
             CaptainRotbeardItemName.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CaptainRotbeardItemName.Location = new Point(365, 42);
+            CaptainRotbeardItemName.Location = new Point(256, 12);
             CaptainRotbeardItemName.Multiline = true;
             CaptainRotbeardItemName.Name = "CaptainRotbeardItemName";
-            CaptainRotbeardItemName.Size = new Size(231, 34);
+            CaptainRotbeardItemName.Size = new Size(340, 25);
             CaptainRotbeardItemName.TabIndex = 106;
             CaptainRotbeardItemName.TextChanged += ChakItemName_TextChanged;
             // 
             // CaptainRotbeardCoste
             // 
             CaptainRotbeardCoste.Font = new Font("Segoe UI", 10F);
-            CaptainRotbeardCoste.Location = new Point(295, 82);
+            CaptainRotbeardCoste.Location = new Point(256, 43);
             CaptainRotbeardCoste.Multiline = true;
             CaptainRotbeardCoste.Name = "CaptainRotbeardCoste";
-            CaptainRotbeardCoste.Size = new Size(301, 34);
+            CaptainRotbeardCoste.Size = new Size(340, 20);
             CaptainRotbeardCoste.TabIndex = 107;
             // 
             // button15
             // 
-            button15.Location = new Point(295, 122);
+            button15.Location = new Point(256, 69);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 108;
@@ -355,7 +355,7 @@
             // 
             pictureBox5.BackgroundImage = Properties.Resources._35min;
             pictureBox5.InitialImage = Properties.Resources._35min;
-            pictureBox5.Location = new Point(346, 151);
+            pictureBox5.Location = new Point(256, 98);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(250, 20);
             pictureBox5.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -399,6 +399,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CaptainRotbeard";
             StartPosition = FormStartPosition.Manual;
+            Load += CaptainRotbeard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

@@ -386,7 +386,7 @@
             button14.BackColor = Color.Black;
             button14.BackgroundImage = Properties.Resources.ChackInfusion;
             button14.FlatStyle = FlatStyle.Flat;
-            button14.Location = new Point(295, 12);
+            button14.Location = new Point(186, 12);
             button14.Name = "button14";
             button14.Size = new Size(64, 64);
             button14.TabIndex = 105;
@@ -395,24 +395,24 @@
             // ChakItemName
             // 
             ChakItemName.Font = new Font("Segoe UI", 14F);
-            ChakItemName.Location = new Point(365, 42);
+            ChakItemName.Location = new Point(256, 12);
             ChakItemName.Multiline = true;
             ChakItemName.Name = "ChakItemName";
-            ChakItemName.Size = new Size(231, 34);
+            ChakItemName.Size = new Size(340, 25);
             ChakItemName.TabIndex = 106;
             // 
             // ChackCost
             // 
             ChackCost.Font = new Font("Segoe UI", 10F);
-            ChackCost.Location = new Point(295, 82);
+            ChackCost.Location = new Point(256, 43);
             ChackCost.Multiline = true;
             ChackCost.Name = "ChackCost";
-            ChackCost.Size = new Size(301, 34);
+            ChackCost.Size = new Size(340, 20);
             ChackCost.TabIndex = 107;
             // 
             // button15
             // 
-            button15.Location = new Point(295, 122);
+            button15.Location = new Point(256, 69);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 108;

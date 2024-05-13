@@ -327,16 +327,17 @@
             // Itemprice
             // 
             Itemprice.Font = new Font("Segoe UI", 10F);
-            Itemprice.Location = new Point(296, 80);
+            Itemprice.Location = new Point(256, 43);
+            Itemprice.Multiline = true;
             Itemprice.Name = "Itemprice";
             Itemprice.ReadOnly = true;
-            Itemprice.Size = new Size(300, 25);
+            Itemprice.Size = new Size(340, 20);
             Itemprice.TabIndex = 102;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Rhendaksiegel;
-            pictureBox4.Location = new Point(296, 10);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 103;
@@ -344,7 +345,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(296, 120);
+            button10.Location = new Point(256, 69);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 105;
@@ -355,11 +356,11 @@
             // Rhendiitemname
             // 
             Rhendiitemname.Font = new Font("Segoe UI", 14F);
-            Rhendiitemname.Location = new Point(366, 40);
+            Rhendiitemname.Location = new Point(256, 12);
             Rhendiitemname.Multiline = true;
             Rhendiitemname.Name = "Rhendiitemname";
             Rhendiitemname.ReadOnly = true;
-            Rhendiitemname.Size = new Size(230, 34);
+            Rhendiitemname.Size = new Size(340, 25);
             Rhendiitemname.TabIndex = 106;
             // 
             // pictureBox5
@@ -375,7 +376,7 @@
             // 
             pictureBox6.BackgroundImage = Properties.Resources._10minlast;
             pictureBox6.InitialImage = Properties.Resources._10minlast;
-            pictureBox6.Location = new Point(346, 149);
+            pictureBox6.Location = new Point(256, 98);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(250, 20);
             pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;

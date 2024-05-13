@@ -271,16 +271,16 @@
             // Itemprice
             // 
             Itemprice.Font = new Font("Segoe UI", 10F);
-            Itemprice.Location = new Point(296, 78);
+            Itemprice.Location = new Point(256, 43);
             Itemprice.Multiline = true;
             Itemprice.Name = "Itemprice";
             Itemprice.ReadOnly = true;
-            Itemprice.Size = new Size(300, 34);
+            Itemprice.Size = new Size(340, 20);
             Itemprice.TabIndex = 117;
             // 
             // button6
             // 
-            button6.Location = new Point(296, 118);
+            button6.Location = new Point(256, 69);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 119;
@@ -291,17 +291,17 @@
             // Samname
             // 
             Samname.Font = new Font("Segoe UI", 14F);
-            Samname.Location = new Point(362, 38);
+            Samname.Location = new Point(256, 12);
             Samname.Multiline = true;
             Samname.Name = "Samname";
             Samname.ReadOnly = true;
-            Samname.Size = new Size(234, 34);
+            Samname.Size = new Size(340, 25);
             Samname.TabIndex = 120;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Sam;
-            pictureBox4.Location = new Point(296, 12);
+            pictureBox4.Location = new Point(190, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(60, 60);
             pictureBox4.TabIndex = 121;
@@ -331,7 +331,7 @@
             // 
             pictureBox6.BackgroundImage = Properties.Resources._20minlast;
             pictureBox6.InitialImage = Properties.Resources._20minlast;
-            pictureBox6.Location = new Point(346, 147);
+            pictureBox6.Location = new Point(256, 98);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(250, 20);
             pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;

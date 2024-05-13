@@ -698,16 +698,16 @@
             // Shattiitem
             // 
             Shattiitem.Font = new Font("Segoe UI", 10F);
-            Shattiitem.Location = new Point(296, 82);
+            Shattiitem.Location = new Point(256, 43);
             Shattiitem.Multiline = true;
             Shattiitem.Name = "Shattiitem";
             Shattiitem.ReadOnly = true;
-            Shattiitem.Size = new Size(300, 34);
+            Shattiitem.Size = new Size(340, 20);
             Shattiitem.TabIndex = 152;
             // 
             // button22
             // 
-            button22.Location = new Point(296, 122);
+            button22.Location = new Point(256, 69);
             button22.Name = "button22";
             button22.Size = new Size(75, 23);
             button22.TabIndex = 153;
@@ -718,7 +718,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Master_Tuning_Crystal;
-            pictureBox4.Location = new Point(296, 12);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 154;
@@ -727,11 +727,11 @@
             // Shattiitemname
             // 
             Shattiitemname.Font = new Font("Segoe UI", 14F);
-            Shattiitemname.Location = new Point(366, 42);
+            Shattiitemname.Location = new Point(256, 12);
             Shattiitemname.Multiline = true;
             Shattiitemname.Name = "Shattiitemname";
             Shattiitemname.ReadOnly = true;
-            Shattiitemname.Size = new Size(230, 34);
+            Shattiitemname.Size = new Size(340, 25);
             Shattiitemname.TabIndex = 155;
             // 
             // pictureBox5
@@ -747,7 +747,7 @@
             // 
             button23.BackgroundImage = Properties.Resources.wikigw2;
             button23.FlatStyle = FlatStyle.Flat;
-            button23.Location = new Point(11, 11);
+            button23.Location = new Point(12, 12);
             button23.Name = "button23";
             button23.Size = new Size(100, 45);
             button23.TabIndex = 157;

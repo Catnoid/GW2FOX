@@ -6,7 +6,7 @@ namespace GW2FOX
 {
     public partial class CaptainRotbeard : BaseForm
     {
-        
+
         public CaptainRotbeard()
         {
             InitializeComponent();
@@ -150,7 +150,7 @@ namespace GW2FOX
             BringGw2ToFront();
         }
 
-        
+
 
         private void Beheinfo_Click(object sender, EventArgs e)
         {
@@ -193,6 +193,11 @@ namespace GW2FOX
         }
 
         private void ChakItemName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CaptainRotbeard_Load(object sender, EventArgs e)
         {
 
         }

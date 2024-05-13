@@ -299,16 +299,16 @@
             // Dwaynaitem
             // 
             Dwaynaitem.Font = new Font("Segoe UI", 10F);
-            Dwaynaitem.Location = new Point(296, 82);
+            Dwaynaitem.Location = new Point(256, 43);
             Dwaynaitem.Multiline = true;
             Dwaynaitem.Name = "Dwaynaitem";
             Dwaynaitem.ReadOnly = true;
-            Dwaynaitem.Size = new Size(300, 34);
+            Dwaynaitem.Size = new Size(340, 20);
             Dwaynaitem.TabIndex = 119;
             // 
             // button6
             // 
-            button6.Location = new Point(215, 203);
+            button6.Location = new Point(256, 126);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 120;
@@ -319,7 +319,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Star_of_Dwayna;
-            pictureBox4.Location = new Point(296, 12);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 121;
@@ -328,11 +328,11 @@
             // Dwaynaitemname
             // 
             Dwaynaitemname.Font = new Font("Segoe UI", 14F);
-            Dwaynaitemname.Location = new Point(366, 42);
+            Dwaynaitemname.Location = new Point(256, 12);
             Dwaynaitemname.Multiline = true;
             Dwaynaitemname.Name = "Dwaynaitemname";
             Dwaynaitemname.ReadOnly = true;
-            Dwaynaitemname.Size = new Size(230, 34);
+            Dwaynaitemname.Size = new Size(340, 25);
             Dwaynaitemname.TabIndex = 122;
             // 
             // pictureBox5
@@ -348,7 +348,7 @@
             // 
             pictureBox6.BackgroundImage = Properties.Resources._50min;
             pictureBox6.InitialImage = Properties.Resources._50min;
-            pictureBox6.Location = new Point(15, 177);
+            pictureBox6.Location = new Point(256, 155);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(250, 20);
             pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -369,17 +369,17 @@
             // Dwaynaitemname2
             // 
             Dwaynaitemname2.Font = new Font("Segoe UI", 14F);
-            Dwaynaitemname2.Location = new Point(366, 153);
+            Dwaynaitemname2.Location = new Point(256, 69);
             Dwaynaitemname2.Multiline = true;
             Dwaynaitemname2.Name = "Dwaynaitemname2";
             Dwaynaitemname2.ReadOnly = true;
-            Dwaynaitemname2.Size = new Size(230, 34);
+            Dwaynaitemname2.Size = new Size(340, 25);
             Dwaynaitemname2.TabIndex = 131;
             // 
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.Dwayna_s_Embrace;
-            pictureBox7.Location = new Point(296, 123);
+            pictureBox7.Location = new Point(186, 82);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(64, 64);
             pictureBox7.TabIndex = 130;
@@ -388,11 +388,11 @@
             // Dwaynaitem2
             // 
             Dwaynaitem2.Font = new Font("Segoe UI", 10F);
-            Dwaynaitem2.Location = new Point(296, 193);
+            Dwaynaitem2.Location = new Point(256, 100);
             Dwaynaitem2.Multiline = true;
             Dwaynaitem2.Name = "Dwaynaitem2";
             Dwaynaitem2.ReadOnly = true;
-            Dwaynaitem2.Size = new Size(300, 34);
+            Dwaynaitem2.Size = new Size(340, 20);
             Dwaynaitem2.TabIndex = 129;
             // 
             // Dwayna

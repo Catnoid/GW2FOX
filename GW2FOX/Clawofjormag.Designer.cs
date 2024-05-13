@@ -347,7 +347,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(293, 122);
+            button15.Location = new Point(256, 69);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 129;
@@ -358,19 +358,19 @@
             // ClawCost
             // 
             ClawCost.Font = new Font("Segoe UI", 10F);
-            ClawCost.Location = new Point(293, 82);
+            ClawCost.Location = new Point(256, 43);
             ClawCost.Multiline = true;
             ClawCost.Name = "ClawCost";
-            ClawCost.Size = new Size(301, 34);
+            ClawCost.Size = new Size(340, 20);
             ClawCost.TabIndex = 128;
             // 
             // ClawItemName
             // 
             ClawItemName.Font = new Font("Segoe UI", 14F);
-            ClawItemName.Location = new Point(363, 42);
+            ClawItemName.Location = new Point(256, 12);
             ClawItemName.Multiline = true;
             ClawItemName.Name = "ClawItemName";
-            ClawItemName.Size = new Size(231, 34);
+            ClawItemName.Size = new Size(340, 25);
             ClawItemName.TabIndex = 127;
             // 
             // button14
@@ -378,7 +378,7 @@
             button14.BackColor = Color.Black;
             button14.BackgroundImage = Properties.Resources.Jormag_Klauen_Fragment_Icon;
             button14.FlatStyle = FlatStyle.Flat;
-            button14.Location = new Point(293, 12);
+            button14.Location = new Point(186, 12);
             button14.Name = "button14";
             button14.Size = new Size(64, 64);
             button14.TabIndex = 126;

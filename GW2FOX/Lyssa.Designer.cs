@@ -317,17 +317,17 @@
             // Lyssacost
             // 
             Lyssacost.Font = new Font("Segoe UI", 10F);
-            Lyssacost.Location = new Point(296, 82);
+            Lyssacost.Location = new Point(256, 43);
             Lyssacost.Multiline = true;
             Lyssacost.Name = "Lyssacost";
             Lyssacost.ReadOnly = true;
-            Lyssacost.Size = new Size(300, 34);
+            Lyssacost.Size = new Size(340, 20);
             Lyssacost.TabIndex = 121;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Deputy_Peacemaker_Badge;
-            pictureBox4.Location = new Point(296, 12);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 122;
@@ -335,7 +335,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(296, 122);
+            button10.Location = new Point(256, 69);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 123;
@@ -346,11 +346,11 @@
             // Lyssaitemname
             // 
             Lyssaitemname.Font = new Font("Segoe UI", 14F);
-            Lyssaitemname.Location = new Point(366, 42);
+            Lyssaitemname.Location = new Point(256, 12);
             Lyssaitemname.Multiline = true;
             Lyssaitemname.Name = "Lyssaitemname";
             Lyssaitemname.ReadOnly = true;
-            Lyssaitemname.Size = new Size(230, 34);
+            Lyssaitemname.Size = new Size(340, 25);
             Lyssaitemname.TabIndex = 124;
             // 
             // pictureBox5

@@ -393,17 +393,17 @@
             // ItempriceInquest
             // 
             ItempriceInquest.Font = new Font("Segoe UI", 10F);
-            ItempriceInquest.Location = new Point(296, 82);
+            ItempriceInquest.Location = new Point(256, 43);
             ItempriceInquest.Multiline = true;
             ItempriceInquest.Name = "ItempriceInquest";
             ItempriceInquest.ReadOnly = true;
-            ItempriceInquest.Size = new Size(300, 34);
+            ItempriceInquest.Size = new Size(340, 20);
             ItempriceInquest.TabIndex = 128;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Symbol_of_the_Inquest;
-            pictureBox4.Location = new Point(296, 12);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 129;
@@ -411,7 +411,7 @@
             // 
             // button13
             // 
-            button13.Location = new Point(296, 122);
+            button13.Location = new Point(256, 69);
             button13.Name = "button13";
             button13.Size = new Size(75, 23);
             button13.TabIndex = 130;
@@ -422,11 +422,11 @@
             // Golemitemname
             // 
             Golemitemname.Font = new Font("Segoe UI", 14F);
-            Golemitemname.Location = new Point(366, 42);
+            Golemitemname.Location = new Point(256, 12);
             Golemitemname.Multiline = true;
             Golemitemname.Name = "Golemitemname";
             Golemitemname.ReadOnly = true;
-            Golemitemname.Size = new Size(230, 34);
+            Golemitemname.Size = new Size(340, 25);
             Golemitemname.TabIndex = 131;
             // 
             // pictureBox5

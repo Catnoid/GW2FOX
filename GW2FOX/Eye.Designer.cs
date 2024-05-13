@@ -325,17 +325,17 @@
             // Itempriceexeofzhaitan
             // 
             Itempriceexeofzhaitan.Font = new Font("Segoe UI", 10F);
-            Itempriceexeofzhaitan.Location = new Point(296, 80);
+            Itempriceexeofzhaitan.Location = new Point(256, 43);
             Itempriceexeofzhaitan.Multiline = true;
             Itempriceexeofzhaitan.Name = "Itempriceexeofzhaitan";
             Itempriceexeofzhaitan.ReadOnly = true;
-            Itempriceexeofzhaitan.Size = new Size(300, 34);
+            Itempriceexeofzhaitan.Size = new Size(340, 20);
             Itempriceexeofzhaitan.TabIndex = 121;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.Pendant_of_Arah;
-            pictureBox4.Location = new Point(296, 10);
+            pictureBox4.Location = new Point(186, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 122;
@@ -343,7 +343,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(215, 203);
+            button10.Location = new Point(256, 126);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 123;
@@ -354,11 +354,11 @@
             // Eyeitemname
             // 
             Eyeitemname.Font = new Font("Segoe UI", 14F);
-            Eyeitemname.Location = new Point(366, 40);
+            Eyeitemname.Location = new Point(256, 12);
             Eyeitemname.Multiline = true;
             Eyeitemname.Name = "Eyeitemname";
             Eyeitemname.ReadOnly = true;
-            Eyeitemname.Size = new Size(230, 34);
+            Eyeitemname.Size = new Size(340, 25);
             Eyeitemname.TabIndex = 124;
             // 
             // pictureBox5
@@ -374,7 +374,7 @@
             // 
             pictureBox6.BackgroundImage = Properties.Resources._20min;
             pictureBox6.InitialImage = Properties.Resources._20min;
-            pictureBox6.Location = new Point(11, 151);
+            pictureBox6.Location = new Point(256, 152);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(250, 20);
             pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -385,7 +385,7 @@
             // 
             pictureBox7.BackgroundImage = Properties.Resources.TowerisUp1;
             pictureBox7.InitialImage = Properties.Resources.TowerisUp;
-            pictureBox7.Location = new Point(11, 177);
+            pictureBox7.Location = new Point(256, 178);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(250, 20);
             pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -406,17 +406,17 @@
             // Eye2itemname
             // 
             Eye2itemname.Font = new Font("Segoe UI", 14F);
-            Eye2itemname.Location = new Point(366, 153);
+            Eye2itemname.Location = new Point(256, 69);
             Eye2itemname.Multiline = true;
             Eye2itemname.Name = "Eye2itemname";
             Eye2itemname.ReadOnly = true;
-            Eye2itemname.Size = new Size(230, 34);
+            Eye2itemname.Size = new Size(340, 25);
             Eye2itemname.TabIndex = 133;
             // 
             // pictureBox8
             // 
             pictureBox8.Image = Properties.Resources.Circle_of_Arah;
-            pictureBox8.Location = new Point(296, 123);
+            pictureBox8.Location = new Point(186, 82);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(64, 64);
             pictureBox8.TabIndex = 132;
@@ -425,11 +425,11 @@
             // Itempriceexeofzhaitan2
             // 
             Itempriceexeofzhaitan2.Font = new Font("Segoe UI", 10F);
-            Itempriceexeofzhaitan2.Location = new Point(296, 193);
+            Itempriceexeofzhaitan2.Location = new Point(256, 100);
             Itempriceexeofzhaitan2.Multiline = true;
             Itempriceexeofzhaitan2.Name = "Itempriceexeofzhaitan2";
             Itempriceexeofzhaitan2.ReadOnly = true;
-            Itempriceexeofzhaitan2.Size = new Size(300, 34);
+            Itempriceexeofzhaitan2.Size = new Size(340, 20);
             Itempriceexeofzhaitan2.TabIndex = 131;
             // 
             // Eye

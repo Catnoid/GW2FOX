@@ -315,10 +315,10 @@
             // FireShamanCost
             // 
             FireShamanCost.Font = new Font("Segoe UI", 14F);
-            FireShamanCost.Location = new Point(289, 82);
+            FireShamanCost.Location = new Point(256, 43);
             FireShamanCost.Multiline = true;
             FireShamanCost.Name = "FireShamanCost";
-            FireShamanCost.Size = new Size(301, 34);
+            FireShamanCost.Size = new Size(340, 20);
             FireShamanCost.TabIndex = 136;
             // 
             // button14
@@ -326,7 +326,7 @@
             button14.BackColor = Color.Black;
             button14.BackgroundImage = Properties.Resources.Legionnaire_Staff;
             button14.FlatStyle = FlatStyle.Flat;
-            button14.Location = new Point(289, 123);
+            button14.Location = new Point(186, 82);
             button14.Name = "button14";
             button14.Size = new Size(64, 64);
             button14.TabIndex = 134;
@@ -335,10 +335,10 @@
             // FireShaman2Cost
             // 
             FireShaman2Cost.Font = new Font("Segoe UI", 14F);
-            FireShaman2Cost.Location = new Point(289, 192);
+            FireShaman2Cost.Location = new Point(256, 100);
             FireShaman2Cost.Multiline = true;
             FireShaman2Cost.Name = "FireShaman2Cost";
-            FireShaman2Cost.Size = new Size(301, 34);
+            FireShaman2Cost.Size = new Size(340, 20);
             FireShaman2Cost.TabIndex = 140;
             // 
             // button6
@@ -346,7 +346,7 @@
             button6.BackColor = Color.Black;
             button6.BackgroundImage = Properties.Resources.Flame_Guard1;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(289, 12);
+            button6.Location = new Point(186, 12);
             button6.Name = "button6";
             button6.Size = new Size(64, 64);
             button6.TabIndex = 138;
@@ -354,7 +354,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(208, 203);
+            button15.Location = new Point(256, 126);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 141;
@@ -365,21 +365,21 @@
             // FireShamanitemname
             // 
             FireShamanitemname.Font = new Font("Segoe UI", 14F);
-            FireShamanitemname.Location = new Point(359, 42);
+            FireShamanitemname.Location = new Point(256, 12);
             FireShamanitemname.Multiline = true;
             FireShamanitemname.Name = "FireShamanitemname";
             FireShamanitemname.ReadOnly = true;
-            FireShamanitemname.Size = new Size(230, 34);
+            FireShamanitemname.Size = new Size(340, 25);
             FireShamanitemname.TabIndex = 142;
             // 
             // FireShaman2itemname
             // 
             FireShaman2itemname.Font = new Font("Segoe UI", 14F);
-            FireShaman2itemname.Location = new Point(359, 153);
+            FireShaman2itemname.Location = new Point(256, 69);
             FireShaman2itemname.Multiline = true;
             FireShaman2itemname.Name = "FireShaman2itemname";
             FireShaman2itemname.ReadOnly = true;
-            FireShaman2itemname.Size = new Size(230, 34);
+            FireShaman2itemname.Size = new Size(340, 25);
             FireShaman2itemname.TabIndex = 143;
             // 
             // Fireshaman

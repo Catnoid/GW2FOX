@@ -361,7 +361,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(293, 122);
+            button15.Location = new Point(256, 69);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 133;
@@ -372,19 +372,19 @@
             // KarkaCost
             // 
             KarkaCost.Font = new Font("Segoe UI", 10F);
-            KarkaCost.Location = new Point(293, 82);
+            KarkaCost.Location = new Point(256, 43);
             KarkaCost.Multiline = true;
             KarkaCost.Name = "KarkaCost";
-            KarkaCost.Size = new Size(301, 34);
+            KarkaCost.Size = new Size(340, 20);
             KarkaCost.TabIndex = 132;
             // 
             // KarkaItemName
             // 
             KarkaItemName.Font = new Font("Segoe UI", 14F);
-            KarkaItemName.Location = new Point(363, 42);
+            KarkaItemName.Location = new Point(256, 12);
             KarkaItemName.Multiline = true;
             KarkaItemName.Name = "KarkaItemName";
-            KarkaItemName.Size = new Size(231, 34);
+            KarkaItemName.Size = new Size(340, 25);
             KarkaItemName.TabIndex = 131;
             // 
             // button14
@@ -392,7 +392,7 @@
             button14.BackColor = Color.Black;
             button14.BackgroundImage = Properties.Resources.Arthropoda;
             button14.FlatStyle = FlatStyle.Flat;
-            button14.Location = new Point(293, 12);
+            button14.Location = new Point(186, 12);
             button14.Name = "button14";
             button14.Size = new Size(64, 64);
             button14.TabIndex = 130;

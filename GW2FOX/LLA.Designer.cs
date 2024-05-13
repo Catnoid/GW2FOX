@@ -361,7 +361,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(292, 122);
+            button6.Location = new Point(256, 69);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 133;
@@ -372,19 +372,19 @@
             // LLACost
             // 
             LLACost.Font = new Font("Segoe UI", 10F);
-            LLACost.Location = new Point(292, 82);
+            LLACost.Location = new Point(256, 43);
             LLACost.Multiline = true;
             LLACost.Name = "LLACost";
-            LLACost.Size = new Size(301, 34);
+            LLACost.Size = new Size(340, 20);
             LLACost.TabIndex = 132;
             // 
             // LLAItemName
             // 
             LLAItemName.Font = new Font("Segoe UI", 14F);
-            LLAItemName.Location = new Point(362, 42);
+            LLAItemName.Location = new Point(256, 12);
             LLAItemName.Multiline = true;
             LLAItemName.Name = "LLAItemName";
-            LLAItemName.Size = new Size(231, 34);
+            LLAItemName.Size = new Size(340, 25);
             LLAItemName.TabIndex = 131;
             // 
             // button7
@@ -392,7 +392,7 @@
             button7.BackColor = Color.Black;
             button7.BackgroundImage = Properties.Resources.Mystische_Münze_Icon;
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(292, 12);
+            button7.Location = new Point(186, 12);
             button7.Name = "button7";
             button7.Size = new Size(64, 64);
             button7.TabIndex = 130;
