@@ -56,11 +56,11 @@
             // 
             // button4
             // 
-            button4.BackColor = SystemColors.ActiveCaptionText;
+            button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.FOXHomepage;
             button4.Cursor = Cursors.Cross;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(12, 193);
+            button4.Location = new Point(30, 193);
             button4.Name = "button4";
             button4.Size = new Size(180, 50);
             button4.TabIndex = 5;
@@ -69,11 +69,11 @@
             // 
             // button3
             // 
-            button3.BackColor = SystemColors.ActiveCaptionText;
+            button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Repair;
             button3.Cursor = Cursors.Cross;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(12, 249);
+            button3.Location = new Point(218, 193);
             button3.Name = "button3";
             button3.Size = new Size(180, 50);
             button3.TabIndex = 8;
@@ -82,11 +82,11 @@
             // 
             // button5
             // 
-            button5.BackColor = SystemColors.ActiveCaptionText;
+            button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.OTimer;
             button5.Cursor = Cursors.Cross;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(12, 361);
+            button5.Location = new Point(590, 193);
             button5.Name = "button5";
             button5.Size = new Size(180, 50);
             button5.TabIndex = 10;
@@ -95,11 +95,11 @@
             // 
             // button1
             // 
-            button1.BackColor = SystemColors.ActiveCaptionText;
+            button1.BackColor = Color.Transparent;
             button1.BackgroundImage = Properties.Resources.LeadingHelper;
             button1.Cursor = Cursors.Cross;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(12, 305);
+            button1.Location = new Point(404, 193);
             button1.Name = "button1";
             button1.Size = new Size(180, 50);
             button1.TabIndex = 11;
@@ -128,7 +128,7 @@
             // 
             button6.BackColor = Color.Black;
             button6.BackgroundImage = Properties.Resources.logo;
-            button6.Location = new Point(346, 193);
+            button6.Location = new Point(176, 249);
             button6.Name = "button6";
             button6.Size = new Size(140, 140);
             button6.TabIndex = 14;
@@ -139,7 +139,7 @@
             // 
             button7.BackColor = Color.Black;
             button7.BackgroundImage = Properties.Resources.Screenshot_2024_03_28_162930;
-            button7.Location = new Point(492, 193);
+            button7.Location = new Point(322, 249);
             button7.Name = "button7";
             button7.Size = new Size(140, 140);
             button7.TabIndex = 15;
@@ -150,7 +150,7 @@
             // 
             button8.BackColor = Color.Black;
             button8.BackgroundImage = Properties.Resources.Taca;
-            button8.Location = new Point(200, 193);
+            button8.Location = new Point(30, 249);
             button8.Name = "button8";
             button8.Size = new Size(140, 140);
             button8.TabIndex = 16;
@@ -160,7 +160,7 @@
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = Properties.Resources.Shortcut;
-            pictureBox2.Location = new Point(200, 377);
+            pictureBox2.Location = new Point(707, 249);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(63, 25);
             pictureBox2.TabIndex = 17;
@@ -169,7 +169,7 @@
             // button9
             // 
             button9.BackgroundImage = Properties.Resources.ArcDPSinstall;
-            button9.Location = new Point(638, 193);
+            button9.Location = new Point(468, 249);
             button9.Name = "button9";
             button9.Size = new Size(140, 60);
             button9.TabIndex = 18;
@@ -179,7 +179,7 @@
             // button10
             // 
             button10.BackgroundImage = Properties.Resources.ArcDPSDeinstall;
-            button10.Location = new Point(638, 273);
+            button10.Location = new Point(468, 329);
             button10.Name = "button10";
             button10.Size = new Size(140, 60);
             button10.TabIndex = 19;

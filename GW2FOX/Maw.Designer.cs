@@ -189,72 +189,93 @@
             // 
             // button2
             // 
+            button2.BackColor = Color.Transparent;
+            button2.BackgroundImage = Properties.Resources.Copy;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(15, 374);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 29;
             button2.Text = "Copy";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += Runinfoload_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.Transparent;
+            button3.BackgroundImage = Properties.Resources.Copy;
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(490, 374);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 30;
             button3.Text = "Copy";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += Squadinfoload_Click;
             // 
             // button4
             // 
+            button4.BackColor = Color.Transparent;
+            button4.BackgroundImage = Properties.Resources.Copy;
+            button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(965, 374);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 31;
             button4.Text = "Copy";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += Guild_Click;
             // 
             // button5
             // 
+            button5.BackColor = Color.Transparent;
+            button5.BackgroundImage = Properties.Resources.Copy;
+            button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1440, 374);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 32;
             button5.Text = "Copy";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += Welcome_Click;
             // 
             // button7
             // 
+            button7.BackColor = Color.Transparent;
+            button7.BackgroundImage = Properties.Resources.Copy;
+            button7.FlatStyle = FlatStyle.Flat;
             button7.Location = new Point(13, 505);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 34;
             button7.Text = "Copy";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += Mawinfo_Click;
             // 
             // button8
             // 
+            button8.BackColor = Color.Transparent;
+            button8.BackgroundImage = Properties.Resources.Copy;
+            button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(654, 505);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
             button8.TabIndex = 35;
             button8.Text = "Copy";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             button8.Click += InstanceMaw_Click;
             // 
             // button9
             // 
+            button9.BackColor = Color.Transparent;
+            button9.BackgroundImage = Properties.Resources.Copy;
+            button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(1294, 505);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 36;
             button9.Text = "Copy";
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
             button9.Click += Attentionmaw_Click;
             // 
             // pictureBox3
@@ -287,12 +308,15 @@
             // 
             // button6
             // 
+            button6.BackColor = Color.Transparent;
+            button6.BackgroundImage = Properties.Resources.Copy;
+            button6.FlatStyle = FlatStyle.Flat;
             button6.Location = new Point(256, 69);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 83;
             button6.Text = "Copy";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
             button6.Click += Preis_Click;
             // 
             // Mawitemname
@@ -330,6 +354,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button16);
             Controls.Add(pictureBox5);

@@ -54,6 +54,12 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             button10 = new Button();
+            button11 = new Button();
+            button12 = new Button();
+            button14 = new Button();
+            button15 = new Button();
+            button16 = new Button();
+            button17 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -84,12 +90,15 @@
             // 
             // button9
             // 
+            button9.BackColor = Color.Transparent;
+            button9.BackgroundImage = Properties.Resources.Copy;
+            button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(1294, 505);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 115;
             button9.Text = "Copy";
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
             button9.Click += Attentionstorm_Click;
             // 
             // button8
@@ -114,22 +123,28 @@
             // 
             // button5
             // 
+            button5.BackColor = Color.Transparent;
+            button5.BackgroundImage = Properties.Resources.Copy;
+            button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1440, 374);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 112;
             button5.Text = "Copy";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += Welcome_Click;
             // 
             // button4
             // 
+            button4.BackColor = Color.Transparent;
+            button4.BackgroundImage = Properties.Resources.Copy;
+            button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(965, 374);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 111;
             button4.Text = "Copy";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += Guild_Click;
             // 
             // button3
@@ -328,25 +343,110 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button11
+            // 
+            button11.BackColor = Color.Transparent;
+            button11.BackgroundImage = Properties.Resources.Copy;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Location = new Point(11, 374);
+            button11.Name = "button11";
+            button11.Size = new Size(75, 23);
+            button11.TabIndex = 109;
+            button11.Text = "Copy";
+            button11.UseVisualStyleBackColor = false;
+            button11.Click += Runinfo_Click;
+            // 
+            // button12
+            // 
+            button12.BackColor = Color.Transparent;
+            button12.BackgroundImage = Properties.Resources.Copy;
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Location = new Point(486, 374);
+            button12.Name = "button12";
+            button12.Size = new Size(75, 23);
+            button12.TabIndex = 110;
+            button12.Text = "Copy";
+            button12.UseVisualStyleBackColor = false;
+            button12.Click += Squadinfo;
+            // 
+            // button14
+            // 
+            button14.BackColor = Color.Transparent;
+            button14.BackgroundImage = Properties.Resources.Copy;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Location = new Point(9, 505);
+            button14.Name = "button14";
+            button14.Size = new Size(75, 23);
+            button14.TabIndex = 113;
+            button14.Text = "Copy";
+            button14.UseVisualStyleBackColor = false;
+            button14.Click += Storminfo_Click;
+            // 
+            // button15
+            // 
+            button15.BackColor = Color.Transparent;
+            button15.BackgroundImage = Properties.Resources.Copy;
+            button15.FlatStyle = FlatStyle.Flat;
+            button15.Location = new Point(650, 505);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 114;
+            button15.Text = "Copy";
+            button15.UseVisualStyleBackColor = false;
+            button15.Click += Instancestorm_Click;
+            // 
+            // button16
+            // 
+            button16.BackColor = Color.Transparent;
+            button16.BackgroundImage = Properties.Resources.Copy;
+            button16.FlatStyle = FlatStyle.Flat;
+            button16.Location = new Point(7, 636);
+            button16.Name = "button16";
+            button16.Size = new Size(75, 23);
+            button16.TabIndex = 117;
+            button16.Text = "Copy";
+            button16.UseVisualStyleBackColor = false;
+            button16.Click += Dragonstorminfo1_Click;
+            // 
+            // button17
+            // 
+            button17.BackColor = Color.Transparent;
+            button17.BackgroundImage = Properties.Resources.Copy;
+            button17.FlatStyle = FlatStyle.Flat;
+            button17.Location = new Point(7, 731);
+            button17.Name = "button17";
+            button17.Size = new Size(75, 23);
+            button17.TabIndex = 118;
+            button17.Text = "Copy";
+            button17.UseVisualStyleBackColor = false;
+            button17.Click += Dragonstorminfo2_Click;
+            // 
             // Dragonstorm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button10);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(Dragonstorminfo2);
+            Controls.Add(button17);
             Controls.Add(button6);
+            Controls.Add(button16);
             Controls.Add(button13);
             Controls.Add(Dragonstorminfo1);
             Controls.Add(button9);
+            Controls.Add(button15);
             Controls.Add(button8);
+            Controls.Add(button14);
             Controls.Add(button7);
             Controls.Add(button5);
             Controls.Add(button4);
+            Controls.Add(button12);
             Controls.Add(button3);
+            Controls.Add(button11);
             Controls.Add(button2);
             Controls.Add(pictureBox2);
             Controls.Add(Attentiondragonstorm);
@@ -397,5 +497,11 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Button button10;
+        private Button button11;
+        private Button button12;
+        private Button button14;
+        private Button button15;
+        private Button button16;
+        private Button button17;
     }
 }

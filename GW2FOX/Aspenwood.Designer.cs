@@ -58,6 +58,8 @@
             // 
             // button9
             // 
+            button9.BackgroundImage = Properties.Resources.Copy;
+            button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(1293, 505);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
@@ -68,6 +70,8 @@
             // 
             // button8
             // 
+            button8.BackgroundImage = Properties.Resources.Copy;
+            button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(653, 505);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
@@ -78,6 +82,8 @@
             // 
             // button7
             // 
+            button7.BackgroundImage = Properties.Resources.Copy;
+            button7.FlatStyle = FlatStyle.Flat;
             button7.Location = new Point(12, 505);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
@@ -88,6 +94,8 @@
             // 
             // button5
             // 
+            button5.BackgroundImage = Properties.Resources.Copy;
+            button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1440, 374);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
@@ -98,6 +106,8 @@
             // 
             // button4
             // 
+            button4.BackgroundImage = Properties.Resources.Copy;
+            button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(965, 374);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
@@ -108,6 +118,8 @@
             // 
             // button3
             // 
+            button3.BackgroundImage = Properties.Resources.Copy;
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(490, 374);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
@@ -118,6 +130,8 @@
             // 
             // button2
             // 
+            button2.BackgroundImage = Properties.Resources.Copy;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(15, 374);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
@@ -285,6 +299,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button6);
             Controls.Add(pictureBox4);

@@ -53,6 +53,8 @@
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             button10 = new Button();
+            button6 = new Button();
+            button11 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -61,12 +63,15 @@
             // 
             // button13
             // 
+            button13.BackColor = Color.Transparent;
+            button13.BackgroundImage = Properties.Resources.Copy;
+            button13.FlatStyle = FlatStyle.Flat;
             button13.Location = new Point(11, 676);
             button13.Name = "button13";
             button13.Size = new Size(75, 23);
             button13.TabIndex = 97;
             button13.Text = "Copy";
-            button13.UseVisualStyleBackColor = true;
+            button13.UseVisualStyleBackColor = false;
             button13.Click += Junglewurminfos_Click;
             // 
             // Junglewurminfos
@@ -83,22 +88,28 @@
             // 
             // button9
             // 
+            button9.BackColor = Color.Transparent;
+            button9.BackgroundImage = Properties.Resources.Copy;
+            button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(1294, 505);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 95;
             button9.Text = "Copy";
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
             button9.Click += Attentionjunglewurm_Click;
             // 
             // button8
             // 
+            button8.BackColor = Color.Transparent;
+            button8.BackgroundImage = Properties.Resources.Copy;
+            button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(654, 505);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
             button8.TabIndex = 94;
             button8.Text = "Copy";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             button8.Click += Junglewurminstance_Click;
             // 
             // button7
@@ -113,32 +124,41 @@
             // 
             // button5
             // 
+            button5.BackColor = Color.Transparent;
+            button5.BackgroundImage = Properties.Resources.Copy;
+            button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1440, 374);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 92;
             button5.Text = "Copy";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += WelcomeClick;
             // 
             // button4
             // 
+            button4.BackColor = Color.Transparent;
+            button4.BackgroundImage = Properties.Resources.Copy;
+            button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(965, 374);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 91;
             button4.Text = "Copy";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += Guild_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.Transparent;
+            button3.BackgroundImage = Properties.Resources.Copy;
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(490, 374);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 90;
             button3.Text = "Copy";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += Squadinfo_Click;
             // 
             // button2
@@ -317,11 +337,38 @@
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.BackgroundImage = Properties.Resources.Copy;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Location = new Point(15, 374);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 23);
+            button6.TabIndex = 89;
+            button6.Text = "Copy";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += Runinfo_Click;
+            // 
+            // button11
+            // 
+            button11.BackColor = Color.Transparent;
+            button11.BackgroundImage = Properties.Resources.Copy;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Location = new Point(13, 505);
+            button11.Name = "button11";
+            button11.Size = new Size(75, 23);
+            button11.TabIndex = 93;
+            button11.Text = "Copy";
+            button11.UseVisualStyleBackColor = false;
+            button11.Click += Junglewurminfo_Click;
+            // 
             // Junglewurm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button10);
             Controls.Add(pictureBox5);
@@ -331,10 +378,12 @@
             Controls.Add(Junglewurminfos);
             Controls.Add(button9);
             Controls.Add(button8);
+            Controls.Add(button11);
             Controls.Add(button7);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
+            Controls.Add(button6);
             Controls.Add(button2);
             Controls.Add(pictureBox2);
             Controls.Add(Attentionjunglewurm);
@@ -384,5 +433,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox5;
         private Button button10;
+        private Button button6;
+        private Button button11;
     }
 }
