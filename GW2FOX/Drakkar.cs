@@ -9,6 +9,7 @@ namespace GW2FOX
         public Drakkar()
         {
             InitializeComponent();
+            LoadConfigText(Runinfo, Squadinfo, Guild, Welcome, Symbols);
             _ = LoadItemPriceInformation();
         }
 

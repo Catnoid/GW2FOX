@@ -18,6 +18,7 @@ namespace GW2FOX
         // Konstruktor, der den Ursprung der Seite als Parameter akzeptiert
         public Behemoth(string origin) : this()
         {
+            InitializeItemPriceTextBox();
             // Setze den Ursprung der Seite
             originPage = origin;
         }

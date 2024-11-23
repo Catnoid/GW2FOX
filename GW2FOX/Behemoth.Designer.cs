@@ -67,12 +67,12 @@
             // 
             button13.BackColor = Color.Transparent;
             button13.BackgroundImage = Properties.Resources.Copy;
+            button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Location = new Point(12, 676);
             button13.Name = "button13";
             button13.Size = new Size(75, 23);
             button13.TabIndex = 77;
-            button13.Text = "Copy";
             button13.UseVisualStyleBackColor = false;
             button13.Click += Behepres_Click;
             // 
