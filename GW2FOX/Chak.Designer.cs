@@ -62,6 +62,14 @@
             ChakItemName = new TextBox();
             ChackCost = new TextBox();
             button15 = new Button();
+            button16 = new Button();
+            button17 = new Button();
+            button18 = new Button();
+            button19 = new Button();
+            button20 = new Button();
+            button21 = new Button();
+            button22 = new Button();
+            button23 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -72,12 +80,12 @@
             // 
             button8.BackColor = Color.Transparent;
             button8.BackgroundImage = Properties.Resources.Copy;
+            button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(653, 505);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
             button8.TabIndex = 66;
-            button8.Text = "Copy";
             button8.UseVisualStyleBackColor = false;
             button8.Click += Beheinstance_Click;
             // 
@@ -98,12 +106,12 @@
             // 
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.Copy;
+            button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1440, 374);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 63;
-            button5.Text = "Copy";
             button5.UseVisualStyleBackColor = false;
             button5.Click += Welcome_Click;
             // 
@@ -111,12 +119,12 @@
             // 
             button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.Copy;
+            button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(965, 374);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 62;
-            button4.Text = "Copy";
             button4.UseVisualStyleBackColor = false;
             button4.Click += Guild_Click;
             // 
@@ -373,12 +381,12 @@
             // 
             button12.BackColor = Color.Transparent;
             button12.BackgroundImage = Properties.Resources.Copy;
+            button12.FlatAppearance.BorderSize = 0;
             button12.FlatStyle = FlatStyle.Flat;
             button12.Location = new Point(1290, 505);
             button12.Name = "button12";
             button12.Size = new Size(75, 23);
             button12.TabIndex = 89;
-            button12.Text = "Copy";
             button12.UseVisualStyleBackColor = false;
             button12.Click += Mapinfo_Click;
             // 
@@ -456,6 +464,110 @@
             button15.UseVisualStyleBackColor = false;
             button15.Click += button15_Click;
             // 
+            // button16
+            // 
+            button16.BackColor = Color.Transparent;
+            button16.BackgroundImage = Properties.Resources.Copy;
+            button16.FlatAppearance.BorderSize = 0;
+            button16.FlatStyle = FlatStyle.Flat;
+            button16.Location = new Point(15, 374);
+            button16.Name = "button16";
+            button16.Size = new Size(75, 23);
+            button16.TabIndex = 60;
+            button16.UseVisualStyleBackColor = false;
+            button16.Click += Runinfo_Click;
+            // 
+            // button17
+            // 
+            button17.BackColor = Color.Transparent;
+            button17.BackgroundImage = Properties.Resources.Copy;
+            button17.FlatAppearance.BorderSize = 0;
+            button17.FlatStyle = FlatStyle.Flat;
+            button17.Location = new Point(490, 374);
+            button17.Name = "button17";
+            button17.Size = new Size(75, 23);
+            button17.TabIndex = 61;
+            button17.UseVisualStyleBackColor = false;
+            button17.Click += Squadinfo_Click;
+            // 
+            // button18
+            // 
+            button18.BackColor = Color.Transparent;
+            button18.BackgroundImage = Properties.Resources.Copy;
+            button18.FlatAppearance.BorderSize = 0;
+            button18.FlatStyle = FlatStyle.Flat;
+            button18.Location = new Point(12, 505);
+            button18.Name = "button18";
+            button18.Size = new Size(75, 23);
+            button18.TabIndex = 65;
+            button18.UseVisualStyleBackColor = false;
+            button18.Click += Beheinfo_Click;
+            // 
+            // button19
+            // 
+            button19.BackColor = Color.Transparent;
+            button19.BackgroundImage = Properties.Resources.Copy;
+            button19.FlatAppearance.BorderSize = 0;
+            button19.FlatStyle = FlatStyle.Flat;
+            button19.Location = new Point(15, 636);
+            button19.Name = "button19";
+            button19.Size = new Size(75, 23);
+            button19.TabIndex = 81;
+            button19.UseVisualStyleBackColor = false;
+            button19.Click += Rata_Click;
+            // 
+            // button20
+            // 
+            button20.BackColor = Color.Transparent;
+            button20.BackgroundImage = Properties.Resources.Copy;
+            button20.FlatAppearance.BorderSize = 0;
+            button20.FlatStyle = FlatStyle.Flat;
+            button20.Location = new Point(15, 731);
+            button20.Name = "button20";
+            button20.Size = new Size(75, 23);
+            button20.TabIndex = 83;
+            button20.UseVisualStyleBackColor = false;
+            button20.Click += Scar_Click;
+            // 
+            // button21
+            // 
+            button21.BackColor = Color.Transparent;
+            button21.BackgroundImage = Properties.Resources.Copy;
+            button21.FlatAppearance.BorderSize = 0;
+            button21.FlatStyle = FlatStyle.Flat;
+            button21.Location = new Point(16, 826);
+            button21.Name = "button21";
+            button21.Size = new Size(75, 23);
+            button21.TabIndex = 85;
+            button21.UseVisualStyleBackColor = false;
+            button21.Click += Nuhoch_Click;
+            // 
+            // button22
+            // 
+            button22.BackColor = Color.Transparent;
+            button22.BackgroundImage = Properties.Resources.Copy;
+            button22.FlatAppearance.BorderSize = 0;
+            button22.FlatStyle = FlatStyle.Flat;
+            button22.Location = new Point(16, 921);
+            button22.Name = "button22";
+            button22.Size = new Size(75, 23);
+            button22.TabIndex = 87;
+            button22.UseVisualStyleBackColor = false;
+            button22.Click += Ogre_Click;
+            // 
+            // button23
+            // 
+            button23.BackColor = Color.Transparent;
+            button23.BackgroundImage = Properties.Resources.Copy;
+            button23.FlatAppearance.BorderSize = 0;
+            button23.FlatStyle = FlatStyle.Flat;
+            button23.Location = new Point(256, 69);
+            button23.Name = "button23";
+            button23.Size = new Size(75, 23);
+            button23.TabIndex = 108;
+            button23.UseVisualStyleBackColor = false;
+            button23.Click += button15_Click;
+            // 
             // Chak
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -463,6 +575,7 @@
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(button23);
             Controls.Add(button15);
             Controls.Add(ChackCost);
             Controls.Add(ChakItemName);
@@ -470,20 +583,27 @@
             Controls.Add(button13);
             Controls.Add(pictureBox4);
             Controls.Add(button12);
+            Controls.Add(button22);
             Controls.Add(Mapinfo);
             Controls.Add(button11);
+            Controls.Add(button21);
             Controls.Add(Ogre);
             Controls.Add(button10);
+            Controls.Add(button20);
             Controls.Add(Nuhoch);
             Controls.Add(button9);
+            Controls.Add(button19);
             Controls.Add(Scar);
             Controls.Add(button6);
             Controls.Add(Rata);
             Controls.Add(pictureBox3);
+            Controls.Add(button18);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button5);
+            Controls.Add(button17);
             Controls.Add(button4);
+            Controls.Add(button16);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox2);
@@ -541,5 +661,13 @@
         private TextBox ChakItemName;
         private TextBox ChackCost;
         private Button button15;
+        private Button button16;
+        private Button button17;
+        private Button button18;
+        private Button button19;
+        private Button button20;
+        private Button button21;
+        private Button button22;
+        private Button button23;
     }
 }

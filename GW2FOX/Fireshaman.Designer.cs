@@ -69,12 +69,12 @@
             // 
             button13.BackColor = Color.Transparent;
             button13.BackgroundImage = Properties.Resources.Copy;
+            button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Location = new Point(11, 636);
             button13.Name = "button13";
             button13.Size = new Size(75, 23);
             button13.TabIndex = 97;
-            button13.Text = "Copy";
             button13.UseVisualStyleBackColor = false;
             button13.Click += Fireshamanrounds_Click;
             // 
@@ -94,12 +94,12 @@
             // 
             button9.BackColor = Color.Transparent;
             button9.BackgroundImage = Properties.Resources.Copy;
+            button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(1294, 505);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 95;
-            button9.Text = "Copy";
             button9.UseVisualStyleBackColor = false;
             button9.Click += AttentionFireshaman_Click;
             // 
@@ -107,12 +107,12 @@
             // 
             button8.BackColor = Color.Transparent;
             button8.BackgroundImage = Properties.Resources.Copy;
+            button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(654, 505);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
             button8.TabIndex = 94;
-            button8.Text = "Copy";
             button8.UseVisualStyleBackColor = false;
             button8.Click += Fireshamaninstance_Click;
             // 
@@ -120,12 +120,12 @@
             // 
             button7.BackColor = Color.Transparent;
             button7.BackgroundImage = Properties.Resources.Copy;
+            button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Location = new Point(13, 505);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 93;
-            button7.Text = "Copy";
             button7.UseVisualStyleBackColor = false;
             button7.Click += Fireshamaninfo_Click;
             // 
@@ -133,12 +133,12 @@
             // 
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.Copy;
+            button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1440, 374);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 92;
-            button5.Text = "Copy";
             button5.UseVisualStyleBackColor = false;
             button5.Click += Welcome_Click;
             // 
@@ -146,12 +146,12 @@
             // 
             button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.Copy;
+            button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(965, 374);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 91;
-            button4.Text = "Copy";
             button4.UseVisualStyleBackColor = false;
             button4.Click += Guild_Click;
             // 
@@ -159,12 +159,12 @@
             // 
             button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Copy;
+            button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(490, 374);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 90;
-            button3.Text = "Copy";
             button3.UseVisualStyleBackColor = false;
             button3.Click += Squadinfo_Click;
             // 
@@ -172,12 +172,12 @@
             // 
             button2.BackColor = Color.Transparent;
             button2.BackgroundImage = Properties.Resources.Copy;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(15, 374);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 89;
-            button2.Text = "Copy";
             button2.UseVisualStyleBackColor = false;
             button2.Click += Runinfo_Click;
             // 
@@ -380,12 +380,12 @@
             // 
             button15.BackColor = Color.Transparent;
             button15.BackgroundImage = Properties.Resources.Copy;
+            button15.FlatAppearance.BorderSize = 0;
             button15.FlatStyle = FlatStyle.Flat;
             button15.Location = new Point(256, 126);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 141;
-            button15.Text = "Copy";
             button15.UseVisualStyleBackColor = false;
             button15.Click += button15_Click;
             // 

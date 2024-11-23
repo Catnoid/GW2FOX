@@ -101,12 +101,12 @@
             // 
             button9.BackColor = Color.Transparent;
             button9.BackgroundImage = Properties.Resources.Copy;
+            button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(1294, 505);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 113;
-            button9.Text = "Copy";
             button9.UseVisualStyleBackColor = false;
             button9.Click += Attentionshatterer_Click;
             // 
@@ -114,12 +114,12 @@
             // 
             button8.BackColor = Color.Transparent;
             button8.BackgroundImage = Properties.Resources.Copy;
+            button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(654, 505);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
             button8.TabIndex = 112;
-            button8.Text = "Copy";
             button8.UseVisualStyleBackColor = false;
             button8.Click += Shattererinstance_Click;
             // 
@@ -127,12 +127,12 @@
             // 
             button7.BackColor = Color.Transparent;
             button7.BackgroundImage = Properties.Resources.Copy;
+            button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Location = new Point(13, 505);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 111;
-            button7.Text = "Copy";
             button7.UseVisualStyleBackColor = false;
             button7.Click += Shattererinfo_Click;
             // 
@@ -140,12 +140,12 @@
             // 
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.Copy;
+            button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1440, 374);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 110;
-            button5.Text = "Copy";
             button5.UseVisualStyleBackColor = false;
             button5.Click += Welcome_Click;
             // 
@@ -153,12 +153,12 @@
             // 
             button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.Copy;
+            button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(965, 374);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 109;
-            button4.Text = "Copy";
             button4.UseVisualStyleBackColor = false;
             button4.Click += Guild_Click;
             // 
@@ -166,12 +166,12 @@
             // 
             button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Copy;
+            button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(490, 374);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 108;
-            button3.Text = "Copy";
             button3.UseVisualStyleBackColor = false;
             button3.Click += Squadinfo_Click;
             // 
@@ -179,12 +179,12 @@
             // 
             button2.BackColor = Color.Transparent;
             button2.BackgroundImage = Properties.Resources.Copy;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(15, 374);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 107;
-            button2.Text = "Copy";
             button2.UseVisualStyleBackColor = false;
             button2.Click += Runinfo_Click;
             // 
@@ -316,7 +316,7 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = SystemColors.ScrollBar;
+            textBox1.BackColor = SystemColors.Control;
             textBox1.Font = new Font("Segoe UI", 15F);
             textBox1.Location = new Point(13, 570);
             textBox1.Name = "textBox1";
@@ -339,7 +339,7 @@
             // 
             // textBox3
             // 
-            textBox3.BackColor = SystemColors.ScrollBar;
+            textBox3.BackColor = SystemColors.Control;
             textBox3.Font = new Font("Segoe UI", 15F);
             textBox3.Location = new Point(409, 570);
             textBox3.Name = "textBox3";
@@ -377,12 +377,12 @@
             // 
             button6.BackColor = Color.Transparent;
             button6.BackgroundImage = Properties.Resources.Copy;
+            button6.FlatAppearance.BorderSize = 0;
             button6.FlatStyle = FlatStyle.Flat;
             button6.Location = new Point(13, 676);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 119;
-            button6.Text = "Copy";
             button6.UseVisualStyleBackColor = false;
             button6.Click += Squadmessage2_Click;
             // 
@@ -390,18 +390,18 @@
             // 
             button10.BackColor = Color.Transparent;
             button10.BackgroundImage = Properties.Resources.Copy;
+            button10.FlatAppearance.BorderSize = 0;
             button10.FlatStyle = FlatStyle.Flat;
             button10.Location = new Point(409, 676);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 120;
-            button10.Text = "Copy";
             button10.UseVisualStyleBackColor = false;
             button10.Click += Pres_Click;
             // 
             // textBox6
             // 
-            textBox6.BackColor = SystemColors.ScrollBar;
+            textBox6.BackColor = SystemColors.Control;
             textBox6.Font = new Font("Segoe UI", 15F);
             textBox6.Location = new Point(1049, 570);
             textBox6.Name = "textBox6";
@@ -414,18 +414,18 @@
             // 
             button11.BackColor = Color.Transparent;
             button11.BackgroundImage = Properties.Resources.Copy;
+            button11.FlatAppearance.BorderSize = 0;
             button11.FlatStyle = FlatStyle.Flat;
             button11.Location = new Point(1049, 676);
             button11.Name = "button11";
             button11.Size = new Size(75, 23);
             button11.TabIndex = 122;
-            button11.Text = "Copy";
             button11.UseVisualStyleBackColor = false;
             button11.Click += Burnsblunder_Click;
             // 
             // textBox7
             // 
-            textBox7.BackColor = SystemColors.ScrollBar;
+            textBox7.BackColor = SystemColors.Control;
             textBox7.Font = new Font("Segoe UI", 15F);
             textBox7.Location = new Point(1049, 705);
             textBox7.Multiline = true;
@@ -452,12 +452,12 @@
             // 
             button12.BackColor = Color.Transparent;
             button12.BackgroundImage = Properties.Resources.Copy;
+            button12.FlatAppearance.BorderSize = 0;
             button12.FlatStyle = FlatStyle.Flat;
             button12.Location = new Point(1049, 785);
             button12.Name = "button12";
             button12.Size = new Size(75, 23);
             button12.TabIndex = 125;
-            button12.Text = "Copy";
             button12.UseVisualStyleBackColor = false;
             button12.Click += Nofly_Click;
             // 
@@ -478,12 +478,12 @@
             // 
             button13.BackColor = Color.Transparent;
             button13.BackgroundImage = Properties.Resources.Copy;
+            button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Location = new Point(1049, 854);
             button13.Name = "button13";
             button13.Size = new Size(75, 23);
             button13.TabIndex = 127;
-            button13.Text = "Copy";
             button13.UseVisualStyleBackColor = false;
             button13.Click += Nofly2_Click;
             // 
@@ -504,18 +504,18 @@
             // 
             button14.BackColor = Color.Transparent;
             button14.BackgroundImage = Properties.Resources.Copy;
+            button14.FlatAppearance.BorderSize = 0;
             button14.FlatStyle = FlatStyle.Flat;
             button14.Location = new Point(1049, 923);
             button14.Name = "button14";
             button14.Size = new Size(75, 23);
             button14.TabIndex = 129;
-            button14.Text = "Copy";
             button14.UseVisualStyleBackColor = false;
             button14.Click += Nofly3_Click;
             // 
             // textBox11
             // 
-            textBox11.BackColor = SystemColors.ScrollBar;
+            textBox11.BackColor = SystemColors.Control;
             textBox11.Font = new Font("Segoe UI", 15F);
             textBox11.Location = new Point(13, 705);
             textBox11.Name = "textBox11";
@@ -588,12 +588,12 @@
             // 
             button15.BackColor = Color.Transparent;
             button15.BackgroundImage = Properties.Resources.Copy;
+            button15.FlatAppearance.BorderSize = 0;
             button15.FlatStyle = FlatStyle.Flat;
             button15.Location = new Point(295, 755);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 138;
-            button15.Text = "Copy";
             button15.UseVisualStyleBackColor = false;
             button15.Click += Jump1_Click;
             // 
@@ -601,12 +601,12 @@
             // 
             button16.BackColor = Color.Transparent;
             button16.BackgroundImage = Properties.Resources.Copy;
+            button16.FlatAppearance.BorderSize = 0;
             button16.FlatStyle = FlatStyle.Flat;
             button16.Location = new Point(293, 796);
             button16.Name = "button16";
             button16.Size = new Size(75, 23);
             button16.TabIndex = 139;
-            button16.Text = "Copy";
             button16.UseVisualStyleBackColor = false;
             button16.Click += Jump2_Click;
             // 
@@ -614,12 +614,12 @@
             // 
             button17.BackColor = Color.Transparent;
             button17.BackgroundImage = Properties.Resources.Copy;
+            button17.FlatAppearance.BorderSize = 0;
             button17.FlatStyle = FlatStyle.Flat;
             button17.Location = new Point(293, 835);
             button17.Name = "button17";
             button17.Size = new Size(75, 23);
             button17.TabIndex = 140;
-            button17.Text = "Copy";
             button17.UseVisualStyleBackColor = false;
             button17.Click += Jump3_Click;
             // 
@@ -647,18 +647,18 @@
             // 
             button18.BackColor = Color.Transparent;
             button18.BackgroundImage = Properties.Resources.Copy;
+            button18.FlatAppearance.BorderSize = 0;
             button18.FlatStyle = FlatStyle.Flat;
             button18.Location = new Point(293, 876);
             button18.Name = "button18";
             button18.Size = new Size(75, 23);
             button18.TabIndex = 143;
-            button18.Text = "Copy";
             button18.UseVisualStyleBackColor = false;
             button18.Click += Jump4_Click;
             // 
             // textBox20
             // 
-            textBox20.BackColor = SystemColors.ScrollBar;
+            textBox20.BackColor = SystemColors.Control;
             textBox20.Font = new Font("Segoe UI", 15F);
             textBox20.Location = new Point(409, 705);
             textBox20.Name = "textBox20";
@@ -683,12 +683,12 @@
             // 
             button19.BackColor = Color.Transparent;
             button19.BackgroundImage = Properties.Resources.Copy;
+            button19.FlatAppearance.BorderSize = 0;
             button19.FlatStyle = FlatStyle.Flat;
             button19.Location = new Point(409, 785);
             button19.Name = "button19";
             button19.Size = new Size(75, 23);
             button19.TabIndex = 146;
-            button19.Text = "Copy";
             button19.UseVisualStyleBackColor = false;
             button19.Click += Petsback_Click;
             // 
@@ -720,12 +720,12 @@
             // 
             button20.BackColor = Color.Transparent;
             button20.BackgroundImage = Properties.Resources.Copy;
+            button20.FlatAppearance.BorderSize = 0;
             button20.FlatStyle = FlatStyle.Flat;
             button20.Location = new Point(409, 854);
             button20.Name = "button20";
             button20.Size = new Size(75, 23);
             button20.TabIndex = 149;
-            button20.Text = "Copy";
             button20.UseVisualStyleBackColor = false;
             button20.Click += Crystalls_Click;
             // 
@@ -733,12 +733,12 @@
             // 
             button21.BackColor = Color.Transparent;
             button21.BackgroundImage = Properties.Resources.Copy;
+            button21.FlatAppearance.BorderSize = 0;
             button21.FlatStyle = FlatStyle.Flat;
             button21.Location = new Point(409, 923);
             button21.Name = "button21";
             button21.Size = new Size(75, 23);
             button21.TabIndex = 150;
-            button21.Text = "Copy";
             button21.UseVisualStyleBackColor = false;
             button21.Click += Nochance_Click;
             // 
@@ -765,12 +765,12 @@
             // 
             button22.BackColor = Color.Transparent;
             button22.BackgroundImage = Properties.Resources.Copy;
+            button22.FlatAppearance.BorderSize = 0;
             button22.FlatStyle = FlatStyle.Flat;
             button22.Location = new Point(256, 69);
             button22.Name = "button22";
             button22.Size = new Size(75, 23);
             button22.TabIndex = 153;
-            button22.Text = "Copy";
             button22.UseVisualStyleBackColor = false;
             button22.Click += Preis_Click;
             // 

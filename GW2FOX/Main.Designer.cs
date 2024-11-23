@@ -59,6 +59,7 @@
             button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.FOXHomepage;
             button4.Cursor = Cursors.Cross;
+            button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(30, 193);
             button4.Name = "button4";
@@ -72,6 +73,7 @@
             button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Repair;
             button3.Cursor = Cursors.Cross;
+            button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(218, 193);
             button3.Name = "button3";
@@ -85,6 +87,7 @@
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.OTimer;
             button5.Cursor = Cursors.Cross;
+            button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(590, 193);
             button5.Name = "button5";
@@ -98,6 +101,7 @@
             button1.BackColor = Color.Transparent;
             button1.BackgroundImage = Properties.Resources.LeadingHelper;
             button1.Cursor = Cursors.Cross;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(404, 193);
             button1.Name = "button1";

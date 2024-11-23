@@ -251,6 +251,7 @@
             // 
             button2.BackColor = Color.Transparent;
             button2.BackgroundImage = Properties.Resources.Save;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(382, 306);
             button2.Name = "button2";
@@ -263,6 +264,7 @@
             // 
             button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.Save;
+            button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(1332, 306);
             button4.Name = "button4";
@@ -275,6 +277,7 @@
             // 
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.Save;
+            button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1807, 306);
             button5.Name = "button5";
@@ -287,12 +290,12 @@
             // 
             button6.BackColor = Color.Transparent;
             button6.BackgroundImage = Properties.Resources.Save;
+            button6.FlatAppearance.BorderSize = 0;
             button6.FlatStyle = FlatStyle.Flat;
             button6.Location = new Point(1377, 164);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 12;
-            button6.Text = "Save";
             button6.UseVisualStyleBackColor = false;
             button6.Click += Symbols_Click;
             // 
@@ -301,6 +304,7 @@
             button7.BackColor = Color.Transparent;
             button7.BackgroundImage = Properties.Resources.Maw;
             button7.Cursor = Cursors.Cross;
+            button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Location = new Point(50, 371);
             button7.Name = "button7";
@@ -314,6 +318,7 @@
             button8.BackColor = Color.Transparent;
             button8.BackgroundImage = Properties.Resources.buttonBEHE;
             button8.Cursor = Cursors.Cross;
+            button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Location = new Point(48, 423);
             button8.Name = "button8";
@@ -327,6 +332,7 @@
             button9.BackColor = Color.Transparent;
             button9.BackgroundImage = Properties.Resources.Fire;
             button9.Cursor = Cursors.Cross;
+            button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Location = new Point(50, 475);
             button9.Name = "button9";
@@ -340,6 +346,7 @@
             button10.BackColor = Color.Transparent;
             button10.BackgroundImage = Properties.Resources.Wurm;
             button10.Cursor = Cursors.Cross;
+            button10.FlatAppearance.BorderSize = 0;
             button10.FlatStyle = FlatStyle.Flat;
             button10.Location = new Point(50, 527);
             button10.Name = "button10";
@@ -353,6 +360,7 @@
             button11.BackColor = Color.Transparent;
             button11.BackgroundImage = Properties.Resources.Rhendi;
             button11.Cursor = Cursors.Cross;
+            button11.FlatAppearance.BorderSize = 0;
             button11.FlatStyle = FlatStyle.Flat;
             button11.Location = new Point(259, 631);
             button11.Name = "button11";
@@ -366,6 +374,7 @@
             button12.BackColor = Color.Transparent;
             button12.BackgroundImage = Properties.Resources.Ulgoth;
             button12.Cursor = Cursors.Cross;
+            button12.FlatAppearance.BorderSize = 0;
             button12.FlatStyle = FlatStyle.Flat;
             button12.Location = new Point(50, 579);
             button12.Name = "button12";
@@ -379,6 +388,7 @@
             button13.BackColor = Color.Transparent;
             button13.BackgroundImage = Properties.Resources.Thaida;
             button13.Cursor = Cursors.Cross;
+            button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Location = new Point(50, 631);
             button13.Name = "button13";
@@ -392,6 +402,7 @@
             button14.BackColor = Color.Transparent;
             button14.BackgroundImage = Properties.Resources.Shatti;
             button14.Cursor = Cursors.Cross;
+            button14.FlatAppearance.BorderSize = 0;
             button14.FlatStyle = FlatStyle.Flat;
             button14.Location = new Point(50, 839);
             button14.Name = "button14";
@@ -405,6 +416,7 @@
             button15.BackColor = Color.Transparent;
             button15.BackgroundImage = Properties.Resources.Fireshaman;
             button15.Cursor = Cursors.Cross;
+            button15.FlatAppearance.BorderSize = 0;
             button15.FlatStyle = FlatStyle.Flat;
             button15.Location = new Point(259, 579);
             button15.Name = "button15";
@@ -418,6 +430,7 @@
             button16.BackColor = Color.Transparent;
             button16.BackgroundImage = Properties.Resources.Tequatl;
             button16.Cursor = Cursors.Cross;
+            button16.FlatAppearance.BorderSize = 0;
             button16.FlatStyle = FlatStyle.Flat;
             button16.Location = new Point(48, 787);
             button16.Name = "button16";
@@ -431,6 +444,7 @@
             button17.BackColor = Color.Transparent;
             button17.BackgroundImage = Properties.Resources.Mega;
             button17.Cursor = Cursors.Cross;
+            button17.FlatAppearance.BorderSize = 0;
             button17.FlatStyle = FlatStyle.Flat;
             button17.Location = new Point(50, 683);
             button17.Name = "button17";
@@ -444,6 +458,7 @@
             button18.BackColor = Color.Transparent;
             button18.BackgroundImage = Properties.Resources.Inquestgolem;
             button18.Cursor = Cursors.Cross;
+            button18.FlatAppearance.BorderSize = 0;
             button18.FlatStyle = FlatStyle.Flat;
             button18.Location = new Point(50, 735);
             button18.Name = "button18";
@@ -457,6 +472,7 @@
             button19.BackColor = Color.Transparent;
             button19.BackgroundImage = Properties.Resources.Karka;
             button19.Cursor = Cursors.Cross;
+            button19.FlatAppearance.BorderSize = 0;
             button19.FlatStyle = FlatStyle.Flat;
             button19.Location = new Point(50, 891);
             button19.Name = "button19";
@@ -470,6 +486,7 @@
             button20.BackColor = Color.Transparent;
             button20.BackgroundImage = Properties.Resources.Claw;
             button20.Cursor = Cursors.Cross;
+            button20.FlatAppearance.BorderSize = 0;
             button20.FlatStyle = FlatStyle.Flat;
             button20.Location = new Point(50, 943);
             button20.Name = "button20";
@@ -483,6 +500,7 @@
             button21.BackColor = Color.Transparent;
             button21.BackgroundImage = Properties.Resources.Dragonstorm;
             button21.Cursor = Cursors.Cross;
+            button21.FlatAppearance.BorderSize = 0;
             button21.FlatStyle = FlatStyle.Flat;
             button21.Location = new Point(885, 475);
             button21.Name = "button21";
@@ -496,6 +514,7 @@
             button22.BackColor = Color.Transparent;
             button22.BackgroundImage = Properties.Resources.Drakkar;
             button22.Cursor = Cursors.Cross;
+            button22.FlatAppearance.BorderSize = 0;
             button22.FlatStyle = FlatStyle.Flat;
             button22.Location = new Point(885, 371);
             button22.Name = "button22";
@@ -509,6 +528,7 @@
             button23.BackColor = Color.Transparent;
             button23.BackgroundImage = Properties.Resources.Eye;
             button23.Cursor = Cursors.Cross;
+            button23.FlatAppearance.BorderSize = 0;
             button23.FlatStyle = FlatStyle.Flat;
             button23.Location = new Point(259, 371);
             button23.Name = "button23";
@@ -522,6 +542,7 @@
             button24.BackColor = Color.Transparent;
             button24.BackgroundImage = Properties.Resources.Dwayna;
             button24.Cursor = Cursors.Cross;
+            button24.FlatAppearance.BorderSize = 0;
             button24.FlatStyle = FlatStyle.Flat;
             button24.Location = new Point(259, 423);
             button24.Name = "button24";
@@ -535,6 +556,7 @@
             button25.BackColor = Color.Transparent;
             button25.BackgroundImage = Properties.Resources.Lyssa;
             button25.Cursor = Cursors.Cross;
+            button25.FlatAppearance.BorderSize = 0;
             button25.FlatStyle = FlatStyle.Flat;
             button25.Location = new Point(259, 475);
             button25.Name = "button25";
@@ -548,6 +570,7 @@
             button26.BackColor = Color.Transparent;
             button26.BackgroundImage = Properties.Resources.Ogrewars;
             button26.Cursor = Cursors.Cross;
+            button26.FlatAppearance.BorderSize = 0;
             button26.FlatStyle = FlatStyle.Flat;
             button26.Location = new Point(259, 527);
             button26.Name = "button26";
@@ -561,6 +584,7 @@
             Concert.BackColor = Color.Transparent;
             Concert.BackgroundImage = Properties.Resources.Concert;
             Concert.Cursor = Cursors.Cross;
+            Concert.FlatAppearance.BorderSize = 0;
             Concert.FlatStyle = FlatStyle.Flat;
             Concert.Location = new Point(885, 423);
             Concert.Name = "Concert";
@@ -573,6 +597,7 @@
             // 
             button28.BackColor = Color.Transparent;
             button28.BackgroundImage = Properties.Resources.Copy;
+            button28.FlatAppearance.BorderSize = 0;
             button28.FlatStyle = FlatStyle.Flat;
             button28.Location = new Point(382, 277);
             button28.Name = "button28";
@@ -585,6 +610,7 @@
             // 
             button29.BackColor = Color.Transparent;
             button29.BackgroundImage = Properties.Resources.Copy;
+            button29.FlatAppearance.BorderSize = 0;
             button29.FlatStyle = FlatStyle.Flat;
             button29.Location = new Point(857, 277);
             button29.Name = "button29";
@@ -597,6 +623,7 @@
             // 
             button30.BackColor = Color.Transparent;
             button30.BackgroundImage = Properties.Resources.Copy;
+            button30.FlatAppearance.BorderSize = 0;
             button30.FlatStyle = FlatStyle.Flat;
             button30.Location = new Point(1332, 277);
             button30.Name = "button30";
@@ -609,6 +636,7 @@
             // 
             button31.BackColor = Color.Transparent;
             button31.BackgroundImage = Properties.Resources.Copy;
+            button31.FlatAppearance.BorderSize = 0;
             button31.FlatStyle = FlatStyle.Flat;
             button31.Location = new Point(1807, 277);
             button31.Name = "button31";
@@ -622,6 +650,7 @@
             button32.BackColor = Color.Transparent;
             button32.BackgroundImage = Properties.Resources.Choya;
             button32.Cursor = Cursors.Cross;
+            button32.FlatAppearance.BorderSize = 0;
             button32.FlatStyle = FlatStyle.Flat;
             button32.Location = new Point(677, 631);
             button32.Name = "button32";
@@ -635,6 +664,7 @@
             button33.BackColor = Color.Transparent;
             button33.BackgroundImage = Properties.Resources.Forged;
             button33.Cursor = Cursors.Cross;
+            button33.FlatAppearance.BorderSize = 0;
             button33.FlatStyle = FlatStyle.Flat;
             button33.Location = new Point(677, 579);
             button33.Name = "button33";
@@ -648,6 +678,7 @@
             button34.BackColor = Color.Transparent;
             button34.BackgroundImage = Properties.Resources.Doppelganger;
             button34.Cursor = Cursors.Cross;
+            button34.FlatAppearance.BorderSize = 0;
             button34.FlatStyle = FlatStyle.Flat;
             button34.Location = new Point(677, 527);
             button34.Name = "button34";
@@ -661,6 +692,7 @@
             button35.BackColor = Color.Transparent;
             button35.BackgroundImage = Properties.Resources.Ascension;
             button35.Cursor = Cursors.Cross;
+            button35.FlatAppearance.BorderSize = 0;
             button35.FlatStyle = FlatStyle.Flat;
             button35.Location = new Point(677, 475);
             button35.Name = "button35";
@@ -674,6 +706,7 @@
             button36.BackColor = Color.Transparent;
             button36.BackgroundImage = Properties.Resources.Junundu;
             button36.Cursor = Cursors.Cross;
+            button36.FlatAppearance.BorderSize = 0;
             button36.FlatStyle = FlatStyle.Flat;
             button36.Location = new Point(677, 423);
             button36.Name = "button36";
@@ -687,6 +720,7 @@
             button37.BackColor = Color.Transparent;
             button37.BackgroundImage = Properties.Resources.Dbs;
             button37.Cursor = Cursors.Cross;
+            button37.FlatAppearance.BorderSize = 0;
             button37.FlatStyle = FlatStyle.Flat;
             button37.Location = new Point(677, 371);
             button37.Name = "button37";
@@ -700,6 +734,7 @@
             button38.BackColor = Color.Transparent;
             button38.BackgroundImage = Properties.Resources.Macsen;
             button38.Cursor = Cursors.Cross;
+            button38.FlatAppearance.BorderSize = 0;
             button38.FlatStyle = FlatStyle.Flat;
             button38.Location = new Point(470, 475);
             button38.Name = "button38";
@@ -713,6 +748,7 @@
             button39.BackColor = Color.Transparent;
             button39.BackgroundImage = Properties.Resources.Tarir;
             button39.Cursor = Cursors.Cross;
+            button39.FlatAppearance.BorderSize = 0;
             button39.FlatStyle = FlatStyle.Flat;
             button39.Location = new Point(470, 423);
             button39.Name = "button39";
@@ -726,6 +762,7 @@
             button40.BackColor = Color.Transparent;
             button40.BackgroundImage = Properties.Resources.Chak;
             button40.Cursor = Cursors.Cross;
+            button40.FlatAppearance.BorderSize = 0;
             button40.FlatStyle = FlatStyle.Flat;
             button40.Location = new Point(470, 371);
             button40.Name = "button40";
@@ -756,6 +793,7 @@
             // 
             button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Save;
+            button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(857, 306);
             button3.Name = "button3";
@@ -769,6 +807,7 @@
             button41.BackColor = Color.Transparent;
             button41.BackgroundImage = Properties.Resources.SerpentsIre;
             button41.Cursor = Cursors.Cross;
+            button41.FlatAppearance.BorderSize = 0;
             button41.FlatStyle = FlatStyle.Flat;
             button41.Location = new Point(677, 683);
             button41.Name = "button41";
@@ -782,6 +821,7 @@
             DragonsStand.BackColor = Color.Transparent;
             DragonsStand.BackgroundImage = Properties.Resources.DragonsStand;
             DragonsStand.Cursor = Cursors.Cross;
+            DragonsStand.FlatAppearance.BorderSize = 0;
             DragonsStand.FlatStyle = FlatStyle.Flat;
             DragonsStand.Location = new Point(470, 527);
             DragonsStand.Name = "DragonsStand";
@@ -795,6 +835,7 @@
             button43.BackColor = Color.Transparent;
             button43.BackgroundImage = Properties.Resources.Palawadan;
             button43.Cursor = Cursors.Cross;
+            button43.FlatAppearance.BorderSize = 0;
             button43.FlatStyle = FlatStyle.Flat;
             button43.Location = new Point(677, 735);
             button43.Name = "button43";
@@ -808,6 +849,7 @@
             button44.BackColor = Color.Transparent;
             button44.BackgroundImage = Properties.Resources.ThunderheadKeep;
             button44.Cursor = Cursors.Cross;
+            button44.FlatAppearance.BorderSize = 0;
             button44.FlatStyle = FlatStyle.Flat;
             button44.Location = new Point(677, 787);
             button44.Name = "button44";
@@ -821,6 +863,7 @@
             button45.BackColor = Color.Transparent;
             button45.BackgroundImage = Properties.Resources.Sandstorm1;
             button45.Cursor = Cursors.Cross;
+            button45.FlatAppearance.BorderSize = 0;
             button45.FlatStyle = FlatStyle.Flat;
             button45.Location = new Point(1094, 371);
             button45.Name = "button45";
@@ -834,6 +877,7 @@
             button46.BackColor = Color.Transparent;
             button46.BackgroundImage = Properties.Resources.Saidra_s_Haven1;
             button46.Cursor = Cursors.Cross;
+            button46.FlatAppearance.BorderSize = 0;
             button46.FlatStyle = FlatStyle.Flat;
             button46.Location = new Point(1094, 423);
             button46.Name = "button46";
@@ -847,6 +891,7 @@
             button47.BackColor = Color.Transparent;
             button47.BackgroundImage = Properties.Resources.New_Loamhurst1;
             button47.Cursor = Cursors.Cross;
+            button47.FlatAppearance.BorderSize = 0;
             button47.FlatStyle = FlatStyle.Flat;
             button47.Location = new Point(1094, 475);
             button47.Name = "button47";
@@ -860,6 +905,7 @@
             button48.BackColor = Color.Transparent;
             button48.BackgroundImage = Properties.Resources.Noran_s_Homestead1;
             button48.Cursor = Cursors.Cross;
+            button48.FlatAppearance.BorderSize = 0;
             button48.FlatStyle = FlatStyle.Flat;
             button48.Location = new Point(1094, 527);
             button48.Name = "button48";
@@ -873,6 +919,7 @@
             button49.BackColor = Color.Transparent;
             button49.BackgroundImage = Properties.Resources.Maws_of_Torment1;
             button49.Cursor = Cursors.Cross;
+            button49.FlatAppearance.BorderSize = 0;
             button49.FlatStyle = FlatStyle.Flat;
             button49.Location = new Point(677, 839);
             button49.Name = "button49";
@@ -886,6 +933,7 @@
             button50.BackColor = Color.Transparent;
             button50.BackgroundImage = Properties.Resources.The_Oil_Floes1;
             button50.Cursor = Cursors.Cross;
+            button50.FlatAppearance.BorderSize = 0;
             button50.FlatStyle = FlatStyle.Flat;
             button50.Location = new Point(677, 891);
             button50.Name = "button50";
@@ -899,6 +947,7 @@
             button51.BackColor = Color.Transparent;
             button51.BackgroundImage = Properties.Resources.OozePits1;
             button51.Cursor = Cursors.Cross;
+            button51.FlatAppearance.BorderSize = 0;
             button51.FlatStyle = FlatStyle.Flat;
             button51.Location = new Point(885, 527);
             button51.Name = "button51";
@@ -912,6 +961,7 @@
             button52.BackColor = Color.Transparent;
             button52.BackgroundImage = Properties.Resources.Effigy1;
             button52.Cursor = Cursors.Cross;
+            button52.FlatAppearance.BorderSize = 0;
             button52.FlatStyle = FlatStyle.Flat;
             button52.Location = new Point(885, 579);
             button52.Name = "button52";
@@ -925,6 +975,7 @@
             button53.BackColor = Color.Transparent;
             button53.BackgroundImage = Properties.Resources.DoomloreShrine1;
             button53.Cursor = Cursors.Cross;
+            button53.FlatAppearance.BorderSize = 0;
             button53.FlatStyle = FlatStyle.Flat;
             button53.Location = new Point(885, 631);
             button53.Name = "button53";
@@ -938,6 +989,7 @@
             button54.BackColor = Color.Transparent;
             button54.BackgroundImage = Properties.Resources.StormsofWinter1;
             button54.Cursor = Cursors.Cross;
+            button54.FlatAppearance.BorderSize = 0;
             button54.FlatStyle = FlatStyle.Flat;
             button54.Location = new Point(885, 683);
             button54.Name = "button54";
@@ -951,6 +1003,7 @@
             button55.BackColor = Color.Transparent;
             button55.BackgroundImage = Properties.Resources.DefendJorasKeep1;
             button55.Cursor = Cursors.Cross;
+            button55.FlatAppearance.BorderSize = 0;
             button55.FlatStyle = FlatStyle.Flat;
             button55.Location = new Point(885, 735);
             button55.Name = "button55";
@@ -964,6 +1017,7 @@
             button56.BackColor = Color.Transparent;
             button56.BackgroundImage = Properties.Resources.Aetherblade_Assault1;
             button56.Cursor = Cursors.Cross;
+            button56.FlatAppearance.BorderSize = 0;
             button56.FlatStyle = FlatStyle.Flat;
             button56.Location = new Point(1303, 371);
             button56.Name = "button56";
@@ -977,6 +1031,7 @@
             button57.BackColor = Color.Transparent;
             button57.BackgroundImage = Properties.Resources.Kaineng_Blackout1;
             button57.Cursor = Cursors.Cross;
+            button57.FlatAppearance.BorderSize = 0;
             button57.FlatStyle = FlatStyle.Flat;
             button57.Location = new Point(1303, 423);
             button57.Name = "button57";
@@ -990,6 +1045,7 @@
             button58.BackColor = Color.Transparent;
             button58.BackgroundImage = Properties.Resources.GangWar1;
             button58.Cursor = Cursors.Cross;
+            button58.FlatAppearance.BorderSize = 0;
             button58.FlatStyle = FlatStyle.Flat;
             button58.Location = new Point(1303, 475);
             button58.Name = "button58";
@@ -1003,6 +1059,7 @@
             button59.BackColor = Color.Transparent;
             button59.BackgroundImage = Properties.Resources.Aspenwood1;
             button59.Cursor = Cursors.Cross;
+            button59.FlatAppearance.BorderSize = 0;
             button59.FlatStyle = FlatStyle.Flat;
             button59.Location = new Point(1303, 527);
             button59.Name = "button59";
@@ -1016,6 +1073,7 @@
             button60.BackColor = Color.Transparent;
             button60.BackgroundImage = Properties.Resources.Unlocking_the_Wizard_s_Tower1;
             button60.Cursor = Cursors.Cross;
+            button60.FlatAppearance.BorderSize = 0;
             button60.FlatStyle = FlatStyle.Flat;
             button60.Location = new Point(1515, 371);
             button60.Name = "button60";
@@ -1029,6 +1087,7 @@
             button61.BackColor = Color.Transparent;
             button61.BackgroundImage = Properties.Resources.Fly_by_Night1;
             button61.Cursor = Cursors.Cross;
+            button61.FlatAppearance.BorderSize = 0;
             button61.FlatStyle = FlatStyle.Flat;
             button61.Location = new Point(1515, 423);
             button61.Name = "button61";
@@ -1042,6 +1101,7 @@
             button62.BackColor = Color.Transparent;
             button62.BackgroundImage = Properties.Resources.TheDefenseofAmnytas1;
             button62.Cursor = Cursors.Cross;
+            button62.FlatAppearance.BorderSize = 0;
             button62.FlatStyle = FlatStyle.Flat;
             button62.Location = new Point(1515, 475);
             button62.Name = "button62";
@@ -1055,6 +1115,7 @@
             Convergens.BackColor = Color.Transparent;
             Convergens.BackgroundImage = Properties.Resources.Convergences1;
             Convergens.Cursor = Cursors.Cross;
+            Convergens.FlatAppearance.BorderSize = 0;
             Convergens.FlatStyle = FlatStyle.Flat;
             Convergens.Location = new Point(1515, 527);
             Convergens.Name = "Convergens";
@@ -1068,6 +1129,7 @@
             button64.BackColor = Color.Transparent;
             button64.BackgroundImage = Properties.Resources.Battle_for_the_Jade_Sea2;
             button64.Cursor = Cursors.Cross;
+            button64.FlatAppearance.BorderSize = 0;
             button64.FlatStyle = FlatStyle.Flat;
             button64.Location = new Point(1303, 579);
             button64.Name = "button64";
@@ -1611,6 +1673,7 @@
             button27.BackgroundImageLayout = ImageLayout.Stretch;
             button27.Cursor = Cursors.Cross;
             button27.FlatAppearance.BorderColor = Color.Black;
+            button27.FlatAppearance.BorderSize = 0;
             button27.FlatStyle = FlatStyle.Flat;
             button27.Location = new Point(12, 68);
             button27.Name = "button27";
@@ -1625,6 +1688,7 @@
             button42.BackgroundImage = Properties.Resources.Worldbosses;
             button42.BackgroundImageLayout = ImageLayout.Stretch;
             button42.Cursor = Cursors.Cross;
+            button42.FlatAppearance.BorderSize = 0;
             button42.FlatStyle = FlatStyle.Flat;
             button42.Location = new Point(12, 12);
             button42.Name = "button42";
@@ -1640,6 +1704,7 @@
             button63.BackgroundImageLayout = ImageLayout.Stretch;
             button63.Cursor = Cursors.Cross;
             button63.FlatAppearance.BorderColor = Color.Black;
+            button63.FlatAppearance.BorderSize = 0;
             button63.FlatStyle = FlatStyle.Flat;
             button63.ForeColor = Color.Black;
             button63.Location = new Point(294, 124);
@@ -1656,6 +1721,7 @@
             button65.BackgroundImageLayout = ImageLayout.Stretch;
             button65.Cursor = Cursors.Cross;
             button65.FlatAppearance.BorderColor = Color.Black;
+            button65.FlatAppearance.BorderSize = 0;
             button65.FlatStyle = FlatStyle.Flat;
             button65.Location = new Point(12, 124);
             button65.Name = "button65";
@@ -1671,6 +1737,7 @@
             button66.BackgroundImageLayout = ImageLayout.Stretch;
             button66.Cursor = Cursors.Cross;
             button66.FlatAppearance.BorderColor = Color.Black;
+            button66.FlatAppearance.BorderSize = 0;
             button66.FlatStyle = FlatStyle.Flat;
             button66.Location = new Point(294, 15);
             button66.Name = "button66";
@@ -1686,6 +1753,7 @@
             buttonSelectAll.BackgroundImageLayout = ImageLayout.Stretch;
             buttonSelectAll.Cursor = Cursors.Cross;
             buttonSelectAll.FlatAppearance.BorderColor = Color.Black;
+            buttonSelectAll.FlatAppearance.BorderSize = 0;
             buttonSelectAll.FlatStyle = FlatStyle.Flat;
             buttonSelectAll.ForeColor = SystemColors.ControlText;
             buttonSelectAll.Location = new Point(153, 124);
@@ -1700,6 +1768,7 @@
             button67.BackColor = Color.Transparent;
             button67.BackgroundImage = Properties.Resources.button_LLA;
             button67.Cursor = Cursors.Cross;
+            button67.FlatAppearance.BorderSize = 0;
             button67.FlatStyle = FlatStyle.Flat;
             button67.Location = new Point(259, 683);
             button67.Name = "button67";
@@ -1713,6 +1782,7 @@
             button68.BackColor = Color.Transparent;
             button68.BackgroundImage = Properties.Resources.ButtonCaptain_Rotbeard;
             button68.Cursor = Cursors.Cross;
+            button68.FlatAppearance.BorderSize = 0;
             button68.FlatStyle = FlatStyle.Flat;
             button68.Location = new Point(259, 735);
             button68.Name = "button68";
@@ -1726,6 +1796,7 @@
             button69.BackColor = Color.Transparent;
             button69.BackgroundImage = Properties.Resources.ButtonDefeat_the_dredge_commissar;
             button69.Cursor = Cursors.Cross;
+            button69.FlatAppearance.BorderSize = 0;
             button69.FlatStyle = FlatStyle.Flat;
             button69.Location = new Point(259, 787);
             button69.Name = "button69";
