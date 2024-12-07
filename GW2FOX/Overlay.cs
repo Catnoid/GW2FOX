@@ -88,10 +88,5 @@ namespace GW2FOX
         {
             Dispose();
         }
-
-        private void Overlay_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

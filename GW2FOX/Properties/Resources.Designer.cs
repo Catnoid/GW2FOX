@@ -283,6 +283,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap blishmini {
+            get {
+                object obj = ResourceManager.GetObject("blishmini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap button {
             get {
                 object obj = ResourceManager.GetObject("button", resourceCulture);
@@ -386,6 +396,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Choya {
             get {
                 object obj = ResourceManager.GetObject("Choya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Chrome {
+            get {
+                object obj = ResourceManager.GetObject("Chrome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -526,6 +546,26 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Deputy_Peacemaker_Badge {
             get {
                 object obj = ResourceManager.GetObject("Deputy_Peacemaker_Badge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Discord {
+            get {
+                object obj = ResourceManager.GetObject("Discord", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap discordbig {
+            get {
+                object obj = ResourceManager.GetObject("discordbig", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -983,6 +1023,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap miniFox {
+            get {
+                object obj = ResourceManager.GetObject("miniFox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Mystische_Münze_Icon {
             get {
                 object obj = ResourceManager.GetObject("Mystische_Münze_Icon", resourceCulture);
@@ -1296,6 +1346,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Taca {
             get {
                 object obj = ResourceManager.GetObject("Taca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Tacomini {
+            get {
+                object obj = ResourceManager.GetObject("Tacomini", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -227,5 +227,12 @@ namespace GW2FOX
             Clipboard.SetText(TarirCost.Text);
             BringGw2ToFront();
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Mapinfo.Text);
+
+            BringGw2ToFront();
+        }
     }
 }

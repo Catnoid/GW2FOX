@@ -126,7 +126,7 @@ namespace GW2FOX
 
         private void Lyssainfo1_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(Lyssainfo2.Text);
+            Clipboard.SetText(Lyssainfo.Text);
             BringGw2ToFront();
         }
 

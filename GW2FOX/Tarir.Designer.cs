@@ -492,6 +492,7 @@
             button17.Size = new Size(75, 23);
             button17.TabIndex = 99;
             button17.UseVisualStyleBackColor = false;
+            button17.Click += button17_Click;
             // 
             // Mapinfo
             // 

@@ -244,10 +244,13 @@ namespace GW2FOX
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            _bossTimer?.Dispose(); // Dispose of the BossTimer first
+            // Dispose des BossTimers oder anderer Ressourcen, falls nötig
+            _bossTimer?.Dispose();
+
+            // Basis-Methode aufrufen, um Standardverhalten beizubehalten
             base.OnFormClosing(e);
-            Application.Exit();
         }
+
 
         protected void Back_Click(object sender, EventArgs e)
         {

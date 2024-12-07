@@ -53,9 +53,41 @@ namespace GW2FOX
 
         private void Timer_Click(object sender, EventArgs e)
         {
-            BossTimerService.Timer_Click(sender, e);
-            // Additional logic specific to Timer_Click in Main class, if any
+            try
+            {
+                // Öffnet die ButtonFox-Form
+                OpenButtonFoxOverlay();
+
+                // Führt die bestehende Logik für den Timer aus
+                BossTimerService.Timer_Click(sender, e);
+            }
+            catch (Exception ex)
+            {
+                HandleException(ex);
+            }
         }
+
+        private void OpenButtonFoxOverlay()
+        {
+            // Instanziiere und zeige die ButtonFox-Form als Overlay
+            ButtonFox overlay = new ButtonFox
+            {
+                TopMost = true, // Immer im Vordergrund
+                FormBorderStyle = FormBorderStyle.None, // Ohne Rahmen
+                StartPosition = FormStartPosition.Manual, // Benutzerdefinierte Position
+                BackColor = Color.Black,
+                TransparencyKey = Color.Black, // Macht die Form transparent
+                Opacity = 0.8, // Optionale Transparenz
+                Width = 210, // Breite des Overlays
+                Height = 40 // Höhe des Overlays
+            };
+
+            // Position: 20 cm (756 px) vom linken Rand, oben bündig
+            overlay.Location = new Point(756, 0);
+
+            overlay.Show();
+        }
+
 
 
         private void HandleException(Exception ex)
@@ -67,7 +99,6 @@ namespace GW2FOX
         {
             newForm.Owner = this;
             newForm.Show();
-            // this.Dispose();
         }
 
         private void Fox_Click(object sender, EventArgs e)
@@ -84,7 +115,7 @@ namespace GW2FOX
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Fehler beim ?ffnen der Homepage: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -158,14 +189,6 @@ namespace GW2FOX
             }
         }
 
-
-
-        private void Leading_Click(object sender, EventArgs e)
-        {
-            ShowAndHideForm(new Worldbosses());
-        }
-
-
         private void CloseAll_Click(object sender, EventArgs e)
         {
             try
@@ -187,84 +210,21 @@ namespace GW2FOX
             }
         }
 
-        private void BlishHUD_Click(object sender, EventArgs e)
-        {
-            // Verzeichnis der ausführbaren Datei erhalten
-            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-
-            // Pfad zur Datei "Blish HUD.exe" im Verzeichnis "data"
-            string filePath = Path.Combine(exeDirectory, "data2", "Blish HUD.exe");
-
-            // Überprüfen, ob die Datei existiert, bevor sie geöffnet wird
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    // Öffne die Datei
-                    Process.Start(filePath);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Fehler beim Öffnen der Datei: " + ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void ReShade_Click(object sender, EventArgs e)
         {
-            // Verzeichnis der ausführbaren Datei erhalten
-            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-
-            // Pfad zur Datei "Blish HUD.exe" im Verzeichnis "data"
-            string filePath = Path.Combine(exeDirectory, "data", "ReShade_Setup_6.1.1.exe");
-
-            // Überprüfen, ob die Datei existiert, bevor sie geöffnet wird
-            if (File.Exists(filePath))
+            try
             {
-                try
+                string homepageUrl = "https://discord.com/download";
+                ProcessStartInfo psi = new ProcessStartInfo
                 {
-                    // Öffne die Datei
-                    Process.Start(filePath);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Fehler beim Öffnen der Datei: " + ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    FileName = homepageUrl,
+                    UseShellExecute = true
+                };
+                Process.Start(psi);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            // Verzeichnis der ausführbaren Datei erhalten
-            string exeDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-
-            // Pfad zur Datei "Blish HUD.exe" im Verzeichnis "data"
-            string filePath = Path.Combine(exeDirectory, "data", "GW2TacO.exe");
-
-            // Überprüfen, ob die Datei existiert, bevor sie geöffnet wird
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    // Öffne die Datei
-                    Process.Start(filePath);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Fehler beim Öffnen der Datei: " + ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
