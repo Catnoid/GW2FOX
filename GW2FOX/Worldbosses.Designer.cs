@@ -1859,7 +1859,6 @@
             BackgroundImage = null;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
-            ControlBox = false;
             Controls.Add(button1);
             Controls.Add(button69);
             Controls.Add(button68);
@@ -1995,7 +1994,6 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Hide;
-            TopMost = true;
             TransparencyKey = Color.Magenta;
             WindowState = FormWindowState.Maximized;
             Load += Worldbosses_Load_1;

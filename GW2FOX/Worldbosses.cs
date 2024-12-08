@@ -187,6 +187,7 @@ namespace GW2FOX
             BringGw2ToFront();
         }
 
+
         private void Guildcopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(Guild.Text);
@@ -195,6 +196,7 @@ namespace GW2FOX
             BringGw2ToFront();
         }
 
+
         private void Welcomecopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(Welcome.Text);
@@ -202,6 +204,8 @@ namespace GW2FOX
             // Bring the Gw2-64.exe window to the foreground
             BringGw2ToFront();
         }
+
+
 
         private void MawsOfTorment_Click(object sender, EventArgs e)
         {
