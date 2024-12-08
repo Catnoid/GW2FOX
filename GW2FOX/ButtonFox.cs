@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace GW2FOX
@@ -8,6 +9,7 @@ namespace GW2FOX
     public partial class ButtonFox : BaseForm
     {
         private Worldbosses worldbossesWindow;
+
 
         public ButtonFox()
         {
@@ -43,14 +45,13 @@ namespace GW2FOX
         {
             try
             {
-                // Öffnet die URL in einem neuen Browser-Fenster
                 string homepageUrl = "https://wiki.guildwars2.com";
-                ProcessStartInfo psi = new ProcessStartInfo
+                Process browserProcess = Process.Start(new ProcessStartInfo
                 {
                     FileName = homepageUrl,
                     UseShellExecute = true
-                };
-                Process.Start(psi);
+                });
+
             }
             catch (Exception ex)
             {
