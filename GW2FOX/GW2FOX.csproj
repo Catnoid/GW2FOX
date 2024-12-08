@@ -33,73 +33,73 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="CaptainRotbeard.cs">
+    <Compile Update="Bosses\CaptainRotbeard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DredgeCommissar.cs">
+    <Compile Update="Bosses\DredgeCommissar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Convergences.cs">
+    <Compile Update="Bosses\Convergences.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DefenseOfAmnytas.cs">
+    <Compile Update="Bosses\DefenseOfAmnytas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FlyByNight.cs">
+    <Compile Update="Bosses\FlyByNight.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LLA.cs">
+    <Compile Update="Bosses\LLA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="WizardsTower.cs">
+    <Compile Update="Bosses\WizardsTower.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="JadeSea.cs">
+    <Compile Update="Bosses\JadeSea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Aspenwood.cs">
+    <Compile Update="Bosses\Aspenwood.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GangWar.cs">
+    <Compile Update="Bosses\GangWar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="KainengBlackout.cs">
+    <Compile Update="Bosses\KainengBlackout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AetherbladeAssault.cs">
+    <Compile Update="Bosses\AetherbladeAssault.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="NoransHomestead.cs">
+    <Compile Update="Bosses\NoransHomestead.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="NewLoamhurst.cs">
+    <Compile Update="Bosses\NewLoamhurst.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SaidrasHaven.cs">
+    <Compile Update="Bosses\SaidrasHaven.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Sandstorm.cs">
+    <Compile Update="Bosses\Sandstorm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DefendJorasKeep.cs">
+    <Compile Update="Bosses\DefendJorasKeep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="StormsOfWinter.cs">
+    <Compile Update="Bosses\StormsOfWinter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DoomloreShrine.cs">
+    <Compile Update="Bosses\DoomloreShrine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Effigy.cs">
+    <Compile Update="Bosses\Effigy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TheOozePits.cs">
+    <Compile Update="Bosses\TheOozePits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TheOilFloes.cs">
+    <Compile Update="Bosses\TheOilFloes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MawsOfTorment.cs">
+    <Compile Update="Bosses\MawsOfTorment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -107,93 +107,93 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="ThunderheadPeaks.cs" />
-    <Compile Update="Palawadan.cs" />
-    <Compile Update="DragonsStand.cs" />
-    <Compile Update="SerpentsIre.cs" />
+    <Compile Update="Bosses\ThunderheadPeaks.cs" />
+    <Compile Update="Bosses\Palawadan.cs" />
+    <Compile Update="Bosses\DragonsStand.cs" />
+    <Compile Update="Bosses\SerpentsIre.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="CaptainRotbeard.resx">
+    <EmbeddedResource Update="Bosses\CaptainRotbeard.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="DredgeCommissar.resx">
+    <EmbeddedResource Update="Bosses\DredgeCommissar.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Convergences.resx">
+    <EmbeddedResource Update="Bosses\Convergences.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="DefenseOfAmnytas.resx">
+    <EmbeddedResource Update="Bosses\DefenseOfAmnytas.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="FlyByNight.resx">
+    <EmbeddedResource Update="Bosses\FlyByNight.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="WizardsTower.resx">
+    <EmbeddedResource Update="Bosses\WizardsTower.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="JadeSea.resx">
+    <EmbeddedResource Update="Bosses\JadeSea.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Aspenwood.resx">
+    <EmbeddedResource Update="Bosses\Aspenwood.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="GangWar.resx">
+    <EmbeddedResource Update="Bosses\GangWar.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="KainengBlackout.resx">
+    <EmbeddedResource Update="Bosses\KainengBlackout.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="AetherbladeAssault.resx">
+    <EmbeddedResource Update="Bosses\AetherbladeAssault.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="NoransHomestead.resx">
+    <EmbeddedResource Update="Bosses\NoransHomestead.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="NewLoamhurst.resx">
+    <EmbeddedResource Update="Bosses\NewLoamhurst.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="SaidrasHaven.resx">
+    <EmbeddedResource Update="Bosses\SaidrasHaven.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Sandstorm.resx">
+    <EmbeddedResource Update="Bosses\Sandstorm.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="DefendJorasKeep.resx">
+    <EmbeddedResource Update="Bosses\DefendJorasKeep.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="StormsOfWinter.resx">
+    <EmbeddedResource Update="Bosses\StormsOfWinter.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="DoomloreShrine.resx">
+    <EmbeddedResource Update="Bosses\DoomloreShrine.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Effigy.resx">
+    <EmbeddedResource Update="Bosses\Effigy.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="TheOozePits.resx">
+    <EmbeddedResource Update="Bosses\TheOozePits.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="TheOilFloes.resx">
+    <EmbeddedResource Update="Bosses\TheOilFloes.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="MawsOfTorment.resx">
+    <EmbeddedResource Update="Bosses\MawsOfTorment.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="ThunderheadPeaks.resx">
+    <EmbeddedResource Update="Bosses\ThunderheadPeaks.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Palawadan.resx">
+    <EmbeddedResource Update="Bosses\Palawadan.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="DragonsStand.resx">
+    <EmbeddedResource Update="Bosses\DragonsStand.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="SerpentsIre.resx">
+    <EmbeddedResource Update="Bosses\SerpentsIre.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

@@ -4,118 +4,118 @@
     <Compile Update="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Behemoth.cs">
+    <Compile Update="Bosses\Behemoth.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ButtonFox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Chak.cs">
+    <Compile Update="Bosses\Chak.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Clawofjormag.cs">
+    <Compile Update="Bosses\Clawofjormag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Dbs.cs">
+    <Compile Update="Bosses\Dbs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Doppelganger.cs">
+    <Compile Update="Bosses\Doppelganger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DragonsStand.cs">
+    <Compile Update="Bosses\DragonsStand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Dragonstorm.cs">
+    <Compile Update="Bosses\Dragonstorm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Drakkar.cs">
+    <Compile Update="Bosses\Drakkar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Dwayna.cs">
+    <Compile Update="Bosses\Dwayna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Eye.cs">
+    <Compile Update="Bosses\Eye.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Fireelemental.cs">
+    <Compile Update="Bosses\Fireelemental.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Fireshaman.cs">
+    <Compile Update="Bosses\Fireshaman.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forgedwithfire.cs">
+    <Compile Update="Bosses\Forgedwithfire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Inquestgolem.cs">
+    <Compile Update="Bosses\Inquestgolem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Jormag.cs">
+    <Compile Update="Bosses\Jormag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Junglewurm.cs">
+    <Compile Update="Bosses\Junglewurm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Juundu.cs">
+    <Compile Update="Bosses\Juundu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Karkaqueen.cs">
+    <Compile Update="Bosses\Karkaqueen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Lyssa.cs">
+    <Compile Update="Bosses\Lyssa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Maw.cs">
+    <Compile Update="Bosses\Maw.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Megadestroyer.cs">
+    <Compile Update="Bosses\Megadestroyer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Metalconcert.cs">
+    <Compile Update="Bosses\Metalconcert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Ogrewars.cs">
+    <Compile Update="Bosses\Ogrewars.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Overlay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Palawadan.cs">
+    <Compile Update="Bosses\Palawadan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Pinatas.cs">
+    <Compile Update="Bosses\Pinatas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Pta.cs">
+    <Compile Update="Bosses\Pta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Rhendak.cs">
+    <Compile Update="Bosses\Rhendak.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SerpentsIre.cs">
+    <Compile Update="Bosses\SerpentsIre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Spellmaster.cs">
+    <Compile Update="Bosses\Spellmaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Tarir.cs">
+    <Compile Update="Bosses\Tarir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Tequatl.cs">
+    <Compile Update="Bosses\Tequatl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Thaida.cs">
+    <Compile Update="Bosses\Thaida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Theshatterer.cs">
+    <Compile Update="Bosses\Theshatterer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ThunderheadPeaks.cs">
+    <Compile Update="Bosses\ThunderheadPeaks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Ulgoth.cs">
+    <Compile Update="Bosses\Ulgoth.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Worldbosses.cs">
@@ -123,13 +123,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Behemoth.resx">
+    <EmbeddedResource Update="Bosses\Behemoth.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Chak.resx">
+    <EmbeddedResource Update="Bosses\Chak.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Clawofjormag.resx">
+    <EmbeddedResource Update="Bosses\Clawofjormag.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
