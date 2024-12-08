@@ -96,6 +96,7 @@
             // 
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.blishmini;
+            button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(170, 0);
             button5.Margin = new Padding(0);
             button5.Name = "button5";
@@ -110,7 +111,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = false;
             AutoSizeMode = AutoSizeMode.GrowOnly;
-            BackColor = Color.Black;
+            BackColor = Color.Magenta;
+            BackgroundImage = null;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(210, 40);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -118,7 +121,6 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Cursor = Cursors.Cross;
-            FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ButtonFox";
@@ -126,9 +128,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Hide;
-            StartPosition = FormStartPosition.Manual;
-            TopMost = true;
-            TransparencyKey = Color.Black;
+            TransparencyKey = Color.Magenta;
             ResumeLayout(false);
         }
 

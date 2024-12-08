@@ -17,9 +17,10 @@ namespace GW2FOX
             this.TopMost = true; // Immer im Vordergrund
             this.FormBorderStyle = FormBorderStyle.None; // Ohne Rahmen
             this.StartPosition = FormStartPosition.Manual; // Benutzerdefinierte Position
-            this.BackColor = Color.Black;
-            this.TransparencyKey = Color.Black; // Transparenz
-            this.Opacity = 0.8; // Optionale Transparenz für das Overlay
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.BackColor = Color.Magenta; // Hintergrundfarbe für Transparenz
+            this.TransparencyKey = Color.Magenta;
+            this.Opacity = 0.9; // Optionale Transparenz für das Overlay
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,7 +31,11 @@ namespace GW2FOX
                 {
                     worldbossesWindow = new Worldbosses
                     {
-                        Owner = this // Setzt das aktuelle Fenster als Besitzer
+                        Owner = this, // Setzt das aktuelle Fenster als Besitzer
+                        FormBorderStyle = FormBorderStyle.None, // Ohne Rahmen
+                        WindowState = FormWindowState.Maximized, // Vollbildmodus
+                        Opacity = 0.8, // 80 % Transparenz
+                        TopMost = true // Immer im Vordergrund
                     };
                     worldbossesWindow.Show(); // Neues Fenster öffnen
                 }

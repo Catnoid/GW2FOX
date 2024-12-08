@@ -17,16 +17,17 @@ namespace GW2FOX
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = Properties.Resources.Background;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.FormBorderStyle = FormBorderStyle.None;
             this.Text = "GW2FOX";
             this.SizeGripStyle = SizeGripStyle.Show;
             this.AutoScaleMode = AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            
-            this.StartPosition = FormStartPosition.CenterParent;
+            this.TopMost = true;
+            this.StartPosition = FormStartPosition.Manual;
             this.WindowState = FormWindowState.Normal;
             this.DoubleBuffered = true;
+            this.Opacity = 0.9;
             // Weitere gemeinsame Eigenschaften setzen...
         }
 
@@ -258,7 +259,15 @@ namespace GW2FOX
             Dispose();
         }
 
-
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close(); // Schließt das aktuelle Fenster
+                return true;  // Gibt an, dass das Tastenereignis verarbeitet wurde
+            }
+            return base.ProcessCmdKey(ref msg, keyData); // Standardverarbeitung für andere Tasten
+        }
 
     }
 }
