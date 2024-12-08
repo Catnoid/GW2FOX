@@ -46,7 +46,7 @@
             button4.Cursor = Cursors.Cross;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(21, 12);
+            button4.Location = new Point(29, 12);
             button4.Name = "button4";
             button4.Size = new Size(180, 50);
             button4.TabIndex = 5;
@@ -60,7 +60,7 @@
             button3.Cursor = Cursors.Cross;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(21, 68);
+            button3.Location = new Point(29, 68);
             button3.Name = "button3";
             button3.Size = new Size(180, 50);
             button3.TabIndex = 8;
@@ -74,7 +74,7 @@
             button5.Cursor = Cursors.Cross;
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(21, 124);
+            button5.Location = new Point(29, 124);
             button5.Name = "button5";
             button5.Size = new Size(180, 50);
             button5.TabIndex = 10;
@@ -92,7 +92,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = SystemColors.WindowText;
             button2.Image = Properties.Resources.Close;
-            button2.Location = new Point(61, 343);
+            button2.Location = new Point(69, 343);
             button2.Name = "button2";
             button2.Size = new Size(100, 100);
             button2.TabIndex = 12;
@@ -102,7 +102,7 @@
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = Properties.Resources.Shortcut;
-            pictureBox2.Location = new Point(80, 180);
+            pictureBox2.Location = new Point(88, 180);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(63, 25);
             pictureBox2.TabIndex = 17;
@@ -111,7 +111,7 @@
             // button9
             // 
             button9.BackgroundImage = Properties.Resources.ArcDPSinstall;
-            button9.Location = new Point(41, 211);
+            button9.Location = new Point(49, 211);
             button9.Name = "button9";
             button9.Size = new Size(140, 60);
             button9.TabIndex = 18;
@@ -121,7 +121,7 @@
             // button10
             // 
             button10.BackgroundImage = Properties.Resources.ArcDPSDeinstall;
-            button10.Location = new Point(41, 277);
+            button10.Location = new Point(49, 277);
             button10.Name = "button10";
             button10.Size = new Size(140, 60);
             button10.TabIndex = 19;
@@ -134,7 +134,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.Backgroundmini;
-            ClientSize = new Size(202, 450);
+            ClientSize = new Size(212, 450);
+            ControlBox = false;
             Controls.Add(button10);
             Controls.Add(button9);
             Controls.Add(pictureBox2);

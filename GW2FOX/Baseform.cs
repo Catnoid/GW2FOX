@@ -4,11 +4,9 @@ using static GW2FOX.GlobalVariables;
 
 namespace GW2FOX
 {
+
     public partial class BaseForm : Form
     {
-
-
-
         public BaseForm()
         {
             InitializeComponent();
@@ -22,15 +20,10 @@ namespace GW2FOX
             this.SizeGripStyle = SizeGripStyle.Show;
             this.AutoScaleMode = AutoScaleMode.None;
             this.AutoScroll = true;
-            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            this.TopMost = true;
             this.StartPosition = FormStartPosition.Manual;
             this.WindowState = FormWindowState.Normal;
             this.DoubleBuffered = true;
-            this.Opacity = 0.9;
-            // Weitere gemeinsame Eigenschaften setzen...
         }
-
 
         protected void ShowAndHideForm(Form newForm)
         {
@@ -156,8 +149,6 @@ namespace GW2FOX
                 SaveTextToFile(defaultToInsert, sectionHeader, true);
                 configText = File.ReadAllText(FILE_PATH);
                 LoadTextFromConfig(sectionHeader, textBox, configText, defaultToInsert);
-                // Muster wurde nicht gefunden
-                // MessageBox.Show($"Das Muster '{sectionHeader}' wurde in der Konfigurationsdatei nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -110,7 +110,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = false;
-            AutoSizeMode = AutoSizeMode.GrowOnly;
             BackColor = Color.Magenta;
             BackgroundImage = null;
             BackgroundImageLayout = ImageLayout.Zoom;
@@ -126,7 +125,6 @@
             Name = "ButtonFox";
             Opacity = 0D;
             ShowIcon = false;
-            ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Hide;
             TransparencyKey = Color.Magenta;
             ResumeLayout(false);
