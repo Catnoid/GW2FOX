@@ -40,6 +40,9 @@
             button1.BackColor = Color.Transparent;
             button1.BackgroundImage = Properties.Resources.miniFox;
             button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.CheckedBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(0, 0);
             button1.Margin = new Padding(0);
@@ -54,6 +57,9 @@
             button2.BackColor = Color.Transparent;
             button2.BackgroundImage = Properties.Resources.Chrome;
             button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.CheckedBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(50, 0);
             button2.Margin = new Padding(0);
@@ -68,6 +74,9 @@
             button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Discord;
             button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.CheckedBackColor = Color.Transparent;
+            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(90, 1);
             button3.Margin = new Padding(0);
@@ -83,6 +92,9 @@
             button4.BackgroundImage = Properties.Resources.Tacomini;
             button4.BackgroundImageLayout = ImageLayout.Center;
             button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.CheckedBackColor = Color.Transparent;
+            button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(130, 1);
             button4.Margin = new Padding(0);
@@ -96,6 +108,9 @@
             // 
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.blishmini;
+            button5.FlatAppearance.CheckedBackColor = Color.Transparent;
+            button5.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button5.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(170, 0);
             button5.Margin = new Padding(0);
