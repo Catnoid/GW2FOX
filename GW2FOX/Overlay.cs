@@ -9,10 +9,8 @@ namespace GW2FOX
         private static readonly Color PastBossFontColor = Color.OrangeRed;
         private static readonly Color MyAlmostBlackColor = Color.FromArgb(255, 1, 1, 1);
         private ListView overlayListView;
-
-
-
         private Panel listViewPanel;
+
         public Overlay(ListView listViewItems)
         {
             InitializeComponent();
@@ -30,11 +28,7 @@ namespace GW2FOX
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.Manual;
             Opacity = 1;
-
-            Width = 240;
-            Height = 310;
             AutoScroll = true;
-
             listViewPanel.BackColor = Color.Transparent;
 
             // Berechne die Größe des listViewPanel
