@@ -48,7 +48,6 @@
             Guild = new TextBox();
             Squadinfo = new TextBox();
             Runinfo = new TextBox();
-            pictureBox1 = new PictureBox();
             Megapres2 = new TextBox();
             button6 = new Button();
             Megapres3 = new TextBox();
@@ -57,7 +56,6 @@
             pictureBox5 = new PictureBox();
             button11 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
@@ -295,15 +293,6 @@
             Runinfo.Size = new Size(450, 100);
             Runinfo.TabIndex = 79;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Header;
-            pictureBox1.Location = new Point(602, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(700, 175);
-            pictureBox1.TabIndex = 78;
-            pictureBox1.TabStop = false;
-            // 
             // Megapres2
             // 
             Megapres2.Font = new Font("Segoe UI", 15F);
@@ -387,8 +376,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Background;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Magenta;
+            BackgroundImage = null;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button11);
             Controls.Add(pictureBox5);
@@ -416,12 +406,10 @@
             Controls.Add(Guild);
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
-            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Megadestroyer";
-            StartPosition = FormStartPosition.Manual;
+            TransparencyKey = Color.Magenta;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
@@ -449,7 +437,6 @@
         private TextBox Guild;
         private TextBox Squadinfo;
         private TextBox Runinfo;
-        private PictureBox pictureBox1;
         private TextBox Megapres2;
         private Button button6;
         private TextBox Megapres3;

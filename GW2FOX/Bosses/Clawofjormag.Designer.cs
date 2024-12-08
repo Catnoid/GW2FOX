@@ -47,7 +47,6 @@
             Guild = new TextBox();
             Squadinfo = new TextBox();
             Runinfo = new TextBox();
-            pictureBox1 = new PictureBox();
             button6 = new Button();
             Clawachi2 = new TextBox();
             textBox1 = new TextBox();
@@ -59,7 +58,6 @@
             ClawCost = new TextBox();
             ClawItemName = new TextBox();
             button14 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -289,15 +287,6 @@
             Runinfo.Size = new Size(450, 100);
             Runinfo.TabIndex = 99;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Header;
-            pictureBox1.Location = new Point(602, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(700, 175);
-            pictureBox1.TabIndex = 98;
-            pictureBox1.TabStop = false;
-            // 
             // button6
             // 
             button6.BackColor = Color.Transparent;
@@ -418,8 +407,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Background;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Magenta;
+            BackgroundImage = null;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button15);
             Controls.Add(ClawCost);
@@ -450,11 +440,9 @@
             Controls.Add(Guild);
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
-            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Clawofjormag";
-            StartPosition = FormStartPosition.Manual;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            TransparencyKey = Color.Magenta;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -482,7 +470,6 @@
         private TextBox Guild;
         private TextBox Squadinfo;
         private TextBox Runinfo;
-        private PictureBox pictureBox1;
         private Button button6;
         private TextBox Clawachi2;
         private TextBox textBox1;

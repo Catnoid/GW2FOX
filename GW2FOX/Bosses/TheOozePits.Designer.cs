@@ -44,13 +44,11 @@
             Guild = new TextBox();
             Squadinfo = new TextBox();
             Runinfo = new TextBox();
-            pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
             OozeInstance = new TextBox();
             button10 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -243,15 +241,6 @@
             Runinfo.Size = new Size(450, 100);
             Runinfo.TabIndex = 50;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Header;
-            pictureBox1.Location = new Point(602, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(700, 175);
-            pictureBox1.TabIndex = 49;
-            pictureBox1.TabStop = false;
-            // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.Line;
@@ -306,7 +295,9 @@
             // TheOozePits
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BackgroundImage = Properties.Resources.Background;
+            BackColor = Color.Magenta;
+            BackgroundImage = null;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button10);
             Controls.Add(OozeInstance);
@@ -328,11 +319,9 @@
             Controls.Add(Guild);
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
-            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TheOozePits";
-            StartPosition = FormStartPosition.Manual;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            TransparencyKey = Color.Magenta;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -359,7 +348,6 @@
         private TextBox Guild;
         private TextBox Squadinfo;
         private TextBox Runinfo;
-        private PictureBox pictureBox1;
         private TextBox textBox1;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;

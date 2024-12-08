@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Worldbosses));
-            pictureBox1 = new PictureBox();
             Runinfo = new TextBox();
             Squadinfo = new TextBox();
             Guild = new TextBox();
@@ -153,24 +152,13 @@
             button42 = new Button();
             button63 = new Button();
             button65 = new Button();
-            button66 = new Button();
             buttonSelectAll = new Button();
             button67 = new Button();
             button68 = new Button();
             button69 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Header;
-            pictureBox1.Location = new Point(602, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(700, 175);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // Runinfo
             // 
@@ -235,7 +223,7 @@
             // 
             button1.BackColor = Color.Transparent;
             button1.BackgroundImage = Properties.Resources.ButtonBack;
-            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.BackgroundImageLayout = ImageLayout.Center;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
@@ -251,8 +239,13 @@
             // 
             button2.BackColor = Color.Transparent;
             button2.BackgroundImage = Properties.Resources.Save;
+            button2.BackgroundImageLayout = ImageLayout.Center;
             button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.CheckedBackColor = Color.White;
+            button2.FlatAppearance.MouseDownBackColor = Color.White;
+            button2.FlatAppearance.MouseOverBackColor = Color.White;
             button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.Transparent;
             button2.Location = new Point(382, 306);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
@@ -264,7 +257,11 @@
             // 
             button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.Save;
+            button4.BackgroundImageLayout = ImageLayout.Center;
             button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.CheckedBackColor = Color.White;
+            button4.FlatAppearance.MouseDownBackColor = Color.White;
+            button4.FlatAppearance.MouseOverBackColor = Color.White;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(1332, 306);
             button4.Name = "button4";
@@ -277,7 +274,11 @@
             // 
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.Save;
+            button5.BackgroundImageLayout = ImageLayout.Center;
             button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.CheckedBackColor = Color.White;
+            button5.FlatAppearance.MouseDownBackColor = Color.White;
+            button5.FlatAppearance.MouseOverBackColor = Color.White;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(1807, 306);
             button5.Name = "button5";
@@ -290,7 +291,11 @@
             // 
             button6.BackColor = Color.Transparent;
             button6.BackgroundImage = Properties.Resources.Save;
+            button6.BackgroundImageLayout = ImageLayout.Center;
             button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.CheckedBackColor = Color.White;
+            button6.FlatAppearance.MouseDownBackColor = Color.White;
+            button6.FlatAppearance.MouseOverBackColor = Color.White;
             button6.FlatStyle = FlatStyle.Flat;
             button6.Location = new Point(1377, 164);
             button6.Name = "button6";
@@ -597,8 +602,13 @@
             // 
             button28.BackColor = Color.Transparent;
             button28.BackgroundImage = Properties.Resources.Copy;
+            button28.BackgroundImageLayout = ImageLayout.Center;
             button28.FlatAppearance.BorderSize = 0;
+            button28.FlatAppearance.CheckedBackColor = Color.White;
+            button28.FlatAppearance.MouseDownBackColor = Color.White;
+            button28.FlatAppearance.MouseOverBackColor = Color.White;
             button28.FlatStyle = FlatStyle.Flat;
+            button28.ForeColor = Color.Transparent;
             button28.Location = new Point(382, 277);
             button28.Name = "button28";
             button28.Size = new Size(75, 23);
@@ -610,7 +620,11 @@
             // 
             button29.BackColor = Color.Transparent;
             button29.BackgroundImage = Properties.Resources.Copy;
+            button29.BackgroundImageLayout = ImageLayout.Center;
             button29.FlatAppearance.BorderSize = 0;
+            button29.FlatAppearance.CheckedBackColor = Color.White;
+            button29.FlatAppearance.MouseDownBackColor = Color.White;
+            button29.FlatAppearance.MouseOverBackColor = Color.White;
             button29.FlatStyle = FlatStyle.Flat;
             button29.Location = new Point(857, 277);
             button29.Name = "button29";
@@ -623,7 +637,11 @@
             // 
             button30.BackColor = Color.Transparent;
             button30.BackgroundImage = Properties.Resources.Copy;
+            button30.BackgroundImageLayout = ImageLayout.Center;
             button30.FlatAppearance.BorderSize = 0;
+            button30.FlatAppearance.CheckedBackColor = Color.White;
+            button30.FlatAppearance.MouseDownBackColor = Color.White;
+            button30.FlatAppearance.MouseOverBackColor = Color.White;
             button30.FlatStyle = FlatStyle.Flat;
             button30.Location = new Point(1332, 277);
             button30.Name = "button30";
@@ -636,7 +654,11 @@
             // 
             button31.BackColor = Color.Transparent;
             button31.BackgroundImage = Properties.Resources.Copy;
+            button31.BackgroundImageLayout = ImageLayout.Center;
             button31.FlatAppearance.BorderSize = 0;
+            button31.FlatAppearance.CheckedBackColor = Color.White;
+            button31.FlatAppearance.MouseDownBackColor = Color.White;
+            button31.FlatAppearance.MouseOverBackColor = Color.White;
             button31.FlatStyle = FlatStyle.Flat;
             button31.Location = new Point(1807, 277);
             button31.Name = "button31";
@@ -793,7 +815,11 @@
             // 
             button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Save;
+            button3.BackgroundImageLayout = ImageLayout.Center;
             button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.CheckedBackColor = Color.White;
+            button3.FlatAppearance.MouseDownBackColor = Color.White;
+            button3.FlatAppearance.MouseOverBackColor = Color.White;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(857, 306);
             button3.Name = "button3";
@@ -1016,8 +1042,12 @@
             // 
             button56.BackColor = Color.Transparent;
             button56.BackgroundImage = Properties.Resources.Aetherblade_Assault1;
+            button56.BackgroundImageLayout = ImageLayout.Center;
             button56.Cursor = Cursors.Cross;
             button56.FlatAppearance.BorderSize = 0;
+            button56.FlatAppearance.CheckedBackColor = Color.White;
+            button56.FlatAppearance.MouseDownBackColor = Color.White;
+            button56.FlatAppearance.MouseOverBackColor = Color.White;
             button56.FlatStyle = FlatStyle.Flat;
             button56.Location = new Point(1303, 371);
             button56.Name = "button56";
@@ -1030,8 +1060,12 @@
             // 
             button57.BackColor = Color.Transparent;
             button57.BackgroundImage = Properties.Resources.Kaineng_Blackout1;
+            button57.BackgroundImageLayout = ImageLayout.Center;
             button57.Cursor = Cursors.Cross;
             button57.FlatAppearance.BorderSize = 0;
+            button57.FlatAppearance.CheckedBackColor = Color.White;
+            button57.FlatAppearance.MouseDownBackColor = Color.White;
+            button57.FlatAppearance.MouseOverBackColor = Color.White;
             button57.FlatStyle = FlatStyle.Flat;
             button57.Location = new Point(1303, 423);
             button57.Name = "button57";
@@ -1044,8 +1078,12 @@
             // 
             button58.BackColor = Color.Transparent;
             button58.BackgroundImage = Properties.Resources.GangWar1;
+            button58.BackgroundImageLayout = ImageLayout.Center;
             button58.Cursor = Cursors.Cross;
             button58.FlatAppearance.BorderSize = 0;
+            button58.FlatAppearance.CheckedBackColor = Color.White;
+            button58.FlatAppearance.MouseDownBackColor = Color.White;
+            button58.FlatAppearance.MouseOverBackColor = Color.White;
             button58.FlatStyle = FlatStyle.Flat;
             button58.Location = new Point(1303, 475);
             button58.Name = "button58";
@@ -1058,8 +1096,12 @@
             // 
             button59.BackColor = Color.Transparent;
             button59.BackgroundImage = Properties.Resources.Aspenwood1;
+            button59.BackgroundImageLayout = ImageLayout.Center;
             button59.Cursor = Cursors.Cross;
             button59.FlatAppearance.BorderSize = 0;
+            button59.FlatAppearance.CheckedBackColor = Color.White;
+            button59.FlatAppearance.MouseDownBackColor = Color.White;
+            button59.FlatAppearance.MouseOverBackColor = Color.White;
             button59.FlatStyle = FlatStyle.Flat;
             button59.Location = new Point(1303, 527);
             button59.Name = "button59";
@@ -1072,8 +1114,12 @@
             // 
             button60.BackColor = Color.Transparent;
             button60.BackgroundImage = Properties.Resources.Unlocking_the_Wizard_s_Tower1;
+            button60.BackgroundImageLayout = ImageLayout.Center;
             button60.Cursor = Cursors.Cross;
             button60.FlatAppearance.BorderSize = 0;
+            button60.FlatAppearance.CheckedBackColor = Color.White;
+            button60.FlatAppearance.MouseDownBackColor = Color.White;
+            button60.FlatAppearance.MouseOverBackColor = Color.White;
             button60.FlatStyle = FlatStyle.Flat;
             button60.Location = new Point(1515, 371);
             button60.Name = "button60";
@@ -1086,8 +1132,12 @@
             // 
             button61.BackColor = Color.Transparent;
             button61.BackgroundImage = Properties.Resources.Fly_by_Night1;
+            button61.BackgroundImageLayout = ImageLayout.Center;
             button61.Cursor = Cursors.Cross;
             button61.FlatAppearance.BorderSize = 0;
+            button61.FlatAppearance.CheckedBackColor = Color.White;
+            button61.FlatAppearance.MouseDownBackColor = Color.White;
+            button61.FlatAppearance.MouseOverBackColor = Color.White;
             button61.FlatStyle = FlatStyle.Flat;
             button61.Location = new Point(1515, 423);
             button61.Name = "button61";
@@ -1100,8 +1150,12 @@
             // 
             button62.BackColor = Color.Transparent;
             button62.BackgroundImage = Properties.Resources.TheDefenseofAmnytas1;
+            button62.BackgroundImageLayout = ImageLayout.Center;
             button62.Cursor = Cursors.Cross;
             button62.FlatAppearance.BorderSize = 0;
+            button62.FlatAppearance.CheckedBackColor = Color.White;
+            button62.FlatAppearance.MouseDownBackColor = Color.White;
+            button62.FlatAppearance.MouseOverBackColor = Color.White;
             button62.FlatStyle = FlatStyle.Flat;
             button62.Location = new Point(1515, 475);
             button62.Name = "button62";
@@ -1114,8 +1168,12 @@
             // 
             Convergens.BackColor = Color.Transparent;
             Convergens.BackgroundImage = Properties.Resources.Convergences1;
+            Convergens.BackgroundImageLayout = ImageLayout.Center;
             Convergens.Cursor = Cursors.Cross;
             Convergens.FlatAppearance.BorderSize = 0;
+            Convergens.FlatAppearance.CheckedBackColor = Color.White;
+            Convergens.FlatAppearance.MouseDownBackColor = Color.White;
+            Convergens.FlatAppearance.MouseOverBackColor = Color.White;
             Convergens.FlatStyle = FlatStyle.Flat;
             Convergens.Location = new Point(1515, 527);
             Convergens.Name = "Convergens";
@@ -1128,8 +1186,12 @@
             // 
             button64.BackColor = Color.Transparent;
             button64.BackgroundImage = Properties.Resources.Battle_for_the_Jade_Sea2;
+            button64.BackgroundImageLayout = ImageLayout.Center;
             button64.Cursor = Cursors.Cross;
             button64.FlatAppearance.BorderSize = 0;
+            button64.FlatAppearance.CheckedBackColor = Color.White;
+            button64.FlatAppearance.MouseDownBackColor = Color.White;
+            button64.FlatAppearance.MouseOverBackColor = Color.White;
             button64.FlatStyle = FlatStyle.Flat;
             button64.Location = new Point(1303, 579);
             button64.Name = "button64";
@@ -1707,7 +1769,7 @@
             button63.FlatAppearance.BorderSize = 0;
             button63.FlatStyle = FlatStyle.Flat;
             button63.ForeColor = Color.Black;
-            button63.Location = new Point(294, 124);
+            button63.Location = new Point(153, 68);
             button63.Name = "button63";
             button63.Size = new Size(135, 37);
             button63.TabIndex = 186;
@@ -1730,22 +1792,6 @@
             button65.UseVisualStyleBackColor = false;
             button65.Click += Mixed_Click;
             // 
-            // button66
-            // 
-            button66.BackColor = Color.Transparent;
-            button66.BackgroundImage = Properties.Resources.TimerOverlay;
-            button66.BackgroundImageLayout = ImageLayout.Stretch;
-            button66.Cursor = Cursors.Cross;
-            button66.FlatAppearance.BorderColor = Color.Black;
-            button66.FlatAppearance.BorderSize = 0;
-            button66.FlatStyle = FlatStyle.Flat;
-            button66.Location = new Point(294, 15);
-            button66.Name = "button66";
-            button66.Size = new Size(135, 37);
-            button66.TabIndex = 189;
-            button66.UseVisualStyleBackColor = false;
-            button66.Click += Timer_Click;
-            // 
             // buttonSelectAll
             // 
             buttonSelectAll.BackColor = Color.Transparent;
@@ -1756,7 +1802,7 @@
             buttonSelectAll.FlatAppearance.BorderSize = 0;
             buttonSelectAll.FlatStyle = FlatStyle.Flat;
             buttonSelectAll.ForeColor = SystemColors.ControlText;
-            buttonSelectAll.Location = new Point(153, 124);
+            buttonSelectAll.Location = new Point(153, 12);
             buttonSelectAll.Name = "buttonSelectAll";
             buttonSelectAll.Size = new Size(135, 37);
             buttonSelectAll.TabIndex = 188;
@@ -1809,14 +1855,15 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            BackgroundImage = Properties.Resources.Background;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Magenta;
+            BackgroundImage = null;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
+            ControlBox = false;
             Controls.Add(button1);
             Controls.Add(button69);
             Controls.Add(button68);
             Controls.Add(button67);
-            Controls.Add(button66);
             Controls.Add(buttonSelectAll);
             Controls.Add(button65);
             Controls.Add(button63);
@@ -1940,13 +1987,18 @@
             Controls.Add(Guild);
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
-            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Worldbosses";
             RightToLeft = RightToLeft.No;
-            StartPosition = FormStartPosition.Manual;
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            SizeGripStyle = SizeGripStyle.Hide;
+            TopMost = true;
+            TransparencyKey = Color.Magenta;
+            WindowState = FormWindowState.Maximized;
             Load += Worldbosses_Load_1;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
@@ -1954,8 +2006,6 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private TextBox Runinfo;
         private TextBox Squadinfo;
         private TextBox Guild;
@@ -2079,7 +2129,6 @@
         private Button button42;
         private Button button63;
         private Button button65;
-        private Button button66;
         private Button buttonSelectAll;
         private Button button67;
         private Button button68;

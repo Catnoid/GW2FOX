@@ -1981,12 +1981,6 @@ namespace GW2FOX
             }
         }
 
-        private new void Timer_Click(object sender, EventArgs e)
-        {
-            BossTimerService.Timer_Click(sender, e);
-            // Additional logic specific to Timer_Click in Main class, if any
-        }
-
 
         public static string getConfigLineForItem(string configItem)
         {

@@ -48,7 +48,6 @@
             Guild = new TextBox();
             Squadinfo = new TextBox();
             Runinfo = new TextBox();
-            pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             PortalRhendi = new TextBox();
             button6 = new Button();
@@ -61,7 +60,6 @@
             pictureBox6 = new PictureBox();
             button11 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -296,15 +294,6 @@
             Runinfo.Size = new Size(450, 100);
             Runinfo.TabIndex = 79;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Header;
-            pictureBox1.Location = new Point(602, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(700, 175);
-            pictureBox1.TabIndex = 78;
-            pictureBox1.TabStop = false;
-            // 
             // textBox1
             // 
             textBox1.BackColor = SystemColors.Control;
@@ -428,8 +417,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Background;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Magenta;
+            BackgroundImage = null;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button11);
             Controls.Add(pictureBox6);
@@ -461,12 +451,10 @@
             Controls.Add(Guild);
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
-            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Rhendak";
-            StartPosition = FormStartPosition.Manual;
+            TransparencyKey = Color.Magenta;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -496,7 +484,6 @@
         private TextBox Guild;
         private TextBox Squadinfo;
         private TextBox Runinfo;
-        private PictureBox pictureBox1;
         private TextBox textBox1;
         private TextBox PortalRhendi;
         private Button button6;
