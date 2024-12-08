@@ -51,7 +51,7 @@ namespace GW2FOX
             try
             {
                 // Öffnet die URL in einem neuen Browser-Fenster
-                string homepageUrl = "https://www.google.com";
+                string homepageUrl = "https://wiki.guildwars2.com";
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
                     FileName = homepageUrl,
@@ -64,6 +64,7 @@ namespace GW2FOX
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
