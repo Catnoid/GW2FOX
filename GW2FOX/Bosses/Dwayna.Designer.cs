@@ -451,6 +451,7 @@
             Controls.Add(Runinfo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Dwayna";
+            ShowInTaskbar = false;
             TransparencyKey = Color.Magenta;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

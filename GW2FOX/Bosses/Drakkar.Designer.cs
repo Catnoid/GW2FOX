@@ -400,6 +400,7 @@
             Controls.Add(Runinfo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Drakkar";
+            ShowInTaskbar = false;
             TransparencyKey = Color.Magenta;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

@@ -413,6 +413,7 @@
             Controls.Add(Runinfo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Behemoth";
+            ShowInTaskbar = false;
             TransparencyKey = Color.Magenta;
             Load += Behemoth_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

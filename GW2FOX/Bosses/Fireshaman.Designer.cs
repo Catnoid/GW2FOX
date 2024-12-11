@@ -437,6 +437,7 @@
             Controls.Add(Runinfo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Fireshaman";
+            ShowInTaskbar = false;
             TransparencyKey = Color.Magenta;
             Load += Fireshaman_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

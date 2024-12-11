@@ -416,6 +416,7 @@
             Controls.Add(Runinfo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CaptainRotbeard";
+            ShowInTaskbar = false;
             TransparencyKey = Color.Magenta;
             Load += CaptainRotbeard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

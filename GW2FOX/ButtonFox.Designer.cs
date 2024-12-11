@@ -133,8 +133,9 @@
             AutoScroll = false;
             BackColor = Color.Magenta;
             BackgroundImage = null;
-            BackgroundImageLayout = ImageLayout.Zoom;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(210, 40);
+            ControlBox = false;
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -146,6 +147,7 @@
             Name = "ButtonFox";
             Opacity = 0D;
             ShowIcon = false;
+            ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Hide;
             TransparencyKey = Color.Magenta;
             ResumeLayout(false);

@@ -10,7 +10,7 @@ namespace GW2FOX
     public partial class Main : BaseForm
     {
 
-
+        private ButtonFox buttonFoxInstance;
         private GlobalKeyboardHook? _globalKeyboardHook; // Füge dies hinzu
 
         public Main()
@@ -55,7 +55,7 @@ namespace GW2FOX
         {
             try
             {
-                // Öffnet die ButtonFox-Form
+                // Öffnet die ButtonFox-Form oder fokussiert sie, wenn sie bereits offen ist
                 OpenButtonFoxOverlay();
 
                 // Führt die bestehende Logik für den Timer aus
@@ -69,23 +69,31 @@ namespace GW2FOX
 
         private void OpenButtonFoxOverlay()
         {
-            // Instanziiere und zeige die ButtonFox-Form als Overlay
-            ButtonFox overlay = new ButtonFox
+            if (buttonFoxInstance == null || buttonFoxInstance.IsDisposed)
             {
-                TopMost = true, // Immer im Vordergrund
-                FormBorderStyle = FormBorderStyle.None, // Ohne Rahmen
-                StartPosition = FormStartPosition.Manual, // Benutzerdefinierte Position
-                BackColor = Color.Black,
-                TransparencyKey = Color.Black, // Macht die Form transparent
-                Opacity = 0.8, // Optionale Transparenz
-                Width = 210, // Breite des Overlays
-                Height = 40 // Höhe des Overlays
-            };
+                // Instanziiere und zeige die ButtonFox-Form als Overlay
+                buttonFoxInstance = new ButtonFox
+                {
+                    TopMost = true, // Immer im Vordergrund
+                    FormBorderStyle = FormBorderStyle.None, // Ohne Rahmen
+                    StartPosition = FormStartPosition.Manual, // Benutzerdefinierte Position
+                    BackColor = Color.Black,
+                    TransparencyKey = Color.Black, // Macht die Form transparent
+                    Opacity = 0.8, // Optionale Transparenz
+                    Width = 210, // Breite des Overlays
+                    Height = 40 // Höhe des Overlays
+                };
 
-            // Position: 20 cm (756 px) vom linken Rand, oben bündig
-            overlay.Location = new Point(756, 0);
+                // Position: 20 cm (756 px) vom linken Rand, oben bündig
+                buttonFoxInstance.Location = new Point(756, 0);
 
-            overlay.Show();
+                buttonFoxInstance.Show();
+            }
+            else
+            {
+                // Bringt die vorhandene Instanz in den Vordergrund
+                buttonFoxInstance.BringToFront();
+            }
         }
 
 
