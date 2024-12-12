@@ -78,11 +78,18 @@ namespace GW2FOX
                     FormBorderStyle = FormBorderStyle.None, // Ohne Rahmen
                     StartPosition = FormStartPosition.Manual, // Benutzerdefinierte Position
                     Opacity = 0.8, // Optionale Transparenz
-                    
                 };
 
-                
-                buttonFoxInstance.Location = new Point(700, 0);
+                // Berechne die Mitte des Bildschirms
+                int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+
+                int formWidth = buttonFoxInstance.Width;
+
+                // Setze die Location des Formulars auf die horizontale Mitte und ganz oben
+                buttonFoxInstance.Location = new Point(
+                    (screenWidth - formWidth) / 2, // Horizontale Mitte
+                    0 // Ganz oben
+                );
 
                 buttonFoxInstance.Show();
             }
@@ -92,6 +99,8 @@ namespace GW2FOX
                 buttonFoxInstance.BringToFront();
             }
         }
+
+
 
 
 
