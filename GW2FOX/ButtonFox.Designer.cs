@@ -135,6 +135,7 @@
             // 
             // button6
             // 
+            button6.BackColor = Color.Transparent;
             button6.BackgroundImage = Properties.Resources.Pocketcomputer;
             button6.BackgroundImageLayout = ImageLayout.Stretch;
             button6.FlatAppearance.BorderColor = Color.Magenta;
@@ -148,11 +149,12 @@
             button6.Name = "button6";
             button6.Size = new Size(23, 30);
             button6.TabIndex = 5;
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
             // button7
             // 
+            button7.BackColor = Color.Transparent;
             button7.BackgroundImage = Properties.Resources.camera;
             button7.BackgroundImageLayout = ImageLayout.Stretch;
             button7.FlatAppearance.BorderColor = Color.Magenta;
@@ -166,7 +168,7 @@
             button7.Name = "button7";
             button7.Size = new Size(30, 23);
             button7.TabIndex = 6;
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // ButtonFox
@@ -191,6 +193,7 @@
             Opacity = 0D;
             ShowIcon = false;
             ShowInTaskbar = false;
+            TopMost = true;
             TransparencyKey = Color.Magenta;
             ResumeLayout(false);
         }
