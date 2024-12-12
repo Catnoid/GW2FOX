@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using static GW2FOX.ListViewColumn;
-
 
 namespace GW2FOX
 {
@@ -20,54 +16,45 @@ namespace GW2FOX
     public class ListViewTextColumn : ListViewColumn
     {
         public ListViewTextColumn(int columnIndex)
-                : base(columnIndex)
+            : base(columnIndex)
+        {
+        }
+
+        public override void Draw(DrawListViewSubItemEventArgs e)
+        {
+            if (e.Item == null) return;
+
+            var itemFont = e.Item.Font;
+            using (var font = itemFont)
             {
-            }
-
-         public override void Draw(DrawListViewSubItemEventArgs e)
-         {
-             if (e.Item == null) return;
-             var itemFont = e.Item.Font;
-             using (var font = itemFont)
+                if (e.Item.Selected)
                 {
-                    // Setze die Schriftart und Farbe basierend auf bestimmten Bedingungen
-                    if (e.Item.Selected)
-                    {
-                        e.Graphics.DrawString(e.SubItem.Text, font, Brushes.White, e.Bounds);
-                    }
-                    else
-                    {
-                        // Definiere die Position des Zeittexts
-                        Point timeTextLocation = new Point(e.Bounds.Left + 0, e.Bounds.Top + 0);
-
-
-                        
-                        {
-                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X - 1, timeTextLocation.Y - 1), Color.Black);
-                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X + 1, timeTextLocation.Y - 1), Color.Black);
-                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X - 1, timeTextLocation.Y + 1), Color.Black);
-                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, new Point(timeTextLocation.X + 1, timeTextLocation.Y + 1), Color.Black);
-                    }
-
-                        // Zeichne den Zeittext ohne Umrandung (darüber, um die Umrandung zu überlagern)
-                        TextRenderer.DrawText(e.Graphics, e.SubItem.Text, font, timeTextLocation, e.Item.ForeColor, Color.Transparent, TextFormatFlags.Default);
-                    }
+                    e.Graphics.DrawString(e.SubItem.Text, font, Brushes.White, e.Bounds);
+                }
+                else
+                {
+                    DrawTextWithShadow(e.Graphics, e.SubItem.Text, font, e.Bounds, e.Item.ForeColor);
                 }
             }
         }
 
+        private void DrawTextWithShadow(Graphics g, string text, Font font, Rectangle bounds, Color textColor)
+        {
+            Point textLocation = new Point(bounds.Left, bounds.Top);
 
+            TextRenderer.DrawText(g, text, font, new Point(textLocation.X - 1, textLocation.Y - 1), Color.Black);
+            TextRenderer.DrawText(g, text, font, new Point(textLocation.X + 1, textLocation.Y - 1), Color.Black);
+            TextRenderer.DrawText(g, text, font, new Point(textLocation.X - 1, textLocation.Y + 1), Color.Black);
+            TextRenderer.DrawText(g, text, font, new Point(textLocation.X + 1, textLocation.Y + 1), Color.Black);
 
+            TextRenderer.DrawText(g, text, font, textLocation, textColor, Color.Transparent, TextFormatFlags.Default);
+        }
+    }
 
-public class ListViewExtender : IDisposable
+    public class ListViewExtender : IDisposable
     {
         private readonly Dictionary<int, ListViewColumn> columns = new Dictionary<int, ListViewColumn>();
-        
-
-        // Füge diese Dictionary hinzu, um die Breiten der Spalten festzulegen
         private readonly Dictionary<ColumnType, int> columnWidths = new Dictionary<ColumnType, int>();
-    
-
         private bool disposed;
 
         public ListViewExtender(ListView listView)
@@ -85,11 +72,9 @@ public class ListViewExtender : IDisposable
             var buttonColumn = new ListViewButtonColumn(0);
             AddColumn(buttonColumn);
 
-            // Erstelle die zweite Spalte
             var secondColumn = new ListViewTextColumn(1);
             AddColumn(secondColumn);
 
-            // Erstelle die dritte Spalte
             var thirdColumn = new ListViewTextColumn(2);
             AddColumn(thirdColumn);
 
@@ -100,11 +85,9 @@ public class ListViewExtender : IDisposable
             this.ListView.MouseMove += OnMouseMove;
             this.ListView.MouseClick += OnMouseClick;
             this.ListView.MouseMove += OnMouseHover;
-            // this.ListView.ItemMouseHover += OnMouseHover;
 
-            this.Font = new Font(ListView.Font.FontFamily, ListView.Font.Size - 0);
+            this.Font = new Font(ListView.Font.FontFamily, ListView.Font.Size);
         }
-   
 
         public virtual Font Font { get; private set; }
 
@@ -179,7 +162,6 @@ public class ListViewExtender : IDisposable
         protected virtual void OnDrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
         {
             e.DrawDefault = true;
-
         }
 
         protected virtual void OnDrawSubItem(object sender, DrawListViewSubItemEventArgs e)
@@ -193,17 +175,11 @@ public class ListViewExtender : IDisposable
             }
 
             column.Draw(e);
-        
         }
-
-
 
         protected virtual void OnDrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            
         }
-
-      
 
         public void AddColumn(ListViewColumn column)
         {
@@ -218,9 +194,7 @@ public class ListViewExtender : IDisposable
         {
             ListViewColumn column;
 
-            return this.columns.TryGetValue(index, out column)
-                ? column
-                : null;
+            return this.columns.TryGetValue(index, out column) ? column : null;
         }
 
         public IEnumerable<ListViewColumn> Columns
@@ -231,7 +205,6 @@ public class ListViewExtender : IDisposable
         public void Dispose()
         {
             this.Dispose(true);
-
             GC.SuppressFinalize(this);
         }
 
@@ -281,26 +254,17 @@ public class ListViewExtender : IDisposable
 
         public virtual void MouseClick(MouseEventArgs e, ListViewItem item, ListViewItem.ListViewSubItem subItem)
         {
-            if (this.Click != null)
-            {
-                this.Click(this, new ListViewColumnMouseEventArgs(e, item, subItem));
-            }
+            this.Click?.Invoke(this, new ListViewColumnMouseEventArgs(e, item, subItem));
         }
 
         public virtual void MouseHover(MouseEventArgs e, ListViewItem item, ListViewItem.ListViewSubItem subItem)
         {
-            if (this.Hover != null)
-            {
-                this.Hover(this, new ListViewColumnMouseHoverEventArgs(e, item, subItem));
-            }
+            this.Hover?.Invoke(this, new ListViewColumnMouseHoverEventArgs(e, item, subItem));
         }
 
         public virtual void Invalidate(ListViewItem item, ListViewItem.ListViewSubItem subItem)
         {
-            if (this.Extender != null)
-            {
-                this.Extender.ListView.Invalidate(subItem.Bounds);
-            }
+            this.Extender?.ListView.Invalidate(subItem.Bounds);
         }
     }
 
@@ -388,43 +352,27 @@ public class ListViewExtender : IDisposable
             if ((this.ListView.GetItemAt(mouse.X, mouse.Y) == e.Item) &&
                 (e.Item.GetSubItemAt(mouse.X, mouse.Y) == e.SubItem))
             {
-                // Verwende die eigene Methode für den Button mit Hintergrundbild (ohne Text)
                 DrawImageButton(e.Graphics, e.Bounds, true);
                 this.hot = e.Bounds;
             }
             else
             {
-                // Verwende die eigene Methode für den Button mit Hintergrundbild (ohne Text)
                 DrawImageButton(e.Graphics, e.Bounds, false);
             }
-
-            
         }
 
         private void DrawImageButton(Graphics g, Rectangle bounds, bool hot)
         {
-            // Das Bild aus den Ressourcen laden
             Image backgroundImage = Properties.Resources.Waypoint;
 
-            // Die Größe auf 17x17 Pixel setzen
             Rectangle imageBounds = new Rectangle(bounds.Location, new Size(17, 17));
 
-            // Falls "hot" aktiviert ist, das Bild um 3 Pixel vergrößern
             if (hot)
             {
                 imageBounds.Inflate(2, 2);
             }
 
-            // Hintergrund zeichnen
             g.DrawImage(backgroundImage, imageBounds);
-
-            // Falls "hot" aktiviert ist, Text anzeigen
-            if (hot)
-            {
-                
-
-            }
         }
-
     }
 }

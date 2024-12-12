@@ -9,7 +9,17 @@ namespace GW2FOX
     public partial class ButtonFox : BaseForm
     {
         private Worldbosses worldbossesWindow;
+        // Importieren der notwendigen Windows-API-Funktionen
+        [DllImport("user32.dll")]
+        private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
+        [DllImport("user32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        private const int SW_RESTORE = 9; // Restore a minimized window
 
         public ButtonFox()
         {
@@ -142,5 +152,64 @@ namespace GW2FOX
                 MessageBox.Show("Die Datei wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Suchen des Fensters mit dem Titel "Rechner"
+                IntPtr calcWindow = FindWindow("ApplicationFrameWindow", "Rechner");
+
+                if (calcWindow != IntPtr.Zero)
+                {
+                    // Fenster gefunden, wiederherstellen und in den Vordergrund bringen
+                    ShowWindow(calcWindow, SW_RESTORE);
+                    SetForegroundWindow(calcWindow);
+                }
+                else
+                {
+                    // Taschenrechner starten, wenn nicht gefunden
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = "calc.exe",
+                        UseShellExecute = true
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Fehler beim Öffnen des Taschenrechners: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Suchen des Fensters mit dem Titel "Snipping Tool"
+                IntPtr snippingToolWindow = FindWindow(null, "Snipping Tool");
+
+                if (snippingToolWindow != IntPtr.Zero)
+                {
+                    // Fenster gefunden, wiederherstellen und in den Vordergrund bringen
+                    ShowWindow(snippingToolWindow, SW_RESTORE);
+                    SetForegroundWindow(snippingToolWindow);
+                }
+                else
+                {
+                    // Snipping Tool starten, wenn nicht gefunden
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = "snippingtool.exe", // Snipping Tool unter Windows 11
+                        UseShellExecute = true
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Fehler beim Öffnen des Snipping Tools: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

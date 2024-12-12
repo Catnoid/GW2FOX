@@ -8,12 +8,6 @@ Squadinfo: "
 • Don’t cancel invites! 
 • No Triple Trouble
 http://www.gw2fox.com
- 
-• GW2FOX: 
-  - Overlay Timer
-  - Guild Advertising Helper
-  - Leading Tool
-  - Repair Client
 "
 
 

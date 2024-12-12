@@ -33,6 +33,8 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -40,6 +42,7 @@
             button1.BackColor = Color.Transparent;
             button1.BackgroundImage = Properties.Resources.miniFox;
             button1.BackgroundImageLayout = ImageLayout.Center;
+            button1.FlatAppearance.BorderColor = Color.Magenta;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.CheckedBackColor = Color.Transparent;
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -58,6 +61,7 @@
             button2.BackColor = Color.Transparent;
             button2.BackgroundImage = Properties.Resources.Chrome;
             button2.BackgroundImageLayout = ImageLayout.Center;
+            button2.FlatAppearance.BorderColor = Color.Magenta;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.CheckedBackColor = Color.Transparent;
             button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -76,6 +80,7 @@
             button3.BackColor = Color.Transparent;
             button3.BackgroundImage = Properties.Resources.Discord;
             button3.BackgroundImageLayout = ImageLayout.Center;
+            button3.FlatAppearance.BorderColor = Color.Magenta;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.CheckedBackColor = Color.Transparent;
             button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -94,6 +99,7 @@
             button4.BackColor = Color.Transparent;
             button4.BackgroundImage = Properties.Resources.Tacomini;
             button4.BackgroundImageLayout = ImageLayout.Center;
+            button4.FlatAppearance.BorderColor = Color.Magenta;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatAppearance.CheckedBackColor = Color.Transparent;
             button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -112,6 +118,7 @@
             button5.BackColor = Color.Transparent;
             button5.BackgroundImage = Properties.Resources.blishmini;
             button5.BackgroundImageLayout = ImageLayout.Center;
+            button5.FlatAppearance.BorderColor = Color.Magenta;
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatAppearance.CheckedBackColor = Color.Transparent;
             button5.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -126,16 +133,52 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
+            // button6
+            // 
+            button6.BackgroundImage = Properties.Resources.Pocketcomputer;
+            button6.BackgroundImageLayout = ImageLayout.Center;
+            button6.FlatAppearance.BorderColor = Color.Magenta;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.CheckedBackColor = Color.Transparent;
+            button6.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button6.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Location = new Point(210, 1);
+            button6.Margin = new Padding(0);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 40);
+            button6.TabIndex = 5;
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            button7.BackgroundImage = Properties.Resources.camera;
+            button7.BackgroundImageLayout = ImageLayout.Center;
+            button7.FlatAppearance.BorderColor = Color.Magenta;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatAppearance.CheckedBackColor = Color.Transparent;
+            button7.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button7.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Location = new Point(243, 0);
+            button7.Margin = new Padding(0);
+            button7.Name = "button7";
+            button7.Size = new Size(50, 38);
+            button7.TabIndex = 6;
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
             // ButtonFox
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = false;
             BackColor = Color.Magenta;
-            BackgroundImage = null;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(210, 40);
+            ClientSize = new Size(296, 40);
             ControlBox = false;
+            Controls.Add(button7);
+            Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -148,7 +191,6 @@
             Opacity = 0D;
             ShowIcon = false;
             ShowInTaskbar = false;
-            SizeGripStyle = SizeGripStyle.Hide;
             TransparencyKey = Color.Magenta;
             ResumeLayout(false);
         }
@@ -160,5 +202,7 @@
         private Button button3;
         private Button button4;
         private Button button5;
+        private Button button6;
+        private Button button7;
     }
 }

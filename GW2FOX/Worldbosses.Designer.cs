@@ -228,6 +228,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = SystemColors.ControlText;
             button1.Location = new Point(1793, 900);
             button1.Name = "button1";
             button1.Size = new Size(100, 102);
@@ -245,7 +246,7 @@
             button2.FlatAppearance.MouseDownBackColor = Color.White;
             button2.FlatAppearance.MouseOverBackColor = Color.White;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
+            button2.ForeColor = SystemColors.ControlText;
             button2.Location = new Point(382, 306);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
@@ -263,6 +264,7 @@
             button4.FlatAppearance.MouseDownBackColor = Color.White;
             button4.FlatAppearance.MouseOverBackColor = Color.White;
             button4.FlatStyle = FlatStyle.Flat;
+            button4.ForeColor = SystemColors.ControlText;
             button4.Location = new Point(1332, 306);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
@@ -280,6 +282,7 @@
             button5.FlatAppearance.MouseDownBackColor = Color.White;
             button5.FlatAppearance.MouseOverBackColor = Color.White;
             button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = SystemColors.ControlText;
             button5.Location = new Point(1807, 306);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
@@ -297,6 +300,7 @@
             button6.FlatAppearance.MouseDownBackColor = Color.White;
             button6.FlatAppearance.MouseOverBackColor = Color.White;
             button6.FlatStyle = FlatStyle.Flat;
+            button6.ForeColor = SystemColors.ControlText;
             button6.Location = new Point(1377, 164);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
@@ -608,7 +612,7 @@
             button28.FlatAppearance.MouseDownBackColor = Color.White;
             button28.FlatAppearance.MouseOverBackColor = Color.White;
             button28.FlatStyle = FlatStyle.Flat;
-            button28.ForeColor = Color.Transparent;
+            button28.ForeColor = SystemColors.ControlText;
             button28.Location = new Point(382, 277);
             button28.Name = "button28";
             button28.Size = new Size(75, 23);
@@ -626,6 +630,7 @@
             button29.FlatAppearance.MouseDownBackColor = Color.White;
             button29.FlatAppearance.MouseOverBackColor = Color.White;
             button29.FlatStyle = FlatStyle.Flat;
+            button29.ForeColor = SystemColors.ControlText;
             button29.Location = new Point(857, 277);
             button29.Name = "button29";
             button29.Size = new Size(75, 23);
@@ -643,6 +648,7 @@
             button30.FlatAppearance.MouseDownBackColor = Color.White;
             button30.FlatAppearance.MouseOverBackColor = Color.White;
             button30.FlatStyle = FlatStyle.Flat;
+            button30.ForeColor = SystemColors.ControlText;
             button30.Location = new Point(1332, 277);
             button30.Name = "button30";
             button30.Size = new Size(75, 23);
@@ -660,6 +666,7 @@
             button31.FlatAppearance.MouseDownBackColor = Color.White;
             button31.FlatAppearance.MouseOverBackColor = Color.White;
             button31.FlatStyle = FlatStyle.Flat;
+            button31.ForeColor = SystemColors.ControlText;
             button31.Location = new Point(1807, 277);
             button31.Name = "button31";
             button31.Size = new Size(75, 23);
@@ -821,6 +828,7 @@
             button3.FlatAppearance.MouseDownBackColor = Color.White;
             button3.FlatAppearance.MouseOverBackColor = Color.White;
             button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = SystemColors.ControlText;
             button3.Location = new Point(857, 306);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
@@ -1856,7 +1864,6 @@
             AutoScaleMode = AutoScaleMode.None;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.Magenta;
-            BackgroundImage = null;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button1);
@@ -1993,7 +2000,6 @@
             RightToLeft = RightToLeft.No;
             ShowIcon = false;
             ShowInTaskbar = false;
-            SizeGripStyle = SizeGripStyle.Hide;
             TransparencyKey = Color.Magenta;
             WindowState = FormWindowState.Maximized;
             Load += Worldbosses_Load_1;

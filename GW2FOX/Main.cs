@@ -11,7 +11,7 @@ namespace GW2FOX
     {
 
         private ButtonFox buttonFoxInstance;
-        private GlobalKeyboardHook? _globalKeyboardHook; // Füge dies hinzu
+        private GlobalKeyboardHook? _globalKeyboardHook;
 
         public Main()
         {
@@ -77,15 +77,12 @@ namespace GW2FOX
                     TopMost = true, // Immer im Vordergrund
                     FormBorderStyle = FormBorderStyle.None, // Ohne Rahmen
                     StartPosition = FormStartPosition.Manual, // Benutzerdefinierte Position
-                    BackColor = Color.Black,
-                    TransparencyKey = Color.Black, // Macht die Form transparent
                     Opacity = 0.8, // Optionale Transparenz
-                    Width = 210, // Breite des Overlays
-                    Height = 40 // Höhe des Overlays
+                    
                 };
 
-                // Position: 20 cm (756 px) vom linken Rand, oben bündig
-                buttonFoxInstance.Location = new Point(756, 0);
+                
+                buttonFoxInstance.Location = new Point(700, 0);
 
                 buttonFoxInstance.Show();
             }

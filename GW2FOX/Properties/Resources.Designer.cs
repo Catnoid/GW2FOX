@@ -373,6 +373,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap camera {
+            get {
+                object obj = ResourceManager.GetObject("camera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ChackInfusion {
             get {
                 object obj = ResourceManager.GetObject("ChackInfusion", resourceCulture);
@@ -1156,6 +1166,16 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap Pirate_Flintlock__1_ {
             get {
                 object obj = ResourceManager.GetObject("Pirate_Flintlock (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Pocketcomputer {
+            get {
+                object obj = ResourceManager.GetObject("Pocketcomputer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
