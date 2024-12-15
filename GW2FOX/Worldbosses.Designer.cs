@@ -1864,7 +1864,8 @@
             AutoScaleMode = AutoScaleMode.None;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.Magenta;
-            BackgroundImageLayout = ImageLayout.None;
+            BackgroundImage = Properties.Resources.backgoundunvisible1;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button1);
             Controls.Add(button69);

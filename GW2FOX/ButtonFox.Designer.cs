@@ -86,10 +86,10 @@
             button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(79, 10);
+            button3.Location = new Point(79, 14);
             button3.Margin = new Padding(2, 1, 2, 1);
             button3.Name = "button3";
-            button3.Size = new Size(30, 30);
+            button3.Size = new Size(30, 23);
             button3.TabIndex = 2;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
@@ -176,7 +176,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Magenta;
-            BackgroundImageLayout = ImageLayout.None;
+            BackgroundImage = Properties.Resources.backgoundunvisible;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(245, 50);
             ControlBox = false;
             Controls.Add(button7);

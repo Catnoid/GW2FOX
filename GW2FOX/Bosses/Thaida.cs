@@ -9,6 +9,7 @@ namespace GW2FOX
         public Thaida()
         {
             InitializeComponent();
+            LoadConfigText(Runinfo, Squadinfo, Guild, Welcome, Symbols);
             _ = LoadItemPriceInformation();
         }
 
@@ -18,7 +19,7 @@ namespace GW2FOX
         // Konstruktor, der den Ursprung der Seite als Parameter akzeptiert
         public Thaida(string origin) : this()
         {
-
+            InitializeItemPriceTextBox();
             // Setze den Ursprung der Seite
             originPage = origin;
         }
