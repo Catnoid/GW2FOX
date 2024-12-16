@@ -48,10 +48,10 @@
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(11, 13);
-            button1.Margin = new Padding(2, 1, 2, 1);
+            button1.Location = new Point(9, 9);
+            button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(30, 24);
+            button1.Size = new Size(33, 30);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -67,8 +67,8 @@
             button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(45, 10);
-            button2.Margin = new Padding(2, 1, 2, 1);
+            button2.Location = new Point(42, 9);
+            button2.Margin = new Padding(0);
             button2.Name = "button2";
             button2.Size = new Size(30, 30);
             button2.TabIndex = 1;
@@ -86,10 +86,10 @@
             button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(79, 14);
-            button3.Margin = new Padding(2, 1, 2, 1);
+            button3.Location = new Point(72, 9);
+            button3.Margin = new Padding(0);
             button3.Name = "button3";
-            button3.Size = new Size(30, 23);
+            button3.Size = new Size(39, 30);
             button3.TabIndex = 2;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
@@ -105,8 +105,8 @@
             button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(113, 10);
-            button4.Margin = new Padding(2, 1, 2, 1);
+            button4.Location = new Point(111, 9);
+            button4.Margin = new Padding(0);
             button4.Name = "button4";
             button4.Size = new Size(30, 30);
             button4.TabIndex = 3;
@@ -125,8 +125,8 @@
             button5.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = SystemColors.ControlText;
-            button5.Location = new Point(147, 10);
-            button5.Margin = new Padding(2, 1, 2, 1);
+            button5.Location = new Point(141, 9);
+            button5.Margin = new Padding(0);
             button5.Name = "button5";
             button5.Size = new Size(30, 30);
             button5.TabIndex = 4;
@@ -144,8 +144,8 @@
             button6.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button6.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(181, 10);
-            button6.Margin = new Padding(2, 1, 2, 1);
+            button6.Location = new Point(171, 9);
+            button6.Margin = new Padding(0);
             button6.Name = "button6";
             button6.Size = new Size(23, 30);
             button6.TabIndex = 5;
@@ -163,10 +163,10 @@
             button7.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button7.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(208, 14);
-            button7.Margin = new Padding(2, 1, 2, 1);
+            button7.Location = new Point(194, 9);
+            button7.Margin = new Padding(0);
             button7.Name = "button7";
-            button7.Size = new Size(30, 23);
+            button7.Size = new Size(30, 30);
             button7.TabIndex = 6;
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
@@ -175,10 +175,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Magenta;
+            BackColor = Color.DarkGray;
             BackgroundImage = Properties.Resources.backgoundunvisible;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(245, 50);
+            ClientSize = new Size(236, 50);
             ControlBox = false;
             Controls.Add(button7);
             Controls.Add(button6);
@@ -195,7 +195,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             TopMost = true;
-            TransparencyKey = Color.Magenta;
+            TransparencyKey = Color.DarkGray;
             ResumeLayout(false);
         }
 
