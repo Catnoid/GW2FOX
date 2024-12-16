@@ -380,8 +380,7 @@
             // Behemoth
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BackColor = Color.Magenta;
-            BackgroundImage = null;
+            BackColor = Color.FromArgb(64, 64, 64);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button10);
@@ -411,10 +410,11 @@
             Controls.Add(Guild);
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
+            ForeColor = Color.FromArgb(64, 64, 64);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Behemoth";
             ShowInTaskbar = false;
-            TransparencyKey = Color.Magenta;
+            TransparencyKey = Color.FromArgb(64, 64, 64);
             Load += Behemoth_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

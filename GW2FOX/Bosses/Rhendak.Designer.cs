@@ -417,8 +417,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Magenta;
-            BackgroundImage = null;
+            BackColor = Color.FromArgb(64, 64, 64);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button11);
@@ -451,10 +450,11 @@
             Controls.Add(Guild);
             Controls.Add(Squadinfo);
             Controls.Add(Runinfo);
+            ForeColor = Color.FromArgb(64, 64, 64);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Rhendak";
             ShowInTaskbar = false;
-            TransparencyKey = Color.Magenta;
+            TransparencyKey = Color.FromArgb(64, 64, 64);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

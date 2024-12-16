@@ -47,7 +47,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.DarkGray;
+            button1.ForeColor = Color.Black;
             button1.Location = new Point(11, 13);
             button1.Margin = new Padding(2, 0, 2, 0);
             button1.Name = "button1";
@@ -66,7 +66,7 @@
             button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.DarkGray;
+            button2.ForeColor = Color.Black;
             button2.Location = new Point(46, 9);
             button2.Margin = new Padding(2, 0, 2, 0);
             button2.Name = "button2";
@@ -85,7 +85,7 @@
             button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.DarkGray;
+            button3.ForeColor = Color.Black;
             button3.Location = new Point(80, 9);
             button3.Margin = new Padding(2, 0, 2, 0);
             button3.Name = "button3";
@@ -104,7 +104,7 @@
             button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.DarkGray;
+            button4.ForeColor = Color.Black;
             button4.Location = new Point(114, 9);
             button4.Margin = new Padding(2, 0, 2, 0);
             button4.Name = "button4";
@@ -123,7 +123,7 @@
             button5.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button5.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.DarkGray;
+            button5.ForeColor = Color.Black;
             button5.Location = new Point(148, 9);
             button5.Margin = new Padding(2, 0, 2, 0);
             button5.Name = "button5";
@@ -142,7 +142,7 @@
             button6.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button6.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.DarkGray;
+            button6.ForeColor = Color.Black;
             button6.Location = new Point(182, 9);
             button6.Margin = new Padding(2, 0, 2, 0);
             button6.Name = "button6";
@@ -161,7 +161,7 @@
             button7.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button7.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.Transparent;
+            button7.ForeColor = Color.Black;
             button7.Location = new Point(209, 13);
             button7.Margin = new Padding(2, 0, 2, 0);
             button7.Name = "button7";
@@ -187,7 +187,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Cursor = Cursors.Cross;
-            ForeColor = Color.Transparent;
+            ForeColor = Color.Black;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ButtonFox";
