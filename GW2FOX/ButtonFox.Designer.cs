@@ -48,10 +48,10 @@
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.DarkGray;
-            button1.Location = new Point(9, 9);
+            button1.Location = new Point(11, 13);
             button1.Margin = new Padding(2, 0, 2, 0);
             button1.Name = "button1";
-            button1.Size = new Size(33, 30);
+            button1.Size = new Size(30, 24);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -127,7 +127,7 @@
             button5.Location = new Point(148, 9);
             button5.Margin = new Padding(2, 0, 2, 0);
             button5.Name = "button5";
-            button5.Size = new Size(30, 30);
+            button5.Size = new Size(30, 29);
             button5.TabIndex = 4;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -174,7 +174,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkGray;
+            BackColor = Color.Black;
             BackgroundImage = Properties.Resources.backgoundunvisible;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(256, 50);
@@ -196,7 +196,7 @@
             ShowInTaskbar = false;
             Text = "";
             TopMost = true;
-            TransparencyKey = Color.DarkGray;
+            TransparencyKey = Color.Black;
             ResumeLayout(false);
         }
 
