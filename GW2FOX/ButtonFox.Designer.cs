@@ -194,6 +194,7 @@
             Opacity = 0D;
             ShowIcon = false;
             ShowInTaskbar = false;
+            Text = "";
             TopMost = true;
             TransparencyKey = Color.DarkGray;
             ResumeLayout(false);
