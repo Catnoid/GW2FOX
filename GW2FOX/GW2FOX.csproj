@@ -111,6 +111,15 @@
     <Compile Update="Bosses\Palawadan.cs" />
     <Compile Update="Bosses\DragonsStand.cs" />
     <Compile Update="Bosses\SerpentsIre.cs" />
+    <Compile Update="Bosses\Marionette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bosses\LionsArch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bosses\Nightmares.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -194,6 +203,15 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Update="Bosses\SerpentsIre.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bosses\Marionette.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bosses\LionsArch.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bosses\Nightmares.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

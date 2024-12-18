@@ -1104,6 +1104,23 @@ namespace GW2FOX
 
         }
 
+        private void Marionette_CheckedChanged_1(object sender, EventArgs e)
+        {
+            string bossName = "Marionette";
+
+
+
+            if (Marionette.Checked)
+            {
+                SaveBossNameToConfig(bossName);
+            }
+            else
+            {
+                RemoveBossNameFromConfig(bossName);
+            }
+
+        }
+
 
         private void Flybynigtht_CheckedChanged(object sender, EventArgs e)
         {
@@ -1155,6 +1172,38 @@ namespace GW2FOX
                 RemoveBossNameFromConfig(bossName);
             }
 
+        }
+
+        private void LionsArch_CheckedChanged(object sender, EventArgs e)
+        {
+            string bossName = "LionsArch";
+
+
+
+            if (LionsArch.Checked)
+            {
+                SaveBossNameToConfig(bossName);
+            }
+            else
+            {
+                RemoveBossNameFromConfig(bossName);
+            }
+        }
+
+        private void Nightmares_CheckedChanged(object sender, EventArgs e)
+        {
+            string bossName = "Nightmares";
+
+
+
+            if (Nightmares.Checked)
+            {
+                SaveBossNameToConfig(bossName);
+            }
+            else
+            {
+                RemoveBossNameFromConfig(bossName);
+            }
         }
 
         private void InitializeBossCheckBoxMap()
@@ -1211,7 +1260,10 @@ namespace GW2FOX
         { "Wizard's Tower", WizzardsTower },
         { "Fly by Night", Flybynigtht },
         { "Defense of Amnytas", Amnytas },
-        { "Convergences", Convergence }
+        { "Convergences", Convergence },
+        { "LionsArch", LionsArch },
+        { "Nightmares", Nightmares },
+        { "Marionette", Marionette }
         };
         }
 
@@ -2114,6 +2166,23 @@ namespace GW2FOX
         {
             ShowAndHideForm(new LLA());
         }
+
+        private void button66_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new Marionette());
+        }
+
+        private void button70_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new LionsArch());
+        }
+
+        private void button71_Click(object sender, EventArgs e)
+        {
+            ShowAndHideForm(new Nightmares());
+        }
+
+        
     }
 
 

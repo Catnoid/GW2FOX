@@ -78,6 +78,9 @@ namespace GW2FOX
             AddBossEvent("Dragonstorm", "00:00:00", 2, "Ice", "[&BAkMAAA=]");
             AddBossEvent("Drakkar", "00:05:00", 2, "Ice", "[&BDkMAAA=]");
             AddBossEvent("Metal Concert", "00:40:00", 2, "Ice", "[&BPgLAAA=]");
+            AddBossEvent("Marionette", "01:00:00", 2, "Ice", "[&BAkMAAA=]");
+            AddBossEvent("Nightmares", "00:30:00", 2, "Ice", "[&BAkMAAA=]");
+            AddBossEvent("LionsArch", "01:30:00", 2, "Ice", "[&BAkMAAA=]");
 
             // Maguuma
             AddBossEvent("Chak Gerent", "01:30:00", 2, "Maguuma", "[&BPUHAAA=]");

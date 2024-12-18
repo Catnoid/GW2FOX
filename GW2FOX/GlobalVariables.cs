@@ -40,7 +40,7 @@ public class GlobalVariables
     public static string DEFAULT_WORLD =
         "The frozen Maw, Shadow Behemoth, Fire Elemental, Great Jungle Wurm, Ulgoth the Modniir, Taidha Covington, Megadestroyer, Inquest Golem M2, Tequatl the Sunless, The Shatterer, Karka Queen, Claw of Jormag";
     public static string DEFAULT_MIXED =
-        "Battle in Tarir, Chak Gerent, DB Shatterer, Junundu Rising, Path to Ascension, Doppelganger, Forged with Fire, Choya Piñata, Spellmaster Macsen, Drakkar, Dragonstorm, The frozen Maw, Shadow Behemoth, Fire Elemental, Great Jungle Wurm, Ulgoth the Modniir, Taidha Covington, Megadestroyer, Inquest Golem M2, Tequatl the Sunless, The Shatterer, Karka Queen, Claw of Jormag";
+        "Nightmares, LionsArch, Marionette, Battle in Tarir, Chak Gerent, DB Shatterer, Junundu Rising, Path to Ascension, Doppelganger, Forged with Fire, Choya Piñata, Spellmaster Macsen, Drakkar, Dragonstorm, The frozen Maw, Shadow Behemoth, Fire Elemental, Great Jungle Wurm, Ulgoth the Modniir, Taidha Covington, Megadestroyer, Inquest Golem M2, Tequatl the Sunless, The Shatterer, Karka Queen, Claw of Jormag";
     public static string DEFAULT_SYMBOLS =
         "☠ ★ ☣ ☮ ☢ ♪ ☜ ☞ ┌ ∩ ┐ ( ●̮̃ • ) ۶ ( • ◡ • ) ♋ ☿ ♀ ♂ ☀ ☁ ☂ ☃ ☄ ☾ ☽ ☇ ☉ ☐ ☒ ☑ ☝ ☚ • ☟ ☆ ♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟ † ☨ ☥ ☦ ☓ ☩ ☯ ☧ ☬ ☸ ♁ ♆ ☭ ✯ ☪ ☫ ✡ © ™ ® ☕ ☎ ☻ ♥ ⏰ 凸 ◇";
     public static string DEFAULT_WELCOME =

@@ -124,11 +124,17 @@
   <data name="Palawadan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Palawadan.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Karka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Karka.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="discordbig" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\discordbig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mystische_Münze_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mystische_Münze_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lyssa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lyssa.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,9 +223,6 @@
   <data name="Ulgoth_s_Tail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ulgoth's_Tail.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Taca" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Taca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Junundu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Junundu.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -234,6 +237,9 @@
   </data>
   <data name="SerpentsIre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SerpentsIre.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefendJorasKeep1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefendJorasKeep.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Convergences" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Convergences.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +259,11 @@
   <data name="Doppelganger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Doppelganger.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dwayna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dwayna.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eye.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Backgroundmini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Backgroundmini.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -273,9 +282,6 @@
   </data>
   <data name="Line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Line.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="miniFox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\miniFox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kristall_Infusion_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kristall-Infusion_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,6 +316,9 @@
   <data name="GangWar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GangWar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgoundunvisible1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgoundunvisible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dragonstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dragonstorm.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -321,6 +330,9 @@
   </data>
   <data name="Confetti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Confetti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BattleForLionsArch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BattleForLionsArch.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Waypoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Waypoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -342,9 +354,6 @@
   </data>
   <data name="AllMetas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AllMetas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Final_Rest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Final_Rest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Shortcut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shortcut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -394,8 +403,8 @@
   <data name="Winter's_Heart_Infusion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Winter's_Heart_Infusion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dwayna" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dwayna.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Final_Rest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Final_Rest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fly by Night1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fly by Night.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -439,14 +448,11 @@
   <data name="Tarir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tarir.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mystische_Münze_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mystische_Münze_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Rhendaksiegel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rhendaksiegel.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Concert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Concert.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Rhendaksiegel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rhendaksiegel.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Saidra's Haven1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Saidra's Haven.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -472,9 +478,6 @@
   <data name="Eternal_Ice__exotic_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eternal_Ice_(exotic).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Flame_Guard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flame_Guard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -483,6 +486,9 @@
   </data>
   <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chrome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chrome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Homepage.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -535,6 +541,9 @@
   <data name="Ulgoth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ulgoth.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TwistedMarionette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwistedMarionette.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blishmini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blishmini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -553,14 +562,14 @@
   <data name="Screenshot_2024_03_28_162930" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-03-28 162930.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Karka" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Karka.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Taca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WBsheader2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WBsheader2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eye.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="35min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\35min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -586,16 +595,16 @@
   <data name="GangWar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GangWar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DefendJorasKeep1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DefendJorasKeep.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="miniFox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\miniFox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Choya" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Choya.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chrome" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chrome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgoundunvisible1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgoundunvisible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TowerOfNightmares" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TowerOfNightmares.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

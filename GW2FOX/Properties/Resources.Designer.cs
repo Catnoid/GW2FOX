@@ -303,6 +303,16 @@ namespace GW2FOX.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap BattleForLionsArch {
+            get {
+                object obj = ResourceManager.GetObject("BattleForLionsArch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap blishmini {
             get {
                 object obj = ResourceManager.GetObject("blishmini", resourceCulture);
@@ -1516,6 +1526,26 @@ namespace GW2FOX.Properties {
         public static System.Drawing.Bitmap TowerisUp1 {
             get {
                 object obj = ResourceManager.GetObject("TowerisUp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TowerOfNightmares {
+            get {
+                object obj = ResourceManager.GetObject("TowerOfNightmares", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TwistedMarionette {
+            get {
+                object obj = ResourceManager.GetObject("TwistedMarionette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

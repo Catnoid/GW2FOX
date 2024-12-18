@@ -156,6 +156,12 @@
             button67 = new Button();
             button68 = new Button();
             button69 = new Button();
+            Marionette = new CheckBox();
+            button66 = new Button();
+            LionsArch = new CheckBox();
+            button70 = new Button();
+            Nightmares = new CheckBox();
+            button71 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
@@ -1859,6 +1865,81 @@
             button69.UseVisualStyleBackColor = false;
             button69.Click += button69_Click;
             // 
+            // Marionette
+            // 
+            Marionette.AutoSize = true;
+            Marionette.BackColor = Color.Transparent;
+            Marionette.Location = new Point(864, 808);
+            Marionette.Name = "Marionette";
+            Marionette.Size = new Size(15, 14);
+            Marionette.TabIndex = 194;
+            Marionette.UseVisualStyleBackColor = false;
+            Marionette.CheckedChanged += Marionette_CheckedChanged_1;
+            // 
+            // button66
+            // 
+            button66.BackColor = Color.Transparent;
+            button66.BackgroundImage = Properties.Resources.TwistedMarionette;
+            button66.Cursor = Cursors.Cross;
+            button66.FlatAppearance.BorderSize = 0;
+            button66.FlatStyle = FlatStyle.Flat;
+            button66.Location = new Point(885, 791);
+            button66.Name = "button66";
+            button66.Size = new Size(180, 50);
+            button66.TabIndex = 193;
+            button66.UseVisualStyleBackColor = false;
+            button66.Click += button66_Click;
+            // 
+            // LionsArch
+            // 
+            LionsArch.AutoSize = true;
+            LionsArch.BackColor = Color.Transparent;
+            LionsArch.Location = new Point(864, 864);
+            LionsArch.Name = "LionsArch";
+            LionsArch.Size = new Size(15, 14);
+            LionsArch.TabIndex = 196;
+            LionsArch.UseVisualStyleBackColor = false;
+            LionsArch.CheckedChanged += LionsArch_CheckedChanged;
+            // 
+            // button70
+            // 
+            button70.BackColor = Color.Transparent;
+            button70.BackgroundImage = Properties.Resources.BattleForLionsArch;
+            button70.Cursor = Cursors.Cross;
+            button70.FlatAppearance.BorderSize = 0;
+            button70.FlatStyle = FlatStyle.Flat;
+            button70.Location = new Point(885, 847);
+            button70.Name = "button70";
+            button70.Size = new Size(180, 50);
+            button70.TabIndex = 195;
+            button70.UseVisualStyleBackColor = false;
+            button70.Click += button70_Click;
+            // 
+            // Nightmares
+            // 
+            Nightmares.AutoSize = true;
+            Nightmares.BackColor = Color.Transparent;
+            Nightmares.Location = new Point(864, 920);
+            Nightmares.Name = "Nightmares";
+            Nightmares.Size = new Size(15, 14);
+            Nightmares.TabIndex = 198;
+            Nightmares.UseVisualStyleBackColor = false;
+            Nightmares.CheckedChanged += Nightmares_CheckedChanged;
+            // 
+            // button71
+            // 
+            button71.BackColor = Color.Transparent;
+            button71.BackgroundImage = Properties.Resources.TowerOfNightmares;
+            button71.Cursor = Cursors.Cross;
+            button71.FlatAppearance.BorderSize = 0;
+            button71.FlatStyle = FlatStyle.Flat;
+            button71.Location = new Point(885, 903);
+            button71.Name = "button71";
+            button71.Size = new Size(180, 50);
+            button71.TabIndex = 197;
+            button71.UseVisualStyleBackColor = false;
+            button71.Click += button71_Click;
+            // 
             // Worldbosses
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -1867,6 +1948,12 @@
             BackgroundImage = Properties.Resources.backgoundunvisible1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(Nightmares);
+            Controls.Add(button71);
+            Controls.Add(LionsArch);
+            Controls.Add(button70);
+            Controls.Add(Marionette);
+            Controls.Add(button66);
             Controls.Add(button1);
             Controls.Add(button69);
             Controls.Add(button68);
@@ -2140,5 +2227,11 @@
         private Button button67;
         private Button button68;
         private Button button69;
+        private CheckBox Marionette;
+        private Button button66;
+        private CheckBox LionsArch;
+        private Button button70;
+        private CheckBox Nightmares;
+        private Button button71;
     }
 }
