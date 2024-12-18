@@ -223,7 +223,7 @@
             Symbols.ScrollBars = ScrollBars.Vertical;
             Symbols.Size = new Size(434, 175);
             Symbols.TabIndex = 5;
-            Symbols.Text = "☠ ★ ☣ ☮ ☢ ♪ ☜ ☞ ┌ ∩ ┐ ( ●̮̃ • ) ۶ ( • ◡ • ) ♋ ☿ ♀ ♂ ☀ ☁ ☂ ☃ ☄ ☾ ☽ ☇ ☉ ☐ ☒ ☑ ☝ ☚ • ☟ ☆ ♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟ † ☨ ☥ ☦ ☓ ☩ ☯ ☧ ☬ ☸ ♁ ♆ ☭ ✯ ☪ ☫ ✡ © ™ ® ☕ ☎ ☻ ♥ ⏰ 凸 ◇";
+            Symbols.Text = resources.GetString("Symbols.Text");
             // 
             // button1
             // 
@@ -335,7 +335,7 @@
             button8.Cursor = Cursors.Cross;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
-            button8.Location = new Point(48, 423);
+            button8.Location = new Point(50, 423);
             button8.Name = "button8";
             button8.Size = new Size(180, 50);
             button8.TabIndex = 15;
@@ -447,7 +447,7 @@
             button16.Cursor = Cursors.Cross;
             button16.FlatAppearance.BorderSize = 0;
             button16.FlatStyle = FlatStyle.Flat;
-            button16.Location = new Point(48, 787);
+            button16.Location = new Point(50, 787);
             button16.Name = "button16";
             button16.Size = new Size(180, 50);
             button16.TabIndex = 23;
@@ -517,7 +517,7 @@
             button21.Cursor = Cursors.Cross;
             button21.FlatAppearance.BorderSize = 0;
             button21.FlatStyle = FlatStyle.Flat;
-            button21.Location = new Point(885, 475);
+            button21.Location = new Point(884, 475);
             button21.Name = "button21";
             button21.Size = new Size(180, 50);
             button21.TabIndex = 28;
@@ -531,7 +531,7 @@
             button22.Cursor = Cursors.Cross;
             button22.FlatAppearance.BorderSize = 0;
             button22.FlatStyle = FlatStyle.Flat;
-            button22.Location = new Point(885, 371);
+            button22.Location = new Point(884, 371);
             button22.Name = "button22";
             button22.Size = new Size(180, 50);
             button22.TabIndex = 29;
@@ -601,7 +601,7 @@
             Concert.Cursor = Cursors.Cross;
             Concert.FlatAppearance.BorderSize = 0;
             Concert.FlatStyle = FlatStyle.Flat;
-            Concert.Location = new Point(885, 423);
+            Concert.Location = new Point(884, 423);
             Concert.Name = "Concert";
             Concert.Size = new Size(180, 50);
             Concert.TabIndex = 81;
@@ -989,7 +989,7 @@
             button51.Cursor = Cursors.Cross;
             button51.FlatAppearance.BorderSize = 0;
             button51.FlatStyle = FlatStyle.Flat;
-            button51.Location = new Point(885, 527);
+            button51.Location = new Point(884, 527);
             button51.Name = "button51";
             button51.Size = new Size(180, 50);
             button51.TabIndex = 112;
@@ -1003,7 +1003,7 @@
             button52.Cursor = Cursors.Cross;
             button52.FlatAppearance.BorderSize = 0;
             button52.FlatStyle = FlatStyle.Flat;
-            button52.Location = new Point(885, 579);
+            button52.Location = new Point(884, 579);
             button52.Name = "button52";
             button52.Size = new Size(180, 50);
             button52.TabIndex = 113;
@@ -1017,7 +1017,7 @@
             button53.Cursor = Cursors.Cross;
             button53.FlatAppearance.BorderSize = 0;
             button53.FlatStyle = FlatStyle.Flat;
-            button53.Location = new Point(885, 631);
+            button53.Location = new Point(884, 631);
             button53.Name = "button53";
             button53.Size = new Size(180, 50);
             button53.TabIndex = 114;
@@ -1031,7 +1031,7 @@
             button54.Cursor = Cursors.Cross;
             button54.FlatAppearance.BorderSize = 0;
             button54.FlatStyle = FlatStyle.Flat;
-            button54.Location = new Point(885, 683);
+            button54.Location = new Point(884, 683);
             button54.Name = "button54";
             button54.Size = new Size(180, 50);
             button54.TabIndex = 115;
@@ -1045,7 +1045,7 @@
             button55.Cursor = Cursors.Cross;
             button55.FlatAppearance.BorderSize = 0;
             button55.FlatStyle = FlatStyle.Flat;
-            button55.Location = new Point(885, 735);
+            button55.Location = new Point(884, 735);
             button55.Name = "button55";
             button55.Size = new Size(180, 50);
             button55.TabIndex = 116;
@@ -1751,7 +1751,7 @@
             button27.FlatAppearance.BorderColor = Color.Black;
             button27.FlatAppearance.BorderSize = 0;
             button27.FlatStyle = FlatStyle.Flat;
-            button27.Location = new Point(12, 68);
+            button27.Location = new Point(744, 46);
             button27.Name = "button27";
             button27.Size = new Size(135, 37);
             button27.TabIndex = 184;
@@ -1766,7 +1766,7 @@
             button42.Cursor = Cursors.Cross;
             button42.FlatAppearance.BorderSize = 0;
             button42.FlatStyle = FlatStyle.Flat;
-            button42.Location = new Point(12, 12);
+            button42.Location = new Point(603, 46);
             button42.Name = "button42";
             button42.Size = new Size(135, 37);
             button42.TabIndex = 185;
@@ -1783,7 +1783,7 @@
             button63.FlatAppearance.BorderSize = 0;
             button63.FlatStyle = FlatStyle.Flat;
             button63.ForeColor = Color.Black;
-            button63.Location = new Point(153, 68);
+            button63.Location = new Point(1167, 46);
             button63.Name = "button63";
             button63.Size = new Size(135, 37);
             button63.TabIndex = 186;
@@ -1799,7 +1799,7 @@
             button65.FlatAppearance.BorderColor = Color.Black;
             button65.FlatAppearance.BorderSize = 0;
             button65.FlatStyle = FlatStyle.Flat;
-            button65.Location = new Point(12, 124);
+            button65.Location = new Point(885, 46);
             button65.Name = "button65";
             button65.Size = new Size(135, 37);
             button65.TabIndex = 187;
@@ -1816,7 +1816,7 @@
             buttonSelectAll.FlatAppearance.BorderSize = 0;
             buttonSelectAll.FlatStyle = FlatStyle.Flat;
             buttonSelectAll.ForeColor = SystemColors.ControlText;
-            buttonSelectAll.Location = new Point(153, 12);
+            buttonSelectAll.Location = new Point(1026, 46);
             buttonSelectAll.Name = "buttonSelectAll";
             buttonSelectAll.Size = new Size(135, 37);
             buttonSelectAll.TabIndex = 188;
@@ -1869,7 +1869,7 @@
             // 
             Marionette.AutoSize = true;
             Marionette.BackColor = Color.Transparent;
-            Marionette.Location = new Point(864, 808);
+            Marionette.Location = new Point(863, 804);
             Marionette.Name = "Marionette";
             Marionette.Size = new Size(15, 14);
             Marionette.TabIndex = 194;
@@ -1883,7 +1883,7 @@
             button66.Cursor = Cursors.Cross;
             button66.FlatAppearance.BorderSize = 0;
             button66.FlatStyle = FlatStyle.Flat;
-            button66.Location = new Point(885, 791);
+            button66.Location = new Point(884, 787);
             button66.Name = "button66";
             button66.Size = new Size(180, 50);
             button66.TabIndex = 193;
@@ -1894,7 +1894,7 @@
             // 
             LionsArch.AutoSize = true;
             LionsArch.BackColor = Color.Transparent;
-            LionsArch.Location = new Point(864, 864);
+            LionsArch.Location = new Point(864, 856);
             LionsArch.Name = "LionsArch";
             LionsArch.Size = new Size(15, 14);
             LionsArch.TabIndex = 196;
@@ -1908,7 +1908,7 @@
             button70.Cursor = Cursors.Cross;
             button70.FlatAppearance.BorderSize = 0;
             button70.FlatStyle = FlatStyle.Flat;
-            button70.Location = new Point(885, 847);
+            button70.Location = new Point(884, 839);
             button70.Name = "button70";
             button70.Size = new Size(180, 50);
             button70.TabIndex = 195;
@@ -1919,7 +1919,7 @@
             // 
             Nightmares.AutoSize = true;
             Nightmares.BackColor = Color.Transparent;
-            Nightmares.Location = new Point(864, 920);
+            Nightmares.Location = new Point(863, 908);
             Nightmares.Name = "Nightmares";
             Nightmares.Size = new Size(15, 14);
             Nightmares.TabIndex = 198;
@@ -1933,7 +1933,7 @@
             button71.Cursor = Cursors.Cross;
             button71.FlatAppearance.BorderSize = 0;
             button71.FlatStyle = FlatStyle.Flat;
-            button71.Location = new Point(885, 903);
+            button71.Location = new Point(884, 891);
             button71.Name = "button71";
             button71.Size = new Size(180, 50);
             button71.TabIndex = 197;
