@@ -48,10 +48,10 @@
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(11, 13);
+            button1.Location = new Point(11, 9);
             button1.Margin = new Padding(2, 0, 2, 0);
             button1.Name = "button1";
-            button1.Size = new Size(30, 24);
+            button1.Size = new Size(30, 30);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;

@@ -397,7 +397,7 @@
             Escord.ScrollBars = ScrollBars.Vertical;
             Escord.Size = new Size(600, 60);
             Escord.TabIndex = 125;
-            Escord.Text = "☠ Escort Captain Edwards to the last camp, destroy the Trébuchets there and kill all the Rock Dogs on your way.";
+            Escord.Text = "☠ Escort Captain Edwards to the last camp, destroy the Catapults there and kill all the Rock Dogs on your way.";
             // 
             // pictureBox5
             // 
